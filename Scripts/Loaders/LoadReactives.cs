@@ -62,33 +62,33 @@ namespace ReactiveMedia
             switch (tendencyAlgorithm)
             {
                 case TendencyAlgorithm.MaxValue:
-                    MaxValueLoader(orderedTendencyAttentionRatings);
+                    StartCoroutine(MaxValueLoader(orderedTendencyAttentionRatings));
                     break;
                 case TendencyAlgorithm.MinValue:
-                    MinValueLoader(orderedTendencyAttentionRatings);
+                    StartCoroutine(MinValueLoader(orderedTendencyAttentionRatings));
                     break;
                 case TendencyAlgorithm.Proportional:
                     //ProportionalLoader(orderedTendencyAttentionRatings);
                     StartCoroutine(ProportionalLoader(orderedTendencyAttentionRatings));
                     break;
                 case TendencyAlgorithm.InverseProportion:
-                    InverseProportionalLoader(orderedTendencyAttentionRatings);
+                    StartCoroutine(InverseProportionalLoader(orderedTendencyAttentionRatings));
                     break;
                 case TendencyAlgorithm.CompetitorDistribution:
-                    CompetitorDistributionLoader(orderedTendencyAttentionRatings);
+                    StartCoroutine(CompetitorDistributionLoader(orderedTendencyAttentionRatings));
                     break;
                 case TendencyAlgorithm.Preset:
-                    PresetLoader();
+                    StartCoroutine(PresetLoader());
                     break;
                 case TendencyAlgorithm.Random:
-                    RandomLoader();
+                    StartCoroutine(RandomLoader());
                     break;
                 default:
                     break;
             }
         }
 
-        private void MaxValueLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private IEnumerator MaxValueLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
         {
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
@@ -97,9 +97,10 @@ namespace ReactiveMedia
                     tendencyPlacement.placementPoint
                     );
             }
+            yield return null;
         }
 
-        private void MinValueLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private IEnumerator MinValueLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
         {
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
@@ -108,6 +109,7 @@ namespace ReactiveMedia
                     tendencyPlacement.placementPoint
                     );
             }
+            yield return null;
         }
 
         private IEnumerator ProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
@@ -162,7 +164,7 @@ namespace ReactiveMedia
             //output[i] = total - sum;
         }
 
-        private void InverseProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private IEnumerator InverseProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
         {
             print(String.Join(", ", orderedTendencyAttentionRatings));
             double tendencySum = orderedTendencyAttentionRatings.Sum(tendency => tendency.Value);
@@ -203,9 +205,11 @@ namespace ReactiveMedia
                     listOfTendencyPlacements.tendencyPlacements[i].placementPoint
                     );
             }
+
+            yield return null;
         }
 
-        private void CompetitorDistributionLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private IEnumerator CompetitorDistributionLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
         {
             print(String.Join(", ", orderedTendencyAttentionRatings));
             double tendencySum = orderedTendencyAttentionRatings.Sum(tendency => tendency.Value);
@@ -260,9 +264,11 @@ namespace ReactiveMedia
                     listOfTendencyPlacements.tendencyPlacements[i].placementPoint
                     );
             }
+
+            yield return null;
         }
 
-        private void PresetLoader()
+        private IEnumerator PresetLoader()
         {
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
@@ -271,9 +277,10 @@ namespace ReactiveMedia
                     tendencyPlacement.placementPoint
                     );
             }
+            yield return null;
         }
 
-        private void RandomLoader()
+        private IEnumerator RandomLoader()
         {
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
@@ -282,6 +289,7 @@ namespace ReactiveMedia
                     tendencyPlacement.placementPoint
                     );
             }
+            yield return null;
         }
 
         private void spawnObject(GameObject objectToSpawn, GameObject placementPoint)
