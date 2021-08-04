@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,11 @@ public class NimbusMeasures : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        NotImplemented();
+    }
+
+    private void NotImplemented()
+    {
+        throw new NotImplementedException();
     }
 }

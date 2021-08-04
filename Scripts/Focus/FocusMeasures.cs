@@ -80,7 +80,6 @@ namespace ReactiveMedia
             }
             else { Debug.LogWarning("No Focus Component on this GameObject"); }
 
-            // Can we rewrite this mess below?
             AttentionDataManager AttnMgr = FindObjectOfType<AttentionDataManager>();
             WriteAttnDataMgr.AddListener(AttnMgr.ParseInboundStructData);
         }
@@ -93,7 +92,7 @@ namespace ReactiveMedia
         void OnDrawGizmos()
         {
 #if UNITY_EDITOR
-            // implement debug / visualisation logic here, for the graph fiends...
+            // implement debug / visualisation logic here?
             Handles.Label(transform.position, totalRating.ToString());
 #endif
         }
@@ -121,9 +120,6 @@ namespace ReactiveMedia
                 visibleRating = visibleTotalTime * visibleMultiplier;
                 // is this the best place for this?
                 totalRating = visibleRating + attendedRating + focusedRating;
-                // other metrics?
-                // debug print stuff
-                //print($"GameObject: {gameObject}, Total Rating: {totalRating:n2}");
             }
         }
 
@@ -145,8 +141,6 @@ namespace ReactiveMedia
                 attendedTotalTime = attendedTimes.Sum();
                 attendedLongestTime = attendedTimes.Max();
                 attendedRating = attendedTotalTime * attendedMultiplier;
-                // other metrics?
-                //print($"GameObject: {gameObject}, AttendedCount: {attendedCount}, TotalAttended: {attendedTotalTime}, AttendedLongest: {attendedLongestTime}, AttendedRating: {attendedRating:n2}");
             }
         }
 
@@ -169,8 +163,6 @@ namespace ReactiveMedia
                 focusedTotalTime = focusedTimes.Sum();
                 focusedLongestTime = focusedTimes.Max();
                 focusedRating = focusedTotalTime * focusedMultiplier;
-                // other metrics?
-                //print($"GameObject: {gameObject}, FocusCount: {focusedCount}, TotalFocus: {focusedTotalTime}, FocusLongest: {focusedLongestTime}, FocusRating: {focusedRating:n2}");
             }
         }
 

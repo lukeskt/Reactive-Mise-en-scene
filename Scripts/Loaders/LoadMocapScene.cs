@@ -7,8 +7,6 @@ namespace ReactiveMedia
 {
     public class LoadMocapScene : MonoBehaviour
     {
-        public OldLoaderMode loaderMode = OldLoaderMode.Tendency;
-
         Playable mocapTimeline;
         PlayableDirector mocapDirector;
 

@@ -6,7 +6,6 @@ namespace ReactiveMedia
 {
     public class LoadSetDressing : MonoBehaviour
     {
-        public OldLoaderMode loaderMode = OldLoaderMode.Tendency;
 
         // Start is called before the first frame update
         void Start()

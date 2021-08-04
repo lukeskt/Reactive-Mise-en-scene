@@ -10,8 +10,8 @@ public class Nimbus : MonoBehaviour
     public float NimbusRadius;
     //private Vector3 centrepoint;
 
-    [Range(0.0f, 10.0f)] [SerializeField] private float farDistance = 2.5f;
-    [Range(0.0f, 10.0f)] [SerializeField] private float midDistance = 1.0f;
+    [SerializeField] private float farDistance;
+    [SerializeField] private float midDistance;
 
     // enums
     private enum Proximity
@@ -38,6 +38,8 @@ public class Nimbus : MonoBehaviour
         Error = 400
     }
 
+    private Dictionary<GameObject, (Proximity Distance, Direction Direction, bool Visibility)> ObjectsInNimbus = new Dictionary<GameObject, (Proximity Distance, Direction Direction, bool Visibility)>();
+
     // Events
     // These should send an event containing the object that entered, plus its position, direction, elevation.
     public UnityEvent<GameObject> EnterNimbus;
@@ -49,6 +51,8 @@ public class Nimbus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        farDistance = NimbusRadius / 3 * 2;
+        midDistance = NimbusRadius / 3;
         //if (GetComponent<Collider>().name == "Nimbus") nimbus = GetComponent<Collider>();
         //centrepoint = nimbus.bounds.center; // get centre of collider, measure position and distance from there for a scene/area/etc.
         NimbusCollider.isTrigger = true;
@@ -57,7 +61,8 @@ public class Nimbus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // HANG ON! Do we want triggers etc, or do we want to measure distances? (Also physics sphere?)
+        // Then we could, based on nimbus-specific objects, handle distances and then trigger actions, position, etc.
     }
 
     bool GetObjectVisibility (GameObject gameObject)
@@ -107,9 +112,9 @@ public class Nimbus : MonoBehaviour
     }
 
     // This just doesn't work! Numbers all wrong
-    Elevation GetObjectElevation (GameObject gameObj)
+    Elevation GetObjectElevation (GameObject gameObject)
     {
-        float dotProdElevation = Vector3.Dot(transform.up, gameObj.transform.position);
+        float dotProdElevation = Vector3.Dot(transform.up, gameObject.transform.position);
         Debug.Log($"Elevation:{dotProdElevation}");
         if (dotProdElevation > 1)
         {
@@ -127,6 +132,16 @@ public class Nimbus : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(!ObjectsInNimbus.ContainsKey(other.gameObject))
+        {
+            ObjectsInNimbus.Add(
+                other.gameObject,
+                (
+                    GetObjectDistance(gameObject),
+                    GetObjectDirection(gameObject),
+                    GetObjectVisibility(gameObject)
+                ));
+        }
         // Set relevant vars
         // Get Distance
         // Get angle/positions
@@ -137,6 +152,12 @@ public class Nimbus : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        // Update objects in list
+        ObjectsInNimbus[other.gameObject] =
+            (GetObjectDistance(other.gameObject),
+            GetObjectDirection(other.gameObject),
+            GetObjectVisibility(other.gameObject));
+
         if (GetObjectVisibility(other.gameObject))
         {
             Proximity dist = GetObjectDistance(other.gameObject);
@@ -150,5 +171,6 @@ public class Nimbus : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         // Event - send details of object that exited and its pos, dir, and elevation at the time.
+        if (ObjectsInNimbus.ContainsKey(other.gameObject)) ObjectsInNimbus.Remove(other.gameObject);
     }
 }

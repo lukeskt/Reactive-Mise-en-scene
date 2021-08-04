@@ -68,7 +68,8 @@ namespace ReactiveMedia
                     MinValueLoader(orderedTendencyAttentionRatings);
                     break;
                 case TendencyAlgorithm.Proportional:
-                    ProportionalLoader(orderedTendencyAttentionRatings);
+                    //ProportionalLoader(orderedTendencyAttentionRatings);
+                    StartCoroutine(ProportionalLoader(orderedTendencyAttentionRatings));
                     break;
                 case TendencyAlgorithm.InverseProportion:
                     InverseProportionalLoader(orderedTendencyAttentionRatings);
@@ -109,7 +110,7 @@ namespace ReactiveMedia
             }
         }
 
-        private void ProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private IEnumerator ProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
         {
             print(String.Join(", ", orderedTendencyAttentionRatings));
             double tendencySum = orderedTendencyAttentionRatings.Sum(tendency => tendency.Value);
@@ -145,6 +146,8 @@ namespace ReactiveMedia
                     );
             }
 
+            yield return null;
+
             // third impl?
             // Per: https://stackoverflow.com/questions/27330331/how-do-i-optimally-distribute-values-over-an-array-of-percentages
             //List<int> output = new List<int>();
@@ -156,10 +159,7 @@ namespace ReactiveMedia
             //    output[i] = bresenhamMapping(orderedMappedRatings[i].Value, total);
             //    sum += output[i];
             //}
-
             //output[i] = total - sum;
-
-            //throw new NotImplementedException();
         }
 
         private void InverseProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)

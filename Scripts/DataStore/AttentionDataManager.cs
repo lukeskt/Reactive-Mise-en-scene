@@ -29,9 +29,6 @@ namespace ReactiveMedia
             }
         }
 
-        void Start() { }
-        private void Update() { }
-
         public void ParseInboundStructData (AttnDataStruct attnData)
         {
             // On receipt of data, ensure in struct and put into list.
