@@ -11,11 +11,11 @@ namespace ReactiveMedia
 
         [Header("Thresholds")]
         // Set max distance object can be interacted with by camera.
-        [Range(0.0f, 1000.0f)] [SerializeField] private float distanceThreshold = 50.0f;
+        [Range(0.0f, 1000.0f)] [SerializeField] private double distanceThreshold = 50.0f;
 
-        // Threshold Values (inc. defaults) - these are terrible vec2 dist related, can we normalize somehow?
-        [Range(0.0f, 1000.0f)] [SerializeField] private float focusedThreshold = 100f;
-        [Range(0.0f, 1000.0f)] [SerializeField] private float attendedThreshold = 400f;
+        // Threshold Values (inc. defaults) - these are terrible vec2 dist related, can we normalize somehow? Also maybe should be calculated from display resolution?
+        [Range(0.0f, 1000.0f)] [SerializeField] private double focusedThreshold = 100f;
+        [Range(0.0f, 1000.0f)] [SerializeField] private double attendedThreshold = 400f;
 
         // Events
         [Header("Event Handling")]
