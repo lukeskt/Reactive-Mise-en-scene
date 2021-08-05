@@ -77,8 +77,10 @@ namespace ReactiveMedia
         private void GetInput(out float speed)
         {
             // Read input - TODO: Replace these with new input system.
+#if ENABLE_LEGACY_INPUT_MANAGER
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
+#endif
 
             //bool waswalking = m_IsWalking;
 
@@ -145,13 +147,8 @@ namespace ReactiveMedia
             m_CameraTargetRot = camera.localRotation;
         }
 
-
         public void LookRotation(Transform character, Transform camera)
         {
-            // Old Input System
-            //float yRot = Input.GetAxis("Mouse X") * XSensitivity;
-            //float xRot = Input.GetAxis("Mouse Y") * YSensitivity;
-
             // New Input System - TODO: these below should be replaced with settings file at some point.
             float yRot = Mouse.current.delta.ReadValue().x * XSensitivity;
             float xRot = Mouse.current.delta.ReadValue().y * YSensitivity;
