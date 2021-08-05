@@ -20,11 +20,31 @@ The conception of Attention in this plugin is the amount of time an object is at
 
 ### DataManager
 
+The DataManager holds a list of structs containing the key information from each reactive object which has an attention metric associated with it. The DataManager calculates the overall attention rating per locale and globally. It is a singleton object that persists across scenes in an experience to track attention without needing all reactive objects to persist in memory.
+
 ### Locales
+
+A locale is an area or location an object is associated with. It is akin to Unity's built-in tag system, so you are not tied to logically parenting an object to a specific locale, you simply select the locale from a dropdown list on the FocusMeasures script
 
 ### Tendencies
 
-### Decision Algorithms
+A tendency is a flavour or aspect of the narrative that is presented. It is not quite the same as a branch in the typical tree-based interactive narrative, rather at whatever point or interval you decide when using the reactive media system you can check the attention ratings for each tendency either globally or for a specific locale, and from there make decisions on the kind of content to present to the player.
+
+For example, on approaching a new locale, the player's presence might trigger which objects to load in the locale based on the ratings for each tendency. You could also decide to check which tendency has the highest rating, and load a dramatic scene in the area based on this, or choose to load a dramatic scene for the lowest rated tendency to challenge the player's assumptions. Decision algorithms are discussed in more detail below.
+
+### Decision Algorithms / Loaders
+
+As mentioned above, there are a series of loaders for different parts of a locale. Each of these can load content based on different decision algorithms. The algorithms are as follows:
+
+#### 1. Max Value
+#### 2. Min Value
+#### 3. Proportional
+#### 4. Inverse Proportion
+#### 5. Competitor Distribution (in development)
+#### 6. Single Value Threshold (to be implemented)
+#### 7. Multi-Value Threshold (to be implemented)
+#### 6. Preset
+#### 7. Random
 
 ## Core Features
 
