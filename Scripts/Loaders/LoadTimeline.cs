@@ -7,7 +7,7 @@ namespace ReactiveMedia
 {
     public class LoadTimeline : MonoBehaviour
     {
-        public OldLoaderMode loaderMode = OldLoaderMode.Tendency;
+        public TendencyAlgorithm tendencyAlgorithm = TendencyAlgorithm.MaxValue;
 
         Playable timeline;
         PlayableDirector timelineDirector;

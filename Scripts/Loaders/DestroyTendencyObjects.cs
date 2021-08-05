@@ -7,7 +7,7 @@ namespace ReactiveMedia
 {
     public class DestroyTendencyObjects : MonoBehaviour
     {
-        public OldLoaderMode loaderMode = OldLoaderMode.Tendency;
+        public TendencyAlgorithm tendencyAlgorithm = TendencyAlgorithm.MaxValue;
         public RequestType requestType;
         public Tendencies tendencyListToDestroy;
         //public TendencyAlgorithm tendencyDecision;
@@ -31,26 +31,9 @@ namespace ReactiveMedia
 
         public void DestroyObjects()
         {
-            switch (loaderMode)
+            switch (tendencyAlgorithm)
             {
-                case OldLoaderMode.Preset:
-                    // maybe more sophisticated behaviour? but this is just a gating mechanism.
-                    // quick test
-                    var tendencyCheck = TendencyObjects.ListOfTendencyLists.First(tendencylist => tendencylist.tendency == tendencyListToDestroy);
-                    if (tendencyCheck.Equals(tendencyListToDestroy))
-                    {
-                        foreach (var obj in tendencyCheck.TendencyPrefabs)
-                        {
-                            Destroy(obj);
-                        }
-                    }                  
-                    break;
-                case OldLoaderMode.Random:
-                    int randList = Random.Range(0, TendencyObjects.ListOfTendencyLists.Count);
-                    int randObj = Random.Range(0, TendencyObjects.ListOfTendencyLists[randList].TendencyPrefabs.Count);
-                    Destroy(TendencyObjects.ListOfTendencyLists[randList].TendencyPrefabs[randObj]);
-                    break;
-                case OldLoaderMode.Tendency:
+                case TendencyAlgorithm.MaxValue:
                     DataMgr = FindObjectOfType<AttentionDataManager>();
                     Dictionary<Tendencies, double> TendenciesFromDataMgr = new Dictionary<Tendencies, double>();
                     Tendencies MaxKey;
@@ -59,16 +42,14 @@ namespace ReactiveMedia
                         // maybe want inverse/min value options here too...?
                         case RequestType.Locale:
                             TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeToParse);
-                            MaxKey = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
                             break;
                         case RequestType.Global:
                             TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
-                            MaxKey = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
                             break;
                         default:
-                            MaxKey = Tendencies.Neutral; // set a default just in case.
                             break;
                     }
+                    MaxKey = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
                     foreach (var tendencyList in TendencyObjects.ListOfTendencyLists)
                     {
                         if (tendencyList.tendency == MaxKey)
@@ -80,9 +61,43 @@ namespace ReactiveMedia
                         }
                     }
                     break;
-                default:
+                case TendencyAlgorithm.MinValue:
+                    NotImpl();
                     break;
+                case TendencyAlgorithm.Proportional:
+                    NotImpl();
+                    break;
+                case TendencyAlgorithm.InverseProportion:
+                    NotImpl();
+                    break;
+                case TendencyAlgorithm.CompetitorDistribution:
+                    NotImpl();
+                    break;
+                case TendencyAlgorithm.Preset:
+                    // maybe more sophisticated behaviour? but this is just a gating mechanism.
+                    // quick test
+                    var tendencyCheck = TendencyObjects.ListOfTendencyLists.First(tendencylist => tendencylist.tendency == tendencyListToDestroy);
+                    if (tendencyCheck.Equals(tendencyListToDestroy))
+                    {
+                        foreach (var obj in tendencyCheck.TendencyPrefabs)
+                        {
+                            Destroy(obj);
+                        }
+                    }
+                    break;
+                case TendencyAlgorithm.Random:
+                    int randList = Random.Range(0, TendencyObjects.ListOfTendencyLists.Count);
+                    int randObj = Random.Range(0, TendencyObjects.ListOfTendencyLists[randList].TendencyPrefabs.Count);
+                    Destroy(TendencyObjects.ListOfTendencyLists[randList].TendencyPrefabs[randObj]);
+                    break;
+                default:
+                    goto case TendencyAlgorithm.Preset;
             }
+        }
+
+        private void NotImpl()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
