@@ -8,6 +8,7 @@ using UnityEngine.Events;
 
 namespace ReactiveMedia
 {
+    [RequireComponent(typeof(Focus))]
     public class FocusMeasures : MonoBehaviour
     {
         public Locales locale;
@@ -80,8 +81,16 @@ namespace ReactiveMedia
             }
             else { Debug.LogWarning("No Focus Component on this GameObject"); }
 
-            AttentionDataManager AttnMgr = FindObjectOfType<AttentionDataManager>();
-            WriteAttnDataMgr.AddListener(AttnMgr.ParseInboundStructData);
+            if(FindObjectOfType<AttentionDataManager>()) 
+            {
+                AttentionDataManager AttnMgr = FindObjectOfType<AttentionDataManager>();
+                WriteAttnDataMgr.AddListener(AttnMgr.ParseInboundStructData);
+            }
+            else
+            {
+                print("Attention Data Manager not found. Have you added the prefab to the scene?");
+            }
+            
         }
 
         void FixedUpdate()
