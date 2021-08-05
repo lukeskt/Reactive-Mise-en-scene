@@ -1,9 +1,16 @@
-# ReactiveMedia
+# Reactive Media Object System
 
-This is the core set of scripts for Unity that enable an attention-based system of reactive objects which in turn can drive implicit, adaptive changes in games and other interactive experiences.
+## Introduction
 
-The releases page contains .unitypackages that make it easier to install in Unity.
+## Rationale
 
-Feedback appreciated.
+## Core Features
 
-This is a PhD research project. More info to follow.
+## Download
+
+## Installation
+
+## Usage
+
+## Additional Documentation
+
