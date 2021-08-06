@@ -1,10 +1,10 @@
-# Reactive Media Object System
+# Reactive Mise-en-scène
 
 ## Introduction
 
-Reactive Media is a design concept being developed by Luke Skarth-Hayley for his PhD thesis.
+Reactive Mise-en-scène is a design concept being developed by Luke Skarth-Hayley for his PhD thesis.
 
-The concept seeks to reconcile tensions between interactivity and narrative experiences by using tacit and implicit inputs from the player, in the form of their attention on specific objects within set locations, to drive changes in the narrative tendency over time.
+The concept seeks to reconcile tensions between interactivity and narrative experiences by using tacit and implicit inputs from the player, in the form of their attention on specific objects within set locations, to drive changes in the environment/set dressing of scenes, and the narrative tendency over time.
 
 This plugin implements some of these design concepts in Unity and is available for others to explore the possibilities enabled by the system and said concepts.
 
@@ -28,7 +28,7 @@ A locale is an area or location an object is associated with. It is akin to Unit
 
 ### Tendencies
 
-A tendency is a flavour or aspect of the narrative that is presented. It is not quite the same as a branch in the typical tree-based interactive narrative, rather at whatever point or interval you decide when using the reactive media system you can check the attention ratings for each tendency either globally or for a specific locale, and from there make decisions on the kind of content to present to the player.
+A tendency is a flavour or aspect of the narrative that is presented. It is not quite the same as a branch in the typical tree-based interactive narrative, rather at whatever point or interval you decide when using the reactive mise-en-scène system you can check the attention ratings for each tendency either globally or for a specific locale, and from there make decisions on the kind of content to present to the player.
 
 For example, on approaching a new locale, the player's presence might trigger which objects to load in the locale based on the ratings for each tendency. You could also decide to check which tendency has the highest rating, and load a dramatic scene in the area based on this, or choose to load a dramatic scene for the lowest rated tendency to challenge the player's assumptions. Decision algorithms are discussed in more detail below.
 
