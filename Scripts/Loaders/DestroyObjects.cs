@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ReactiveMedia
 {
-    public class DestroyTendencyObjects : MonoBehaviour
+    public class DestroyObjects : MonoBehaviour
     {
         public TendencyAlgorithm tendencyAlgorithm = TendencyAlgorithm.MaxValue;
         public RequestType requestType;
@@ -29,13 +29,13 @@ namespace ReactiveMedia
 
         public TendencyPrefabList TendencyObjects = new TendencyPrefabList();
 
-        public void DestroyObjects()
+        public void DoDestroyObjects()
         {
+            Dictionary<Tendencies, double> TendenciesFromDataMgr = new Dictionary<Tendencies, double>();
             switch (tendencyAlgorithm)
             {
                 case TendencyAlgorithm.MaxValue:
                     DataMgr = FindObjectOfType<AttentionDataManager>();
-                    Dictionary<Tendencies, double> TendenciesFromDataMgr = new Dictionary<Tendencies, double>();
                     Tendencies MaxKey;
                     switch (requestType)
                     {
@@ -62,7 +62,31 @@ namespace ReactiveMedia
                     }
                     break;
                 case TendencyAlgorithm.MinValue:
-                    NotImpl();
+                    DataMgr = FindObjectOfType<AttentionDataManager>();
+                    Tendencies MinKey;
+                    switch (requestType)
+                    {
+                        // maybe want inverse/min value options here too...?
+                        case RequestType.Locale:
+                            TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeToParse);
+                            break;
+                        case RequestType.Global:
+                            TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
+                            break;
+                        default:
+                            break;
+                    }
+                    MinKey = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
+                    foreach (var tendencyList in TendencyObjects.ListOfTendencyLists)
+                    {
+                        if (tendencyList.tendency == MinKey)
+                        {
+                            foreach (var obj in tendencyList.TendencyPrefabs)
+                            {
+                                Destroy(obj);
+                            }
+                        }
+                    }
                     break;
                 case TendencyAlgorithm.Proportional:
                     NotImpl();

@@ -23,8 +23,8 @@ namespace ReactiveMedia
         void Update()
         {
             var localeInfo = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, locale);
-            localeTendency = localeInfo.Max().Key;
-            localeTendencyRating = localeInfo.Max().Value;
+            localeTendency = localeInfo.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
+            localeTendencyRating = localeInfo.Aggregate((l, r) => l.Value > r.Value ? l : r).Value;
         }
     }
 }

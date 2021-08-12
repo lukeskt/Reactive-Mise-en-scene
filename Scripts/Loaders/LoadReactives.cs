@@ -93,7 +93,7 @@ namespace ReactiveMedia
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
                 spawnObject(
-                    tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(orderedTendencyAttentionRatings[0].Key)),
+                    tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value > r.Value ? l : r).Key)),
                     tendencyPlacement.placementPoint
                     );
             }
@@ -105,7 +105,7 @@ namespace ReactiveMedia
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
                 spawnObject(
-                    tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(orderedTendencyAttentionRatings[orderedTendencyAttentionRatings.Count-1].Key)),
+                    tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value < r.Value ? l : r).Key)),
                     tendencyPlacement.placementPoint
                     );
             }
@@ -139,7 +139,7 @@ namespace ReactiveMedia
             }
 
             //print(String.Join(", ", tendencyList));
-
+            // there may be an index out of range issue down here - consider how to handle - trycatch?
             for (int i = 0; i < listOfTendencyPlacements.tendencyPlacements.Count; i++)
             {
                 spawnObject(
@@ -149,19 +149,6 @@ namespace ReactiveMedia
             }
 
             yield return null;
-
-            // third impl?
-            // Per: https://stackoverflow.com/questions/27330331/how-do-i-optimally-distribute-values-over-an-array-of-percentages
-            //List<int> output = new List<int>();
-            //var total = orderedMappedRatings.Sum(tendency => tendency.Value);
-            //float sum = 0;
-            //amortized = 0;
-            //for (int i = 0; i < output.Count - 1; i++)
-            //{
-            //    output[i] = bresenhamMapping(orderedMappedRatings[i].Value, total);
-            //    sum += output[i];
-            //}
-            //output[i] = total - sum;
         }
 
         private IEnumerator InverseProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
@@ -211,6 +198,7 @@ namespace ReactiveMedia
 
         private IEnumerator CompetitorDistributionLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
         {
+            throw new System.NotImplementedException();
             //print(String.Join(", ", orderedTendencyAttentionRatings));
             double tendencySum = orderedTendencyAttentionRatings.Sum(tendency => tendency.Value);
             int placementPointsCount = listOfTendencyPlacements.tendencyPlacements.Count();
