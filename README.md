@@ -10,11 +10,11 @@ This plugin implements some of these design concepts in Unity and is available f
 
 ## Contents
 
-* Installation
-* Usage
-* Contributing
-* Credits
-* License
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Credits](#credits)
+* [License](#license)
 
 ## Installation
 
@@ -76,7 +76,7 @@ As mentioned above, there are a series of loaders for different parts of a local
 
 ## Contributing
 
-## Credits (and References)
+## Credits
 
 ## License
 
