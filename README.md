@@ -1,4 +1,4 @@
-# Reactive Mise-en-scène
+# Reactive Mise-en-scène Unity Plugin
 
 ## Introduction
 
@@ -18,13 +18,25 @@ This plugin implements some of these design concepts in Unity and is available f
 
 ## Installation
 
-See releases...
+See the [releases](./releases) page for downloads.
 
 ### .unitypackage method
 
+Open the Unity project you want to import the plugin into.
+
+In the menu bar at the top of the editor window click Assets -> Import Package -> Custom Package...
+
+Find the .unitypackage you downloaded, select it, click Open.
+
+If this is the first time you are using the plugin with the project, just click Import. You should now have a folder called ReactiveMise-en-scene under the Assets folder in the Project file explorer.
+
 ### Package Manager method
 
+The modern Unity package manager install is pending creation...
+
 ## Usage
+
+Reactive Mise-en-scène
 
 Tutorial Video pending...
 
