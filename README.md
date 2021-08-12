@@ -8,9 +8,37 @@ The concept seeks to reconcile tensions between interactivity and narrative expe
 
 This plugin implements some of these design concepts in Unity and is available for others to explore the possibilities enabled by the system and said concepts.
 
-## Key Concepts
+## Contents
 
-### Focus
+* Installation
+* Usage
+* Contributing
+* Credits
+* License
+
+## Installation
+
+See releases...
+
+### .unitypackage method
+
+### Package Manager method
+
+## Usage
+
+Tutorial Video pending...
+
+To cover: Focus.cs, FocusMeasures.cs, AttentionDataManager.cs, Loader scripts...
+
+### Core Features
+
+- Focus-based [1] interactions where objects are aware of their position within the camera viewport.
+- Attention metrics derived from the object's position in the camera viewport over time.
+- A datamanager which tracks objects and their association with specific locales and narrative tendencies.
+- A collection of loader scripts which request data from the datamanager to determine how to configure further locales and the narrative elements within them.
+- A collection of algorithms in the loader scripts to offer different means of configuring scenes/locales.
+
+### Focus 
 
 Focus is an interaction concept created by Greenhalgh *et al.* [1]. 
 
@@ -46,32 +74,10 @@ As mentioned above, there are a series of loaders for different parts of a local
 #### 6. Preset
 #### 7. Random
 
-## Core Features
+## Contributing
 
-- Focus-based [1] interactions where objects are aware of their position within the camera viewport.
-- Attention metrics derived from the object's position in the camera viewport over time.
-- A datamanager which tracks objects and their association with specific locales and narrative tendencies.
-- A collection of loader scripts which request data from the datamanager to determine how to configure further locales and the narrative elements within them.
-- A collection of algorithms in the loader scripts to offer different means of configuring scenes/locales.
+## Credits (and References)
 
-## Download
+## License
 
-See releases.
-
-## Installation
-
-### .unitypackage method
-
-### Package Manager method
-
-## Usage
-
-Tutorial Video pending...
-
-To cover: Focus.cs, FocusMeasures.cs, AttentionDataManager.cs, Loader scripts...
-
-## Additional Documentation
-
-Link to website?
-
-## References	
+Released under MIT license. See [LICENSE.](./LICENSE)
