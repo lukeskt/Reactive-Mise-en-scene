@@ -503,14 +503,12 @@ MonoBehaviour:
   tendencyAlgorithm: 0
   requestType: 1
   localeToParse: 0
-  volume: {fileID: 0}
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
   - {fileID: 11400000, guid: 387bba26ceb95ad4bac16cef13161c1e, type: 2}
   - {fileID: 11400000, guid: 6450c9fce03652d42bab475285169d84, type: 2}
   presetVolumeProfile: {fileID: 0}
-  DataMgr: {fileID: 0}
 --- !u!114 &48743276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,16 +1026,9 @@ MonoBehaviour:
   attendedRating: 0
   focusedRating: 0
   totalRating: 0
-  VisibleStart: 0
-  VisibleEnd: 0
-  AttendedStart: 0
-  AttendedEnd: 0
-  FocusedStart: 0
-  FocusedEnd: 0
   WriteAttnDataMgr:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
 --- !u!114 &164959639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,51 +1048,103 @@ MonoBehaviour:
   EnterVisible:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayVisible:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitVisible:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   EnterAttention:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayAttention:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitAttention:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   EnterFocus:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayFocus:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitFocus:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  currentVisbility: 0
-  lastVisibility: 0
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   meshRenderer: {fileID: 0}
-  meshBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!114 &164959640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1114,8 +1157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e252add64c9878409b80ed403194e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 0}
-  lastMaterial: {fileID: 0}
   switchMaterial:
   - {fileID: 2100000, guid: c6529490c26e1444dba4ec1712fc8556, type: 2}
   - {fileID: 2100000, guid: 980f684a06b56934a8760a992b7467cc, type: 2}
@@ -1270,7 +1311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locale: 1
-  DataMgr: {fileID: 0}
   localeTendency: 0
   localeTendencyRating: 0
 --- !u!1 &194371461
@@ -1353,7 +1393,6 @@ MonoBehaviour:
   requestType: 1
   tendencyListToDestroy: 0
   localeToParse: 1
-  DataMgr: {fileID: 0}
   TendencyObjects:
     ListOfTendencyLists:
     - tendency: 0
@@ -1400,8 +1439,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tendencyAlgorithm: 0
-  timelineDirector: {fileID: 0}
-  startTime: 0
   timeToWait: 0
 --- !u!1 &207010539
 GameObject:
@@ -1532,7 +1569,6 @@ MonoBehaviour:
       - {fileID: 8062815487814896933, guid: ca24c207349e328428e6d6c5ab9a5445, type: 3}
       - {fileID: 1216038610440337389, guid: b69d19124512e7a41aaba716c5397ec9, type: 3}
       - {fileID: 6563604617043299407, guid: 3d3ef6305b102a44b99ff1dbfa4d74de, type: 3}
-  amortized: 0
 --- !u!1 &207117189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,7 +2035,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mocapDirector: {fileID: 0}
 --- !u!1001 &273946291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2527,14 +2562,12 @@ MonoBehaviour:
   tendencyAlgorithm: 0
   requestType: 1
   localeToParse: 0
-  volume: {fileID: 0}
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
   - {fileID: 11400000, guid: 387bba26ceb95ad4bac16cef13161c1e, type: 2}
   - {fileID: 11400000, guid: 6450c9fce03652d42bab475285169d84, type: 2}
   presetVolumeProfile: {fileID: 0}
-  DataMgr: {fileID: 0}
 --- !u!114 &353778993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2696,16 +2729,9 @@ MonoBehaviour:
   attendedRating: 0
   focusedRating: 0
   totalRating: 0
-  VisibleStart: 0
-  VisibleEnd: 0
-  AttendedStart: 0
-  AttendedEnd: 0
-  FocusedStart: 0
-  FocusedEnd: 0
   WriteAttnDataMgr:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
 --- !u!114 &359663730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2725,51 +2751,43 @@ MonoBehaviour:
   EnterVisible:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 359663731}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 1, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 359663731}
+        m_TargetAssemblyTypeName: ShaderSwitcher
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayVisible:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitVisible:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 359663731}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      m_Calls: []
   EnterAttention:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 359663731}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 2, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      m_Calls: []
   StayAttention:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitAttention:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 359663731}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 1, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      m_Calls: []
   EnterFocus:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 359663731}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 3, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      m_Calls: []
   StayFocus:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitFocus:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 359663731}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 2, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  currentVisbility: 0
-  lastVisibility: 0
+      m_Calls: []
   meshRenderer: {fileID: 0}
-  meshBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!114 &359663731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2782,8 +2800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e252add64c9878409b80ed403194e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 0}
-  lastMaterial: {fileID: 0}
   switchMaterial:
   - {fileID: 2100000, guid: c6529490c26e1444dba4ec1712fc8556, type: 2}
   - {fileID: 2100000, guid: 980f684a06b56934a8760a992b7467cc, type: 2}
@@ -3035,7 +3051,6 @@ MonoBehaviour:
   requestType: 1
   tendencyListToDestroy: 0
   localeToParse: 1
-  DataMgr: {fileID: 0}
   TendencyObjects:
     ListOfTendencyLists:
     - tendency: 0
@@ -3082,8 +3097,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tendencyAlgorithm: 0
-  timelineDirector: {fileID: 0}
-  startTime: 0
   timeToWait: 0
 --- !u!1 &409805904
 GameObject:
@@ -3165,7 +3178,6 @@ MonoBehaviour:
   requestType: 1
   tendencyListToDestroy: 0
   localeToParse: 1
-  DataMgr: {fileID: 0}
   TendencyObjects:
     ListOfTendencyLists:
     - tendency: 0
@@ -3212,8 +3224,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tendencyAlgorithm: 0
-  timelineDirector: {fileID: 0}
-  startTime: 0
   timeToWait: 0
 --- !u!1001 &436800563
 PrefabInstance:
@@ -4520,7 +4530,6 @@ MonoBehaviour:
   requestType: 1
   tendencyListToDestroy: 0
   localeToParse: 1
-  DataMgr: {fileID: 0}
   TendencyObjects:
     ListOfTendencyLists:
     - tendency: 0
@@ -4567,8 +4576,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tendencyAlgorithm: 0
-  timelineDirector: {fileID: 0}
-  startTime: 0
   timeToWait: 0
 --- !u!1001 &597439480
 PrefabInstance:
@@ -4816,7 +4823,6 @@ MonoBehaviour:
   requestType: 1
   tendencyListToDestroy: 0
   localeToParse: 1
-  DataMgr: {fileID: 0}
   TendencyObjects:
     ListOfTendencyLists:
     - tendency: 0
@@ -4863,8 +4869,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tendencyAlgorithm: 0
-  timelineDirector: {fileID: 0}
-  startTime: 0
   timeToWait: 0
 --- !u!1001 &608831541
 PrefabInstance:
@@ -5056,14 +5060,12 @@ MonoBehaviour:
   tendencyAlgorithm: 0
   requestType: 1
   localeToParse: 0
-  volume: {fileID: 0}
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
   - {fileID: 11400000, guid: 387bba26ceb95ad4bac16cef13161c1e, type: 2}
   - {fileID: 11400000, guid: 6450c9fce03652d42bab475285169d84, type: 2}
   presetVolumeProfile: {fileID: 0}
-  DataMgr: {fileID: 0}
 --- !u!114 &610208066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5502,7 +5504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mocapDirector: {fileID: 0}
 --- !u!1 &662703063
 GameObject:
   m_ObjectHideFlags: 0
@@ -6540,7 +6541,6 @@ MonoBehaviour:
       - {fileID: 8062815487814896933, guid: ca24c207349e328428e6d6c5ab9a5445, type: 3}
       - {fileID: 1216038610440337389, guid: b69d19124512e7a41aaba716c5397ec9, type: 3}
       - {fileID: 6563604617043299407, guid: 3d3ef6305b102a44b99ff1dbfa4d74de, type: 3}
-  amortized: 0
 --- !u!1 &799054560
 GameObject:
   m_ObjectHideFlags: 0
@@ -6750,7 +6750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mocapDirector: {fileID: 0}
 --- !u!1 &832760670
 GameObject:
   m_ObjectHideFlags: 0
@@ -6805,7 +6804,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locale: 2
-  DataMgr: {fileID: 0}
   localeTendency: 0
   localeTendencyRating: 0
 --- !u!1 &836779453
@@ -7101,7 +7099,6 @@ MonoBehaviour:
   requestType: 1
   tendencyListToDestroy: 0
   localeToParse: 1
-  DataMgr: {fileID: 0}
   TendencyObjects:
     ListOfTendencyLists:
     - tendency: 0
@@ -7148,8 +7145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tendencyAlgorithm: 0
-  timelineDirector: {fileID: 0}
-  startTime: 0
   timeToWait: 0
 --- !u!1 &868704583
 GameObject:
@@ -7499,7 +7494,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locale: 3
-  DataMgr: {fileID: 0}
   localeTendency: 0
   localeTendencyRating: 0
 --- !u!4 &899188003
@@ -8235,7 +8229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mocapDirector: {fileID: 0}
 --- !u!1001 &991710309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8550,7 +8543,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locale: 3
-  DataMgr: {fileID: 0}
   localeTendency: 0
   localeTendencyRating: 0
 --- !u!4 &1038240960
@@ -8789,14 +8781,12 @@ MonoBehaviour:
   tendencyAlgorithm: 0
   requestType: 1
   localeToParse: 0
-  volume: {fileID: 0}
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
   - {fileID: 11400000, guid: 387bba26ceb95ad4bac16cef13161c1e, type: 2}
   - {fileID: 11400000, guid: 6450c9fce03652d42bab475285169d84, type: 2}
   presetVolumeProfile: {fileID: 0}
-  DataMgr: {fileID: 0}
 --- !u!114 &1075301128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9070,7 +9060,6 @@ MonoBehaviour:
       - {fileID: 8062815487814896933, guid: ca24c207349e328428e6d6c5ab9a5445, type: 3}
       - {fileID: 1216038610440337389, guid: b69d19124512e7a41aaba716c5397ec9, type: 3}
       - {fileID: 6563604617043299407, guid: 3d3ef6305b102a44b99ff1dbfa4d74de, type: 3}
-  amortized: 0
 --- !u!1 &1127201893
 GameObject:
   m_ObjectHideFlags: 0
@@ -9267,7 +9256,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locale: 3
-  DataMgr: {fileID: 0}
   localeTendency: 0
   localeTendencyRating: 0
 --- !u!4 &1130344305
@@ -11095,7 +11083,6 @@ MonoBehaviour:
       - {fileID: 8062815487814896933, guid: ca24c207349e328428e6d6c5ab9a5445, type: 3}
       - {fileID: 1216038610440337389, guid: b69d19124512e7a41aaba716c5397ec9, type: 3}
       - {fileID: 6563604617043299407, guid: 3d3ef6305b102a44b99ff1dbfa4d74de, type: 3}
-  amortized: 0
 --- !u!1001 &1209283277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11215,14 +11202,12 @@ MonoBehaviour:
   tendencyAlgorithm: 0
   requestType: 1
   localeToParse: 0
-  volume: {fileID: 0}
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
   - {fileID: 11400000, guid: 387bba26ceb95ad4bac16cef13161c1e, type: 2}
   - {fileID: 11400000, guid: 6450c9fce03652d42bab475285169d84, type: 2}
   presetVolumeProfile: {fileID: 0}
-  DataMgr: {fileID: 0}
 --- !u!114 &1215597788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11567,7 +11552,6 @@ MonoBehaviour:
       - {fileID: 8062815487814896933, guid: ca24c207349e328428e6d6c5ab9a5445, type: 3}
       - {fileID: 1216038610440337389, guid: b69d19124512e7a41aaba716c5397ec9, type: 3}
       - {fileID: 6563604617043299407, guid: 3d3ef6305b102a44b99ff1dbfa4d74de, type: 3}
-  amortized: 0
 --- !u!1001 &1268856748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12112,16 +12096,9 @@ MonoBehaviour:
   attendedRating: 0
   focusedRating: 0
   totalRating: 0
-  VisibleStart: 0
-  VisibleEnd: 0
-  AttendedStart: 0
-  AttendedEnd: 0
-  FocusedStart: 0
-  FocusedEnd: 0
   WriteAttnDataMgr:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
 --- !u!114 &1320322186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12141,51 +12118,43 @@ MonoBehaviour:
   EnterVisible:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 1320322187}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 1, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 1320322187}
+        m_TargetAssemblyTypeName: ShaderSwitcher
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayVisible:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitVisible:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 1320322187}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      m_Calls: []
   EnterAttention:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 1320322187}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 2, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      m_Calls: []
   StayAttention:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitAttention:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 1320322187}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 1, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      m_Calls: []
   EnterFocus:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 1320322187}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 3, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      m_Calls: []
   StayFocus:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitFocus:
     m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 1320322187}, m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMedia, m_MethodName: SetSwitchShader, m_Mode: 3, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 2, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  currentVisbility: 0
-  lastVisibility: 0
+      m_Calls: []
   meshRenderer: {fileID: 0}
-  meshBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!114 &1320322187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12198,8 +12167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e252add64c9878409b80ed403194e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 0}
-  lastMaterial: {fileID: 0}
   switchMaterial:
   - {fileID: 2100000, guid: c6529490c26e1444dba4ec1712fc8556, type: 2}
   - {fileID: 2100000, guid: 980f684a06b56934a8760a992b7467cc, type: 2}
@@ -12437,7 +12404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mocapDirector: {fileID: 0}
 --- !u!1 &1391775212
 GameObject:
   m_ObjectHideFlags: 0
@@ -12617,16 +12583,9 @@ MonoBehaviour:
   attendedRating: 0
   focusedRating: 0
   totalRating: 0
-  VisibleStart: 0
-  VisibleEnd: 0
-  AttendedStart: 0
-  AttendedEnd: 0
-  FocusedStart: 0
-  FocusedEnd: 0
   WriteAttnDataMgr:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
 --- !u!114 &1392786985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12646,51 +12605,103 @@ MonoBehaviour:
   EnterVisible:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayVisible:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitVisible:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   EnterAttention:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayAttention:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitAttention:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   EnterFocus:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayFocus:
     m_PersistentCalls:
       m_Calls: []
-    m_CallsDirty: 1
   ExitFocus:
     m_PersistentCalls:
       m_Calls:
-      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: , m_MethodName: , m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: , m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  currentVisbility: 0
-  lastVisibility: 0
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   meshRenderer: {fileID: 0}
-  meshBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!114 &1392786986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12703,8 +12714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e252add64c9878409b80ed403194e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 0}
-  lastMaterial: {fileID: 0}
   switchMaterial:
   - {fileID: 2100000, guid: c6529490c26e1444dba4ec1712fc8556, type: 2}
   - {fileID: 2100000, guid: 980f684a06b56934a8760a992b7467cc, type: 2}
@@ -12824,7 +12833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mocapDirector: {fileID: 0}
 --- !u!1 &1435283338
 GameObject:
   m_ObjectHideFlags: 0
@@ -13322,7 +13330,6 @@ MonoBehaviour:
   requestType: 1
   tendencyListToDestroy: 0
   localeToParse: 1
-  DataMgr: {fileID: 0}
   TendencyObjects:
     ListOfTendencyLists:
     - tendency: 0
@@ -13369,8 +13376,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tendencyAlgorithm: 0
-  timelineDirector: {fileID: 0}
-  startTime: 0
   timeToWait: 0
 --- !u!1001 &1526914211
 PrefabInstance:
@@ -13608,7 +13613,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locale: 3
-  DataMgr: {fileID: 0}
   localeTendency: 0
   localeTendencyRating: 0
 --- !u!4 &1586456583
@@ -14321,7 +14325,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locale: 4
-  DataMgr: {fileID: 0}
   localeTendency: 0
   localeTendencyRating: 0
 --- !u!1 &1652679791
@@ -15067,7 +15070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mocapDirector: {fileID: 0}
 --- !u!1 &1702451636
 GameObject:
   m_ObjectHideFlags: 0
@@ -15116,14 +15118,12 @@ MonoBehaviour:
   tendencyAlgorithm: 0
   requestType: 1
   localeToParse: 0
-  volume: {fileID: 0}
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
   - {fileID: 11400000, guid: 387bba26ceb95ad4bac16cef13161c1e, type: 2}
   - {fileID: 11400000, guid: 6450c9fce03652d42bab475285169d84, type: 2}
   presetVolumeProfile: {fileID: 0}
-  DataMgr: {fileID: 0}
 --- !u!114 &1702451639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15273,14 +15273,12 @@ MonoBehaviour:
   tendencyAlgorithm: 0
   requestType: 1
   localeToParse: 0
-  volume: {fileID: 0}
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
   - {fileID: 11400000, guid: 387bba26ceb95ad4bac16cef13161c1e, type: 2}
   - {fileID: 11400000, guid: 6450c9fce03652d42bab475285169d84, type: 2}
   presetVolumeProfile: {fileID: 0}
-  DataMgr: {fileID: 0}
 --- !u!114 &1723184839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15362,7 +15360,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locale: 0
-  DataMgr: {fileID: 0}
   localeTendency: 0
   localeTendencyRating: 0
 --- !u!1 &1749335918
@@ -15896,7 +15893,6 @@ MonoBehaviour:
       - {fileID: 8062815487814896933, guid: ca24c207349e328428e6d6c5ab9a5445, type: 3}
       - {fileID: 1216038610440337389, guid: b69d19124512e7a41aaba716c5397ec9, type: 3}
       - {fileID: 6563604617043299407, guid: 3d3ef6305b102a44b99ff1dbfa4d74de, type: 3}
-  amortized: 0
 --- !u!1001 &1790037216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16022,7 +16018,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locale: 3
-  DataMgr: {fileID: 0}
   localeTendency: 0
   localeTendencyRating: 0
 --- !u!1001 &1794094168
@@ -16296,7 +16291,6 @@ MonoBehaviour:
       - {fileID: 8062815487814896933, guid: ca24c207349e328428e6d6c5ab9a5445, type: 3}
       - {fileID: 1216038610440337389, guid: b69d19124512e7a41aaba716c5397ec9, type: 3}
       - {fileID: 6563604617043299407, guid: 3d3ef6305b102a44b99ff1dbfa4d74de, type: 3}
-  amortized: 0
 --- !u!1001 &1820870768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17317,7 +17311,6 @@ MonoBehaviour:
   requestType: 1
   tendencyListToDestroy: 0
   localeToParse: 1
-  DataMgr: {fileID: 0}
   TendencyObjects:
     ListOfTendencyLists:
     - tendency: 0
@@ -17364,8 +17357,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tendencyAlgorithm: 0
-  timelineDirector: {fileID: 0}
-  startTime: 0
   timeToWait: 0
 --- !u!1001 &2027412467
 PrefabInstance:
@@ -17638,7 +17629,6 @@ MonoBehaviour:
       - {fileID: 8062815487814896933, guid: ca24c207349e328428e6d6c5ab9a5445, type: 3}
       - {fileID: 1216038610440337389, guid: b69d19124512e7a41aaba716c5397ec9, type: 3}
       - {fileID: 6563604617043299407, guid: 3d3ef6305b102a44b99ff1dbfa4d74de, type: 3}
-  amortized: 0
 --- !u!1001 &2035970110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17758,14 +17748,12 @@ MonoBehaviour:
   tendencyAlgorithm: 0
   requestType: 1
   localeToParse: 0
-  volume: {fileID: 0}
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
   - {fileID: 11400000, guid: 387bba26ceb95ad4bac16cef13161c1e, type: 2}
   - {fileID: 11400000, guid: 6450c9fce03652d42bab475285169d84, type: 2}
   presetVolumeProfile: {fileID: 0}
-  DataMgr: {fileID: 0}
 --- !u!114 &2038092874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18112,7 +18100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mocapDirector: {fileID: 0}
 --- !u!1001 &2085838712
 PrefabInstance:
   m_ObjectHideFlags: 0
