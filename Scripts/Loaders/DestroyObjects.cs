@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     public class DestroyObjects : MonoBehaviour
     {
@@ -32,27 +32,27 @@ namespace ReactiveMedia
         public void DoDestroyObjects()
         {
             Dictionary<Tendencies, double> TendenciesFromDataMgr = new Dictionary<Tendencies, double>();
+            DataMgr = FindObjectOfType<AttentionDataManager>();
+            Tendencies TendencyToDestroy;
+            switch (requestType)
+            {
+                case RequestType.Global:
+                    TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
+                    break;
+                case RequestType.Locale:
+                    TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeToParse);
+                    break;
+                default:
+                    break;
+            }
+
             switch (tendencyAlgorithm)
             {
                 case TendencyAlgorithm.MaxValue:
-                    DataMgr = FindObjectOfType<AttentionDataManager>();
-                    Tendencies MaxKey;
-                    switch (requestType)
-                    {
-                        // maybe want inverse/min value options here too...?
-                        case RequestType.Locale:
-                            TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeToParse);
-                            break;
-                        case RequestType.Global:
-                            TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
-                            break;
-                        default:
-                            break;
-                    }
-                    MaxKey = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
+                    TendencyToDestroy = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
                     foreach (var tendencyList in TendencyObjects.ListOfTendencyLists)
                     {
-                        if (tendencyList.tendency == MaxKey)
+                        if (tendencyList.tendency == TendencyToDestroy)
                         {
                             foreach (var obj in tendencyList.TendencyPrefabs)
                             {
@@ -62,24 +62,10 @@ namespace ReactiveMedia
                     }
                     break;
                 case TendencyAlgorithm.MinValue:
-                    DataMgr = FindObjectOfType<AttentionDataManager>();
-                    Tendencies MinKey;
-                    switch (requestType)
-                    {
-                        // maybe want inverse/min value options here too...?
-                        case RequestType.Locale:
-                            TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeToParse);
-                            break;
-                        case RequestType.Global:
-                            TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
-                            break;
-                        default:
-                            break;
-                    }
-                    MinKey = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
+                    TendencyToDestroy = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
                     foreach (var tendencyList in TendencyObjects.ListOfTendencyLists)
                     {
-                        if (tendencyList.tendency == MinKey)
+                        if (tendencyList.tendency == TendencyToDestroy)
                         {
                             foreach (var obj in tendencyList.TendencyPrefabs)
                             {

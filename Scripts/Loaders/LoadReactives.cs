@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     public class LoadReactives : MonoBehaviour
     {
@@ -112,9 +112,8 @@ namespace ReactiveMedia
             yield return null;
         }
 
-        private IEnumerator ProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private List<KeyValuePair<Tendencies, int>> MapOrderedRatings(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
         {
-            //print(String.Join(", ", orderedTendencyAttentionRatings));
             double tendencySum = orderedTendencyAttentionRatings.Sum(tendency => tendency.Value);
             int placementPointsCount = listOfTendencyPlacements.tendencyPlacements.Count();
             Dictionary<Tendencies, int> mappedTendencyAttentionRatings = new Dictionary<Tendencies, int>();
@@ -126,9 +125,11 @@ namespace ReactiveMedia
             var orderedMappedRatings = mappedTendencyAttentionRatings.ToList();
             orderedMappedRatings.Sort((x, y) => x.Value.CompareTo(y.Value));
             orderedMappedRatings.Reverse();
-            //print(String.Join(", ", orderedMappedRatings));
+            return orderedMappedRatings;
+        }
 
-            // this seems like 4th impl? - it works sort of. above could be put into a separate method?
+        private static List<Tendencies> BuildListOfTendenciesToMapForPlacements(List<KeyValuePair<Tendencies, int>> orderedMappedRatings)
+        {
             List<Tendencies> tendencyList = new List<Tendencies>();
             foreach (var rating in orderedMappedRatings)
             {
@@ -138,7 +139,11 @@ namespace ReactiveMedia
                 }
             }
 
-            //print(String.Join(", ", tendencyList));
+            return tendencyList;
+        }
+
+        private void SpawnObjectsBasedOnTendenciesAtPlacementPoints(List<Tendencies> tendencyList)
+        {
             // there may be an index out of range issue down here - consider how to handle - trycatch?
             for (int i = 0; i < listOfTendencyPlacements.tendencyPlacements.Count; i++)
             {
@@ -147,51 +152,30 @@ namespace ReactiveMedia
                     listOfTendencyPlacements.tendencyPlacements[i].placementPoint
                     );
             }
+        }
+
+        private IEnumerator ProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        {
+            List<KeyValuePair<Tendencies, int>> orderedMappedRatings = MapOrderedRatings(orderedTendencyAttentionRatings);
+            // this seems like 4th impl? - it works sort of. above could be put into a separate method?
+            List<Tendencies> tendencyList = BuildListOfTendenciesToMapForPlacements(orderedMappedRatings);
+            SpawnObjectsBasedOnTendenciesAtPlacementPoints(tendencyList);
 
             yield return null;
         }
 
         private IEnumerator InverseProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
         {
-            //print(String.Join(", ", orderedTendencyAttentionRatings));
-            double tendencySum = orderedTendencyAttentionRatings.Sum(tendency => tendency.Value);
-            int placementPointsCount = listOfTendencyPlacements.tendencyPlacements.Count();
-            Dictionary<Tendencies, int> mappedTendencyAttentionRatings = new Dictionary<Tendencies, int>();
-            foreach (var tendency in orderedTendencyAttentionRatings)
-            {
-                var mappedRating = mapTendencyToSpawnListLength(tendency.Value, tendencySum, placementPointsCount);
-                mappedTendencyAttentionRatings.Add(tendency.Key, mappedRating);
-            }
-            var orderedMappedRatings = mappedTendencyAttentionRatings.ToList();
-            orderedMappedRatings.Sort((x, y) => x.Value.CompareTo(y.Value));
-            orderedMappedRatings.Reverse();
-            //print(String.Join(", ", orderedMappedRatings));
+            List<KeyValuePair<Tendencies, int>> orderedMappedRatings = MapOrderedRatings(orderedTendencyAttentionRatings);
 
+            // Inversion Logic
             // the smallest tendency gets the max tendency's placement points, 2nd smallest = 2nd biggest, etc.
             List<Tendencies> reverseTendencies = (from kvp in orderedMappedRatings select kvp.Key).Distinct().Reverse().ToList();
             List<int> ratingValues = (from kvp in orderedMappedRatings select kvp.Value).ToList();
             List<KeyValuePair<Tendencies, int>> inverseProportionalRatings = reverseTendencies.Zip(ratingValues, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v).ToList();
-            //print("INVERTING!");
-            //print(String.Join(", ", inverseProportionalRatings));
 
-            List<Tendencies> tendencyList = new List<Tendencies>();
-            foreach (var rating in inverseProportionalRatings)
-            {
-                for (int i = 0; i < rating.Value; i++)
-                {
-                    tendencyList.Add(rating.Key);
-                }
-            }
-
-            //print(String.Join(", ", tendencyList));
-
-            for (int i = 0; i < listOfTendencyPlacements.tendencyPlacements.Count; i++)
-            {
-                spawnObject(
-                    listOfTendencyPlacements.tendencyPlacements[i].tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(tendencyList[i])),
-                    listOfTendencyPlacements.tendencyPlacements[i].placementPoint
-                    );
-            }
+            List<Tendencies> tendencyList = BuildListOfTendenciesToMapForPlacements(orderedMappedRatings);
+            SpawnObjectsBasedOnTendenciesAtPlacementPoints(tendencyList);
 
             yield return null;
         }
@@ -199,65 +183,56 @@ namespace ReactiveMedia
         private IEnumerator CompetitorDistributionLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
         {
             throw new System.NotImplementedException();
-            //print(String.Join(", ", orderedTendencyAttentionRatings));
-            double tendencySum = orderedTendencyAttentionRatings.Sum(tendency => tendency.Value);
-            int placementPointsCount = listOfTendencyPlacements.tendencyPlacements.Count();
-            Dictionary<Tendencies, int> mappedTendencyAttentionRatings = new Dictionary<Tendencies, int>();
-            foreach (var tendency in orderedTendencyAttentionRatings)
-            {
-                var mappedRating = mapTendencyToSpawnListLength(tendency.Value, tendencySum, placementPointsCount);
-                mappedTendencyAttentionRatings.Add(tendency.Key, mappedRating);
-            }
-            var orderedMappedRatings = mappedTendencyAttentionRatings.ToList();
-            orderedMappedRatings.Sort((x, y) => x.Value.CompareTo(y.Value));
-            orderedMappedRatings.Reverse();
-            //print(String.Join(", ", orderedMappedRatings));
+            ////print(String.Join(", ", orderedTendencyAttentionRatings));
+            //List<KeyValuePair<Tendencies, int>> orderedMappedRatings = MapOrderedRatings(orderedTendencyAttentionRatings);
+            ////print(String.Join(", ", orderedMappedRatings));
 
-            // Max tendency gets the remainder placement points
-            // the placement points it would get are distributed amongst other tendencies.
-            // e.g. if 6/10 max, 6 points evenly divided amongst other tendencies, max gets remainder?
-            // TODO: THIS CODE DOESN'T WORK PROPERLY!
-            List<Tendencies> distroTendencies = new List<Tendencies>();
-            int maxVal = orderedMappedRatings[0].Value;
-            int distroMaxVal = maxVal / (orderedMappedRatings.Count - 1);
-            int remainderVal = 0;
-            for (int i = 1; i < orderedMappedRatings.Count; i++)
-            {
-                remainderVal += orderedMappedRatings[i].Value;
-            }
-            List<int> distroValues = new List<int>();
-            distroValues.Add(remainderVal);
-            for (int i = 1; i < orderedMappedRatings.Count; i++)
-            {
-                distroValues.Add(distroMaxVal);
-            }
-            List<KeyValuePair<Tendencies, int>> competitorDistroRatings = distroTendencies.Zip(distroValues, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v).ToList();
-            //print("COMPETITOR DISTRIBUTION!");
-            //print(String.Join(", ", competitorDistroRatings));
+            //// Max tendency gets the remainder placement points
+            //// the placement points it would get are distributed amongst other tendencies.
+            //// e.g. if 6/10 max, 6 points evenly divided amongst other tendencies, max gets remainder?
+            //// TODO: THIS CODE DOESN'T WORK PROPERLY!
+            //List<Tendencies> distroTendencies = new List<Tendencies>();
+            //int maxVal = orderedMappedRatings[0].Value;
+            //int distroMaxVal = maxVal / (orderedMappedRatings.Count - 1);
+            //int remainderVal = 0;
+            //for (int i = 1; i < orderedMappedRatings.Count; i++)
+            //{
+            //    remainderVal += orderedMappedRatings[i].Value;
+            //}
+            //List<int> distroValues = new List<int>();
+            //distroValues.Add(remainderVal);
+            //for (int i = 1; i < orderedMappedRatings.Count; i++)
+            //{
+            //    distroValues.Add(distroMaxVal);
+            //}
+            //List<KeyValuePair<Tendencies, int>> competitorDistroRatings = distroTendencies.Zip(distroValues, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v).ToList();
+            ////print("COMPETITOR DISTRIBUTION!");
+            ////print(String.Join(", ", competitorDistroRatings));
 
-            List<Tendencies> tendencyList = new List<Tendencies>();
-            foreach (var rating in competitorDistroRatings)
-            {
-                for (int i = 0; i < rating.Value; i++)
-                {
-                    tendencyList.Add(rating.Key);
-                }
-            }
+            //List<Tendencies> tendencyList = new List<Tendencies>();
+            //foreach (var rating in competitorDistroRatings)
+            //{
+            //    for (int i = 0; i < rating.Value; i++)
+            //    {
+            //        tendencyList.Add(rating.Key);
+            //    }
+            //}
 
-            // spawn objects based on above.
-            for (int i = 0; i < listOfTendencyPlacements.tendencyPlacements.Count; i++)
-            {
-                spawnObject(
-                    listOfTendencyPlacements.tendencyPlacements[i].tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(tendencyList[i])),
-                    listOfTendencyPlacements.tendencyPlacements[i].placementPoint
-                    );
-            }
+            //// spawn objects based on above.
+            //for (int i = 0; i < listOfTendencyPlacements.tendencyPlacements.Count; i++)
+            //{
+            //    spawnObject(
+            //        listOfTendencyPlacements.tendencyPlacements[i].tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(tendencyList[i])),
+            //        listOfTendencyPlacements.tendencyPlacements[i].placementPoint
+            //        );
+            //}
 
-            yield return null;
+            //yield return null;
         }
 
         private IEnumerator PresetLoader()
         {
+            // TODO: Change this from a single tendency to spawn an authored list of objects.
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
                 spawnObject(

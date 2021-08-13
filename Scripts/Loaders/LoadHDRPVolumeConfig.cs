@@ -1,4 +1,4 @@
-using ReactiveMedia;
+using ReactiveMiseEnScene;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     public class LoadHDRPVolumeConfig : MonoBehaviour
     {
@@ -25,30 +25,32 @@ namespace ReactiveMedia
         {
             volume = GetComponent<Volume>();
 
+            DataMgr = FindObjectOfType<AttentionDataManager>();
+            Dictionary<Tendencies, double> TendenciesFromDataMgr = new Dictionary<Tendencies, double>();
+            Tendencies TendencyForVolProfile;
+            switch (requestType)
+            {
+                // note here: these are max-value derived, so akin to first-past the post... maybe check a threshold?
+                // also offer an inversion / min value?
+                case RequestType.Global:
+                    TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
+                    break;
+                case RequestType.Locale:
+                    TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeToParse);
+                    break;
+                default:
+                    break;
+            }
+
             switch (tendencyAlgorithm)
             {
                 case TendencyAlgorithm.MaxValue:
-                    DataMgr = FindObjectOfType<AttentionDataManager>();
-                    Dictionary<Tendencies, double> TendenciesFromDataMgr = new Dictionary<Tendencies, double>();
-                    Tendencies MaxKey;
-                    switch (requestType)
-                    {
-                        // note here: these are max-value derived, so akin to first-past the post... maybe check a threshold?
-                        // also offer an inversion / min value?
-                        case RequestType.Locale:
-                            TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeToParse);
-                            break;
-                        case RequestType.Global:
-                            TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
-                            break;
-                        default:
-                            break;
-                    }
-                    MaxKey = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
-                    volume.profile = volumeProfiles.Find(profile => profile.name.Contains(MaxKey.ToString()));
+                    TendencyForVolProfile = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
+                    volume.profile = volumeProfiles.Find(profile => profile.name.Contains(TendencyForVolProfile.ToString()));
                     break;
                 case TendencyAlgorithm.MinValue:
-                    NotImpl();
+                    TendencyForVolProfile = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
+                    volume.profile = volumeProfiles.Find(profile => profile.name.Contains(TendencyForVolProfile.ToString()));
                     break;
                 case TendencyAlgorithm.Proportional:
                     NotImpl();
