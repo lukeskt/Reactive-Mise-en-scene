@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     // Eventually roll these enums into the SO, and replace some with lists of strings? Would be more flexible?
     public enum Tendencies
