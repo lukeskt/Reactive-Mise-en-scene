@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     [RequireComponent(typeof(Focus))]
     public class FocusMeasures : MonoBehaviour
@@ -102,7 +102,7 @@ namespace ReactiveMedia
         {
 #if UNITY_EDITOR
             // implement debug / visualisation logic here?
-            Handles.Label(transform.position, totalRating.ToString());
+            Handles.Label(transform.position, $"{tendency}\n{totalRating}");
 #endif
         }
 

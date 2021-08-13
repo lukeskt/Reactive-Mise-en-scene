@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine.Events;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     public class Focus : MonoBehaviour
     {
