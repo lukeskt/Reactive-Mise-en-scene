@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     public class LoadSetDressing : MonoBehaviour
     {

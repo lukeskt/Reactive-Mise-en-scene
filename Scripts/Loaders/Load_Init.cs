@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     public class Load_Init : MonoBehaviour
     {

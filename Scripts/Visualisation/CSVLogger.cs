@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Analytics;
-using SimpleJSON;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     public class CSVLogger : MonoBehaviour
     {
@@ -52,23 +51,6 @@ namespace ReactiveMedia
                 // this doesn't work, get the right values...?
                 csvFile.WriteLine($"{obj.name}, {obj.locale}, {obj.tendency}, {obj.attentionRating}, {String.Join(", ", DataMgr.GetLocaleTendency(DataMgr.attentionObjects, obj.locale))}, {String.Join(", ", DataMgr.GetGlobalTendency(DataMgr.attentionObjects))}");
             }
-        }
-
-        private void JSONTest()
-        {
-            var beep = @"{
-            ""version"": ""1.0"",
-            ""data"": {
-                ""sampleArray"": [
-                    ""string value"",
-                    5,
-                        {
-                        ""name"": ""sub object""
-                        }
-                    ]
-                }
-            }";
-            JSON.Parse(beep);
         }
 
         private void DataMgrToJSON()

@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace ReactiveMedia
+#if UNITY_EDITOR
+namespace ReactiveMiseEnScene
 {
     public class Visualiser : MonoBehaviour
     {
@@ -52,3 +53,4 @@ namespace ReactiveMedia
         }
     }
 }
+#endif

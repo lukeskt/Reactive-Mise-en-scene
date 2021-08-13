@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     public class LoadTimeline : MonoBehaviour
     {
