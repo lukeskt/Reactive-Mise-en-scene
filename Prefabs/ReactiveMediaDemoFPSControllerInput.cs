@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     // Adapted from the standard assets FPS controller 
     // TODO: fully migrate to new input system.
