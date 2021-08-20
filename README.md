@@ -78,21 +78,17 @@ For example, on approaching a new locale, the player's presence might trigger wh
 
 ## Contributing
 
-Pull requests
-
-Using plugin in your projects.
-
-Call for study participants and case studies.
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Credits
 
-Focus interaction concept.
+The Focus implementation in this plugin is inspired by the Focus interaction work of Benford and Fahlén in [*A Spatial Model of Interaction in Large Virtual Environments*](https://link.springer.com/chapter/10.1007/978-94-011-2094-4_8) and Greenhalgh and Benford in [*MASSIVE: a distributed virtual reality system incorporating spatial trading*](https://ieeexplore.ieee.org/abstract/document/499999).
 
-General help and advice.
+Thank you to my supervisors Martin Flintham, Sarah Martindale, and Steve Benford for all guidance and advice received so far and in the future as my PhD progresses.
 
-Supervisor acks.
+Thank you also to Paul Tennent, Christine Li, Chris Greenhalgh, Stuart Reeves, Jocelyn Spence and so many others in the Mixed Reality Lab at University of Nottingham for advice, feedback, and conversations on my research and everything else.
 
-BBC R&D acks.
+Finally thank you to my industry partner BBC R&D, with special thanks to Si Lumb, Phil Stenton, Tim Pearce and Rajiv Ramdhany for help and guidance, and encouraging me to release this plugin as a means to widening its reach.
 
 ## License
 
