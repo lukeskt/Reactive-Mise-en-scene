@@ -18,7 +18,7 @@ This plugin implements some of these design concepts in Unity and is available f
 
 ## Installation
 
-See the [releases](./releases) page for downloads.
+See [releases](./releases) for downloads.
 
 ### .unitypackage method
 
@@ -75,6 +75,10 @@ A locale is an area or location an object is associated with. It is akin to Unit
 A tendency is a flavour or aspect of the narrative that is presented. It is not quite the same as a branch in the typical tree-based interactive narrative, rather at whatever point or interval you decide when using the reactive mise-en-scène system you can check the attention ratings for each tendency either globally or for a specific locale, and from there make decisions on the kind of content to present to the player.
 
 For example, on approaching a new locale, the player's presence might trigger which objects to load in the locale based on the ratings for each tendency. You could also decide to check which tendency has the highest rating, and load a dramatic scene in the area based on this, or choose to load a dramatic scene for the lowest rated tendency to challenge the player's assumptions. Decision algorithms are discussed in more detail below.
+
+## Further Documentation
+
+See the [wiki](https://github.com/lukeskt/Reactive-Mise-en-scene/wiki) for more detailed information about the plugin.
 
 ## Contributing
 
