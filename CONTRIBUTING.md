@@ -26,7 +26,7 @@ Did you write a patch that fixes a bug?
 
 ### New Features
 
-As noted above, new features will in general not be considered due to the relation of this plugin to active PhD research. Please email me to discuss via [rmes@oneirica.systems](mailto:rmes@oneirica.systems?subject=RMES New Feature Suggestion).
+As noted above, new features will in general not be considered due to the relation of this plugin to active PhD research. Please email me to discuss via [rmes@oneirica.systems](mailto:rmes@oneirica.systems?subject=RMES%20New%20Feature%20Suggestion).
 
 ### Contributing to Documentation
 
@@ -84,7 +84,7 @@ This Code of Conduct applies within all community spaces, and also applies when 
 
 ### Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at [rmes@oneirica.systems](mailto:rmes@oneirica.systems?subject=RMES Community Complaint). All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at [rmes@oneirica.systems](mailto:rmes@oneirica.systems?subject=RMES%20Community%20Complaint). All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 
