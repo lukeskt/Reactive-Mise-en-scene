@@ -28,7 +28,7 @@ Did you write a patch that fixes a bug?
 
 As noted above, new features will in general not be considered due to the relation of this plugin to active PhD research. Please email me to discuss via [rmes@oneirica.systems](mailto:rmes@oneirica.systems?subject=RMES New Feature Suggestion).
 
-## Contributing to Documentation
+### Contributing to Documentation
 
 Please consider adding to the [wiki](https://github.com/lukeskt/Reactive-Mise-en-scene/wiki).
 
