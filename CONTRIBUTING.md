@@ -6,11 +6,41 @@ As such, the work itself must be the author's own, so significant changes, reimp
 
 That said, bugfixes are welcome, and additional algorithms for the loader system are welcome also, but with clear caveats and credits to their creators.
 
-Issues are very welcome, happy to look into bugs, and will consider requests for additional functionality (though please note these requests need to be balanced with the focus required for my research).
+Issues are welcome, happy to look into bugs, and will consider requests for additional functionality (though please note these requests need to be balanced with the focus required for my research).
 
-## Steps for creating good Issues
+## Steps for Good Contributions
 
-## Steps for creating good Pull Requests
+### Bugs
+
+* Ensure the bug was not already reported by searching on GitHub under [Issues](https://github.com/lukeskt/Reactive-Mise-en-scene/issues).
+* If you're unable to find an open issue addressing the problem, open a new one. Be sure to include a title and clear description, as much relevant information as possible, and a code sample demonstrating the expected behavior that is not occurring.
+
+### Patches
+
+Did you write a patch that fixes a bug?
+
+* Open a new GitHub pull request with the patch.
+* Ensure the PR description clearly describes the problem and solution. Include the relevant issue number if applicable.
+
+(adapted from: https://github.com/rails/rails/blob/main/CONTRIBUTING.md)
+
+### New Features
+
+As noted above, new features will in general not be considered due to the relation of this plugin to active PhD research. Please email me to discuss via [rmes@oneirica.systems](mailto:rmes@oneirica.systems?subject=RMES New Feature Suggestion).
+
+## Contributing to Documentation
+
+Please consider adding to the [wiki](https://github.com/lukeskt/Reactive-Mise-en-scene/wiki).
+
+* Manually create a fork of the wiki on your Github account:
+    * Create a new repository on your github account. Let's call it "Taffy-Wiki".
+    * Clone the wiki repo to your local machine somewhere.
+    * Remove the original "origin" remote and add your github repo as new "origin" git.
+    * Make your proposed changes locally, then push them to your github account.
+    * Submit an issue requesting that I do a review of your changes and merge them in. Please be sure to include a link to your repo and describe what you've changed.
+    * Goto #2
+
+(adapted from: http://fusiongrokker.com/post/how-you-can-contribute-to-taffy-documentation)
 
 ## Documentation
 
