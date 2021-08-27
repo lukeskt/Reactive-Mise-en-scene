@@ -1,84 +1,61 @@
 # Reactive Mise-en-scène Unity Plugin
 
-## Introduction
+Reactive Mise-en-scène is a plugin that uses the position of objects on screen as a proxy for viewer/player attention, and this attention is then measured over time and associated with different narrative tendencies. 
 
-Reactive Mise-en-scène is a design concept being developed by Luke Skarth-Hayley for his PhD thesis.
+Each specified object has attention tracked over time and is tagged with a locale and a tendency. Locales are the locations/scenes/areas objects reside within, and tendencies are the narrative tendencies/branches/moods with which objects are associated.
 
-The concept seeks to reconcile tensions between interactivity and narrative experiences by using tacit and implicit inputs from the player, in the form of their attention on specific objects within set locations, to drive changes in the environment/set dressing of scenes, and the narrative tendency over time.
+Each locale has a dominant narrative tendency, which is determined over time based on the total attention rating for objects within it, by their associated tendencies.
 
-This plugin implements some of these design concepts in Unity and is available for others to explore the possibilities enabled by the system and said concepts.
+On entering a new locale, we can use the loader system to determine how elements of the locale are changed either by the global tendency of the narrative, or the tendency of another locale (e.g., the last locale visited). The loader system can provide positive, negative, or more balanced feedback into the overall system, enabling experiences that narrow to a single tendency outcome or present different tendencies/moods/perspectives over time and/or per locale.
+
+The purpose of the plugin is to enable reactive narrative experiences that are shaped via the implicit and tacit interactions of the user through attention, rather than by their explicit actions in game or their selection of branching choices seen in other narrative systems. However, the system is flexible enough that it can be adapted to other use cases.
+
+Please note that this plugin is part of an on-going PhD research project by the author, Luke Skarth-Hayley. I am keen to discuss use cases with creators, see what people use the system for, and perhaps conduct studies with users. I am also planning game jams and other means to promote and explore the plugin and the design concepts underpinning it. Please follow me on Twitter [@lukeskarth](https://www.twitter.com/lukeskarth) or get in touch via rmes@oneirica.systems.
 
 ## Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Further Docuemntation](#further-documentation)
 * [Contributing](#contributing)
 * [Credits](#credits)
 * [License](#license)
 
 ## Installation
 
-See [releases](./releases) for downloads.
+*Tutorial Video pending*
 
-### .unitypackage method
+### .unitypackage
 
-Open the Unity project you want to import the plugin into.
+Download the package from [releases](releases).
 
-In the menu bar at the top of the editor window click Assets -> Import Package -> Custom Package...
+Follow the Unity documentation here: https://docs.unity3d.com/Manual/AssetPackagesImport.html 
 
-Find the .unitypackage you downloaded, select it, click Open.
+### Package Manager
 
-If this is the first time you are using the plugin with the project, just click Import. You should now have a folder called ReactiveMise-en-scene under the Assets folder in the Project file explorer.
+Please note the package manager installation method is pending setup, it won’t work at present.
 
-### Package Manager method
+Download the tar.gz file from [releases](releases).
 
-The modern Unity package manager install is pending creation...
+Follow the Unity documentation here: https://docs.unity3d.com/Manual/upm-ui-tarball.html 
 
 ## Usage
 
-Reactive Mise-en-scène
+*Tutorial Video pending*
 
-Tutorial Video pending...
+The Reactive Mise-en-scène system’s core functionality is as follows:
 
-To cover: Focus.cs, FocusMeasures.cs, AttentionDataManager.cs, Loader scripts...
+1.	Customise the locales and tendencies to be relevant to your project by editing…?!?
+2.	Create the actual locales/areas you want in your experience or game, along with the objects, and divide these up per locale based on which ones you want to load depending on the tendency. This might be complex, so refer to the tutorial video when available, or check out the demo scene in the plugin.
+3.	Add the Focus and Focus Measures components to all the objects you want to track player attention on. Set the Locale and Tendency on each.
+4.	Add the Attention Data Manager prefab (containing the Attention Data Manager component) to the scene.
+5.	Add loaders and configure which objects and elements they will load dependent upon which locale/global tendency you want to track, and the algorithm that will be used to determine what to load. You might want to use the Locale prefab, which is a nested set of game objects with attached loader scripts, as a guide to how to set up a locale.
 
-### Core Features
-
-- Focus-based [1] interactions where objects are aware of their position within the camera viewport.
-- Attention metrics derived from the object's position in the camera viewport over time.
-- A datamanager which tracks objects and their association with specific locales and narrative tendencies.
-- A collection of loader scripts which request data from the datamanager to determine how to configure further locales and the narrative elements within them.
-- A collection of algorithms in the loader scripts to offer different means of configuring scenes/locales.
-
-### Focus 
-
-Focus is an interaction concept created by Greenhalgh *et al.* [1]. 
-
-### Attention
-
-The conception of Attention in this plugin is the amount of time an object is attended to by the player, i.e. how long the object is on screen, and at varying points from the centre of the screen. This is used to determine a simple Attention metric for each object. Each object is associated with a narrative tendency and a locale (see below), and the metrics for each object feed into locale-based and global levels of attention to specific narrative tendencies, which are then referenced elsewhere in the system or in code you write in order to drive adaptive and reactive changes in the experience.
-
-### DataManager
-
-The DataManager holds a list of structs containing the key information from each reactive object which has an attention metric associated with it. The DataManager calculates the overall attention rating per locale and globally. It is a singleton object that persists across scenes in an experience to track attention without needing all reactive objects to persist in memory.
-
-### Loader System / Decision Algorithms
-
-As mentioned above, there are a series of loaders for different parts of a locale. Each of these can load content based on different decision algorithms.
-
-### Locales
-
-A locale is an area or location an object is associated with. It is akin to Unity's built-in tag system, so you are not tied to logically parenting an object to a specific locale, you simply select the locale from a dropdown list on the FocusMeasures script
-
-### Tendencies
-
-A tendency is a flavour or aspect of the narrative that is presented. It is not quite the same as a branch in the typical tree-based interactive narrative, rather at whatever point or interval you decide when using the reactive mise-en-scène system you can check the attention ratings for each tendency either globally or for a specific locale, and from there make decisions on the kind of content to present to the player.
-
-For example, on approaching a new locale, the player's presence might trigger which objects to load in the locale based on the ratings for each tendency. You could also decide to check which tendency has the highest rating, and load a dramatic scene in the area based on this, or choose to load a dramatic scene for the lowest rated tendency to challenge the player's assumptions. Decision algorithms are discussed in more detail below.
+This is a simplification of the process, so please do watch the tutorial video above and/or refer to the further documentation in the wiki as linked below.
 
 ## Further Documentation
 
-See the [wiki](https://github.com/lukeskt/Reactive-Mise-en-scene/wiki) for more detailed information about the plugin.
+See the [wiki](https://github.com/lukeskt/Reactive-Mise-en-scene/wiki) for more detailed information about the plugin, along with the design and academic underpinnings of the system.
 
 ## Contributing
 
@@ -96,4 +73,4 @@ Finally thank you to my industry partner BBC R&D, with special thanks to Si Lumb
 
 ## License
 
-Released under MIT license. See [LICENSE.](./LICENSE)
+Released under [MIT License](./LICENSE).
