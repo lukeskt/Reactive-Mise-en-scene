@@ -3339,6 +3339,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733a8ae5d3df174bbbe08928c2fd17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
+  requestType: 0
+  locale: 
+  tendency: 
+  algorithm: 0
 --- !u!1 &451193686
 GameObject:
   m_ObjectHideFlags: 0
@@ -5628,6 +5633,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733a8ae5d3df174bbbe08928c2fd17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
+  requestType: 0
+  locale: 
+  tendency: 
+  algorithm: 0
 --- !u!1001 &713724057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8860,6 +8870,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733a8ae5d3df174bbbe08928c2fd17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
+  requestType: 0
+  locale: 
+  tendency: 
+  algorithm: 0
 --- !u!1001 &1085033054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11281,6 +11296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733a8ae5d3df174bbbe08928c2fd17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
+  requestType: 0
+  locale: 
+  tendency: 
+  algorithm: 0
 --- !u!1 &1234411991
 GameObject:
   m_ObjectHideFlags: 0
@@ -14168,6 +14188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733a8ae5d3df174bbbe08928c2fd17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
+  requestType: 0
+  locale: 
+  tendency: 
+  algorithm: 0
 --- !u!43 &1638820852
 Mesh:
   m_ObjectHideFlags: 0
@@ -15379,6 +15404,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1748954771}
   - component: {fileID: 1748954772}
+  - component: {fileID: 1748954775}
+  - component: {fileID: 1748954774}
+  - component: {fileID: 1748954773}
   m_Layer: 0
   m_Name: Area_00
   m_TagString: Untagged
@@ -15422,6 +15450,58 @@ MonoBehaviour:
   locale: 0
   localeTendency: 0
   localeTendencyRating: 0
+--- !u!114 &1748954773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748954770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec5d6ee91604f142bc73fec507a3a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tendencyAlgorithm: 0
+  presetTendency: 0
+  requestType: 0
+  localeRequest: 0
+  listOfTendencyPlacements:
+    tendencyPlacements: []
+--- !u!114 &1748954774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748954770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a273c65f06adf6e4ca9fc31f6abd2835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tendencyAlgorithm: 0
+  requestType: 0
+  localeToParse: 0
+  volumeProfiles: []
+  presetVolumeProfile: {fileID: 0}
+--- !u!114 &1748954775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748954770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3733a8ae5d3df174bbbe08928c2fd17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
+  requestType: 0
+  locale: WhitespaceLab
+  tendency: Neutral
+  algorithm: 0
 --- !u!1 &1749335918
 GameObject:
   m_ObjectHideFlags: 0
@@ -16935,6 +17015,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733a8ae5d3df174bbbe08928c2fd17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
+  requestType: 0
+  locale: 
+  tendency: 
+  algorithm: 0
 --- !u!1001 &1991380347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17951,6 +18036,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733a8ae5d3df174bbbe08928c2fd17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
+  requestType: 0
+  locale: 
+  tendency: 
+  algorithm: 0
 --- !u!1 &2059438327
 GameObject:
   m_ObjectHideFlags: 0
@@ -18416,6 +18506,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733a8ae5d3df174bbbe08928c2fd17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
+  requestType: 0
+  locale: 
+  tendency: 
+  algorithm: 0
 --- !u!1 &2141968864
 GameObject:
   m_ObjectHideFlags: 0
