@@ -23,9 +23,9 @@ namespace ReactiveMiseEnScene
     //}
 
     [System.Serializable]
-    public class AttentionDataManager : MonoBehaviour
+    public class ReactiveMesDataManager : MonoBehaviour
     {
-        public static AttentionDataManager attentionStore;
+        public static ReactiveMesDataManager attentionStore;
 
         public List<AttnDataStruct> attentionObjects = new List<AttnDataStruct>();
 

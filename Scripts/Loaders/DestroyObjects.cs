@@ -12,7 +12,7 @@ namespace ReactiveMiseEnScene
         public Tendencies tendencyListToDestroy;
         //public TendencyAlgorithm tendencyDecision;
         public Locales localeToParse;
-        AttentionDataManager DataMgr;
+        ReactiveMesDataManager DataMgr;
 
         [System.Serializable]
         public class tendencyPrefabs
@@ -32,7 +32,7 @@ namespace ReactiveMiseEnScene
         public void DoDestroyObjects()
         {
             Dictionary<Tendencies, double> TendenciesFromDataMgr = new Dictionary<Tendencies, double>();
-            DataMgr = FindObjectOfType<AttentionDataManager>();
+            DataMgr = FindObjectOfType<ReactiveMesDataManager>();
             Tendencies TendencyToDestroy;
             switch (requestType)
             {

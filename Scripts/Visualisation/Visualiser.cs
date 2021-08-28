@@ -13,12 +13,12 @@ namespace ReactiveMiseEnScene
         public List<Color32> nodeColors = new List<Color32>();
         public List<Color32> edgeColors = new List<Color32>();
 
-        private AttentionDataManager DataMgr;
+        private ReactiveMesDataManager DataMgr;
 
         // Start is called before the first frame update
         void Start()
         {
-            DataMgr = FindObjectOfType<AttentionDataManager>();
+            DataMgr = FindObjectOfType<ReactiveMesDataManager>();
         }
 
         private void OnDrawGizmos()

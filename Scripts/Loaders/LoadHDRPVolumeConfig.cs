@@ -18,14 +18,14 @@ namespace ReactiveMiseEnScene
         private Volume volume;
         public List<VolumeProfile> volumeProfiles;
         public VolumeProfile presetVolumeProfile;
-        private AttentionDataManager DataMgr;
+        private ReactiveMesDataManager DataMgr;
 
         // Start is called before the first frame update
         void Start()
         {
             volume = GetComponent<Volume>();
 
-            DataMgr = FindObjectOfType<AttentionDataManager>();
+            DataMgr = FindObjectOfType<ReactiveMesDataManager>();
             Dictionary<Tendencies, double> TendenciesFromDataMgr = new Dictionary<Tendencies, double>();
             Tendencies TendencyForVolProfile;
             switch (requestType)

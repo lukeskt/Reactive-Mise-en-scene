@@ -81,9 +81,9 @@ namespace ReactiveMiseEnScene
             }
             else { Debug.LogWarning("No Focus Component on this GameObject"); }
 
-            if(FindObjectOfType<AttentionDataManager>()) 
+            if(FindObjectOfType<ReactiveMesDataManager>()) 
             {
-                AttentionDataManager AttnMgr = FindObjectOfType<AttentionDataManager>();
+                ReactiveMesDataManager AttnMgr = FindObjectOfType<ReactiveMesDataManager>();
                 WriteAttnDataMgr.AddListener(AttnMgr.ParseInboundStructData);
             }
             else

@@ -16,7 +16,7 @@ namespace ReactiveMiseEnScene
         // Maybe we want to log at each decision point rather than over time?
 
         private GameObject thePlayer; // Do we want to log position?
-        private AttentionDataManager DataMgr;
+        private ReactiveMesDataManager DataMgr;
 
         // CSV Config
         private StreamWriter csvFile;
@@ -27,7 +27,7 @@ namespace ReactiveMiseEnScene
         private void Start()
         {
             thePlayer = GameObject.FindGameObjectWithTag("Player");
-            DataMgr = FindObjectOfType<AttentionDataManager>();
+            DataMgr = FindObjectOfType<ReactiveMesDataManager>();
 
             deviceID = SystemInfo.deviceUniqueIdentifier;
             userID = AnalyticsSessionInfo.userId;

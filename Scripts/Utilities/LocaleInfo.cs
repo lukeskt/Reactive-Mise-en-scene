@@ -9,14 +9,14 @@ namespace ReactiveMiseEnScene
     {
         public Locales locale;
 
-        private AttentionDataManager DataMgr;
+        private ReactiveMesDataManager DataMgr;
         [HideInInspector] public Tendencies localeTendency;
         [HideInInspector] public double localeTendencyRating;
 
         // Start is called before the first frame update
         void Start()
         {
-            DataMgr = FindObjectOfType<AttentionDataManager>();
+            DataMgr = FindObjectOfType<ReactiveMesDataManager>();
         }
 
         // Update is called once per frame

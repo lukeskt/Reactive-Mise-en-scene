@@ -67,7 +67,7 @@ namespace ReactiveMiseEnScene
             MinValue,
             //FirstPastThePost, // winning tendency past a threshold
             Proportional, // proportion of decision/placement points distroed amongst tendencies
-                          //ProportionalPastThePost, // any that pass a threshold get a proportional rep
+            //ProportionalPastThePost, // any that pass a threshold get a proportional rep
             InverseProportion, // i.e. load inverse to what proportional results would be
             CompetitorDistribution, // distribute the tendency total amongst all others than the winning tendency
             Preset,

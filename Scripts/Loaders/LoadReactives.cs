@@ -38,7 +38,7 @@ namespace ReactiveMiseEnScene
         // Start is called before the first frame update
         void Start()
         {
-            AttentionDataManager DataMgr = FindObjectOfType<AttentionDataManager>();
+            ReactiveMesDataManager DataMgr = FindObjectOfType<ReactiveMesDataManager>();
                   
             Dictionary<Tendencies, double> tendencyAttentionRatings;
             List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings;
