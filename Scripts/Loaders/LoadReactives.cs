@@ -9,7 +9,7 @@ namespace ReactiveMiseEnScene
     public class LoadReactives : MonoBehaviour
     {
         [Tooltip("Select which algorithm to use to decide which object to load at each placement point.")]
-        [SerializeField] public TendencyAlgorithm tendencyAlgorithm;
+        [SerializeField] public ReactiveMesSettings.TendencyAlgorithm tendencyAlgorithm;
         [Tooltip("If using Preset algorithm, use this to specify the tendency to load objects for.")]
         [SerializeField] public string presetTendency;
         [Tooltip("Global: Get global attention rating. Locale: Get attention rating of specified locale.")]
@@ -61,26 +61,26 @@ namespace ReactiveMiseEnScene
 
             switch (tendencyAlgorithm)
             {
-                case TendencyAlgorithm.MaxValue:
+                case ReactiveMesSettings.TendencyAlgorithm.MaxValue:
                     StartCoroutine(MaxValueLoader(orderedTendencyAttentionRatings));
                     break;
-                case TendencyAlgorithm.MinValue:
+                case ReactiveMesSettings.TendencyAlgorithm.MinValue:
                     StartCoroutine(MinValueLoader(orderedTendencyAttentionRatings));
                     break;
-                case TendencyAlgorithm.Proportional:
+                case ReactiveMesSettings.TendencyAlgorithm.Proportional:
                     //ProportionalLoader(orderedTendencyAttentionRatings);
                     StartCoroutine(ProportionalLoader(orderedTendencyAttentionRatings));
                     break;
-                case TendencyAlgorithm.InverseProportion:
+                case ReactiveMesSettings.TendencyAlgorithm.InverseProportion:
                     StartCoroutine(InverseProportionalLoader(orderedTendencyAttentionRatings));
                     break;
-                case TendencyAlgorithm.CompetitorDistribution:
+                case ReactiveMesSettings.TendencyAlgorithm.CompetitorDistribution:
                     StartCoroutine(CompetitorDistributionLoader(orderedTendencyAttentionRatings));
                     break;
-                case TendencyAlgorithm.Preset:
+                case ReactiveMesSettings.TendencyAlgorithm.Preset:
                     StartCoroutine(PresetLoader());
                     break;
-                case TendencyAlgorithm.Random:
+                case ReactiveMesSettings.TendencyAlgorithm.Random:
                     StartCoroutine(RandomLoader());
                     break;
                 default:

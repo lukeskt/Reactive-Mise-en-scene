@@ -7,7 +7,7 @@ namespace ReactiveMiseEnScene
 {
     public class LoadTimeline : MonoBehaviour
     {
-        public TendencyAlgorithm tendencyAlgorithm = TendencyAlgorithm.MaxValue;
+        public ReactiveMesSettings.TendencyAlgorithm tendencyAlgorithm = ReactiveMesSettings.TendencyAlgorithm.MaxValue;
 
         Playable timeline;
         PlayableDirector timelineDirector;

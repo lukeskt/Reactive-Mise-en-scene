@@ -11,7 +11,7 @@ namespace ReactiveMiseEnScene
 {
     public class LoadHDRPVolumeConfig : MonoBehaviour
     {
-        public TendencyAlgorithm tendencyAlgorithm;
+        public ReactiveMesSettings.TendencyAlgorithm tendencyAlgorithm;
         public ReactiveMesSettings.RequestType requestType;
         public string localeToParse;
 
@@ -44,31 +44,31 @@ namespace ReactiveMiseEnScene
 
             switch (tendencyAlgorithm)
             {
-                case TendencyAlgorithm.MaxValue:
+                case ReactiveMesSettings.TendencyAlgorithm.MaxValue:
                     TendencyForVolProfile = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
                     volume.profile = volumeProfiles.Find(profile => profile.name.Contains(TendencyForVolProfile.ToString()));
                     break;
-                case TendencyAlgorithm.MinValue:
+                case ReactiveMesSettings.TendencyAlgorithm.MinValue:
                     TendencyForVolProfile = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
                     volume.profile = volumeProfiles.Find(profile => profile.name.Contains(TendencyForVolProfile.ToString()));
                     break;
-                case TendencyAlgorithm.Proportional:
+                case ReactiveMesSettings.TendencyAlgorithm.Proportional:
                     NotImpl();
                     break;
-                case TendencyAlgorithm.InverseProportion:
+                case ReactiveMesSettings.TendencyAlgorithm.InverseProportion:
                     NotImpl();
                     break;
-                case TendencyAlgorithm.CompetitorDistribution:
+                case ReactiveMesSettings.TendencyAlgorithm.CompetitorDistribution:
                     NotImpl();
                     break;
-                case TendencyAlgorithm.Preset:
+                case ReactiveMesSettings.TendencyAlgorithm.Preset:
                     volume.profile = presetVolumeProfile;
                     break;
-                case TendencyAlgorithm.Random:
+                case ReactiveMesSettings.TendencyAlgorithm.Random:
                     volume.profile = volumeProfiles[Random.Range(0, volumeProfiles.Count)];
                     break;
                 default:
-                    goto case TendencyAlgorithm.Preset;
+                    goto case ReactiveMesSettings.TendencyAlgorithm.Preset;
             }
         }
 

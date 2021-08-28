@@ -9,7 +9,7 @@ namespace ReactiveMiseEnScene
     {
         [SerializeField] private ReactiveMesSettings RMesSettings;
 
-        public TendencyAlgorithm tendencyAlgorithm = TendencyAlgorithm.MaxValue;
+        public ReactiveMesSettings.TendencyAlgorithm tendencyAlgorithm = ReactiveMesSettings.TendencyAlgorithm.MaxValue;
         public ReactiveMesSettings.RequestType requestType;
         public string tendencyListToDestroy;
         //public TendencyAlgorithm tendencyDecision;
@@ -50,7 +50,7 @@ namespace ReactiveMiseEnScene
 
             switch (tendencyAlgorithm)
             {
-                case TendencyAlgorithm.MaxValue:
+                case ReactiveMesSettings.TendencyAlgorithm.MaxValue:
                     TendencyToDestroy = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
                     foreach (var tendencyList in TendencyObjects.ListOfTendencyLists)
                     {
@@ -63,7 +63,7 @@ namespace ReactiveMiseEnScene
                         }
                     }
                     break;
-                case TendencyAlgorithm.MinValue:
+                case ReactiveMesSettings.TendencyAlgorithm.MinValue:
                     TendencyToDestroy = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
                     foreach (var tendencyList in TendencyObjects.ListOfTendencyLists)
                     {
@@ -76,16 +76,16 @@ namespace ReactiveMiseEnScene
                         }
                     }
                     break;
-                case TendencyAlgorithm.Proportional:
+                case ReactiveMesSettings.TendencyAlgorithm.Proportional:
                     NotImpl();
                     break;
-                case TendencyAlgorithm.InverseProportion:
+                case ReactiveMesSettings.TendencyAlgorithm.InverseProportion:
                     NotImpl();
                     break;
-                case TendencyAlgorithm.CompetitorDistribution:
+                case ReactiveMesSettings.TendencyAlgorithm.CompetitorDistribution:
                     NotImpl();
                     break;
-                case TendencyAlgorithm.Preset:
+                case ReactiveMesSettings.TendencyAlgorithm.Preset:
                     // maybe more sophisticated behaviour? but this is just a gating mechanism.
                     // quick test
                     var tendencyCheck = TendencyObjects.ListOfTendencyLists.First(tendencylist => tendencylist.tendency == tendencyListToDestroy);
@@ -97,13 +97,13 @@ namespace ReactiveMiseEnScene
                         }
                     }
                     break;
-                case TendencyAlgorithm.Random:
+                case ReactiveMesSettings.TendencyAlgorithm.Random:
                     int randList = Random.Range(0, TendencyObjects.ListOfTendencyLists.Count);
                     int randObj = Random.Range(0, TendencyObjects.ListOfTendencyLists[randList].TendencyPrefabs.Count);
                     Destroy(TendencyObjects.ListOfTendencyLists[randList].TendencyPrefabs[randObj]);
                     break;
                 default:
-                    goto case TendencyAlgorithm.Preset;
+                    goto case ReactiveMesSettings.TendencyAlgorithm.Preset;
             }
         }
 
