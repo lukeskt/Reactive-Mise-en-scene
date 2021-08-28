@@ -48,8 +48,8 @@ namespace ReactiveMiseEnScene
     }
 
     // This SO isn't working yet, but could provide inspector-accessible alt to hard-coded tendencies.
-    [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ReactiveMediaSettings", order = 1)]
-    public class ReactiveMediaSettings : ScriptableObject
+    [CreateAssetMenu(fileName = "Data", menuName = "ReactiveMesSettings", order = 1)]
+    public class ReactiveMesSettings : ScriptableObject
     {
         // Need to figure out how to replace enums above with lists, then dropdown those in custom inspector.
         public string[] Locales = new string[4];

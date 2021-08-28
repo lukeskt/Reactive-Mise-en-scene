@@ -7,12 +7,12 @@ namespace ReactiveMiseEnScene
 {
     public class LoadSetDressing : MonoBehaviour
     {
-        public ReactiveMediaSettings RMSettings;
+        public ReactiveMesSettings RMSettings;
 
-        public ReactiveMediaSettings.RequestType requestType;
+        public ReactiveMesSettings.RequestType requestType;
         public string locale;
         public string tendency;
-        public ReactiveMediaSettings.TendencyAlgorithm algorithm;
+        public ReactiveMesSettings.TendencyAlgorithm algorithm;
 
         // Start is called before the first frame update
         void Start()

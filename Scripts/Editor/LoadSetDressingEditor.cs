@@ -12,14 +12,14 @@ namespace ReactiveMiseEnScene
     {
         SerializedProperty RMSettings;
         SerializedProperty requestType;
-        ReactiveMediaSettings.RequestType editorRequestType;
+        ReactiveMesSettings.RequestType editorRequestType;
         SerializedProperty locale;
         string[] editorLocale;
         int _localeIndex = 0;
         SerializedProperty tendency;
         string[] editorTendency;
         int _tendencyIndex = 0;
-        ReactiveMediaSettings.TendencyAlgorithm algorithm;
+        ReactiveMesSettings.TendencyAlgorithm algorithm;
 
         private void OnEnable()
         {
@@ -50,7 +50,7 @@ namespace ReactiveMiseEnScene
         {
             serializedObject.Update();
             EditorGUILayout.PropertyField(RMSettings);
-            editorRequestType = (ReactiveMediaSettings.RequestType)EditorGUILayout.EnumPopup(label:"Request Type:", editorRequestType);
+            editorRequestType = (ReactiveMesSettings.RequestType)EditorGUILayout.EnumPopup(label:"Request Type:", editorRequestType);
             serializedObject.ApplyModifiedProperties();
             serializedObject.Update();
             var setDressing = target as LoadSetDressing;
@@ -58,7 +58,7 @@ namespace ReactiveMiseEnScene
             {
                 editorLocale = setDressing.RMSettings.Locales;
                 editorTendency = setDressing.RMSettings.Tendencies;
-                if (editorRequestType == ReactiveMediaSettings.RequestType.Locale)
+                if (editorRequestType == ReactiveMesSettings.RequestType.Locale)
                 {
                     _localeIndex = EditorGUILayout.Popup("Locale:", _localeIndex, editorLocale);
                 }
@@ -66,7 +66,7 @@ namespace ReactiveMiseEnScene
                 setDressing.locale = editorLocale[_localeIndex];
                 setDressing.tendency = editorTendency[_tendencyIndex];
             }
-            algorithm = (ReactiveMediaSettings.TendencyAlgorithm)EditorGUILayout.EnumPopup("Algorithm:", algorithm);
+            algorithm = (ReactiveMesSettings.TendencyAlgorithm)EditorGUILayout.EnumPopup("Algorithm:", algorithm);
             EditorUtility.SetDirty(target);
             //EditorGUILayout.PropertyField(tendency);
             serializedObject.ApplyModifiedProperties();
