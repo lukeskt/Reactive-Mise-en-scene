@@ -13,7 +13,7 @@ namespace ReactiveMiseEnScene
         [Tooltip("If using Preset algorithm, use this to specify the tendency to load objects for.")]
         [SerializeField] public string presetTendency;
         [Tooltip("Global: Get global attention rating. Locale: Get attention rating of specified locale.")]
-        [SerializeField] public RequestType requestType;
+        [SerializeField] public ReactiveMesSettings.RequestType requestType;
         [Tooltip("If using Locale request type, specify locale from which to get attention rating.")]
         [SerializeField] public string localeRequest;
 
@@ -45,14 +45,14 @@ namespace ReactiveMiseEnScene
 
             switch (requestType)
                     {
-                        case RequestType.Global:
+                        case ReactiveMesSettings.RequestType.Global:
                             tendencyAttentionRatings = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
                             break;
-                        case RequestType.Locale:
+                        case ReactiveMesSettings.RequestType.Locale:
                             tendencyAttentionRatings = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeRequest);
                             break;
                         default:
-                            goto case RequestType.Global;
+                            goto case ReactiveMesSettings.RequestType.Global;
                     }
 
             orderedTendencyAttentionRatings = tendencyAttentionRatings.ToList();

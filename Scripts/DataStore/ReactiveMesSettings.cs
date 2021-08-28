@@ -28,11 +28,11 @@ namespace ReactiveMiseEnScene
     //    Denouement,
     //}
 
-    public enum RequestType
-    {
-        Global,
-        Locale
-    }
+    //public enum RequestType
+    //{
+    //    Global,
+    //    Locale
+    //}
 
     public enum TendencyAlgorithm
     {

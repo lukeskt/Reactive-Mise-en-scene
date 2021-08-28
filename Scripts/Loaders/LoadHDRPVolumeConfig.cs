@@ -12,7 +12,7 @@ namespace ReactiveMiseEnScene
     public class LoadHDRPVolumeConfig : MonoBehaviour
     {
         public TendencyAlgorithm tendencyAlgorithm;
-        public RequestType requestType;
+        public ReactiveMesSettings.RequestType requestType;
         public string localeToParse;
 
         private Volume volume;
@@ -32,10 +32,10 @@ namespace ReactiveMiseEnScene
             {
                 // note here: these are max-value derived, so akin to first-past the post... maybe check a threshold?
                 // also offer an inversion / min value?
-                case RequestType.Global:
+                case ReactiveMesSettings.RequestType.Global:
                     TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
                     break;
-                case RequestType.Locale:
+                case ReactiveMesSettings.RequestType.Locale:
                     TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeToParse);
                     break;
                 default:

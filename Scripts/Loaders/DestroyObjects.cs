@@ -10,7 +10,7 @@ namespace ReactiveMiseEnScene
         [SerializeField] private ReactiveMesSettings RMesSettings;
 
         public TendencyAlgorithm tendencyAlgorithm = TendencyAlgorithm.MaxValue;
-        public RequestType requestType;
+        public ReactiveMesSettings.RequestType requestType;
         public string tendencyListToDestroy;
         //public TendencyAlgorithm tendencyDecision;
         public string localeToParse;
@@ -38,10 +38,10 @@ namespace ReactiveMiseEnScene
             string TendencyToDestroy;
             switch (requestType)
             {
-                case RequestType.Global:
+                case ReactiveMesSettings.RequestType.Global:
                     TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
                     break;
-                case RequestType.Locale:
+                case ReactiveMesSettings.RequestType.Locale:
                     TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeToParse);
                     break;
                 default:
