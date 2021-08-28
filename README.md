@@ -10,7 +10,7 @@ On entering a new locale, we can use the loader system to determine how elements
 
 The purpose of the plugin is to enable reactive narrative experiences that are shaped via the implicit and tacit interactions of the user through attention, rather than by their explicit actions in game or their selection of branching choices seen in other narrative systems. However, the system is flexible enough that it can be adapted to other use cases.
 
-Please note that this plugin is part of an on-going PhD research project by the author, Luke Skarth-Hayley. I am keen to discuss use cases with creators, see what people use the system for, and perhaps conduct studies with users. I am also planning game jams and other means to promote and explore the plugin and the design concepts underpinning it. Please follow me on Twitter [@lukeskarth](https://www.twitter.com/lukeskarth) or get in touch via rmes@oneirica.systems.
+Please note that this plugin is a work-in-progress and should be considered experimental/beta software. It is part of an on-going PhD research project by the author, Luke Skarth-Hayley. I am keen to discuss use cases with creators, see what people use the system for, and perhaps conduct studies with users. I am also planning game jams and other means to promote and explore the plugin and the design concepts underpinning it. Please follow me on Twitter [@lukeskarth](https://www.twitter.com/lukeskarth) or get in touch via rmes@oneirica.systems.
 
 ## Contents
 
