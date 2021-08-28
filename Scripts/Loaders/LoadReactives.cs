@@ -15,7 +15,7 @@ namespace ReactiveMiseEnScene
         [Tooltip("Global: Get global attention rating. Locale: Get attention rating of specified locale.")]
         [SerializeField] public RequestType requestType;
         [Tooltip("If using Locale request type, specify locale from which to get attention rating.")]
-        [SerializeField] public Locales localeRequest;
+        [SerializeField] public string localeRequest;
 
         [System.Serializable]
         public class TendencyPlacements

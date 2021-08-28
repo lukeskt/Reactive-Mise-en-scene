@@ -7,7 +7,7 @@ namespace ReactiveMiseEnScene
 {
     public class LocaleInfo : MonoBehaviour
     {
-        public Locales locale;
+        public string locale;
 
         private ReactiveMesDataManager DataMgr;
         [HideInInspector] public string localeTendency;

@@ -13,7 +13,7 @@ namespace ReactiveMiseEnScene
     {
         public TendencyAlgorithm tendencyAlgorithm;
         public RequestType requestType;
-        public Locales localeToParse;
+        public string localeToParse;
 
         private Volume volume;
         public List<VolumeProfile> volumeProfiles;

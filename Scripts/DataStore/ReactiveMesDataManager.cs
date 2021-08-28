@@ -74,7 +74,7 @@ namespace ReactiveMiseEnScene
             return attnStruct;
         }
 
-        public Dictionary<string, double> GetLocaleTendency (List<FocusDataStruct> attnStructs, Locales locale)
+        public Dictionary<string, double> GetLocaleTendency (List<FocusDataStruct> attnStructs, string locale)
         {
             Dictionary<string, double> locationTendencies = new Dictionary<string, double>();
             // get tendency of location by getting all objs in location then check strongest tendency.
@@ -88,16 +88,16 @@ namespace ReactiveMiseEnScene
             return locationTendencies;
         }
 
-        public Dictionary<string, double> GetGlobalTendency (List<FocusDataStruct> attnStructs)
+        public Dictionary<string, double> GetGlobalTendency (List<FocusDataStruct> focusStructs)
         {
             Dictionary<string, double> globalTendencies = new Dictionary<string, double>();
             foreach (var tendency in RMesSettings.Tendencies)
             {
                 globalTendencies.Add(tendency, 0f);
             }
-            foreach (var location in Enum.GetNames(typeof(Locales)))
+            foreach (var location in RMesSettings.Locales)
             {
-                Dictionary<string, double> locationTendency = GetLocaleTendency(attnStructs, (Locales)Enum.Parse(typeof(Locales), location));
+                Dictionary<string, double> locationTendency = GetLocaleTendency(focusStructs, location);
                 globalTendencies = globalTendencies.Concat(locationTendency).GroupBy(x => x.Key).ToDictionary(x => x.Key, x => x.Sum(y => y.Value));
             }
             return globalTendencies;

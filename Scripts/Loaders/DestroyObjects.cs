@@ -13,7 +13,7 @@ namespace ReactiveMiseEnScene
         public RequestType requestType;
         public string tendencyListToDestroy;
         //public TendencyAlgorithm tendencyDecision;
-        public Locales localeToParse;
+        public string localeToParse;
         ReactiveMesDataManager DataMgr;
 
         [System.Serializable]

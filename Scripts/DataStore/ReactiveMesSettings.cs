@@ -15,18 +15,18 @@ namespace ReactiveMiseEnScene
     //    Auteur
     //}
 
-    public enum Locales
-    {
-        WhitespaceLab,
-        Apartment,
-        Cafe,
-        Gallery,
-        Church,
-        Underpass,
-        Bunker,
-        Datacentre,
-        Denouement,
-    }
+    //public enum Locales
+    //{
+    //    WhitespaceLab,
+    //    Apartment,
+    //    Cafe,
+    //    Gallery,
+    //    Church,
+    //    Underpass,
+    //    Bunker,
+    //    Datacentre,
+    //    Denouement,
+    //}
 
     public enum RequestType
     {
