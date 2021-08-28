@@ -15499,8 +15499,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
   requestType: 0
-  locale: WhitespaceLab
-  tendency: Neutral
+  locale: Whitespace Lab
+  tendency: Spy
   algorithm: 0
 --- !u!1 &1749335918
 GameObject:
