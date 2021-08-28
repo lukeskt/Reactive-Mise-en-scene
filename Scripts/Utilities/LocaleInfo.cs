@@ -10,7 +10,7 @@ namespace ReactiveMiseEnScene
         public Locales locale;
 
         private ReactiveMesDataManager DataMgr;
-        [HideInInspector] public Tendencies localeTendency;
+        [HideInInspector] public string localeTendency;
         [HideInInspector] public double localeTendencyRating;
 
         // Start is called before the first frame update

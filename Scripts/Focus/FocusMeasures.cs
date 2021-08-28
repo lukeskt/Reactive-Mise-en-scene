@@ -11,9 +11,9 @@ namespace ReactiveMiseEnScene
     [RequireComponent(typeof(Focus))]
     public class FocusMeasures : MonoBehaviour
     {
-        public Locales locale;
+        public string locale;
         //public List<ReactiveTags.Tendencies> tendencyTags;
-        public Tendencies tendency;
+        public string tendency;
 
         // Rating Multipliers - Focused is best, otherwise effect of attention, visible, is less.
         [Header("Rating Multipliers")]
@@ -59,7 +59,7 @@ namespace ReactiveMiseEnScene
         // Compare below - scriptableobj or singleton monobehaviour best?
         //[HideInInspector] public UnityEvent<GameObject> WriteToAttnDataStore;
         // singleton call below?
-        [HideInInspector] public UnityEvent<AttnDataStruct> WriteAttnDataMgr;
+        [HideInInspector] public UnityEvent<FocusDataStruct> WriteAttnDataMgr;
 
         // Start is called before the first frame update
         void Start()
@@ -179,12 +179,12 @@ namespace ReactiveMiseEnScene
         {
             // Write data out to the data container/manager.
             // WriteToAttnDataStore.Invoke(gameObject);
-            AttnDataStruct attnData;
-            attnData.name = name;
-            attnData.locale = locale;
-            attnData.tendency = tendency;
-            attnData.attentionRating = totalRating;
-            WriteAttnDataMgr.Invoke(attnData);
+            FocusDataStruct focusData;
+            focusData.name = name;
+            focusData.locale = locale;
+            focusData.tendency = tendency;
+            focusData.attentionRating = totalRating;
+            WriteAttnDataMgr.Invoke(focusData);
         }
 
         private void OnDisable()

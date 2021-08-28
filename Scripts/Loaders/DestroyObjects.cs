@@ -7,9 +7,11 @@ namespace ReactiveMiseEnScene
 {
     public class DestroyObjects : MonoBehaviour
     {
+        [SerializeField] private ReactiveMesSettings RMesSettings;
+
         public TendencyAlgorithm tendencyAlgorithm = TendencyAlgorithm.MaxValue;
         public RequestType requestType;
-        public Tendencies tendencyListToDestroy;
+        public string tendencyListToDestroy;
         //public TendencyAlgorithm tendencyDecision;
         public Locales localeToParse;
         ReactiveMesDataManager DataMgr;
@@ -17,7 +19,7 @@ namespace ReactiveMiseEnScene
         [System.Serializable]
         public class tendencyPrefabs
         {
-            public Tendencies tendency;
+            public string tendency;
             public List<GameObject> TendencyPrefabs;
         }
 
@@ -31,9 +33,9 @@ namespace ReactiveMiseEnScene
 
         public void DoDestroyObjects()
         {
-            Dictionary<Tendencies, double> TendenciesFromDataMgr = new Dictionary<Tendencies, double>();
+            Dictionary<string, double> TendenciesFromDataMgr = new Dictionary<string, double>();
             DataMgr = FindObjectOfType<ReactiveMesDataManager>();
-            Tendencies TendencyToDestroy;
+            string TendencyToDestroy;
             switch (requestType)
             {
                 case RequestType.Global:

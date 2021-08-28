@@ -26,8 +26,8 @@ namespace ReactiveMiseEnScene
             volume = GetComponent<Volume>();
 
             DataMgr = FindObjectOfType<ReactiveMesDataManager>();
-            Dictionary<Tendencies, double> TendenciesFromDataMgr = new Dictionary<Tendencies, double>();
-            Tendencies TendencyForVolProfile;
+            Dictionary<string, double> TendenciesFromDataMgr = new Dictionary<string, double>();
+            string TendencyForVolProfile;
             switch (requestType)
             {
                 // note here: these are max-value derived, so akin to first-past the post... maybe check a threshold?

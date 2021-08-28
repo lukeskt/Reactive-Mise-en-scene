@@ -11,7 +11,7 @@ namespace ReactiveMiseEnScene
         [Tooltip("Select which algorithm to use to decide which object to load at each placement point.")]
         [SerializeField] public TendencyAlgorithm tendencyAlgorithm;
         [Tooltip("If using Preset algorithm, use this to specify the tendency to load objects for.")]
-        [SerializeField] public Tendencies presetTendency;
+        [SerializeField] public string presetTendency;
         [Tooltip("Global: Get global attention rating. Locale: Get attention rating of specified locale.")]
         [SerializeField] public RequestType requestType;
         [Tooltip("If using Locale request type, specify locale from which to get attention rating.")]
@@ -40,8 +40,8 @@ namespace ReactiveMiseEnScene
         {
             ReactiveMesDataManager DataMgr = FindObjectOfType<ReactiveMesDataManager>();
                   
-            Dictionary<Tendencies, double> tendencyAttentionRatings;
-            List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings;
+            Dictionary<string, double> tendencyAttentionRatings;
+            List<KeyValuePair<string, double>> orderedTendencyAttentionRatings;
 
             switch (requestType)
                     {
@@ -88,7 +88,7 @@ namespace ReactiveMiseEnScene
             }
         }
 
-        private IEnumerator MaxValueLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private IEnumerator MaxValueLoader(List<KeyValuePair<string, double>> orderedTendencyAttentionRatings)
         {
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
@@ -100,7 +100,7 @@ namespace ReactiveMiseEnScene
             yield return null;
         }
 
-        private IEnumerator MinValueLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private IEnumerator MinValueLoader(List<KeyValuePair<string, double>> orderedTendencyAttentionRatings)
         {
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
@@ -112,11 +112,11 @@ namespace ReactiveMiseEnScene
             yield return null;
         }
 
-        private List<KeyValuePair<Tendencies, int>> MapOrderedRatings(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private List<KeyValuePair<string, int>> MapOrderedRatings(List<KeyValuePair<string, double>> orderedTendencyAttentionRatings)
         {
             double tendencySum = orderedTendencyAttentionRatings.Sum(tendency => tendency.Value);
             int placementPointsCount = listOfTendencyPlacements.tendencyPlacements.Count();
-            Dictionary<Tendencies, int> mappedTendencyAttentionRatings = new Dictionary<Tendencies, int>();
+            Dictionary<string, int> mappedTendencyAttentionRatings = new Dictionary<string, int>();
             foreach (var tendency in orderedTendencyAttentionRatings)
             {
                 var mappedRating = mapTendencyToSpawnListLength(tendency.Value, tendencySum, placementPointsCount);
@@ -128,9 +128,9 @@ namespace ReactiveMiseEnScene
             return orderedMappedRatings;
         }
 
-        private static List<Tendencies> BuildListOfTendenciesToMapForPlacements(List<KeyValuePair<Tendencies, int>> orderedMappedRatings)
+        private static List<string> BuildListOfTendenciesToMapForPlacements(List<KeyValuePair<string, int>> orderedMappedRatings)
         {
-            List<Tendencies> tendencyList = new List<Tendencies>();
+            List<string> tendencyList = new List<string>();
             foreach (var rating in orderedMappedRatings)
             {
                 for (int i = 0; i < rating.Value; i++)
@@ -142,7 +142,7 @@ namespace ReactiveMiseEnScene
             return tendencyList;
         }
 
-        private void SpawnObjectsBasedOnTendenciesAtPlacementPoints(List<Tendencies> tendencyList)
+        private void SpawnObjectsBasedOnTendenciesAtPlacementPoints(List<string> tendencyList)
         {
             // there may be an index out of range issue down here - consider how to handle - trycatch?
             for (int i = 0; i < listOfTendencyPlacements.tendencyPlacements.Count; i++)
@@ -154,33 +154,33 @@ namespace ReactiveMiseEnScene
             }
         }
 
-        private IEnumerator ProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private IEnumerator ProportionalLoader(List<KeyValuePair<string, double>> orderedTendencyAttentionRatings)
         {
-            List<KeyValuePair<Tendencies, int>> orderedMappedRatings = MapOrderedRatings(orderedTendencyAttentionRatings);
+            List<KeyValuePair<string, int>> orderedMappedRatings = MapOrderedRatings(orderedTendencyAttentionRatings);
             // this seems like 4th impl? - it works sort of. above could be put into a separate method?
-            List<Tendencies> tendencyList = BuildListOfTendenciesToMapForPlacements(orderedMappedRatings);
+            List<string> tendencyList = BuildListOfTendenciesToMapForPlacements(orderedMappedRatings);
             SpawnObjectsBasedOnTendenciesAtPlacementPoints(tendencyList);
 
             yield return null;
         }
 
-        private IEnumerator InverseProportionalLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private IEnumerator InverseProportionalLoader(List<KeyValuePair<string, double>> orderedTendencyAttentionRatings)
         {
-            List<KeyValuePair<Tendencies, int>> orderedMappedRatings = MapOrderedRatings(orderedTendencyAttentionRatings);
+            List<KeyValuePair<string, int>> orderedMappedRatings = MapOrderedRatings(orderedTendencyAttentionRatings);
 
             // Inversion Logic
             // the smallest tendency gets the max tendency's placement points, 2nd smallest = 2nd biggest, etc.
-            List<Tendencies> reverseTendencies = (from kvp in orderedMappedRatings select kvp.Key).Distinct().Reverse().ToList();
+            List<string> reverseTendencies = (from kvp in orderedMappedRatings select kvp.Key).Distinct().Reverse().ToList();
             List<int> ratingValues = (from kvp in orderedMappedRatings select kvp.Value).ToList();
-            List<KeyValuePair<Tendencies, int>> inverseProportionalRatings = reverseTendencies.Zip(ratingValues, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v).ToList();
+            List<KeyValuePair<string, int>> inverseProportionalRatings = reverseTendencies.Zip(ratingValues, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v).ToList();
 
-            List<Tendencies> tendencyList = BuildListOfTendenciesToMapForPlacements(orderedMappedRatings);
+            List<string> tendencyList = BuildListOfTendenciesToMapForPlacements(orderedMappedRatings);
             SpawnObjectsBasedOnTendenciesAtPlacementPoints(tendencyList);
 
             yield return null;
         }
 
-        private IEnumerator CompetitorDistributionLoader(List<KeyValuePair<Tendencies, double>> orderedTendencyAttentionRatings)
+        private IEnumerator CompetitorDistributionLoader(List<KeyValuePair<string, double>> orderedTendencyAttentionRatings)
         {
             throw new System.NotImplementedException();
             ////print(String.Join(", ", orderedTendencyAttentionRatings));

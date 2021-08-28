@@ -5,15 +5,15 @@ using UnityEngine;
 namespace ReactiveMiseEnScene
 {
     // Eventually roll these enums into the SO, and replace some with lists of strings? Would be more flexible?
-    public enum Tendencies
-    {
-        Neutral,
-        Spy,
-        Terrorist,
-        //Resistance,
-        //Oneirica,
-        Auteur
-    }
+    //public enum Tendencies
+    //{
+    //    Neutral,
+    //    Spy,
+    //    Terrorist,
+    //    //Resistance,
+    //    //Oneirica,
+    //    Auteur
+    //}
 
     public enum Locales
     {
