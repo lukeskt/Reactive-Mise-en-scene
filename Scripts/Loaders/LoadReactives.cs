@@ -8,6 +8,8 @@ namespace ReactiveMiseEnScene
 {
     public class LoadReactives : MonoBehaviour
     {
+        public ReactiveMesSettings RMSettings;
+
         [Tooltip("Select which algorithm to use to decide which object to load at each placement point.")]
         [SerializeField] public ReactiveMesSettings.TendencyAlgorithm tendencyAlgorithm;
         [Tooltip("If using Preset algorithm, use this to specify the tendency to load objects for.")]

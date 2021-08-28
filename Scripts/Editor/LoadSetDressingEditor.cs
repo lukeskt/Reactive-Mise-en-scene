@@ -70,7 +70,7 @@ namespace ReactiveMiseEnScene
             EditorUtility.SetDirty(target);
             //EditorGUILayout.PropertyField(tendency);
             serializedObject.ApplyModifiedProperties();
-            EditorGUILayout.Space();
+            //EditorGUILayout.Space();
             //DrawDefaultInspector();
         }
     }

@@ -1,0 +1,62 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+namespace ReactiveMiseEnScene
+{
+    [CustomEditor(typeof(LoadReactives))]
+    [CanEditMultipleObjects]
+    public class LoadReactivesEditor : Editor
+    {
+        SerializedProperty RMSettings;
+        SerializedProperty tendencyAlgorithm;
+        SerializedProperty presetTendency;
+        string[] editorTendency;
+        int _tendencyIndex = 0;
+        SerializedProperty requestType;
+        SerializedProperty localeRequest;
+        string[] editorLocale;
+        int _localeIndex = 0;
+        SerializedProperty listOfTendencyPlacements;
+
+        private void OnEnable()
+        {
+            RMSettings = serializedObject.FindProperty("RMSettings");
+            tendencyAlgorithm = serializedObject.FindProperty("tendencyAlgorithm");
+            presetTendency = serializedObject.FindProperty("presetTendency");
+            var loadReactives = target as LoadReactives;
+            if (loadReactives.RMSettings != null)
+            {
+                editorTendency = loadReactives.RMSettings.Tendencies;
+                editorLocale = loadReactives.RMSettings.Locales;
+            }
+            requestType = serializedObject.FindProperty("requestType");
+            localeRequest = serializedObject.FindProperty("localeRequest");
+            listOfTendencyPlacements = serializedObject.FindProperty("listOfTendencyPlacements");
+        }
+
+        private void OnValidate()
+        {
+            
+        }
+
+        public override void OnInspectorGUI()
+        {
+            serializedObject.Update();
+            DrawDefaultInspector();
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
+            EditorGUILayout.LabelField("Custom Inspector Below");
+            
+            EditorGUILayout.PropertyField(RMSettings);
+            serializedObject.ApplyModifiedProperties();
+            serializedObject.Update();
+            EditorGUILayout.PropertyField(tendencyAlgorithm);
+            EditorGUILayout.Popup("Preset Tendency:", _tendencyIndex, editorTendency);
+            EditorGUILayout.Popup("Locale to Request:", _localeIndex, editorLocale);
+
+            serializedObject.ApplyModifiedProperties();
+        }
+    }
+}
