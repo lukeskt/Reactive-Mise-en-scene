@@ -36,11 +36,6 @@ namespace ReactiveMiseEnScene
             listOfTendencyPlacements = serializedObject.FindProperty("listOfTendencyPlacements");
         }
 
-        private void OnValidate()
-        {
-            // Do we need stuff here to pick up changes?
-        }
-
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
@@ -54,16 +49,21 @@ namespace ReactiveMiseEnScene
             serializedObject.Update();
             EditorGUILayout.PropertyField(tendencyAlgorithm);
             var loadReactives = target as LoadReactives;
-            if (loadReactives.tendencyAlgorithm == ReactiveMesSettings.TendencyAlgorithm.Preset) // preset algo - index not ideal, name match how?
+            if (loadReactives.RMSettings != null)
             {
-                _tendencyIndex = EditorGUILayout.Popup("Preset Tendency:", _tendencyIndex, editorTendency);
-                presetTendency.stringValue = editorTendency[_tendencyIndex];
-            }
-            EditorGUILayout.PropertyField(requestType);
-            if(loadReactives.requestType == ReactiveMesSettings.RequestType.Locale)
-            {
-                _localeIndex = EditorGUILayout.Popup("Locale to Request:", _localeIndex, editorLocale);
-                localeRequest.stringValue = editorLocale[_localeIndex];
+                if (loadReactives.tendencyAlgorithm == ReactiveMesSettings.TendencyAlgorithm.Preset) // preset algo - index not ideal, name match how?
+                {
+                    editorTendency = loadReactives.RMSettings.Tendencies;
+                    _tendencyIndex = EditorGUILayout.Popup("Preset Tendency:", _tendencyIndex, editorTendency);
+                    presetTendency.stringValue = editorTendency[_tendencyIndex];
+                }
+                EditorGUILayout.PropertyField(requestType);
+                if (loadReactives.requestType == ReactiveMesSettings.RequestType.Locale)
+                {
+                    editorLocale = loadReactives.RMSettings.Locales;
+                    _localeIndex = EditorGUILayout.Popup("Locale to Request:", _localeIndex, editorLocale);
+                    localeRequest.stringValue = editorLocale[_localeIndex];
+                }
             }
             EditorGUILayout.PropertyField(listOfTendencyPlacements);
             serializedObject.ApplyModifiedProperties();

@@ -7310,6 +7310,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 46656455978211691, guid: dd9fc14bc8b076346b97ed28e6b623d1, type: 3}
+      propertyPath: RMesSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
     - target: {fileID: 46656455978211700, guid: dd9fc14bc8b076346b97ed28e6b623d1, type: 3}
       propertyPath: m_Name
       value: AttnDataMgr
@@ -15475,12 +15479,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  tendencyAlgorithm: 0
-  presetTendency: 0
-  requestType: 0
-  localeRequest: 0
+  tendencyAlgorithm: 5
+  presetTendency: Neutral
+  requestType: 1
+  localeRequest: Whitespace Lab
   listOfTendencyPlacements:
-    tendencyPlacements: []
+    tendencyPlacements:
+    - Name: 
+      placementPoint: {fileID: 0}
+      tendencyObjects: []
 --- !u!114 &1748954774
 MonoBehaviour:
   m_ObjectHideFlags: 0

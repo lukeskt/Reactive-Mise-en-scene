@@ -11,7 +11,6 @@ namespace ReactiveMiseEnScene
     public class LoadSetDressingEditor : Editor
     {
         SerializedProperty RMSettings;
-        SerializedProperty requestType;
         ReactiveMesSettings.RequestType editorRequestType;
         SerializedProperty locale;
         string[] editorLocale;
@@ -22,19 +21,6 @@ namespace ReactiveMiseEnScene
         ReactiveMesSettings.TendencyAlgorithm algorithm;
 
         private void OnEnable()
-        {
-            RMSettings = serializedObject.FindProperty("RMSettings");
-            if (RMSettings != null)
-            {
-                var setDressing = target as LoadSetDressing;
-                editorRequestType = setDressing.requestType;
-                editorLocale = setDressing.RMSettings.Locales;
-                editorTendency = setDressing.RMSettings.Tendencies;
-            }
-            requestType = serializedObject.FindProperty("requestType");
-        }
-
-        private void OnValidate()
         {
             RMSettings = serializedObject.FindProperty("RMSettings");
             if (RMSettings != null)
@@ -63,8 +49,8 @@ namespace ReactiveMiseEnScene
                     _localeIndex = EditorGUILayout.Popup("Locale:", _localeIndex, editorLocale);
                 }
                 _tendencyIndex = EditorGUILayout.Popup("Tendency:", _tendencyIndex, editorTendency);
-                setDressing.locale = editorLocale[_localeIndex];
-                setDressing.tendency = editorTendency[_tendencyIndex];
+                locale.stringValue = editorLocale[_localeIndex];
+                tendency.stringValue = editorTendency[_tendencyIndex];
             }
             algorithm = (ReactiveMesSettings.TendencyAlgorithm)EditorGUILayout.EnumPopup("Algorithm:", algorithm);
             EditorUtility.SetDirty(target);

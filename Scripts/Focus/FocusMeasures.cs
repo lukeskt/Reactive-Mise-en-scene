@@ -11,6 +11,7 @@ namespace ReactiveMiseEnScene
     [RequireComponent(typeof(Focus))]
     public class FocusMeasures : MonoBehaviour
     {
+        public ReactiveMesSettings RMSettings;
         public string locale;
         //public List<ReactiveTags.Tendencies> tendencyTags;
         public string tendency;

@@ -38,21 +38,27 @@ namespace ReactiveMiseEnScene
 
         public override void OnInspectorGUI()
         {
+            serializedObject.Update();
+            //DrawDefaultInspector();
+            //EditorGUILayout.Space();
             EditorGUILayout.PropertyField(RMSettings);
             serializedObject.ApplyModifiedProperties();
             serializedObject.Update();
             var focusMeasures = target as FocusMeasures;
             if (focusMeasures.RMSettings != null)
             {
-                _localeIndex = EditorGUILayout.Popup("Locale to Request:", _localeIndex, editorLocale);
+                editorLocale = focusMeasures.RMSettings.Locales;
+                editorTendency = focusMeasures.RMSettings.Tendencies;
+                _localeIndex = EditorGUILayout.Popup("Locale:", _localeIndex, editorLocale);
                 locale.stringValue = editorLocale[_localeIndex];
-                _tendencyIndex = EditorGUILayout.Popup("Preset Tendency:", _tendencyIndex, editorTendency);
+                _tendencyIndex = EditorGUILayout.Popup("Tendency:", _tendencyIndex, editorTendency);
                 tendency.stringValue = editorTendency[_tendencyIndex];
             }
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(visibleMultiplier);
             EditorGUILayout.PropertyField(attendedMultiplier);
             EditorGUILayout.PropertyField(focusedMultiplier);
+            serializedObject.ApplyModifiedProperties();
         }
     }
 }
