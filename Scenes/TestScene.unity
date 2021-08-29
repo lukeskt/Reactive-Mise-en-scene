@@ -1389,6 +1389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93ff4399590d6247932568ca469a7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMesSettings: {fileID: 0}
   tendencyAlgorithm: 0
   requestType: 1
   tendencyListToDestroy: 0
@@ -1493,6 +1494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec5d6ee91604f142bc73fec507a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
   tendencyAlgorithm: 2
   presetTendency: 0
   requestType: 1
@@ -3047,6 +3049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93ff4399590d6247932568ca469a7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMesSettings: {fileID: 0}
   tendencyAlgorithm: 0
   requestType: 1
   tendencyListToDestroy: 0
@@ -3174,6 +3177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93ff4399590d6247932568ca469a7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMesSettings: {fileID: 0}
   tendencyAlgorithm: 0
   requestType: 1
   tendencyListToDestroy: 0
@@ -4531,6 +4535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93ff4399590d6247932568ca469a7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMesSettings: {fileID: 0}
   tendencyAlgorithm: 0
   requestType: 1
   tendencyListToDestroy: 0
@@ -4824,6 +4829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93ff4399590d6247932568ca469a7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMesSettings: {fileID: 0}
   tendencyAlgorithm: 0
   requestType: 1
   tendencyListToDestroy: 0
@@ -6475,6 +6481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec5d6ee91604f142bc73fec507a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
   tendencyAlgorithm: 2
   presetTendency: 0
   requestType: 1
@@ -7105,6 +7112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93ff4399590d6247932568ca469a7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMesSettings: {fileID: 0}
   tendencyAlgorithm: 0
   requestType: 1
   tendencyListToDestroy: 0
@@ -8999,6 +9007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec5d6ee91604f142bc73fec507a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
   tendencyAlgorithm: 2
   presetTendency: 0
   requestType: 1
@@ -11022,6 +11031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec5d6ee91604f142bc73fec507a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
   tendencyAlgorithm: 2
   presetTendency: 0
   requestType: 1
@@ -11496,6 +11506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec5d6ee91604f142bc73fec507a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
   tendencyAlgorithm: 2
   presetTendency: 0
   requestType: 1
@@ -13406,6 +13417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93ff4399590d6247932568ca469a7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMesSettings: {fileID: 0}
   tendencyAlgorithm: 0
   requestType: 1
   tendencyListToDestroy: 0
@@ -15462,6 +15474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec5d6ee91604f142bc73fec507a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
   tendencyAlgorithm: 0
   presetTendency: 0
   requestType: 0
@@ -15500,7 +15513,7 @@ MonoBehaviour:
   RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
   requestType: 0
   locale: Whitespace Lab
-  tendency: Spy
+  tendency: Neutral
   algorithm: 0
 --- !u!1 &1749335918
 GameObject:
@@ -15957,6 +15970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec5d6ee91604f142bc73fec507a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
   tendencyAlgorithm: 2
   presetTendency: 0
   requestType: 1
@@ -16355,6 +16369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec5d6ee91604f142bc73fec507a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
   tendencyAlgorithm: 2
   presetTendency: 0
   requestType: 1
@@ -17452,6 +17467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93ff4399590d6247932568ca469a7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMesSettings: {fileID: 0}
   tendencyAlgorithm: 0
   requestType: 1
   tendencyListToDestroy: 0
@@ -17698,6 +17714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec5d6ee91604f142bc73fec507a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RMSettings: {fileID: 0}
   tendencyAlgorithm: 2
   presetTendency: 0
   requestType: 1
