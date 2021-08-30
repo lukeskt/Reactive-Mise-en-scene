@@ -500,9 +500,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a273c65f06adf6e4ca9fc31f6abd2835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tendencyAlgorithm: 0
+  RMSettings: {fileID: 0}
+  algorithm: 0
   requestType: 1
-  localeToParse: 0
+  presetTendency: 
+  localeRequest: 
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
@@ -1005,8 +1007,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c43b58774452fc408b0dafc5979fc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locale: 0
-  tendency: 2
+  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
+  locale: Whitespace Lab
+  tendency: Terrorist
   visibleMultiplier: 0.25
   attendedMultiplier: 0.5
   focusedMultiplier: 1
@@ -2037,6 +2040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mocapDirector: {fileID: 0}
 --- !u!1001 &273946291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2561,9 +2565,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a273c65f06adf6e4ca9fc31f6abd2835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tendencyAlgorithm: 0
+  RMSettings: {fileID: 0}
+  algorithm: 0
   requestType: 1
-  localeToParse: 0
+  presetTendency: 
+  localeRequest: 
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
@@ -2710,8 +2716,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c43b58774452fc408b0dafc5979fc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locale: 0
-  tendency: 1
+  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
+  locale: Whitespace Lab
+  tendency: Neutral
   visibleMultiplier: 0.25
   attendedMultiplier: 0.5
   focusedMultiplier: 1
@@ -5068,9 +5075,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a273c65f06adf6e4ca9fc31f6abd2835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tendencyAlgorithm: 0
+  RMSettings: {fileID: 0}
+  algorithm: 0
   requestType: 1
-  localeToParse: 0
+  presetTendency: 
+  localeRequest: 
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
@@ -5515,6 +5524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mocapDirector: {fileID: 0}
 --- !u!1 &662703063
 GameObject:
   m_ObjectHideFlags: 0
@@ -6767,6 +6777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mocapDirector: {fileID: 0}
 --- !u!1 &832760670
 GameObject:
   m_ObjectHideFlags: 0
@@ -8251,6 +8262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mocapDirector: {fileID: 0}
 --- !u!1001 &991710309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8800,9 +8812,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a273c65f06adf6e4ca9fc31f6abd2835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tendencyAlgorithm: 0
+  RMSettings: {fileID: 0}
+  algorithm: 0
   requestType: 1
-  localeToParse: 0
+  presetTendency: 
+  localeRequest: 
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
@@ -11228,9 +11242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a273c65f06adf6e4ca9fc31f6abd2835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tendencyAlgorithm: 0
+  RMSettings: {fileID: 0}
+  algorithm: 0
   requestType: 1
-  localeToParse: 0
+  presetTendency: 
+  localeRequest: 
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
@@ -12110,8 +12126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c43b58774452fc408b0dafc5979fc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locale: 0
-  tendency: 0
+  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
+  locale: Whitespace Lab
+  tendency: Auteur
   visibleMultiplier: 0.25
   attendedMultiplier: 0.5
   focusedMultiplier: 1
@@ -12499,6 +12516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mocapDirector: {fileID: 0}
 --- !u!1 &1391775212
 GameObject:
   m_ObjectHideFlags: 0
@@ -12657,8 +12675,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c43b58774452fc408b0dafc5979fc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locale: 0
-  tendency: 3
+  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
+  locale: Whitespace Lab
+  tendency: Spy
   visibleMultiplier: 0.25
   attendedMultiplier: 0.5
   focusedMultiplier: 1
@@ -12928,6 +12947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mocapDirector: {fileID: 0}
 --- !u!1 &1435283338
 GameObject:
   m_ObjectHideFlags: 0
@@ -15171,6 +15191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mocapDirector: {fileID: 0}
 --- !u!1 &1702451636
 GameObject:
   m_ObjectHideFlags: 0
@@ -15216,9 +15237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a273c65f06adf6e4ca9fc31f6abd2835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tendencyAlgorithm: 0
+  RMSettings: {fileID: 0}
+  algorithm: 0
   requestType: 1
-  localeToParse: 0
+  presetTendency: 
+  localeRequest: 
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
@@ -15371,9 +15394,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a273c65f06adf6e4ca9fc31f6abd2835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tendencyAlgorithm: 0
+  RMSettings: {fileID: 0}
+  algorithm: 0
   requestType: 1
-  localeToParse: 0
+  presetTendency: 
+  localeRequest: 
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
@@ -15419,10 +15444,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1748954771}
-  - component: {fileID: 1748954772}
-  - component: {fileID: 1748954775}
   - component: {fileID: 1748954774}
   - component: {fileID: 1748954773}
+  - component: {fileID: 1748954772}
   m_Layer: 0
   m_Name: Area_00
   m_TagString: Untagged
@@ -15460,12 +15484,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748954770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9213c7d6ecc1500418f6e490de199ebf, type: 3}
+  m_Script: {fileID: 11500000, guid: b0e6a26013238a74489dc7c6473e44ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locale: 0
-  localeTendency: 0
-  localeTendencyRating: 0
+  RMSettings: {fileID: 0}
+  tendencyAlgorithm: 0
+  presetTendency: 
+  requestType: 0
+  localeRequest: 
+  listOfTendencyPlacements:
+    tendencyPlacements: []
 --- !u!114 &1748954773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15500,28 +15528,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a273c65f06adf6e4ca9fc31f6abd2835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tendencyAlgorithm: 0
+  RMSettings: {fileID: 0}
+  algorithm: 0
   requestType: 0
-  localeToParse: 0
+  presetTendency: 
+  localeRequest: 
   volumeProfiles: []
   presetVolumeProfile: {fileID: 0}
---- !u!114 &1748954775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1748954770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3733a8ae5d3df174bbbe08928c2fd17c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  requestType: 0
-  locale: Whitespace Lab
-  tendency: Neutral
-  algorithm: 0
 --- !u!1 &1749335918
 GameObject:
   m_ObjectHideFlags: 0
@@ -17914,9 +17927,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a273c65f06adf6e4ca9fc31f6abd2835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tendencyAlgorithm: 0
+  RMSettings: {fileID: 0}
+  algorithm: 0
   requestType: 1
-  localeToParse: 0
+  presetTendency: 
+  localeRequest: 
   volumeProfiles:
   - {fileID: 11400000, guid: dee9350577a4d9e449f38f35196fc60e, type: 2}
   - {fileID: 11400000, guid: 3540caf7994a7cc4d86e9ad64731e491, type: 2}
@@ -18274,6 +18289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f96bc737a9a17a4d91ee1808bf8bdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mocapDirector: {fileID: 0}
 --- !u!1001 &2085838712
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,8 +13,10 @@ namespace ReactiveMiseEnScene
     {
         public ReactiveMesSettings RMSettings;
         public string locale;
+        [HideInInspector] public int localeIndex = 0;
         //public List<ReactiveTags.Tendencies> tendencyTags;
         public string tendency;
+        [HideInInspector] public int tendencyIndex = 0;
 
         // Rating Multipliers - Focused is best, otherwise effect of attention, visible, is less.
         [Header("Rating Multipliers")]
@@ -103,7 +105,7 @@ namespace ReactiveMiseEnScene
         {
 #if UNITY_EDITOR
             // implement debug / visualisation logic here?
-            Handles.Label(transform.position, $"{tendency}\n{totalRating}");
+            Handles.Label(transform.position, $"{locale}\n{tendency}\n{totalRating}");
 #endif
         }
 

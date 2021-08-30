@@ -10,12 +10,12 @@ namespace ReactiveMiseEnScene
     public class FocusMeasuresEditor : Editor
     {
         SerializedProperty RMSettings;
+        public string[] editorLocale;
         SerializedProperty locale;
-        string[] editorLocale;
-        int _localeIndex = 0;
+        SerializedProperty localeIndex;
+        public string[] editorTendency;
         SerializedProperty tendency;
-        string[] editorTendency;
-        int _tendencyIndex = 0;
+        SerializedProperty tendencyIndex;
         SerializedProperty visibleMultiplier;
         SerializedProperty attendedMultiplier;
         SerializedProperty focusedMultiplier;
@@ -24,7 +24,9 @@ namespace ReactiveMiseEnScene
         {
             RMSettings = serializedObject.FindProperty("RMSettings");
             locale = serializedObject.FindProperty("locale");
+            localeIndex = serializedObject.FindProperty("localeIndex");
             tendency = serializedObject.FindProperty("tendency");
+            tendencyIndex = serializedObject.FindProperty("tendencyIndex");
             var focusMeasures = target as FocusMeasures;
             if (focusMeasures.RMSettings != null)
             {
@@ -49,10 +51,10 @@ namespace ReactiveMiseEnScene
             {
                 editorLocale = focusMeasures.RMSettings.Locales;
                 editorTendency = focusMeasures.RMSettings.Tendencies;
-                _localeIndex = EditorGUILayout.Popup("Locale:", _localeIndex, editorLocale);
-                locale.stringValue = editorLocale[_localeIndex];
-                _tendencyIndex = EditorGUILayout.Popup("Tendency:", _tendencyIndex, editorTendency);
-                tendency.stringValue = editorTendency[_tendencyIndex];
+                localeIndex.intValue = EditorGUILayout.Popup(label:"Locale:", localeIndex.intValue, editorLocale);
+                locale.stringValue = editorLocale[localeIndex.intValue];
+                tendencyIndex.intValue = EditorGUILayout.Popup("Tendency:", tendencyIndex.intValue, editorTendency);
+                tendency.stringValue = editorTendency[tendencyIndex.intValue];
             }
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(visibleMultiplier);
