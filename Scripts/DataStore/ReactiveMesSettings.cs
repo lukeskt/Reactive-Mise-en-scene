@@ -4,50 +4,6 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    // Eventually roll these enums into the SO, and replace some with lists of strings? Would be more flexible?
-    //public enum Tendencies
-    //{
-    //    Neutral,
-    //    Spy,
-    //    Terrorist,
-    //    //Resistance,
-    //    //Oneirica,
-    //    Auteur
-    //}
-
-    //public enum Locales
-    //{
-    //    WhitespaceLab,
-    //    Apartment,
-    //    Cafe,
-    //    Gallery,
-    //    Church,
-    //    Underpass,
-    //    Bunker,
-    //    Datacentre,
-    //    Denouement,
-    //}
-
-    //public enum RequestType
-    //{
-    //    Global,
-    //    Locale
-    //}
-
-    //public enum TendencyAlgorithm
-    //{
-    //    MaxValue, // winning tendency by largest attention value
-    //    MinValue,
-    //    //FirstPastThePost, // winning tendency past a threshold
-    //    Proportional, // proportion of decision/placement points distroed amongst tendencies
-    //    //ProportionalPastThePost, // any that pass a threshold get a proportional rep
-    //    InverseProportion, // i.e. load inverse to what proportional results would be
-    //    CompetitorDistribution, // distribute the tendency total amongst all others than the winning tendency
-    //    Preset,
-    //    Random
-    //}
-
-    // This SO isn't working yet, but could provide inspector-accessible alt to hard-coded tendencies.
     [CreateAssetMenu(fileName = "Data", menuName = "ReactiveMesSettings", order = 1)]
     public class ReactiveMesSettings : ScriptableObject
     {

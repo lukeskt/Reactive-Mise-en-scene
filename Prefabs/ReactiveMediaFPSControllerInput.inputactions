@@ -147,7 +147,7 @@
                 {
                     "name": "",
                     "id": "de7cdca1-c0b2-4408-83fe-c06771dd6234",
-                    "path": "<Pointer>/delta",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "FPSControllerInputs",
