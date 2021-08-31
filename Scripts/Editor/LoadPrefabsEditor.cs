@@ -9,17 +9,23 @@ namespace ReactiveMiseEnScene
     {
         SerializedProperty RMSettings;
         SerializedProperty algorithm;
+        SerializedProperty presetTendency;
         string[] editorTendency;
-        int _tendencyIndex = 0;
+        SerializedProperty tendencyIndex;
         SerializedProperty requestType;
+        SerializedProperty localeRequest;
         string[] editorLocale;
-        int _localeIndex = 0;
+        SerializedProperty localeIndex;
         SerializedProperty listOfTendencyPlacements;
 
         private void OnEnable()
         {
             RMSettings = serializedObject.FindProperty("RMSettings");
             algorithm = serializedObject.FindProperty("tendencyAlgorithm");
+            presetTendency = serializedObject.FindProperty("presetTendency");
+            tendencyIndex = serializedObject.FindProperty("tendencyIndex");
+            localeRequest = serializedObject.FindProperty("localeRequest");
+            localeIndex = serializedObject.FindProperty("localeIndex");
             var loadPrefabs = target as LoadPrefabs;
             if (loadPrefabs.RMSettings != null)
             {
@@ -35,9 +41,6 @@ namespace ReactiveMiseEnScene
             serializedObject.Update();
             //DrawDefaultInspector();
             //EditorGUILayout.Space();
-            //EditorGUILayout.Space();
-            //EditorGUILayout.LabelField("Custom Inspector Below");
-
             EditorGUILayout.PropertyField(RMSettings);
             serializedObject.ApplyModifiedProperties();
             serializedObject.Update();
@@ -48,19 +51,18 @@ namespace ReactiveMiseEnScene
                 if (loadPrefabs.tendencyAlgorithm == ReactiveMesSettings.TendencyAlgorithm.Preset) // preset algo - index not ideal, name match how?
                 {
                     editorTendency = loadPrefabs.RMSettings.Tendencies;
-                    _tendencyIndex = EditorGUILayout.Popup("Preset Tendency:", _tendencyIndex, editorTendency);
-                    loadPrefabs.presetTendency = editorTendency[_tendencyIndex];
+                    tendencyIndex.intValue = EditorGUILayout.Popup("Preset Tendency:", tendencyIndex.intValue, editorTendency);
+                    presetTendency.stringValue = editorTendency[tendencyIndex.intValue];
                 }
                 EditorGUILayout.PropertyField(requestType);
                 if (loadPrefabs.requestType == ReactiveMesSettings.RequestType.Locale)
                 {
                     editorLocale = loadPrefabs.RMSettings.Locales;
-                    _localeIndex = EditorGUILayout.Popup("Locale to Request:", _localeIndex, editorLocale);
-                    loadPrefabs.localeRequest = editorLocale[_localeIndex];
+                    localeIndex.intValue = EditorGUILayout.Popup("Locale to Request:", localeIndex.intValue, editorLocale);
+                    localeRequest.stringValue = editorLocale[localeIndex.intValue];
                 }
             }
             EditorGUILayout.PropertyField(listOfTendencyPlacements);
-            EditorUtility.SetDirty(target);
             serializedObject.ApplyModifiedProperties();
         }
     }

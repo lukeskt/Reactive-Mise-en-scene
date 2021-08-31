@@ -7,11 +7,13 @@ namespace ReactiveMiseEnScene
 {
     public class LocaleInfo : MonoBehaviour
     {
-        public string locale;
-
         private ReactiveMesDataManager DataMgr;
-        [HideInInspector] public string localeTendency;
-        [HideInInspector] public double localeTendencyRating;
+        public ReactiveMesSettings RMSettings;
+
+        public string locale;
+        [HideInInspector] public int localeIndex = 0; // for custom editor
+        public string tendency;
+        public double tendencyRating;
 
         // Start is called before the first frame update
         void Start()
@@ -23,8 +25,8 @@ namespace ReactiveMiseEnScene
         void Update()
         {
             var localeInfo = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, locale);
-            localeTendency = localeInfo.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
-            localeTendencyRating = localeInfo.Aggregate((l, r) => l.Value > r.Value ? l : r).Value;
+            tendency = localeInfo.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
+            tendencyRating = localeInfo.Aggregate((l, r) => l.Value > r.Value ? l : r).Value;
         }
     }
 }

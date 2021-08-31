@@ -14,10 +14,12 @@ namespace ReactiveMiseEnScene
         [SerializeField] public ReactiveMesSettings.TendencyAlgorithm tendencyAlgorithm;
         [Tooltip("If using Preset algorithm, use this to specify the tendency to load objects for.")]
         [SerializeField] public string presetTendency;
+        [HideInInspector] public int tendencyIndex = 0; // for custom editor
         [Tooltip("Global: Get global attention rating. Locale: Get attention rating of specified locale.")]
         [SerializeField] public ReactiveMesSettings.RequestType requestType;
         [Tooltip("If using Locale request type, specify locale from which to get attention rating.")]
         [SerializeField] public string localeRequest;
+        [HideInInspector] public int localeIndex = 0; // for custom editor
 
         [System.Serializable]
         public class TendencyPlacements

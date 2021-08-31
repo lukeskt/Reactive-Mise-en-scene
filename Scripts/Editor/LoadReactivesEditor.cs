@@ -13,11 +13,11 @@ namespace ReactiveMiseEnScene
         SerializedProperty tendencyAlgorithm;
         SerializedProperty presetTendency;
         string[] editorTendency;
-        int _tendencyIndex = 0;
+        SerializedProperty tendencyIndex;
         SerializedProperty requestType;
         SerializedProperty localeRequest;
         string[] editorLocale;
-        int _localeIndex = 0;
+        SerializedProperty localeIndex;
         SerializedProperty listOfTendencyPlacements;
 
         private void OnEnable()
@@ -25,6 +25,9 @@ namespace ReactiveMiseEnScene
             RMSettings = serializedObject.FindProperty("RMSettings");
             tendencyAlgorithm = serializedObject.FindProperty("tendencyAlgorithm");
             presetTendency = serializedObject.FindProperty("presetTendency");
+            tendencyIndex = serializedObject.FindProperty("tendencyIndex");
+            localeRequest = serializedObject.FindProperty("localeRequest");
+            localeIndex = serializedObject.FindProperty("localeIndex");
             var loadReactives = target as LoadReactives;
             if (loadReactives.RMSettings != null)
             {
@@ -32,7 +35,6 @@ namespace ReactiveMiseEnScene
                 editorLocale = loadReactives.RMSettings.Locales;
             }
             requestType = serializedObject.FindProperty("requestType");
-            localeRequest = serializedObject.FindProperty("localeRequest");
             listOfTendencyPlacements = serializedObject.FindProperty("listOfTendencyPlacements");
         }
 
@@ -41,9 +43,6 @@ namespace ReactiveMiseEnScene
             serializedObject.Update();
             //DrawDefaultInspector();
             //EditorGUILayout.Space();
-            //EditorGUILayout.Space();
-            //EditorGUILayout.LabelField("Custom Inspector Below");
-            
             EditorGUILayout.PropertyField(RMSettings);
             serializedObject.ApplyModifiedProperties();
             serializedObject.Update();
@@ -51,19 +50,21 @@ namespace ReactiveMiseEnScene
             var loadReactives = target as LoadReactives;
             if (loadReactives.RMSettings != null)
             {
+                editorTendency = loadReactives.RMSettings.Tendencies;
                 if (loadReactives.tendencyAlgorithm == ReactiveMesSettings.TendencyAlgorithm.Preset) // preset algo - index not ideal, name match how?
                 {
-                    editorTendency = loadReactives.RMSettings.Tendencies;
-                    _tendencyIndex = EditorGUILayout.Popup("Preset Tendency:", _tendencyIndex, editorTendency);
-                    presetTendency.stringValue = editorTendency[_tendencyIndex];
+                    tendencyIndex.intValue = EditorGUILayout.Popup(label:"Preset Tendency:", tendencyIndex.intValue, editorTendency);
                 }
+                presetTendency.stringValue = editorTendency[tendencyIndex.intValue];
+
                 EditorGUILayout.PropertyField(requestType);
+                
+                editorLocale = loadReactives.RMSettings.Locales;
                 if (loadReactives.requestType == ReactiveMesSettings.RequestType.Locale)
                 {
-                    editorLocale = loadReactives.RMSettings.Locales;
-                    _localeIndex = EditorGUILayout.Popup("Locale to Request:", _localeIndex, editorLocale);
-                    localeRequest.stringValue = editorLocale[_localeIndex];
+                    localeIndex.intValue = EditorGUILayout.Popup(label:"Locale to Request:", localeIndex.intValue, editorLocale);
                 }
+                localeRequest.stringValue = editorLocale[localeIndex.intValue];
             }
             EditorGUILayout.PropertyField(listOfTendencyPlacements);
             serializedObject.ApplyModifiedProperties();

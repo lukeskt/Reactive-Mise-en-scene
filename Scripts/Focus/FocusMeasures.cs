@@ -13,10 +13,9 @@ namespace ReactiveMiseEnScene
     {
         public ReactiveMesSettings RMSettings;
         public string locale;
-        [HideInInspector] public int localeIndex = 0;
-        //public List<ReactiveTags.Tendencies> tendencyTags;
+        [HideInInspector] public int localeIndex = 0; // for custom editor
         public string tendency;
-        [HideInInspector] public int tendencyIndex = 0;
+        [HideInInspector] public int tendencyIndex = 0; // for custom editor
 
         // Rating Multipliers - Focused is best, otherwise effect of attention, visible, is less.
         [Header("Rating Multipliers")]

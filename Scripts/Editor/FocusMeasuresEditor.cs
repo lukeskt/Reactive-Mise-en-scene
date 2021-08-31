@@ -50,9 +50,10 @@ namespace ReactiveMiseEnScene
             if (focusMeasures.RMSettings != null)
             {
                 editorLocale = focusMeasures.RMSettings.Locales;
-                editorTendency = focusMeasures.RMSettings.Tendencies;
                 localeIndex.intValue = EditorGUILayout.Popup(label:"Locale:", localeIndex.intValue, editorLocale);
                 locale.stringValue = editorLocale[localeIndex.intValue];
+
+                editorTendency = focusMeasures.RMSettings.Tendencies;
                 tendencyIndex.intValue = EditorGUILayout.Popup("Tendency:", tendencyIndex.intValue, editorTendency);
                 tendency.stringValue = editorTendency[tendencyIndex.intValue];
             }
