@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    public class LoadGeometry : MonoBehaviour
+    public class EnableObjectHierarchyRecursively : MonoBehaviour
     {
         // NOTE: Put this on the top level empty gameobject that contains the basic geometry you want to load for a location.
         // Simply enables the hierarchy recursively down from the object to which it is attached.
