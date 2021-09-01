@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEditor;
 
 namespace ReactiveMiseEnScene
@@ -75,3 +76,4 @@ namespace ReactiveMiseEnScene
         }
     }
 }
+#endif
