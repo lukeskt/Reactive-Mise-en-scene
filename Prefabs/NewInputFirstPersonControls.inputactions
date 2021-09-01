@@ -1,5 +1,5 @@
 {
-    "name": "ReactiveMediaFPSControllerInput",
+    "name": "NewInputFirstPersonControls",
     "maps": [
         {
             "name": "FPSController",
@@ -18,6 +18,14 @@
                     "type": "Value",
                     "id": "5199bef6-c81b-4c89-a767-9d8947696c32",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Zoom",
+                    "type": "Button",
+                    "id": "0998abb7-9fab-4ed8-840b-668f6a9d41f7",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -138,7 +146,7 @@
                     "id": "a4145e3e-192b-4cc8-82eb-ebae065cddae",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "ScaleVector2(x=20,y=20)",
                     "groups": "FPSControllerInputs",
                     "action": "Look",
                     "isComposite": false,
@@ -152,6 +160,28 @@
                     "processors": "",
                     "groups": "FPSControllerInputs",
                     "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af2e03ea-44d0-47e1-af62-ae554b91a1d9",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "FPSControllerInputs",
+                    "action": "Zoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86ffbc8f-e77d-421f-aba6-4660814d34b1",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "FPSControllerInputs",
+                    "action": "Zoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

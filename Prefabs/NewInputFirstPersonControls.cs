@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/_Reactive_Mise-en-scene/Prefabs/ReactiveMediaFPSControllerInput.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/_Reactive_Mise-en-scene/Prefabs/NewInputFirstPersonControls.inputactions'
 
 using System;
 using System.Collections;
@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @ReactiveMediaFPSControllerInput : IInputActionCollection, IDisposable
+public class @NewInputFirstPersonControls : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @ReactiveMediaFPSControllerInput()
+    public @NewInputFirstPersonControls()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""ReactiveMediaFPSControllerInput"",
+    ""name"": ""NewInputFirstPersonControls"",
     ""maps"": [
         {
             ""name"": ""FPSController"",
@@ -31,6 +31,14 @@ public class @ReactiveMediaFPSControllerInput : IInputActionCollection, IDisposa
                     ""type"": ""Value"",
                     ""id"": ""5199bef6-c81b-4c89-a767-9d8947696c32"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""Button"",
+                    ""id"": ""0998abb7-9fab-4ed8-840b-668f6a9d41f7"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -151,7 +159,7 @@ public class @ReactiveMediaFPSControllerInput : IInputActionCollection, IDisposa
                     ""id"": ""a4145e3e-192b-4cc8-82eb-ebae065cddae"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""ScaleVector2(x=20,y=20)"",
                     ""groups"": ""FPSControllerInputs"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
@@ -165,6 +173,28 @@ public class @ReactiveMediaFPSControllerInput : IInputActionCollection, IDisposa
                     ""processors"": """",
                     ""groups"": ""FPSControllerInputs"",
                     ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af2e03ea-44d0-47e1-af62-ae554b91a1d9"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""FPSControllerInputs"",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""86ffbc8f-e77d-421f-aba6-4660814d34b1"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""FPSControllerInputs"",
+                    ""action"": ""Zoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -199,6 +229,7 @@ public class @ReactiveMediaFPSControllerInput : IInputActionCollection, IDisposa
         m_FPSController = asset.FindActionMap("FPSController", throwIfNotFound: true);
         m_FPSController_Move = m_FPSController.FindAction("Move", throwIfNotFound: true);
         m_FPSController_Look = m_FPSController.FindAction("Look", throwIfNotFound: true);
+        m_FPSController_Zoom = m_FPSController.FindAction("Zoom", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -250,12 +281,14 @@ public class @ReactiveMediaFPSControllerInput : IInputActionCollection, IDisposa
     private IFPSControllerActions m_FPSControllerActionsCallbackInterface;
     private readonly InputAction m_FPSController_Move;
     private readonly InputAction m_FPSController_Look;
+    private readonly InputAction m_FPSController_Zoom;
     public struct FPSControllerActions
     {
-        private @ReactiveMediaFPSControllerInput m_Wrapper;
-        public FPSControllerActions(@ReactiveMediaFPSControllerInput wrapper) { m_Wrapper = wrapper; }
+        private @NewInputFirstPersonControls m_Wrapper;
+        public FPSControllerActions(@NewInputFirstPersonControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_FPSController_Move;
         public InputAction @Look => m_Wrapper.m_FPSController_Look;
+        public InputAction @Zoom => m_Wrapper.m_FPSController_Zoom;
         public InputActionMap Get() { return m_Wrapper.m_FPSController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -271,6 +304,9 @@ public class @ReactiveMediaFPSControllerInput : IInputActionCollection, IDisposa
                 @Look.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnLook;
                 @Look.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnLook;
                 @Look.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnLook;
+                @Zoom.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnZoom;
+                @Zoom.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnZoom;
+                @Zoom.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnZoom;
             }
             m_Wrapper.m_FPSControllerActionsCallbackInterface = instance;
             if (instance != null)
@@ -281,6 +317,9 @@ public class @ReactiveMediaFPSControllerInput : IInputActionCollection, IDisposa
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
+                @Zoom.started += instance.OnZoom;
+                @Zoom.performed += instance.OnZoom;
+                @Zoom.canceled += instance.OnZoom;
             }
         }
     }
@@ -298,5 +337,6 @@ public class @ReactiveMediaFPSControllerInput : IInputActionCollection, IDisposa
     {
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnZoom(InputAction.CallbackContext context);
     }
 }
