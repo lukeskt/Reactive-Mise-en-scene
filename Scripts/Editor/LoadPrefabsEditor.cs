@@ -1,6 +1,5 @@
 #if UNITY_EDITOR
 using UnityEditor;
-using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
@@ -55,7 +54,9 @@ namespace ReactiveMiseEnScene
                     tendencyIndex.intValue = EditorGUILayout.Popup("Preset Tendency:", tendencyIndex.intValue, editorTendency);
                     presetTendency.stringValue = editorTendency[tendencyIndex.intValue];
                 }
+
                 EditorGUILayout.PropertyField(requestType);
+
                 if (loadPrefabs.requestType == ReactiveMesSettings.RequestType.Locale)
                 {
                     editorLocale = loadPrefabs.RMSettings.Locales;
@@ -63,6 +64,7 @@ namespace ReactiveMiseEnScene
                     localeRequest.stringValue = editorLocale[localeIndex.intValue];
                 }
             }
+            EditorGUILayout.Space();
             EditorGUILayout.PropertyField(listOfTendencyPlacements);
             serializedObject.ApplyModifiedProperties();
         }
