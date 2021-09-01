@@ -22,14 +22,5 @@ namespace ReactiveMiseEnScene
             // Remove this component - but keep trigger in case useful later?
             Destroy(this);
         }
-
-        //private void OnTriggerExit(Collider other)
-        //{
-        //    if(other.gameObject.tag == "Player")
-        //    {
-        //        // Destroy gameobject of self to stop additional triggerings
-        //        Destroy(gameObject);
-        //    }
-        //}
     }
 }
