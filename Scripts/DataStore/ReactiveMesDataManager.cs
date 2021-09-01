@@ -5,15 +5,6 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    //public struct AttnDataStruct
-    //{
-    //    public string name;
-    //    public Tendencies tendency;
-    //    public Locales locale;
-    //    public double attentionRating;
-    //}
-
-    // below would be potential alt impl for using with reactivemediasettings SO.
     public struct FocusDataStruct
     {
         public string name;
