@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: RMS
   m_EditorClassIdentifier: 
   Locales:
-  - Whitespace Lab
-  - Apartment
-  - Cafe
-  - Gallery
-  - Office
+  - Area_01
+  - Area_02
+  - Area_03
   Tendencies:
   - Neutral
-  - Spy
-  - Terrorist
-  - Auteur
+  - Tendency_01
+  - Tendency_02
+  - Tendency_03
