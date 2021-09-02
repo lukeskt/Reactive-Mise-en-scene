@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/_Reactive_Mise-en-scene/Prefabs/FirstPersonCharacter/NewInputFirstPersonControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/_Reactive_Mise-en-scene/Scripts/FirstPersonCharacter/NewInputFirstPersonControls.inputactions'
 
 using System;
 using System.Collections;
