@@ -17,7 +17,6 @@ namespace ReactiveMiseEnScene
         SerializedProperty localeRequest;
         SerializedProperty localeIndex;
         SerializedProperty volumeProfiles;
-        SerializedProperty presetVolumeProfile;
 
         private void OnEnable()
         {
@@ -35,7 +34,6 @@ namespace ReactiveMiseEnScene
             localeRequest = serializedObject.FindProperty("localeRequest");
             localeIndex = serializedObject.FindProperty("localeIndex");
             volumeProfiles = serializedObject.FindProperty("volumeProfiles");
-            presetVolumeProfile = serializedObject.FindProperty("presetVolumeProfile");
         }
 
         public override void OnInspectorGUI()
@@ -49,10 +47,6 @@ namespace ReactiveMiseEnScene
             if (loadRenderVolume.RMSettings != null)
             {
                 editorTendency = loadRenderVolume.RMSettings.Tendencies;
-                if (loadRenderVolume.algorithm == ReactiveMesSettings.TendencyAlgorithm.Preset) // preset algo - index not ideal, name match how?
-                {
-                    tendencyIndex.intValue = EditorGUILayout.Popup("Preset Tendency:", tendencyIndex.intValue, editorTendency);   
-                }
                 presetTendency.stringValue = editorTendency[tendencyIndex.intValue];
 
                 EditorGUILayout.PropertyField(requestType);
@@ -64,14 +58,7 @@ namespace ReactiveMiseEnScene
                 }
                 localeRequest.stringValue = editorLocale[localeIndex.intValue];
             }
-            if (loadRenderVolume.algorithm == ReactiveMesSettings.TendencyAlgorithm.Preset)
-            {
-                EditorGUILayout.PropertyField(presetVolumeProfile);
-            }
-            else
-            {
-                EditorGUILayout.PropertyField(volumeProfiles);
-            }
+            EditorGUILayout.PropertyField(volumeProfiles);
             serializedObject.ApplyModifiedProperties();
         }
     }

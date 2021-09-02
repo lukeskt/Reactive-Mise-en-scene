@@ -48,7 +48,7 @@ namespace ReactiveMiseEnScene
             var loadPrefabs = target as LoadPrefabs;
             if (loadPrefabs.RMSettings != null)
             {
-                if (loadPrefabs.tendencyAlgorithm == ReactiveMesSettings.TendencyAlgorithm.Preset) // preset algo - index not ideal, name match how?
+                if (loadPrefabs.tendencyAlgorithm == ReactiveMesSettings.MultiResultTendencyAlgorithm.Preset) // preset algo - index not ideal, name match how?
                 {
                     editorTendency = loadPrefabs.RMSettings.Tendencies;
                     tendencyIndex.intValue = EditorGUILayout.Popup("Preset Tendency:", tendencyIndex.intValue, editorTendency);

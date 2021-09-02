@@ -11,7 +11,7 @@ namespace ReactiveMiseEnScene
         public ReactiveMesSettings RMSettings;
 
         [Tooltip("Select which algorithm to use to decide which object to load at each placement point.")]
-        [SerializeField] public ReactiveMesSettings.TendencyAlgorithm tendencyAlgorithm;
+        [SerializeField] public ReactiveMesSettings.MultiResultTendencyAlgorithm tendencyAlgorithm;
         [Tooltip("If using Preset algorithm, use this to specify the tendency to load objects for.")]
         [SerializeField] public string presetTendency;
         [HideInInspector] public int tendencyIndex = 0; // for custom editor
@@ -65,26 +65,26 @@ namespace ReactiveMiseEnScene
 
             switch (tendencyAlgorithm)
             {
-                case ReactiveMesSettings.TendencyAlgorithm.MaxValue:
+                case ReactiveMesSettings.MultiResultTendencyAlgorithm.MaxValue:
                     StartCoroutine(MaxValueLoader(orderedTendencyAttentionRatings));
                     break;
-                case ReactiveMesSettings.TendencyAlgorithm.MinValue:
+                case ReactiveMesSettings.MultiResultTendencyAlgorithm.MinValue:
                     StartCoroutine(MinValueLoader(orderedTendencyAttentionRatings));
                     break;
-                case ReactiveMesSettings.TendencyAlgorithm.Proportional:
+                case ReactiveMesSettings.MultiResultTendencyAlgorithm.Proportional:
                     //ProportionalLoader(orderedTendencyAttentionRatings);
                     StartCoroutine(ProportionalLoader(orderedTendencyAttentionRatings));
                     break;
-                case ReactiveMesSettings.TendencyAlgorithm.InverseProportion:
+                case ReactiveMesSettings.MultiResultTendencyAlgorithm.InverseProportion:
                     StartCoroutine(InverseProportionalLoader(orderedTendencyAttentionRatings));
                     break;
-                case ReactiveMesSettings.TendencyAlgorithm.CompetitorDistribution:
-                    StartCoroutine(CompetitorDistributionLoader(orderedTendencyAttentionRatings));
-                    break;
-                case ReactiveMesSettings.TendencyAlgorithm.Preset:
+                //case ReactiveMesSettings.MultiResultTendencyAlgorithm.CompetitorDistribution:
+                //    StartCoroutine(CompetitorDistributionLoader(orderedTendencyAttentionRatings));
+                //    break;
+                case ReactiveMesSettings.MultiResultTendencyAlgorithm.Preset:
                     StartCoroutine(PresetLoader());
                     break;
-                case ReactiveMesSettings.TendencyAlgorithm.Random:
+                case ReactiveMesSettings.MultiResultTendencyAlgorithm.Random:
                     StartCoroutine(RandomLoader());
                     break;
                 default:

@@ -5,12 +5,11 @@ using UnityEngine.Rendering;
 
 namespace ReactiveMiseEnScene
 {
-    [RequireComponent(typeof(Volume))]
-    [RequireComponent(typeof(Collider))]
+    [RequireComponent(typeof(Volume), (typeof(Collider)))]
     public class LoadRenderVolume : MonoBehaviour
     {
         public ReactiveMesSettings RMSettings;
-        public ReactiveMesSettings.TendencyAlgorithm algorithm;
+        public ReactiveMesSettings.SingleResultTendencyAlgorithm algorithm;
         public ReactiveMesSettings.RequestType requestType;
         public string presetTendency;
         [HideInInspector] public int tendencyIndex = 0; // for custom editor
@@ -46,37 +45,23 @@ namespace ReactiveMiseEnScene
 
             switch (algorithm)
             {
-                case ReactiveMesSettings.TendencyAlgorithm.MaxValue:
+                case ReactiveMesSettings.SingleResultTendencyAlgorithm.MaxValue:
                     TendencyForVolProfile = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
                     volume.profile = volumeProfiles.Find(profile => profile.name.Contains(TendencyForVolProfile.ToString()));
                     break;
-                case ReactiveMesSettings.TendencyAlgorithm.MinValue:
+                case ReactiveMesSettings.SingleResultTendencyAlgorithm.MinValue:
                     TendencyForVolProfile = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
                     volume.profile = volumeProfiles.Find(profile => profile.name.Contains(TendencyForVolProfile.ToString()));
                     break;
-                case ReactiveMesSettings.TendencyAlgorithm.Proportional:
-                    NotImpl();
-                    break;
-                case ReactiveMesSettings.TendencyAlgorithm.InverseProportion:
-                    NotImpl();
-                    break;
-                case ReactiveMesSettings.TendencyAlgorithm.CompetitorDistribution:
-                    NotImpl();
-                    break;
-                case ReactiveMesSettings.TendencyAlgorithm.Preset:
-                    volume.profile = presetVolumeProfile;
-                    break;
-                case ReactiveMesSettings.TendencyAlgorithm.Random:
+                //case ReactiveMesSettings.SingleResultTendencyAlgorithm.Preset:
+                //    volume.profile = presetVolumeProfile;
+                //    break;
+                case ReactiveMesSettings.SingleResultTendencyAlgorithm.Random:
                     volume.profile = volumeProfiles[Random.Range(0, volumeProfiles.Count)];
                     break;
                 default:
-                    goto case ReactiveMesSettings.TendencyAlgorithm.Preset;
+                    goto case ReactiveMesSettings.SingleResultTendencyAlgorithm.MaxValue;
             }
-        }
-
-        private void NotImpl()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

@@ -23,7 +23,6 @@ namespace ReactiveMiseEnScene
         SerializedProperty localeIndex;
 
         SerializedProperty timelines;
-        SerializedProperty presetTimeline;
 
         private void OnEnable()
         {
@@ -41,7 +40,6 @@ namespace ReactiveMiseEnScene
             localeRequest = serializedObject.FindProperty("localeRequest");
             localeIndex = serializedObject.FindProperty("localeIndex");
             timelines = serializedObject.FindProperty("timelines");
-            presetTimeline = serializedObject.FindProperty("presetTimeline");
         }
 
         public override void OnInspectorGUI()
@@ -55,10 +53,6 @@ namespace ReactiveMiseEnScene
             if (loadTimeline.RMSettings != null)
             {
                 editorTendency = loadTimeline.RMSettings.Tendencies;
-                if (loadTimeline.algorithm == ReactiveMesSettings.TendencyAlgorithm.Preset) // preset algo - index not ideal, name match how?
-                {
-                    tendencyIndex.intValue = EditorGUILayout.Popup("Preset Tendency:", tendencyIndex.intValue, editorTendency);
-                }
                 presetTendency.stringValue = editorTendency[tendencyIndex.intValue];
 
                 EditorGUILayout.PropertyField(requestType);
@@ -70,14 +64,7 @@ namespace ReactiveMiseEnScene
                 }
                 localeRequest.stringValue = editorLocale[localeIndex.intValue];
             }
-            if (loadTimeline.algorithm == ReactiveMesSettings.TendencyAlgorithm.Preset)
-            {
-                EditorGUILayout.PropertyField(presetTimeline);
-            }
-            else
-            {
-                EditorGUILayout.PropertyField(timelines);
-            }
+            EditorGUILayout.PropertyField(timelines);
             serializedObject.ApplyModifiedProperties();
         }
     }

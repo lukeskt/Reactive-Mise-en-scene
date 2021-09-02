@@ -11,7 +11,7 @@ namespace ReactiveMiseEnScene
     public class LoadTimeline : MonoBehaviour
     {
         public ReactiveMesSettings RMSettings;
-        public ReactiveMesSettings.TendencyAlgorithm algorithm;
+        public ReactiveMesSettings.SingleResultTendencyAlgorithm algorithm;
         public ReactiveMesSettings.RequestType requestType;
         public string presetTendency;
         [HideInInspector] public int localeIndex = 0; // for custom editor
@@ -23,8 +23,6 @@ namespace ReactiveMiseEnScene
         public TimelineAsset presetTimeline;
         private ReactiveMesDataManager DataMgr;
 
-        // times if we need them
-        private float startTime;
         public float timeToWait;
 
         // Start is called before the first frame update
@@ -34,8 +32,6 @@ namespace ReactiveMiseEnScene
             // Make sure timeline stopped before loading new timeline.
             timelineDirector.Stop();
             DataMgr = FindObjectOfType<ReactiveMesDataManager>();
-            
-            startTime = Time.time;
 
             Dictionary<string, double> TendenciesFromDataMgr = new Dictionary<string, double>();
             string TendencyForTimeline;
@@ -53,51 +49,25 @@ namespace ReactiveMiseEnScene
 
             switch (algorithm)
             {
-                case ReactiveMesSettings.TendencyAlgorithm.MaxValue:
+                case ReactiveMesSettings.SingleResultTendencyAlgorithm.MaxValue:
                     TendencyForTimeline = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
                     timelineDirector.playableAsset = timelines.Find(profile => profile.name.Contains(TendencyForTimeline.ToString()));
                     break;
-                case ReactiveMesSettings.TendencyAlgorithm.MinValue:
+                case ReactiveMesSettings.SingleResultTendencyAlgorithm.MinValue:
                     TendencyForTimeline = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
                     timelineDirector.playableAsset = timelines.Find(profile => profile.name.Contains(TendencyForTimeline.ToString()));
                     break;
-                case ReactiveMesSettings.TendencyAlgorithm.Proportional:
-                    NotImpl();
-                    break;
-                case ReactiveMesSettings.TendencyAlgorithm.InverseProportion:
-                    NotImpl();
-                    break;
-                case ReactiveMesSettings.TendencyAlgorithm.CompetitorDistribution:
-                    NotImpl();
-                    break;
-                case ReactiveMesSettings.TendencyAlgorithm.Preset:
-                    timelineDirector.playableAsset = presetTimeline;
-                    break;
-                case ReactiveMesSettings.TendencyAlgorithm.Random:
+                //case ReactiveMesSettings.SingleResultTendencyAlgorithm.Preset:
+                //    timelineDirector.playableAsset = presetTimeline;
+                //    break;
+                case ReactiveMesSettings.SingleResultTendencyAlgorithm.Random:
                     timelineDirector.playableAsset = timelines[Random.Range(0, timelines.Count)];
                     break;
                 default:
-                    goto case ReactiveMesSettings.TendencyAlgorithm.Preset;
+                    goto case ReactiveMesSettings.SingleResultTendencyAlgorithm.MaxValue;
             }
             // Start timeline after selecting one based on algorithm.
             timelineDirector.Play();
-        }
-
-        private bool CheckTimeSinceStart(float timeToWait)
-        {
-            float nowTime = Time.time;
-            if (nowTime - startTime >= timeToWait)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        private void NotImpl()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
