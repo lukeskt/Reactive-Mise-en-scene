@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace ReactiveMiseEnScene
 {
-    public class Load_Init : MonoBehaviour
+    public class EnableListOfObjects : MonoBehaviour
     {
         public List<GameObject> objectsToActivate = new List<GameObject>();
 
