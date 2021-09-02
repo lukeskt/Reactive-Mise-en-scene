@@ -21,7 +21,7 @@ namespace ReactiveMiseEnScene
         private void OnEnable()
         {
             RMSettings = serializedObject.FindProperty("RMSettings");
-            algorithm = serializedObject.FindProperty("tendencyAlgorithm");
+            algorithm = serializedObject.FindProperty("algorithm");
             presetTendency = serializedObject.FindProperty("presetTendency");
             tendencyIndex = serializedObject.FindProperty("tendencyIndex");
             localeRequest = serializedObject.FindProperty("localeRequest");
@@ -44,24 +44,29 @@ namespace ReactiveMiseEnScene
             EditorGUILayout.PropertyField(RMSettings);
             serializedObject.ApplyModifiedProperties();
             serializedObject.Update();
+
             EditorGUILayout.PropertyField(algorithm);
+            
             var loadPrefabs = target as LoadPrefabs;
+            
             if (loadPrefabs.RMSettings != null)
             {
-                if (loadPrefabs.tendencyAlgorithm == ReactiveMesSettings.MultiResultTendencyAlgorithm.Preset) // preset algo - index not ideal, name match how?
+                if (loadPrefabs.algorithm == ReactiveMesSettings.MultiResultTendencyAlgorithm.Preset) // preset algo - index not ideal, name match how?
                 {
                     editorTendency = loadPrefabs.RMSettings.Tendencies;
                     tendencyIndex.intValue = EditorGUILayout.Popup("Preset Tendency:", tendencyIndex.intValue, editorTendency);
                     presetTendency.stringValue = editorTendency[tendencyIndex.intValue];
                 }
 
-                EditorGUILayout.PropertyField(requestType);
-
-                if (loadPrefabs.requestType == ReactiveMesSettings.RequestType.Locale)
+                if (loadPrefabs.algorithm != ReactiveMesSettings.MultiResultTendencyAlgorithm.Random)
                 {
-                    editorLocale = loadPrefabs.RMSettings.Locales;
-                    localeIndex.intValue = EditorGUILayout.Popup("Locale to Request:", localeIndex.intValue, editorLocale);
-                    localeRequest.stringValue = editorLocale[localeIndex.intValue];
+                    EditorGUILayout.PropertyField(requestType);
+                    if (loadPrefabs.requestType == ReactiveMesSettings.RequestType.Locale)
+                    {
+                        editorLocale = loadPrefabs.RMSettings.Locales;
+                        localeIndex.intValue = EditorGUILayout.Popup("Locale to Request:", localeIndex.intValue, editorLocale);
+                        localeRequest.stringValue = editorLocale[localeIndex.intValue];
+                    }
                 }
             }
             EditorGUILayout.Space();

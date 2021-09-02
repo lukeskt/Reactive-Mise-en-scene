@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,10 +12,10 @@ namespace ReactiveMiseEnScene
         public ReactiveMesSettings RMSettings;
         public ReactiveMesSettings.SingleResultTendencyAlgorithm algorithm;
         public ReactiveMesSettings.RequestType requestType;
-        public string presetTendency;
-        [HideInInspector] public int localeIndex = 0; // for custom editor
+        //public string presetTendency;
+        //[HideInInspector] public int tendencyIndex = 0; // for custom editor
         public string localeRequest;
-        [HideInInspector] public int tendencyIndex = 0; // for custom editor
+        [HideInInspector] public int localeIndex = 0; // for custom editor
 
         private PlayableDirector timelineDirector;
         public List<TimelineAsset> timelines;

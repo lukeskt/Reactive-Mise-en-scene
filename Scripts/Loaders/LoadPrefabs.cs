@@ -11,7 +11,7 @@ namespace ReactiveMiseEnScene
         public ReactiveMesSettings RMSettings;
 
         [Tooltip("Select which algorithm to use to decide which object to load at each placement point.")]
-        [SerializeField] public ReactiveMesSettings.MultiResultTendencyAlgorithm tendencyAlgorithm;
+        [SerializeField] public ReactiveMesSettings.MultiResultTendencyAlgorithm algorithm;
         [Tooltip("If using Preset algorithm, use this to specify the tendency to load objects for.")]
         [SerializeField] public string presetTendency;
         [HideInInspector] public int tendencyIndex = 0; // for custom editor
@@ -63,7 +63,7 @@ namespace ReactiveMiseEnScene
             orderedTendencyAttentionRatings.Sort((x, y) => x.Value.CompareTo(y.Value));
             orderedTendencyAttentionRatings.Reverse(); // = descending values.
 
-            switch (tendencyAlgorithm)
+            switch (algorithm)
             {
                 case ReactiveMesSettings.MultiResultTendencyAlgorithm.MaxValue:
                     StartCoroutine(MaxValueLoader(orderedTendencyAttentionRatings));

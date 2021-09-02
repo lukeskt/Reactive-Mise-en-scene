@@ -11,8 +11,8 @@ namespace ReactiveMiseEnScene
         public ReactiveMesSettings RMSettings;
         public ReactiveMesSettings.SingleResultTendencyAlgorithm algorithm;
         public ReactiveMesSettings.RequestType requestType;
-        public string presetTendency;
-        [HideInInspector] public int tendencyIndex = 0; // for custom editor
+        //public string presetTendency;
+        //[HideInInspector] public int tendencyIndex = 0; // for custom editor
         public string localeRequest;
         [HideInInspector] public int localeIndex = 0; // for custom editor
 

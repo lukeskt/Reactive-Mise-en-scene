@@ -14,9 +14,9 @@ namespace ReactiveMiseEnScene
         SerializedProperty algorithm;
         SerializedProperty requestType;
 
-        SerializedProperty presetTendency;
-        string[] editorTendency;
-        SerializedProperty tendencyIndex;
+        //SerializedProperty presetTendency;
+        //string[] editorTendency;
+        //SerializedProperty tendencyIndex;
         
         SerializedProperty localeRequest;
         string[] editorLocale;        
@@ -28,15 +28,15 @@ namespace ReactiveMiseEnScene
         {
             RMSettings = serializedObject.FindProperty("RMSettings");
             algorithm = serializedObject.FindProperty("algorithm");
+            requestType = serializedObject.FindProperty("requestType");
             var loadTimeline = target as LoadTimeline;
             if (loadTimeline.RMSettings != null)
             {
-                editorTendency = loadTimeline.RMSettings.Tendencies;
+                //editorTendency = loadTimeline.RMSettings.Tendencies;
                 editorLocale = loadTimeline.RMSettings.Locales;
             }
-            requestType = serializedObject.FindProperty("requestType");
-            presetTendency = serializedObject.FindProperty("presetTendency");
-            tendencyIndex = serializedObject.FindProperty("tendencyIndex");
+            //presetTendency = serializedObject.FindProperty("presetTendency");
+            //tendencyIndex = serializedObject.FindProperty("tendencyIndex");
             localeRequest = serializedObject.FindProperty("localeRequest");
             localeIndex = serializedObject.FindProperty("localeIndex");
             timelines = serializedObject.FindProperty("timelines");
@@ -48,22 +48,29 @@ namespace ReactiveMiseEnScene
             EditorGUILayout.PropertyField(RMSettings);
             serializedObject.ApplyModifiedProperties();
             serializedObject.Update();
+            
             EditorGUILayout.PropertyField(algorithm);
+            
             var loadTimeline = target as LoadTimeline;
+            
             if (loadTimeline.RMSettings != null)
             {
-                editorTendency = loadTimeline.RMSettings.Tendencies;
-                presetTendency.stringValue = editorTendency[tendencyIndex.intValue];
+                //editorTendency = loadTimeline.RMSettings.Tendencies;
+                //presetTendency.stringValue = editorTendency[tendencyIndex.intValue];
 
-                EditorGUILayout.PropertyField(requestType);
-
-                editorLocale = loadTimeline.RMSettings.Locales;
-                if (loadTimeline.requestType == ReactiveMesSettings.RequestType.Locale)
+                if (loadTimeline.algorithm != ReactiveMesSettings.SingleResultTendencyAlgorithm.Random)
                 {
-                    localeIndex.intValue = EditorGUILayout.Popup("Locale to Request:", localeIndex.intValue, editorLocale);
+                    EditorGUILayout.PropertyField(requestType);
+                    editorLocale = loadTimeline.RMSettings.Locales;
+                    if (loadTimeline.requestType == ReactiveMesSettings.RequestType.Locale)
+                    {
+                        localeIndex.intValue = EditorGUILayout.Popup("Locale to Request:", localeIndex.intValue, editorLocale);
+                    }
+                    localeRequest.stringValue = editorLocale[localeIndex.intValue];
                 }
-                localeRequest.stringValue = editorLocale[localeIndex.intValue];
             }
+
+            EditorGUILayout.Space();
             EditorGUILayout.PropertyField(timelines);
             serializedObject.ApplyModifiedProperties();
         }
