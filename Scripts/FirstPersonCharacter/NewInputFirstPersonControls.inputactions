@@ -173,7 +173,7 @@
                     "id": "de7cdca1-c0b2-4408-83fe-c06771dd6234",
                     "path": "<Mouse>/delta",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "ScaleVector2(x=2,y=2)",
                     "groups": "FPSControllerInputs",
                     "action": "Look",
                     "isComposite": false,

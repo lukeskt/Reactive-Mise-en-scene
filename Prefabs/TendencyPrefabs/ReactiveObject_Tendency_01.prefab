@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  locale: Area_01
-  localeIndex: 0
+  locale: Area_02
+  localeIndex: 1
   tendency: Tendency_01
   tendencyIndex: 1

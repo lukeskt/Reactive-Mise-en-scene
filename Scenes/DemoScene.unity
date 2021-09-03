@@ -1824,23 +1824,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchMaterial: []
---- !u!114 &109829975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109829973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a1ef110019c50c478c954df56d5b3e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  locale: Area_01
-  localeIndex: 0
-  tendency: Neutral
-  tendencyIndex: 0
 --- !u!1001 &123759497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2135,23 +2118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchMaterial: []
---- !u!114 &248845324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248845322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a1ef110019c50c478c954df56d5b3e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  locale: Area_01
-  localeIndex: 0
-  tendency: Tendency_02
-  tendencyIndex: 2
 --- !u!1001 &248883137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3252,23 +3218,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4004042927848942362, guid: 18244f2b025aead4d9c852c65d87b70b, type: 3}
   m_PrefabInstance: {fileID: 1849969503}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &640192374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640192373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a1ef110019c50c478c954df56d5b3e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  locale: Area_01
-  localeIndex: 0
-  tendency: Tendency_01
-  tendencyIndex: 1
 --- !u!1 &652143032
 GameObject:
   m_ObjectHideFlags: 0
@@ -6333,23 +6282,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1783410421219001441, guid: 0bd13dc9ed6a64a44a2db6ddb813f73a, type: 3}
   m_PrefabInstance: {fileID: 724892525}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1444338203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444338202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a1ef110019c50c478c954df56d5b3e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  locale: Area_01
-  localeIndex: 0
-  tendency: Tendency_03
-  tendencyIndex: 3
 --- !u!1 &1609672846
 GameObject:
   m_ObjectHideFlags: 0
@@ -7664,7 +7596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  algorithm: 0
+  algorithm: 2
   presetTendency: Neutral
   tendencyIndex: 0
   requestType: 1

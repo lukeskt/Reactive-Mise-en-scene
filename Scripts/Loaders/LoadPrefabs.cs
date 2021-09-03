@@ -96,25 +96,44 @@ namespace ReactiveMiseEnScene
         {
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
-                // TODO: check throughout to try obj.GetComponent<FocusMeasures>() then if fails try GetComponent<ObjectLocaleTendencyTags>()!
-                spawnObject(
-                    tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value > r.Value ? l : r).Key)),
-                    tendencyPlacement.placementPoint
-                    );
+                GameObject obj;
+                if (tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>() != null && obj.GetComponent<FocusMeasures>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value > r.Value ? l : r).Key))) 
+                {
+                    obj = tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value > r.Value ? l : r).Key));
+                }
+                else if(tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>() != null && obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value > r.Value ? l : r).Key)))
+                {
+                    obj = tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value > r.Value ? l : r).Key));
+                }
+                else
+                {
+                    obj = null;
+                }
+
+                spawnObject(obj, tendencyPlacement.placementPoint);
             }
             yield return null;
         }
 
         private IEnumerator MinValueLoader(List<KeyValuePair<string, double>> orderedTendencyAttentionRatings)
         {
-            
-
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
-                spawnObject(
-                    tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value < r.Value ? l : r).Key)),
-                    tendencyPlacement.placementPoint
-                    );
+                GameObject obj;
+                if (tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>() != null && obj.GetComponent<FocusMeasures>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value < r.Value ? l : r).Key)))
+                {
+                    obj = tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value < r.Value ? l : r).Key));
+                }
+                else if (tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>() != null && obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value < r.Value ? l : r).Key)))
+                {
+                    obj = tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(orderedTendencyAttentionRatings.Aggregate((l, r) => l.Value < r.Value ? l : r).Key));
+                }
+                else
+                {
+                    obj = null;
+                }
+
+                spawnObject(obj, tendencyPlacement.placementPoint);
             }
             yield return null;
         }
@@ -154,10 +173,21 @@ namespace ReactiveMiseEnScene
             // there may be an index out of range issue down here - consider how to handle - trycatch?
             for (int i = 0; i < listOfTendencyPlacements.tendencyPlacements.Count; i++)
             {
-                spawnObject(
-                    listOfTendencyPlacements.tendencyPlacements[i].tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(tendencyList[i])),
-                    listOfTendencyPlacements.tendencyPlacements[i].placementPoint
-                    );
+                GameObject obj;
+                if (listOfTendencyPlacements.tendencyPlacements[i].tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>() != null && obj.GetComponent<FocusMeasures>().tendency.Equals(tendencyList[i])))
+                {
+                    obj = listOfTendencyPlacements.tendencyPlacements[i].tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(tendencyList[i]));
+                }
+                else if (listOfTendencyPlacements.tendencyPlacements[i].tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>() != null && obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(tendencyList[i])))
+                {
+                    obj = listOfTendencyPlacements.tendencyPlacements[i].tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(tendencyList[i]));
+                }
+                else
+                {
+                    obj = null;
+                }
+
+                spawnObject(obj, listOfTendencyPlacements.tendencyPlacements[i].placementPoint);
             }
         }
 
@@ -242,10 +272,21 @@ namespace ReactiveMiseEnScene
             // TODO: Change this from a single tendency to spawn an authored list of objects.
             foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
             {
-                spawnObject(
-                    tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(presetTendency)),
-                    tendencyPlacement.placementPoint
-                    );
+                GameObject obj;
+                if (tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>() != null && obj.GetComponent<FocusMeasures>().tendency.Equals(presetTendency)))
+                {
+                    obj = tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(presetTendency));
+                }
+                else if (tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>() != null && obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(presetTendency)))
+                {
+                    obj = tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(presetTendency));
+                }
+                else
+                {
+                    obj = null;
+                }
+
+                spawnObject(obj, tendencyPlacement.placementPoint);
             }
             yield return null;
         }
