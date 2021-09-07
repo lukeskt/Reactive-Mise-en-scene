@@ -1,0 +1,10 @@
+cff-version: 0.7.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Skarth-Hayley
+    given-names: Luke
+    orcid: https://orcid.org/
+title: "Reactive Mise-en-scène Unity Plugin"
+version: 0.7.0
+doi: 
+date-released: 2021-09-30
