@@ -1,0 +1,9 @@
+newmtl UModeler_RulerGrid_Gray
+Ka 1 1 1
+Kd  1.0 1.0 1.0
+Ks  1.0 1.0 1.0
+d 1
+Ns  0.0
+illum 2
+map_Kd UModeler_ruler_grid_gray.png
+
