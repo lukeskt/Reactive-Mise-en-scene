@@ -43,4 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2affb7b59c1202f4abc5a166cd346ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requestType: 0
+  RMesSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
