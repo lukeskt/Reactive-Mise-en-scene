@@ -140,7 +140,7 @@ namespace ReactiveMiseEnScene
             if (Physics.Linecast(cam.transform.position,
                                  meshBounds.center,
                                  out RaycastHit hit, Physics.AllLayers, QueryTriggerInteraction.Ignore) &&
-                hit.collider.name == gameObject.name)
+                (hit.collider.name == gameObject.name || hit.collider.transform.parent.gameObject.name == gameObject.name))
             {
                 return true;
             }
