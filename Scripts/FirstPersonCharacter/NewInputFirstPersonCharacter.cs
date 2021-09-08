@@ -53,7 +53,7 @@ public class NewInputFirstPersonCharacter : MonoBehaviour
         DoLooking();
         DoMovement();
         DoZoom();
-        //DoCrouch();
+        DoCrouch();
     }
 
     private void DoLooking()
@@ -108,7 +108,7 @@ public class NewInputFirstPersonCharacter : MonoBehaviour
         else
         {
             // this doesn't work to check collision...
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), 0.5f))
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), 2.0f, -1))
             {
                 controller.height = crouchHeight;
             }
