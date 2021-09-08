@@ -125,9 +125,13 @@ namespace ReactiveMiseEnScene
             {
                 return;
             }
-            else // look for collider on gameObject
+            else if (GetComponent<Collider>()) // look for collider on gameObject
             {
                 specifiedCollider = GetComponent<Collider>();
+            }
+            else
+            {
+                specifiedCollider = GetComponentInChildren<Collider>(); // get the first collider found in children - not ideal.
             }
         }
 
