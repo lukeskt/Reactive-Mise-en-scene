@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &481330718951917254
+--- !u!1 &4375460737207704214
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1432461123074229228}
-  - component: {fileID: 4395784619213372738}
-  - component: {fileID: 6544537105720106887}
-  - component: {fileID: 559458501282990493}
+  - component: {fileID: 7774173130080684899}
+  - component: {fileID: 4217659782971176276}
+  - component: {fileID: 840838591892177851}
+  - component: {fileID: 8414457538139978581}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1432461123074229228
+--- !u!4 &7774173130080684899
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481330718951917254}
-  m_LocalRotation: {x: 0.118563354, y: 0.3896423, z: 0.010214988, w: 0.91324544}
+  m_GameObject: {fileID: 4375460737207704214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 1, z: 0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1147726378892554133}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 12.04, y: 46.9, z: 6.52}
---- !u!33 &4395784619213372738
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4217659782971176276
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481330718951917254}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6544537105720106887
+  m_GameObject: {fileID: 4375460737207704214}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &840838591892177851
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481330718951917254}
+  m_GameObject: {fileID: 4375460737207704214}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,20 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &559458501282990493
-MeshCollider:
+--- !u!135 &8414457538139978581
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481330718951917254}
+  m_GameObject: {fileID: 4375460737207704214}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5286824135258697350
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +104,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1147726378892554133}
-  - component: {fileID: -2177077100813756893}
   - component: {fileID: 1952455703511754516}
   - component: {fileID: 2214315540549920603}
   m_Layer: 0
@@ -126,27 +124,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1432461123074229228}
+  - {fileID: 7774173130080684899}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2177077100813756893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5286824135258697350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a1ef110019c50c478c954df56d5b3e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  locale: Area_03
-  localeIndex: 2
-  tendency: Neutral
-  tendencyIndex: 0
 --- !u!114 &1952455703511754516
 MonoBehaviour:
   m_ObjectHideFlags: 0
