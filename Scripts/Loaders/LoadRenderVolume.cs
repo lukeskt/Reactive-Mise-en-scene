@@ -47,11 +47,15 @@ namespace ReactiveMiseEnScene
             {
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.MaxValue:
                     TendencyForVolProfile = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
-                    volume.profile = volumeProfiles.Find(profile => profile.name.Contains(TendencyForVolProfile.ToString()));
+                    volume.profile = volumeProfiles.Find(profile => profile.name.Contains(TendencyForVolProfile));
+                    break;
+                case ReactiveMesSettings.SingleResultTendencyAlgorithm.RunnerUp:
+                    var SortedTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).Reverse().ToList();
+                    volume.profile = volumeProfiles.Find(profile => profile.name.Contains(SortedTendencies[1].Key));
                     break;
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.MinValue:
                     TendencyForVolProfile = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
-                    volume.profile = volumeProfiles.Find(profile => profile.name.Contains(TendencyForVolProfile.ToString()));
+                    volume.profile = volumeProfiles.Find(profile => profile.name.Contains(TendencyForVolProfile));
                     break;
                 //case ReactiveMesSettings.SingleResultTendencyAlgorithm.Preset:
                 //    volume.profile = presetVolumeProfile;

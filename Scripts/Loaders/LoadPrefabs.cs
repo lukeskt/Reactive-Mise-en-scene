@@ -68,6 +68,9 @@ namespace ReactiveMiseEnScene
                 case ReactiveMesSettings.MultiResultTendencyAlgorithm.MaxValue:
                     StartCoroutine(MaxValueLoader(orderedTendencyAttentionRatings));
                     break;
+                case ReactiveMesSettings.MultiResultTendencyAlgorithm.RunnerUp:
+                    StartCoroutine(RunnerUpLoader(orderedTendencyAttentionRatings));
+                    break;
                 case ReactiveMesSettings.MultiResultTendencyAlgorithm.MinValue:
                     StartCoroutine(MinValueLoader(orderedTendencyAttentionRatings));
                     break;
@@ -90,6 +93,29 @@ namespace ReactiveMiseEnScene
                 default:
                     break;
             }
+        }
+
+        private IEnumerator RunnerUpLoader(List<KeyValuePair<string, double>> orderedTendencyAttentionRatings)
+        {
+            foreach (var tendencyPlacement in listOfTendencyPlacements.tendencyPlacements)
+            {
+                GameObject obj;
+                if (tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>() != null && obj.GetComponent<FocusMeasures>().tendency.Equals(orderedTendencyAttentionRatings[1].Key)))
+                {
+                    obj = tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(orderedTendencyAttentionRatings[1].Key));
+                }
+                else if (tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>() != null && obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(orderedTendencyAttentionRatings[1].Key)))
+                {
+                    obj = tendencyPlacement.tendencyObjects.Find(obj => obj.GetComponent<ObjectLocaleTendencyTags>().tendency.Equals(orderedTendencyAttentionRatings[1].Key));
+                }
+                else
+                {
+                    obj = null;
+                }
+
+                spawnObject(obj, tendencyPlacement.placementPoint);
+            }
+            yield return null;
         }
 
         private IEnumerator MaxValueLoader(List<KeyValuePair<string, double>> orderedTendencyAttentionRatings)

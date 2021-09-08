@@ -50,11 +50,15 @@ namespace ReactiveMiseEnScene
             {
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.MaxValue:
                     TendencyForTimeline = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
-                    timelineDirector.playableAsset = timelines.Find(profile => profile.name.Contains(TendencyForTimeline.ToString()));
+                    timelineDirector.playableAsset = timelines.Find(profile => profile.name.Contains(TendencyForTimeline));
+                    break;
+                case ReactiveMesSettings.SingleResultTendencyAlgorithm.RunnerUp:
+                    var SortedTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).Reverse().ToList();
+                    timelineDirector.playableAsset = timelines.Find(profile => profile.name.Contains(SortedTendencies[1].Key));
                     break;
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.MinValue:
                     TendencyForTimeline = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
-                    timelineDirector.playableAsset = timelines.Find(profile => profile.name.Contains(TendencyForTimeline.ToString()));
+                    timelineDirector.playableAsset = timelines.Find(profile => profile.name.Contains(TendencyForTimeline));
                     break;
                 //case ReactiveMesSettings.SingleResultTendencyAlgorithm.Preset:
                 //    timelineDirector.playableAsset = presetTimeline;

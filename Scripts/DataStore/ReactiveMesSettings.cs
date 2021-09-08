@@ -20,6 +20,7 @@ namespace ReactiveMiseEnScene
         public enum MultiResultTendencyAlgorithm
         {
             MaxValue, // winning tendency by largest attention value
+            RunnerUp, // second place tendency
             MinValue,
             // FirstPastThreshold, // winning tendency past a threshold
             Proportional, // proportion of decision/placement points distroed amongst tendencies
@@ -33,6 +34,7 @@ namespace ReactiveMiseEnScene
         public enum SingleResultTendencyAlgorithm
         {
             MaxValue,
+            RunnerUp, // second place tendency
             MinValue,
             // FirstPastThreshold,
             Random
