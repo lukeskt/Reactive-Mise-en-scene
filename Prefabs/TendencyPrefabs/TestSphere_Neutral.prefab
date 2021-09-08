@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 268415587603726139}
   - component: {fileID: 1779734712435039984}
   - component: {fileID: 8127633950540950790}
+  - component: {fileID: 1366640338636988}
   m_Layer: 0
   m_Name: TestSphere_Neutral
   m_TagString: Untagged
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: bccbf54e17896404a8854ac0534306fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,31 +116,103 @@ MonoBehaviour:
   attendedThreshold: 400
   EnterVisible:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366640338636988}
+        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
+        m_MethodName: SetSwitchShader
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayVisible:
     m_PersistentCalls:
       m_Calls: []
   ExitVisible:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366640338636988}
+        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
+        m_MethodName: SetSwitchShader
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   EnterAttention:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366640338636988}
+        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
+        m_MethodName: SetSwitchShader
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayAttention:
     m_PersistentCalls:
       m_Calls: []
   ExitAttention:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366640338636988}
+        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
+        m_MethodName: SetSwitchShader
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   EnterFocus:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366640338636988}
+        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
+        m_MethodName: SetSwitchShader
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StayFocus:
     m_PersistentCalls:
       m_Calls: []
   ExitFocus:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366640338636988}
+        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
+        m_MethodName: SetSwitchShader
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   meshRenderer: {fileID: 0}
 --- !u!114 &8127633950540950790
 MonoBehaviour:
@@ -154,10 +227,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  locale: Whitespace Lab
+  locale: Area_01
   localeIndex: 0
   tendency: Neutral
-  tendencyIndex: 3
+  tendencyIndex: 0
   visibleMultiplier: 0.25
   attendedMultiplier: 0.5
   focusedMultiplier: 1
@@ -180,3 +253,20 @@ MonoBehaviour:
   WriteAttnDataMgr:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1366640338636988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268415587603726137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e252add64c9878409b80ed403194e1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchMaterial:
+  - {fileID: 2100000, guid: bccbf54e17896404a8854ac0534306fd, type: 2}
+  - {fileID: 2100000, guid: 980f684a06b56934a8760a992b7467cc, type: 2}
+  - {fileID: 2100000, guid: ca43f1d0adff7a74185cf83f898f590d, type: 2}
+  - {fileID: 2100000, guid: e736ab41d72fd604b9f08708faf0668f, type: 2}
