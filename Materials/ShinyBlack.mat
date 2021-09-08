@@ -22,10 +22,10 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: ShinyBlack
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_ShaderKeywords: _ADD_PRECOMPUTED_VELOCITY _DISABLE_SSR_TRANSPARENT _ENABLE_GEOMETRIC_SPECULAR_AA
-    _MATERIAL_FEATURE_CLEAR_COAT _NORMALMAP_TANGENT_SPACE
+  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _ENABLE_GEOMETRIC_SPECULAR_AA _MATERIAL_FEATURE_CLEAR_COAT
+    _NORMALMAP_TANGENT_SPACE
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2225
   stringTagMap:
@@ -35,6 +35,7 @@ Material:
   - TransparentDepthPostpass
   - TransparentBackface
   - TransparentDepthPrepass
+  - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -47,6 +48,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_91DB27DC:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_C5E3E723:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -187,25 +192,38 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_35A71344: 0
+    - Boolean_7A5F3F39: 0
+    - Boolean_7AC8D832: 0
     - Vector1_1886D5D5: 0.5
     - Vector1_1AE51200: 0.83
+    - Vector1_3402D67A: 1
+    - Vector1_3655428E: 2
+    - Vector1_5B05FA1F: 0.753
     - Vector1_612C4345: 0.6
     - Vector1_645404D7: 1
+    - Vector1_6B67A8FF: -20
     - Vector1_6B9EA178: 1
+    - Vector1_7810F718: 1
     - Vector1_8E5B9980: 1.48
     - Vector1_AB1FE791: 2.41
+    - Vector1_B6126E6E: 0.864
+    - Vector1_CA7D5F3: 1
     - Vector1_D03EAD1A: 1
     - Vector1_D103C52F: 12.94
+    - Vector1_D5FBE925: 0.3
     - Vector1_DC0D7652: 0
     - Vector1_E04DC205: 1
     - Vector1_F0859611: 0.67
+    - Vector1_F2A922B4: 1
+    - Vector1_F5FD9210: 30
     - Vector1_d02ec33a601f48bd9367120bb2db974d: 1.07
     - Vector1_e2b2e1187da147b7bc788e94fc3f4156: 2.04
     - Vector1_f7e851fa7e0d4303805fd0cceb7c51f0: 0.21
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
-    - _AddPrecomputedVelocity: 1
+    - _AddPrecomputedVelocity: 0
     - _AffectAlbedo: 1
     - _AffectNormal: 1
     - _AffectSmoothness: 1
@@ -278,7 +296,7 @@ Material:
     - _IridescenceThickness: 1
     - _LinkDetailsWithBase: 0
     - _MaterialID: 1
-    - _Metallic: 0.04
+    - _Metallic: 0
     - _MetallicRemapMax: 0
     - _MetallicRemapMin: 0
     - _Mode: 0
@@ -298,11 +316,11 @@ Material:
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
-    - _RenderQueueType: 4
+    - _RenderQueueType: 1
     - _RequireSplitLighting: 0
     - _ScanlineOffset: 1.25
     - _ScrollSpeed: 0.5
-    - _Smoothness: 0.26
+    - _Smoothness: 0.5
     - _SmoothnessRemapMax: 0.595
     - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 1
@@ -347,6 +365,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_1410BA24: {r: 0, g: 0.034409046, b: 1, a: 0}
+    - Color_2B671050: {r: 0, g: 0, b: 0, a: 0}
+    - Color_30A0CA2F: {r: 0, g: 0, b: 0, a: 0}
     - Color_518E1D6C: {r: 0, g: 0.99215686, b: 1, a: 1}
     - Color_DF96D22A: {r: 0, g: 0, b: 0, a: 0}
     - Color_e7461bf438284f48a060000bf6d7e4a8: {r: 0.9927486, g: 1, b: 0.15566039, a: 0}
@@ -362,7 +382,7 @@ Material:
     - _DoubleSidedConstants: {r: -1, g: -1, b: -1, a: 0}
     - _EdgeColor: {r: 0, g: 4.356018, b: 32, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0.46666667}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 0, g: 0.12101045, b: 1.0505898, a: 1}
     - _HologramTiling: {r: 128, g: 64, b: 0, a: 0}
