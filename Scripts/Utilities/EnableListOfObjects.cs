@@ -6,7 +6,7 @@ namespace ReactiveMiseEnScene
 {
     public class EnableListOfObjects : MonoBehaviour
     {
-        public List<GameObject> objectsToActivate = new List<GameObject>();
+        public GameObject[] objectsToActivate;
 
         // Start is called before the first frame update
         private void OnTriggerEnter(Collider other)
