@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1779734712435039984}
   - component: {fileID: 8127633950540950790}
   - component: {fileID: 1366640338636988}
+  - component: {fileID: 1957911274800124615}
   m_Layer: 0
   m_Name: TestSphere_Neutral
   m_TagString: Untagged
@@ -129,6 +130,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1957911274800124615}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
+        m_MethodName: PrintThis
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Enter Visible
+          m_BoolArgument: 0
+        m_CallState: 2
   StayVisible:
     m_PersistentCalls:
       m_Calls: []
@@ -147,6 +160,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1957911274800124615}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
+        m_MethodName: PrintThis
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Exit Visible
+          m_BoolArgument: 0
+        m_CallState: 2
   EnterAttention:
     m_PersistentCalls:
       m_Calls:
@@ -160,6 +185,18 @@ MonoBehaviour:
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1957911274800124615}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
+        m_MethodName: PrintThis
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Enter Attention
           m_BoolArgument: 0
         m_CallState: 2
   StayAttention:
@@ -180,6 +217,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1957911274800124615}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
+        m_MethodName: PrintThis
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Exit Attention
+          m_BoolArgument: 0
+        m_CallState: 2
   EnterFocus:
     m_PersistentCalls:
       m_Calls:
@@ -193,6 +242,18 @@ MonoBehaviour:
           m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1957911274800124615}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
+        m_MethodName: PrintThis
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Enter Focus
           m_BoolArgument: 0
         m_CallState: 2
   StayFocus:
@@ -211,6 +272,18 @@ MonoBehaviour:
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1957911274800124615}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
+        m_MethodName: PrintThis
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Exit Focus
           m_BoolArgument: 0
         m_CallState: 2
   meshRenderer: {fileID: 0}
@@ -270,3 +343,15 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 980f684a06b56934a8760a992b7467cc, type: 2}
   - {fileID: 2100000, guid: ca43f1d0adff7a74185cf83f898f590d, type: 2}
   - {fileID: 2100000, guid: e736ab41d72fd604b9f08708faf0668f, type: 2}
+--- !u!114 &1957911274800124615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268415587603726137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40fc04fdb3b91549baf5060f2ebe96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
