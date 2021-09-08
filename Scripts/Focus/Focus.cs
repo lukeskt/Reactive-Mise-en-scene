@@ -6,9 +6,6 @@ namespace ReactiveMiseEnScene
 {
     public class Focus : MonoBehaviour
     {
-        // Public
-        public Camera cam;
-
         [Header("Thresholds")]
         // Set max distance object can be interacted with by camera.
         [Range(0.0f, 1000.0f)] [SerializeField] private double distanceThreshold = 50.0f;
@@ -43,18 +40,18 @@ namespace ReactiveMiseEnScene
         private Visibility lastVisibility = Visibility.invisible;
 
         // Other Vars - e.g. for debug/gizmos
-        //private Rigidbody rigidBody;
-        public Renderer meshRenderer;
+        [Header("Debug Variables")]
+        [Tooltip("If the interactions aren't triggering as expected, e.g. with a custom camera setup, with multiple colliders, or with nested models in an object hierarchy, you can specify the camera, collider and mesh renderer here.")]
+        public Camera cam;
+        public Collider specifiedCollider;
+        public Renderer specifiedMeshRenderer;
         private Bounds meshBounds;
 
         // Start is called before the first frame update
         void Start()
         {
-            //if (GetComponent<Rigidbody>())
-            //{
-            //    rigidBody = GetComponent<Rigidbody>();
-            //}
             CamSetup();
+            GetCollider();
             GetRenderer();
         }
 
@@ -64,6 +61,7 @@ namespace ReactiveMiseEnScene
             // TODO: This getrenderer call is a fix/hack right now, the issue is we need bounds, but this method needs to keep updating e.g. when physics are involved, otherwise events don't fire etc.
             //if((rigidBody && !rigidBody.IsSleeping()) || (GetComponent<Animation>() && GetComponent<Animation>().isPlaying))
             GetRenderer();
+            GetCollider();
             ThresholdCheck();
         }
 
@@ -96,28 +94,40 @@ namespace ReactiveMiseEnScene
 
         private void GetRenderer()
         {
-            if (meshRenderer)
+            if (specifiedMeshRenderer)
             {
-                meshBounds = meshRenderer.bounds;
+                meshBounds = specifiedMeshRenderer.bounds;
             }
             else if (gameObject.GetComponent<Renderer>())
             {
-                meshRenderer = gameObject.GetComponent<Renderer>();
-                meshBounds = meshRenderer.bounds;
+                specifiedMeshRenderer = gameObject.GetComponent<Renderer>();
+                meshBounds = specifiedMeshRenderer.bounds;
             }
             else
             {
-                meshRenderer = GetComponentInChildren<Renderer>();
-                meshBounds = meshRenderer.bounds;
+                specifiedMeshRenderer = GetComponentInChildren<Renderer>();
+                meshBounds = specifiedMeshRenderer.bounds;
                 // code below from: https://answers.unity.com/questions/17968/finding-the-bounds-of-a-grouped-model.html
                 // need to change code later in here to use this combined bounds.
                 var combinedBounds = meshBounds;
                 var renderers = GetComponentsInChildren<MeshRenderer>();
                 foreach (MeshRenderer render in renderers)
                 {
-                    if (render != meshRenderer) combinedBounds.Encapsulate(render.bounds);
+                    if (render != specifiedMeshRenderer) combinedBounds.Encapsulate(render.bounds);
                 }
                 meshBounds = combinedBounds;
+            }
+        }
+
+        private void GetCollider()
+        {
+            if (specifiedCollider) // if customCollider is specified in inspector
+            {
+                return;
+            }
+            else // look for collider on gameObject
+            {
+                specifiedCollider = GetComponent<Collider>();
             }
         }
 
@@ -137,10 +147,8 @@ namespace ReactiveMiseEnScene
         private bool SightlineCheck()
         {
             Debug.DrawLine(cam.transform.position, meshBounds.center, Color.red);
-            if (Physics.Linecast(cam.transform.position,
-                                 meshBounds.center,
-                                 out RaycastHit hit, Physics.AllLayers, QueryTriggerInteraction.Ignore) &&
-                (hit.collider.name == gameObject.name || hit.collider.transform.parent.gameObject.name == gameObject.name))
+            if (Physics.Linecast(cam.transform.position, meshBounds.center, out RaycastHit hit, Physics.AllLayers, QueryTriggerInteraction.Ignore) 
+                && hit.collider == specifiedCollider)
             {
                 return true;
             }

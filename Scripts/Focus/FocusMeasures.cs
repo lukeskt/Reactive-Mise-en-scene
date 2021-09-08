@@ -124,7 +124,6 @@ namespace ReactiveMiseEnScene
                 double visibleTime = VisibleEnd - VisibleStart;
                 visibleTimes.Add(visibleTime);
                 visibleCount = visibleTimes.Count;
-                // per: https://stackoverflow.com/questions/4703046/sum-of-timespans-in-c-sharp
                 visibleTotalTime = visibleTimes.Sum();
                 visibleLongestTime = visibleTimes.Max();
                 // check this logic...
