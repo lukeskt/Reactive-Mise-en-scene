@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 268415587603726138}
   - component: {fileID: 268415587603726139}
   - component: {fileID: 1779734712435039984}
-  - component: {fileID: 8127633950540950790}
   - component: {fileID: 1366640338636988}
   - component: {fileID: 1957911274800124615}
   m_Layer: 0
-  m_Name: TestSphere_Neutral
+  m_Name: TestSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,45 +286,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   meshRenderer: {fileID: 0}
---- !u!114 &8127633950540950790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268415587603726137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c43b58774452fc408b0dafc5979fc16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
-  locale: Area_01
-  localeIndex: 0
-  tendency: Neutral
-  tendencyIndex: 0
-  visibleMultiplier: 0.25
-  attendedMultiplier: 0.5
-  focusedMultiplier: 1
-  visibleTimes: []
-  attendedTimes: []
-  focusedTimes: []
-  visibleCount: 0
-  attendedCount: 0
-  focusedCount: 0
-  visibleTotalTime: 0
-  attendedTotalTime: 0
-  focusedTotalTime: 0
-  visibleLongestTime: 0
-  attendedLongestTime: 0
-  focusedLongestTime: 0
-  visibleRating: 0
-  attendedRating: 0
-  focusedRating: 0
-  totalRating: 0
-  WriteAttnDataMgr:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1366640338636988
 MonoBehaviour:
   m_ObjectHideFlags: 0
