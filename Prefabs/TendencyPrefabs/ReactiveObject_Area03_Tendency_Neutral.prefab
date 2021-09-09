@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3185dea091ba24e970790e7ac036fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   distanceThreshold: 50
   focusedThreshold: 100
   attendedThreshold: 400
@@ -171,7 +170,9 @@ MonoBehaviour:
   ExitFocus:
     m_PersistentCalls:
       m_Calls: []
-  meshRenderer: {fileID: 0}
+  cam: {fileID: 0}
+  specifiedCollider: {fileID: 0}
+  specifiedMeshRenderer: {fileID: 0}
 --- !u!114 &2214315540549920603
 MonoBehaviour:
   m_ObjectHideFlags: 0
