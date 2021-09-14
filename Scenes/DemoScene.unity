@@ -4154,6 +4154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReactiveObject_Area01_Tendency_Neutral
       objectReference: {fileID: 0}
+    - target: {fileID: 8497113235797007998, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
+      propertyPath: tendency
+      value: Tendency_00
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
 --- !u!4 &1990506085 stripped
