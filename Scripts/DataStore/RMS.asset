@@ -17,7 +17,7 @@ MonoBehaviour:
   - Area_02
   - Area_03
   Tendencies:
-  - Neutral
+  - Tendency_00
   - Tendency_01
   - Tendency_02
   - Tendency_03
