@@ -33,9 +33,10 @@ namespace ReactiveMiseEnScene
 
         public enum SingleResultTendencyAlgorithm
         {
-            MaxValue,
-            RunnerUp, // second place tendency
-            MinValue,
+            StrongestTendency,
+            SecondStrongest, // second place tendency
+            SecondWeakest,
+            WeakestTendency,
             // FirstPastThreshold,
             Random
         }
