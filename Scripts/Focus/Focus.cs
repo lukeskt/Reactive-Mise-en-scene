@@ -50,6 +50,7 @@ namespace ReactiveMiseEnScene
         // Start is called before the first frame update
         void Start()
         {
+            //gameObject.layer = 10; // Set alternative to Physics.AllLayers to hit only Focus.
             CamSetup();
             GetCollider();
             GetRenderer();
@@ -150,14 +151,15 @@ namespace ReactiveMiseEnScene
 
         private bool SightlineCheck()
         {
-            Debug.DrawLine(cam.transform.position, meshBounds.center, Color.red);
-            if (Physics.Linecast(cam.transform.position, meshBounds.center, out RaycastHit hit, Physics.AllLayers, QueryTriggerInteraction.Ignore) 
+            if (Physics.Linecast(cam.transform.position, meshBounds.center, out RaycastHit hit, 1 << 0, QueryTriggerInteraction.Ignore) // Physics.AllLayers replaced with 1 << 10 for focus? 1 << 0 = default
                 && hit.collider == specifiedCollider)
             {
+                Debug.DrawLine(cam.transform.position, meshBounds.center, Color.green);
                 return true;
             }
             else
             {
+                Debug.DrawLine(cam.transform.position, meshBounds.center, Color.red);
                 return false;
             }
         }
