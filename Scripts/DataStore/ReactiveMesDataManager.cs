@@ -19,7 +19,7 @@ namespace ReactiveMiseEnScene
         public static ReactiveMesDataManager dataMgr;
         [SerializeField] private ReactiveMesSettings RMesSettings;
 
-        public List<FocusDataStruct> attentionObjects = new List<FocusDataStruct>();
+        public List<FocusDataStruct> reactiveObjects = new List<FocusDataStruct>();
 
         private void Awake()
         {
@@ -38,16 +38,16 @@ namespace ReactiveMiseEnScene
         public void ParseInboundStructData (FocusDataStruct attnData)
         {
             // On receipt of data, ensure in struct and put into list.
-            if (!attentionObjects.Any(attnStruct => attnStruct.name == attnData.name))
+            if (!reactiveObjects.Any(attnStruct => attnStruct.name == attnData.name))
             {
-                attentionObjects.Add(attnData);
+                reactiveObjects.Add(attnData);
             }
             // TODO: check this works, need to say if exists check if values greater and replace, otherwise don't.
-            else if (attentionObjects.Any(attnStruct => attnStruct.name == attnData.name) && 
-                attnData.attentionRating > attentionObjects.Find(attnStruct => attnStruct.name == attnData.name).attentionRating)
+            else if (reactiveObjects.Any(attnStruct => attnStruct.name == attnData.name) && 
+                attnData.attentionRating > reactiveObjects.Find(attnStruct => attnStruct.name == attnData.name).attentionRating)
             {
-                attentionObjects.Remove(attentionObjects.Find(attnStruct => attnStruct.name == attnData.name));
-                attentionObjects.Add(attnData);
+                reactiveObjects.Remove(reactiveObjects.Find(attnStruct => attnStruct.name == attnData.name));
+                reactiveObjects.Add(attnData);
             }
         }
 
