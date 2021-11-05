@@ -524,6 +524,7 @@ MonoBehaviour:
   requestType: 1
   localeRequest: Area_01
   localeIndex: 0
+  continuous: 0
   timelines:
   - {fileID: 11400000, guid: aeca09c893bb120409787cfb58c94d4b, type: 2}
   - {fileID: 11400000, guid: cfe4b6f9d48f7834db43b92a2d8d11bd, type: 2}
@@ -800,6 +801,7 @@ MonoBehaviour:
   requestType: 1
   localeRequest: Area_02
   localeIndex: 1
+  continuous: 0
   timelines:
   - {fileID: 11400000, guid: aeca09c893bb120409787cfb58c94d4b, type: 2}
   - {fileID: 11400000, guid: cfe4b6f9d48f7834db43b92a2d8d11bd, type: 2}
@@ -858,6 +860,10 @@ PrefabInstance:
     - target: {fileID: 2240643064954224092, guid: e88565169e4a4744695c4be728b78cd5, type: 3}
       propertyPath: m_Name
       value: FirstPersonCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2240643065093264019, guid: e88565169e4a4744695c4be728b78cd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e88565169e4a4744695c4be728b78cd5, type: 3}
@@ -978,6 +984,7 @@ MonoBehaviour:
   requestType: 1
   localeRequest: Area_01
   localeIndex: 0
+  continuous: 0
   volumeProfiles:
   - {fileID: 11400000, guid: 0ef299b35d87cb3459ade00bc506327c, type: 2}
   - {fileID: 11400000, guid: a0916554dc813294d8395ae017fe3e4c, type: 2}
@@ -1269,6 +1276,7 @@ MonoBehaviour:
   requestType: 1
   localeRequest: Area_02
   localeIndex: 1
+  continuous: 0
   listOfTendencyPlacements:
     tendencyPlacements:
     - Name: 
@@ -1776,6 +1784,7 @@ MonoBehaviour:
   requestType: 1
   localeRequest: Area_02
   localeIndex: 1
+  continuous: 0
   listOfTendencyPlacements:
     tendencyPlacements:
     - Name: 
@@ -2047,7 +2056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 268415587603726136, guid: 9d431922451aa214a8c546bc1b31bf44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 268415587603726136, guid: 9d431922451aa214a8c546bc1b31bf44, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3325,6 +3334,7 @@ MonoBehaviour:
   requestType: 1
   localeRequest: Area_02
   localeIndex: 1
+  continuous: 0
   volumeProfiles:
   - {fileID: 11400000, guid: 0ef299b35d87cb3459ade00bc506327c, type: 2}
   - {fileID: 11400000, guid: a0916554dc813294d8395ae017fe3e4c, type: 2}
@@ -4023,6 +4033,7 @@ MonoBehaviour:
   requestType: 1
   localeRequest: Area_01
   localeIndex: 0
+  continuous: 0
   listOfTendencyPlacements:
     tendencyPlacements:
     - Name: 
