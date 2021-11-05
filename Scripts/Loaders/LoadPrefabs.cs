@@ -21,6 +21,9 @@ namespace ReactiveMiseEnScene
         [SerializeField] public string localeRequest;
         [HideInInspector] public int localeIndex = 0; // for custom editor
 
+        [Tooltip("WARNING EXPERIMENTAL FEATURE!\nIf Continuous is checked, update the tendency-based volume profile every frame.")]
+        public bool continuous = false;
+
         [System.Serializable]
         public class TendencyPlacements
         {
@@ -39,25 +42,39 @@ namespace ReactiveMiseEnScene
 
         private double amortized = 0;
 
+        ReactiveMesDataManager DataMgr;
+
         // Start is called before the first frame update
         void Start()
         {
-            ReactiveMesDataManager DataMgr = FindObjectOfType<ReactiveMesDataManager>();
-                  
+            DataMgr = FindObjectOfType<ReactiveMesDataManager>();
+            PrefabLoader(localeRequest);
+        }
+
+        private void Update()
+        {
+            if (continuous)
+            {
+                PrefabLoader(localeRequest); // change this to the locale locale?
+            }
+        }
+
+        private void PrefabLoader(string localeToRequest)
+        {
             Dictionary<string, double> tendencyAttentionRatings;
             List<KeyValuePair<string, double>> orderedTendencyAttentionRatings;
 
             switch (requestType)
-                    {
-                        case ReactiveMesSettings.RequestType.Global:
-                            tendencyAttentionRatings = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
-                            break;
-                        case ReactiveMesSettings.RequestType.Locale:
-                            tendencyAttentionRatings = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeRequest);
-                            break;
-                        default:
-                            goto case ReactiveMesSettings.RequestType.Global;
-                    }
+            {
+                case ReactiveMesSettings.RequestType.Global:
+                    tendencyAttentionRatings = DataMgr.GetGlobalTendency(DataMgr.reactiveObjects);
+                    break;
+                case ReactiveMesSettings.RequestType.Locale:
+                    tendencyAttentionRatings = DataMgr.GetLocaleTendency(DataMgr.reactiveObjects, localeToRequest);
+                    break;
+                default:
+                    goto case ReactiveMesSettings.RequestType.Global;
+            }
 
             orderedTendencyAttentionRatings = tendencyAttentionRatings.ToList();
             orderedTendencyAttentionRatings.Sort((x, y) => x.Value.CompareTo(y.Value));
@@ -331,8 +348,8 @@ namespace ReactiveMiseEnScene
 
         private void spawnObject(GameObject objectToSpawn, GameObject placementPoint)
         {
-            Instantiate(objectToSpawn, placementPoint.transform.position, placementPoint.transform.rotation, placementPoint.transform.parent);
-            Destroy(placementPoint);
+            Instantiate(objectToSpawn, placementPoint.transform.position, placementPoint.transform.rotation, placementPoint.transform);
+            //Destroy(placementPoint);
         }
 
         private int mapTendencyToSpawnListLength(double tendency, double sumOfTendencies, int objectListLength)
