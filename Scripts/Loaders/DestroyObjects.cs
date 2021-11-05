@@ -43,10 +43,10 @@ namespace ReactiveMiseEnScene
             switch (requestType)
             {
                 case ReactiveMesSettings.RequestType.Global:
-                    TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.attentionObjects);
+                    TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.reactiveObjects);
                     break;
                 case ReactiveMesSettings.RequestType.Locale:
-                    TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.attentionObjects, localeRequest);
+                    TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.reactiveObjects, localeRequest);
                     break;
                 default:
                     break;
