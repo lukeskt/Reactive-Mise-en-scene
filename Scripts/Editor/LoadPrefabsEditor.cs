@@ -16,6 +16,9 @@ namespace ReactiveMiseEnScene
         SerializedProperty localeRequest;
         string[] editorLocale;
         SerializedProperty localeIndex;
+
+        SerializedProperty continuous;
+
         SerializedProperty listOfTendencyPlacements;
 
         private void OnEnable()
@@ -33,6 +36,7 @@ namespace ReactiveMiseEnScene
                 editorLocale = loadPrefabs.RMSettings.Locales;
             }
             requestType = serializedObject.FindProperty("requestType");
+            continuous = serializedObject.FindProperty("continuous");
             listOfTendencyPlacements = serializedObject.FindProperty("listOfTendencyPlacements");
         }
 
@@ -69,6 +73,7 @@ namespace ReactiveMiseEnScene
                     }
                 }
             }
+            //EditorGUILayout.PropertyField(continuous); // uncomment to show continuous check.
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(listOfTendencyPlacements);
             serializedObject.ApplyModifiedProperties();

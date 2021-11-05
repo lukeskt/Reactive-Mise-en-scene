@@ -22,6 +22,8 @@ namespace ReactiveMiseEnScene
         string[] editorLocale;        
         SerializedProperty localeIndex;
 
+        SerializedProperty continuous;
+
         SerializedProperty timelines;
 
         private void OnEnable()
@@ -39,6 +41,7 @@ namespace ReactiveMiseEnScene
             //tendencyIndex = serializedObject.FindProperty("tendencyIndex");
             localeRequest = serializedObject.FindProperty("localeRequest");
             localeIndex = serializedObject.FindProperty("localeIndex");
+            continuous = serializedObject.FindProperty("continuous");
             timelines = serializedObject.FindProperty("timelines");
         }
 
@@ -69,7 +72,7 @@ namespace ReactiveMiseEnScene
                     localeRequest.stringValue = editorLocale[localeIndex.intValue];
                 }
             }
-
+            //EditorGUILayout.PropertyField(continuous); // uncomment to show continuous check.
             EditorGUILayout.Space();
             EditorGUILayout.PropertyField(timelines);
             serializedObject.ApplyModifiedProperties();
