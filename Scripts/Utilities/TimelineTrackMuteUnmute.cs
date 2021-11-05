@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-namespace ReactiveMedia
+namespace ReactiveMiseEnScene
 {
     public class TimelineTrackMuteUnmute : MonoBehaviour
     {
