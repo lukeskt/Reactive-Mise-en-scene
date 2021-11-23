@@ -12,9 +12,7 @@ GameObject:
   - component: {fileID: 268415587603726133}
   - component: {fileID: 268415587603726138}
   - component: {fileID: 268415587603726139}
-  - component: {fileID: 1779734712435039984}
   - component: {fileID: 1366640338636988}
-  - component: {fileID: 1957911274800124615}
   m_Layer: 0
   m_Name: TestSphere
   m_TagString: Untagged
@@ -32,6 +30,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9, y: 1, z: 3.0499992}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -98,194 +98,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1779734712435039984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268415587603726137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca3185dea091ba24e970790e7ac036fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  distanceThreshold: 50
-  focusedThreshold: 100
-  attendedThreshold: 400
-  EnterVisible:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1366640338636988}
-        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
-        m_MethodName: SetSwitchShader
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957911274800124615}
-        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
-        m_MethodName: PrintThis
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Enter Visible
-          m_BoolArgument: 0
-        m_CallState: 2
-  StayVisible:
-    m_PersistentCalls:
-      m_Calls: []
-  ExitVisible:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1366640338636988}
-        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
-        m_MethodName: SetSwitchShader
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957911274800124615}
-        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
-        m_MethodName: PrintThis
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Exit Visible
-          m_BoolArgument: 0
-        m_CallState: 2
-  EnterAttention:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1366640338636988}
-        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
-        m_MethodName: SetSwitchShader
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957911274800124615}
-        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
-        m_MethodName: PrintThis
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Enter Attention
-          m_BoolArgument: 0
-        m_CallState: 2
-  StayAttention:
-    m_PersistentCalls:
-      m_Calls: []
-  ExitAttention:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1366640338636988}
-        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
-        m_MethodName: SetSwitchShader
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957911274800124615}
-        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
-        m_MethodName: PrintThis
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Exit Attention
-          m_BoolArgument: 0
-        m_CallState: 2
-  EnterFocus:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1366640338636988}
-        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
-        m_MethodName: SetSwitchShader
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957911274800124615}
-        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
-        m_MethodName: PrintThis
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Enter Focus
-          m_BoolArgument: 0
-        m_CallState: 2
-  StayFocus:
-    m_PersistentCalls:
-      m_Calls: []
-  ExitFocus:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1366640338636988}
-        m_TargetAssemblyTypeName: ShaderSwitcher, ReactiveMiseEnScene
-        m_MethodName: SetSwitchShader
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1957911274800124615}
-        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusDebugPrint, ReactiveMiseEnScene
-        m_MethodName: PrintThis
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Exit Focus
-          m_BoolArgument: 0
-        m_CallState: 2
-  meshRenderer: {fileID: 0}
 --- !u!114 &1366640338636988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,15 +115,3 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 980f684a06b56934a8760a992b7467cc, type: 2}
   - {fileID: 2100000, guid: ca43f1d0adff7a74185cf83f898f590d, type: 2}
   - {fileID: 2100000, guid: e736ab41d72fd604b9f08708faf0668f, type: 2}
---- !u!114 &1957911274800124615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268415587603726137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b40fc04fdb3b91549baf5060f2ebe96c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
