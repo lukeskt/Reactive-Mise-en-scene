@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1952455703511754516}
   - component: {fileID: 2214315540549920603}
   m_Layer: 0
-  m_Name: ReactiveObject_Area03_Tendency_Neutral
+  m_Name: ReactiveObject_Area03_Tendency_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
