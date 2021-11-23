@@ -1,45 +1,37 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace ReactiveMiseEnScene
 {
+    public enum FocusLevel
+    {
+        offscreen,
+        onscreen,
+        attended,
+        focused
+    }
+
     public class Focus : MonoBehaviour
     {
+        // Focus Levels
+        [HideInInspector] public FocusLevel currentFocusLevel;
+        [HideInInspector] public FocusLevel lastFocusLevel;
+
+        // Focus Level Thresholds
         [Header("Thresholds")]
         // Set max distance object can be interacted with by camera.
         [Range(0.0f, 1000.0f)] [SerializeField] private double distanceThreshold = 50.0f;
+        // Viewport thresholds from 0f to 1f - not ideal but better than screen res thresholds, more consistent.
+        [Range(0.0f, 1.0f)] [SerializeField] private double focusedThreshold = 0.075f;
+        [Range(0.0f, 1.0f)] [SerializeField] private double attendedThreshold = 0.25f;
 
-        // Threshold Values (inc. defaults) - these are terrible vec2 dist related, can we normalize somehow? Also maybe should be calculated from display resolution?
-        [Range(0.0f, 1000.0f)] [SerializeField] private double focusedThreshold = 100f;
-        [Range(0.0f, 1000.0f)] [SerializeField] private double attendedThreshold = 400f;
+        // Focus Level Events: This Object, it's current focus level, bool of true if same as last?
+        [Header("Events")]
+        public UnityEvent<GameObject, FocusLevel, FocusLevel> FocusLevelChange;
+        public UnityEvent<GameObject, FocusLevel> FocusLevelStay;
 
-        // Events
-        [Header("Event Handling")]
-        public UnityEvent<GameObject> EnterVisible;
-        public UnityEvent<GameObject> StayVisible;
-        public UnityEvent<GameObject> ExitVisible;
-
-        public UnityEvent<GameObject> EnterAttention;
-        public UnityEvent<GameObject> StayAttention;
-        public UnityEvent<GameObject> ExitAttention;
-
-        public UnityEvent<GameObject> EnterFocus;
-        public UnityEvent<GameObject> StayFocus;
-        public UnityEvent<GameObject> ExitFocus;
-
-        // Private
-        private enum Visibility
-        {
-            invisible,
-            visible,
-            attended,
-            focused,
-        }
-        private Visibility currentVisbility;
-        private Visibility lastVisibility = Visibility.invisible;
-
-        // Other Vars - e.g. for debug/gizmos
+        // Debug / Fix Variables
         [Header("Debug Variables")]
         [Tooltip("If the interactions aren't triggering as expected, e.g. with a custom camera setup, with multiple colliders, or with nested models in an object hierarchy, you can specify the camera, collider and mesh renderer here.")]
         public Camera cam;
@@ -50,50 +42,12 @@ namespace ReactiveMiseEnScene
         // Start is called before the first frame update
         void Start()
         {
-            //gameObject.layer = 10; // Set alternative to Physics.AllLayers to hit only Focus.
             CamSetup();
-            GetCollider();
-            GetRenderer();
+            GetObjectCollider();
+            GetObjectRenderer();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            // TODO: This getrenderer call is a fix/hack right now, the issue is we need bounds, but this method needs to keep updating e.g. when physics are involved, otherwise events don't fire etc.
-            //if((rigidBody && !rigidBody.IsSleeping()) || (GetComponent<Animation>() && GetComponent<Animation>().isPlaying))
-            GetRenderer();
-            GetCollider();
-            ThresholdCheck();
-        }
-
-        private void CamSetup()
-        {
-            if (!cam)
-            {
-                GameObject Viewer = GameObject.FindGameObjectWithTag("Player");
-                if (Viewer)
-                {
-                    if (Viewer.GetComponent<Camera>())
-                    {
-                        cam = Viewer.GetComponent<Camera>();
-                    }
-                    else if (Viewer.GetComponentInChildren<Camera>())
-                    {
-                        cam = Viewer.GetComponentInChildren<Camera>();
-                    }
-                    else if (Viewer.GetComponentInParent<Camera>())
-                    {
-                        cam = Viewer.GetComponentInParent<Camera>();
-                    }
-                }
-                else
-                {
-                    cam = Camera.main;
-                }
-            }
-        }
-
-        private void GetRenderer()
+        private void GetObjectRenderer()
         {
             if (specifiedMeshRenderer)
             {
@@ -120,7 +74,7 @@ namespace ReactiveMiseEnScene
             }
         }
 
-        private void GetCollider()
+        private void GetObjectCollider()
         {
             if (specifiedCollider) // if customCollider is specified in inspector
             {
@@ -136,20 +90,37 @@ namespace ReactiveMiseEnScene
             }
         }
 
-        private bool VisibleInCameraFrustrumCheck()
+        private void CamSetup()
         {
-            Plane[] planes = GeometryUtility.CalculateFrustumPlanes(cam);
-            if (GeometryUtility.TestPlanesAABB(planes, meshBounds))
+            if (!cam)
             {
-                return true;
-            }
-            else
-            {
-                return false;
+                GameObject Viewer = GameObject.FindGameObjectWithTag("Player");
+                if (Viewer)
+                {
+                    if (Viewer.GetComponent<Camera>()) cam = Viewer.GetComponent<Camera>();
+                    else if (Viewer.GetComponentInChildren<Camera>()) cam = Viewer.GetComponentInChildren<Camera>();
+                    else if (Viewer.GetComponentInParent<Camera>()) cam = Viewer.GetComponentInParent<Camera>();
+                }
+                else cam = Camera.main;
             }
         }
 
-        private bool SightlineCheck()
+        // Update is called once per frame
+        void Update()
+        {
+            GetObjectCollider();
+            GetObjectRenderer();
+            GetFocusLevel();
+        }
+
+        private bool ObjectFrustrumCheck()
+        {
+            Plane[] planes = GeometryUtility.CalculateFrustumPlanes(cam);
+            if (GeometryUtility.TestPlanesAABB(planes, meshBounds)) return true;
+            else return false;
+        }
+
+        private bool ObjectLineOfSightCheck()
         {
             if (Physics.Linecast(cam.transform.position, meshBounds.center, out RaycastHit hit, 1 << 0, QueryTriggerInteraction.Ignore) // Physics.AllLayers replaced with 1 << 10 for focus? 1 << 0 = default
                 && hit.collider == specifiedCollider)
@@ -164,117 +135,56 @@ namespace ReactiveMiseEnScene
             }
         }
 
-        // TODO: compare doing this inversely, i.e. screentoworldpoint? - might have better results?
-        private float ObjectToCamCentreDistance()
+        private bool ObjectDistanceCheck()
         {
-            Vector2 gameObjectScreenPos = cam.WorldToScreenPoint(meshBounds.center); // alt:gameObject.transform.position);
-            Vector2 camCentre = new Vector2(Display.main.renderingWidth / 2, Display.main.renderingHeight / 2);
-            float dist = Vector2.Distance(gameObjectScreenPos, camCentre);
+            if (Vector3.Distance(meshBounds.center, cam.transform.position) < distanceThreshold) return true;
+            else return false;
+        }
+
+        private void GetFocusLevel()
+        {
+            //throw new NotImplementedException();
+            lastFocusLevel = currentFocusLevel;
+            // If object is being rendered and isn't behind another object and is close enough...
+            if(ObjectFrustrumCheck() && ObjectLineOfSightCheck() && ObjectDistanceCheck())
+            {
+                float objectScreenCentreDistance = GetObjectScreenPosition();
+                switch (objectScreenCentreDistance)
+                {
+                    case var _ when objectScreenCentreDistance < focusedThreshold:
+                        currentFocusLevel = FocusLevel.focused;
+                        break;
+                    case var _ when objectScreenCentreDistance >= focusedThreshold && objectScreenCentreDistance < attendedThreshold:
+                        currentFocusLevel = FocusLevel.attended;
+                        break;
+                    case var _ when objectScreenCentreDistance >= attendedThreshold:
+                        currentFocusLevel = FocusLevel.onscreen;
+                        break;
+                    default:
+                        currentFocusLevel = FocusLevel.offscreen;
+                        break;
+                }
+            }
+            else currentFocusLevel = FocusLevel.offscreen;
+
+            if (currentFocusLevel == lastFocusLevel) FocusLevelStay.Invoke(gameObject, currentFocusLevel);
+            else FocusLevelChange.Invoke(gameObject, currentFocusLevel, lastFocusLevel);
+        }
+
+        private float GetObjectScreenPosition()
+        {
+            // TODO: compare doing this inversely, i.e. viewporttoworldpoint? - might have better results?
+            Vector2 gameObjectViewportPosition = cam.WorldToViewportPoint(meshBounds.center);
+            Vector2 viewportCentre = new Vector2(0.5f, 0.5f);
+            float dist = Vector2.Distance(gameObjectViewportPosition, viewportCentre);
             return dist;
-        }
-
-        private bool ObjectCloseEnough()
-        {
-            if (Vector3.Distance(meshBounds.center, cam.transform.position) < distanceThreshold)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        private void ThresholdCheck()
-        {
-            // Set last state of visibility before updating to new.
-            lastVisibility = currentVisbility;
-            // If object is visible in camera frustrum check...
-            if (VisibleInCameraFrustrumCheck() && ObjectCloseEnough() && SightlineCheck())
-            {
-                // Get dist of obj on screen from center
-                float objDist = ObjectToCamCentreDistance();
-                // Focus
-                if (objDist < focusedThreshold)
-                {
-                    currentVisbility = Visibility.focused;
-
-                    if (currentVisbility == lastVisibility) { StayFocus.Invoke(gameObject); }
-                    else { EnterFocus.Invoke(gameObject); }
-                }
-                // Attention
-                else if (objDist > focusedThreshold && objDist < attendedThreshold)
-                {
-                    currentVisbility = Visibility.attended;
-                    if (lastVisibility == Visibility.focused) { ExitFocus.Invoke(gameObject); }
-
-                    if (currentVisbility == lastVisibility) { StayAttention.Invoke(gameObject); }
-                    else { EnterAttention.Invoke(gameObject); }
-                }
-                // Visible
-                else if (objDist > attendedThreshold)
-                {
-                    currentVisbility = Visibility.visible;
-                    if (lastVisibility == Visibility.attended) { ExitAttention.Invoke(gameObject); }
-
-                    if (currentVisbility == lastVisibility) { StayVisible.Invoke(gameObject); }
-                    else { EnterVisible.Invoke(gameObject); }
-                }
-                // Invisible
-                else
-                {
-                    currentVisbility = Visibility.invisible;
-                    if (lastVisibility == Visibility.visible) { ExitVisible.Invoke(gameObject); }
-                }
-            }
-            // Invisible
-            else
-            {
-                currentVisbility = Visibility.invisible;
-                if (lastVisibility == Visibility.focused)
-                {
-                    ExitFocus.Invoke(gameObject);
-                    ExitAttention.Invoke(gameObject);
-                    ExitVisible.Invoke(gameObject);
-                }
-                if (lastVisibility == Visibility.attended)
-                {
-                    ExitAttention.Invoke(gameObject);
-                    ExitVisible.Invoke(gameObject);
-                }
-                if (lastVisibility == Visibility.visible)
-                {
-                    ExitVisible.Invoke(gameObject);
-                }
-            }
-        }
-
-        private void EventCleanup(Visibility visibility)
-        {
-            switch (visibility)
-            {
-                case Visibility.invisible:
-                    break;
-                case Visibility.visible:
-                    ExitVisible.Invoke(gameObject);
-                    break;
-                case Visibility.attended:
-                    ExitAttention.Invoke(gameObject);
-                    ExitVisible.Invoke(gameObject);
-                    break;
-                case Visibility.focused:
-                    ExitFocus.Invoke(gameObject);
-                    ExitAttention.Invoke(gameObject);
-                    ExitVisible.Invoke(gameObject);
-                    break;
-                default:
-                    break;
-            }
         }
 
         private void OnDisable()
         {
-            EventCleanup(currentVisbility);
+            // Event Cleanup?
+            currentFocusLevel = FocusLevel.offscreen;
+            FocusLevelChange.Invoke(gameObject, currentFocusLevel, lastFocusLevel);
         }
     }
 }
