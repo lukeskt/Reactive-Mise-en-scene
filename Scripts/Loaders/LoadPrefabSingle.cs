@@ -80,8 +80,6 @@ namespace ReactiveMiseEnScene
                 default:
                     goto case ReactiveMesSettings.SingleResultTendencyAlgorithm.StrongestTendency;
             }
-
-            print("PING! WE DID IT!");
         }
 
         private void spawnObject(GameObject objectToSpawn, GameObject placementPoint)
