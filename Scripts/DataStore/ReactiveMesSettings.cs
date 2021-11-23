@@ -17,19 +17,19 @@ namespace ReactiveMiseEnScene
             Locale
         }
 
-        public enum MultiResultTendencyAlgorithm
-        {
-            MaxValue, // winning tendency by largest attention value
-            RunnerUp, // second place tendency
-            MinValue,
-            // FirstPastThreshold, // winning tendency past a threshold
-            Proportional, // proportion of decision/placement points distroed amongst tendencies
-            // ProportionalPastThreshold, // any that pass a threshold get a proportional rep
-            InverseProportion, // i.e. load inverse to what proportional results would be
-            // CompetitorDistribution, // distribute the tendency total amongst all others than the winning tendency
-            Preset,
-            Random
-        }
+        //public enum MultiResultTendencyAlgorithm
+        //{
+        //    MaxValue, // winning tendency by largest attention value
+        //    RunnerUp, // second place tendency
+        //    MinValue,
+        //    // FirstPastThreshold, // winning tendency past a threshold
+        //    Proportional, // proportion of decision/placement points distroed amongst tendencies
+        //    // ProportionalPastThreshold, // any that pass a threshold get a proportional rep
+        //    InverseProportion, // i.e. load inverse to what proportional results would be
+        //    // CompetitorDistribution, // distribute the tendency total amongst all others than the winning tendency
+        //    Preset,
+        //    Random
+        //}
 
         public enum SingleResultTendencyAlgorithm
         {
