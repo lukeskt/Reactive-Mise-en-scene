@@ -15,7 +15,7 @@ namespace ReactiveMiseEnScene
         public string[] editorTendency;
         SerializedProperty tendency;
         SerializedProperty tendencyIndex;
-        SerializedProperty visibleMultiplier;
+        SerializedProperty onscreenMultiplier;
         SerializedProperty attendedMultiplier;
         SerializedProperty focusedMultiplier;
 
@@ -32,7 +32,7 @@ namespace ReactiveMiseEnScene
                 editorLocale = focusMeasures.RMSettings.Locales;
                 editorTendency = focusMeasures.RMSettings.Tendencies;
             }
-            visibleMultiplier = serializedObject.FindProperty("visibleMultiplier");
+            onscreenMultiplier = serializedObject.FindProperty("onscreenMultiplier");
             attendedMultiplier = serializedObject.FindProperty("attendedMultiplier");
             focusedMultiplier = serializedObject.FindProperty("focusedMultiplier");
         }
@@ -57,7 +57,7 @@ namespace ReactiveMiseEnScene
                 tendency.stringValue = editorTendency[tendencyIndex.intValue];
             }
             EditorGUILayout.Space();
-            EditorGUILayout.PropertyField(visibleMultiplier);
+            EditorGUILayout.PropertyField(onscreenMultiplier);
             EditorGUILayout.PropertyField(attendedMultiplier);
             EditorGUILayout.PropertyField(focusedMultiplier);
             serializedObject.ApplyModifiedProperties();
