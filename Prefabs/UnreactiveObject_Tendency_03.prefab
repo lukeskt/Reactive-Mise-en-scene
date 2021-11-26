@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 1147726378892554133}
   - component: {fileID: 6103132581397667420}
   m_Layer: 0
-  m_Name: UnreactiveObject_Example_Tendency_01
+  m_Name: UnreactiveObject_Tendency_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,8 +144,8 @@ MonoBehaviour:
   RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
   locale: Area_03
   localeIndex: 2
-  tendency: Tendency_01
-  tendencyIndex: 1
+  tendency: Tendency_03
+  tendencyIndex: 3
 --- !u!1 &6922195828429258189
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +301,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 980f684a06b56934a8760a992b7467cc, type: 2}
+  - {fileID: 2100000, guid: 344f8bc1951bce44aadba04bf711f948, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

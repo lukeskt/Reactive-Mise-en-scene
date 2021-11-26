@@ -312,7 +312,7 @@ Material:
     m_Colors:
     - Color_2B671050: {r: 1, g: 1, b: 1, a: 0}
     - Color_30A0CA2F: {r: 0.13399053, g: 1, b: 0, a: 0}
-    - _BaseColor: {r: 0, g: 1, b: 0.02162838, a: 1}
+    - _BaseColor: {r: 0, g: 1, b: 0, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0, g: 1, b: 0.02162838, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}

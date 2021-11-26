@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 1147726378892554133}
   - component: {fileID: 6103132581397667420}
   m_Layer: 0
-  m_Name: UnreactiveObject_Example_Tendency_00
+  m_Name: UnreactiveObject_Tendency_00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
