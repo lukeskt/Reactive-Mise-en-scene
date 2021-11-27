@@ -54,9 +54,11 @@ namespace ReactiveMiseEnScene
                     TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.reactiveObjects, localeRequest);
                     break;
                 default:
-                    break;
+                    goto case ReactiveMesSettings.RequestType.Global;
             }
 
+            List<KeyValuePair<string, double>> WeakestFirstTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).ToList();
+            List<KeyValuePair<string, double>> StrongestFirstTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).Reverse().ToList();
             switch (algorithm)
             {
                 // TODO: Make the lookups generic with tolist orderby, not aggregate?
@@ -64,21 +66,17 @@ namespace ReactiveMiseEnScene
                 // Also need to move the check into datamgr maybe for reuse, and just spawn obj here?
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.StrongestTendency:
                     //TendencyForPrefab = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
-                    var ASortedTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).Reverse().ToList();
-                    TendencyForPrefab = ASortedTendencies[0].Key;
+                    TendencyForPrefab = StrongestFirstTendencies[0].Key;
                     break;
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.SecondStrongest:
-                    var SortedTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).Reverse().ToList();
-                    TendencyForPrefab = SortedTendencies[1].Key;
+                    TendencyForPrefab = StrongestFirstTendencies[1].Key;
                     break;
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.SecondWeakest:
-                    var UnsortTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).ToList();
-                    TendencyForPrefab = UnsortTendencies[1].Key;
+                    TendencyForPrefab = WeakestFirstTendencies[1].Key;
                     break;
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.WeakestTendency:
                     //TendencyForPrefab = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
-                    var ResortTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).ToList();
-                    TendencyForPrefab = ResortTendencies[0].Key;
+                    TendencyForPrefab = WeakestFirstTendencies[0].Key;
                     break;
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.Random:
                     TendencyForPrefab = tendencyObjects[UnityEngine.Random.Range(0, tendencyObjects.Count)].ToString();
@@ -87,30 +85,43 @@ namespace ReactiveMiseEnScene
                     goto case ReactiveMesSettings.SingleResultTendencyAlgorithm.StrongestTendency;
             }
 
-            GameObject obj;
+            GameObject objToSpawn;
             if (tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>() != null && obj.GetComponent<FocusMeasures>().tendency.Equals(TendencyForPrefab)))
             {
-                obj = tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(TendencyForPrefab));
+                objToSpawn = tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(TendencyForPrefab));
             }
             else if (tendencyObjects.Find(obj => obj.GetComponent<ReactiveMesObjectTags>() != null && obj.GetComponent<ReactiveMesObjectTags>().tendency.Equals(TendencyForPrefab)))
             {
-                obj = tendencyObjects.Find(obj => obj.GetComponent<ReactiveMesObjectTags>().tendency.Equals(TendencyForPrefab));
+                objToSpawn = tendencyObjects.Find(obj => obj.GetComponent<ReactiveMesObjectTags>().tendency.Equals(TendencyForPrefab));
             }
             else
             {
-                obj = null;
+                objToSpawn = null;
             }
 
-            spawnObject(obj, gameObject);
+            //if(continuous)
+            //{
+            //    removePlacementPointChildren();
+            //}
+            spawnObject(objToSpawn, gameObject);
         }
 
-
+        private void removePlacementPointChildren ()
+        {
+            // If placement point contains child then delete that before spawning? Allow for continuous like this?
+            if (transform.childCount > 0)
+            {
+                // we have children!
+                foreach (Transform child in transform)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+        }
 
         private void spawnObject(GameObject objectToSpawn, GameObject placementPoint)
         {
-            // If placement point contains child then delete that before spawning? Allow for continuous like this?
             Instantiate(objectToSpawn, placementPoint.transform.position, placementPoint.transform.rotation, placementPoint.transform);
-            //Destroy(placementPoint);
         }
     }
 }
