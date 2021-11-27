@@ -2496,7 +2496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1147726378892554133, guid: d5d666322920d064a85366275186b4cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1147726378892554133, guid: d5d666322920d064a85366275186b4cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2547,6 +2547,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1147726378892554133, guid: d5d666322920d064a85366275186b4cc, type: 3}
   m_PrefabInstance: {fileID: 1322552275}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1322552277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 378046906422024543, guid: d5d666322920d064a85366275186b4cc, type: 3}
+  m_PrefabInstance: {fileID: 1322552275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1322552278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322552277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63aac669e19b0a4ab900ca1bcbf5e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchColors:
+  - {r: 0, g: 1, b: 0.16267419, a: 1}
+  - {r: 1, g: 0.9206716, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 0}
 --- !u!1001 &1349859455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4174,7 +4195,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 20
+  m_Intensity: 15
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4404,6 +4425,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1897018131}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusReactiveBehaviour, ReactiveMiseEnScene
+        m_MethodName: FocusLevelChangeHandler
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1322552278}
         m_TargetAssemblyTypeName: ReactiveMiseEnScene.FocusReactiveBehaviour, ReactiveMiseEnScene
         m_MethodName: FocusLevelChangeHandler
         m_Mode: 0
