@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: bccbf54e17896404a8854ac0534306fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,8 +104,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1147726378892554133}
-  - component: {fileID: 5795133318275028442}
-  - component: {fileID: 761719003770150216}
+  - component: {fileID: -6056185169512372395}
+  - component: {fileID: -1760087066536486742}
   m_Layer: 0
   m_Name: ReactiveObject_Tendency_03
   m_TagString: Untagged
@@ -128,7 +128,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5795133318275028442
+--- !u!114 &-6056185169512372395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,42 +137,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 5286824135258697350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca3185dea091ba24e970790e7ac036fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 890b5bd01f26da84e8a76d4ef6eb93b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  currentFocusLevel: 0
+  lastFocusLevel: 0
   distanceThreshold: 50
-  focusedThreshold: 100
-  attendedThreshold: 400
-  EnterVisible:
+  focusedThreshold: 0.07500000298023224
+  attendedThreshold: 0.25
+  FocusLevelChange:
     m_PersistentCalls:
       m_Calls: []
-  StayVisible:
+  FocusLevelStay:
     m_PersistentCalls:
       m_Calls: []
-  ExitVisible:
-    m_PersistentCalls:
-      m_Calls: []
-  EnterAttention:
-    m_PersistentCalls:
-      m_Calls: []
-  StayAttention:
-    m_PersistentCalls:
-      m_Calls: []
-  ExitAttention:
-    m_PersistentCalls:
-      m_Calls: []
-  EnterFocus:
-    m_PersistentCalls:
-      m_Calls: []
-  StayFocus:
-    m_PersistentCalls:
-      m_Calls: []
-  ExitFocus:
-    m_PersistentCalls:
-      m_Calls: []
-  meshRenderer: {fileID: 0}
---- !u!114 &761719003770150216
+  cam: {fileID: 0}
+  specifiedCollider: {fileID: 0}
+  specifiedMeshRenderer: {fileID: 0}
+--- !u!114 &-1760087066536486742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,7 +163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5286824135258697350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c43b58774452fc408b0dafc5979fc16, type: 3}
+  m_Script: {fileID: 11500000, guid: 3067c340f0524ae41ae6442716d93897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
@@ -189,22 +171,14 @@ MonoBehaviour:
   localeIndex: 0
   tendency: Tendency_03
   tendencyIndex: 3
-  visibleMultiplier: 0.25
+  onscreenMultiplier: 0.25
   attendedMultiplier: 0.5
   focusedMultiplier: 1
-  visibleTimes: []
-  attendedTimes: []
-  focusedTimes: []
-  visibleCount: 0
-  attendedCount: 0
-  focusedCount: 0
-  visibleTotalTime: 0
-  attendedTotalTime: 0
-  focusedTotalTime: 0
-  visibleLongestTime: 0
-  attendedLongestTime: 0
-  focusedLongestTime: 0
-  visibleRating: 0
+  onscreenTime: 0
+  attendedTime: 0
+  focusedTime: 0
+  totalTime: 0
+  onscreenRating: 0
   attendedRating: 0
   focusedRating: 0
   totalRating: 0
