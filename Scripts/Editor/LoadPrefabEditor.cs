@@ -6,9 +6,9 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    [CustomEditor(typeof(LoadPrefabSingle))]
+    [CustomEditor(typeof(LoadPrefab))]
     [CanEditMultipleObjects]
-    public class LoadPrefabSingleEditor : Editor
+    public class LoadPrefabEditor : Editor
     {
         SerializedProperty RMSettings;
         SerializedProperty algorithm;
@@ -27,7 +27,7 @@ namespace ReactiveMiseEnScene
             RMSettings = serializedObject.FindProperty("RMSettings");
             algorithm = serializedObject.FindProperty("algorithm");
             requestType = serializedObject.FindProperty("requestType");
-            var loadPrefabSingle = target as LoadPrefabSingle;
+            var loadPrefabSingle = target as LoadPrefab;
             if (loadPrefabSingle.RMSettings != null)
             {
                 editorLocale = loadPrefabSingle.RMSettings.Locales;
@@ -47,7 +47,7 @@ namespace ReactiveMiseEnScene
 
             EditorGUILayout.PropertyField(algorithm);
 
-            var loadPrefabSingle = target as LoadPrefabSingle;
+            var loadPrefabSingle = target as LoadPrefab;
 
             if (loadPrefabSingle.RMSettings != null)
             {
