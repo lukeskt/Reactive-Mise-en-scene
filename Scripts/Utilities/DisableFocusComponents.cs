@@ -14,8 +14,10 @@ namespace ReactiveMiseEnScene
         {
             foreach (var obj in objectsToRemoveComponentFrom)
             {
-                Destroy(obj.GetComponent<FocusMeasures>());
-                Destroy(obj.GetComponent<Focus>());
+                //Destroy(obj.GetComponent<FocusMeasures>());
+                //Destroy(obj.GetComponent<Focus>());
+                obj.GetComponent<FocusMeasures>().enabled = false;
+                obj.GetComponent<Focus>().enabled = false;
             }
         }
     }
