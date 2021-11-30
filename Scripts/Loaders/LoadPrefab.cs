@@ -57,8 +57,8 @@ namespace ReactiveMiseEnScene
                     goto case ReactiveMesSettings.RequestType.Global;
             }
 
-            List<KeyValuePair<string, double>> WeakestFirstTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).ToList();
             List<KeyValuePair<string, double>> StrongestFirstTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).Reverse().ToList();
+            List<KeyValuePair<string, double>> WeakestFirstTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).ToList();
             switch (algorithm)
             {
                 // TODO: Make the lookups generic with tolist orderby, not aggregate?
