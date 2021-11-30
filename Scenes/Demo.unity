@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 8ab2ed69c7480c240a0c937738df1301, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: e1aceb2f17329e04da8b69e5b71ab06e, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 438330c69a276b04c8381e635c3b0bab, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2500,7 +2500,6 @@ GameObject:
   - component: {fileID: 1210260200}
   - component: {fileID: 1210260205}
   - component: {fileID: 1210260201}
-  - component: {fileID: 1210260202}
   m_Layer: 0
   m_Name: Loaders_03
   m_TagString: Untagged
@@ -2538,21 +2537,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 4, z: 5}
   m_Center: {x: -7, y: 2, z: 0}
---- !u!114 &1210260202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210260199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d67c191bb7930544aaf2f7851357d37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeInWhenSceneStarts: 0
-  fadeColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeTime: 5
 --- !u!114 &1210260205
 MonoBehaviour:
   m_ObjectHideFlags: 0
