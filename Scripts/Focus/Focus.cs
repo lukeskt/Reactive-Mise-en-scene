@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,7 +25,7 @@ namespace ReactiveMiseEnScene
         // Set max distance object can be interacted with by camera.
         [Range(0.0f, 1000.0f)] [SerializeField] private double distanceThreshold = 50.0f;
         // Viewport thresholds from 0f to 1f - not ideal but better than screen res thresholds, more consistent.
-        [Range(0.0f, 1.0f)] [SerializeField] private double focusedThreshold = 0.075f;
+        [Range(0.0f, 1.0f)] [SerializeField] private double focusedThreshold = 0.1f;
         [Range(0.0f, 1.0f)] [SerializeField] private double attendedThreshold = 0.25f;
 
         // Focus Level Events: This Object, it's current focus level, bool of true if same as last?
@@ -31,64 +33,38 @@ namespace ReactiveMiseEnScene
         public UnityEvent<GameObject, FocusLevel, FocusLevel> FocusLevelChange;
         public UnityEvent<GameObject, FocusLevel> FocusLevelStay;
 
-        // Debug / Fix Variables
-        [Header("Debug Variables")]
-        [Tooltip("If the interactions aren't triggering as expected, e.g. with a custom camera setup, with multiple colliders, or with nested models in an object hierarchy, you can specify the camera, collider and mesh renderer here.")]
+        [Tooltip("Specify a camera if issues with focus occur, e.g. if using multiple cams.")]
         public Camera cam;
-        public Collider specifiedCollider;
-        public Renderer specifiedMeshRenderer;
+
+        //private Collider boxCollider;
+        private List<Collider> childColliders;
         private Bounds meshBounds;
 
         // Start is called before the first frame update
         void Start()
         {
             CamSetup();
-            GetObjectCollider();
-            GetObjectRenderer();
+            meshBounds = GetCombinedRendererBounds();
+            childColliders = GetComponentsInChildren<Collider>().ToList();
+            //MakeBoxCollider();
+            //boxCollider = GetComponent<BoxCollider>();
         }
 
-        private void GetObjectRenderer()
+        private Bounds GetCombinedRendererBounds()
         {
-            if (specifiedMeshRenderer)
-            {
-                meshBounds = specifiedMeshRenderer.bounds;
-            }
-            else if (gameObject.GetComponent<Renderer>())
-            {
-                specifiedMeshRenderer = gameObject.GetComponent<Renderer>();
-                meshBounds = specifiedMeshRenderer.bounds;
-            }
-            else
-            {
-                specifiedMeshRenderer = GetComponentInChildren<Renderer>();
-                meshBounds = specifiedMeshRenderer.bounds;
-                // code below from: https://answers.unity.com/questions/17968/finding-the-bounds-of-a-grouped-model.html
-                // need to change code later in here to use this combined bounds.
-                var combinedBounds = meshBounds;
-                var renderers = GetComponentsInChildren<MeshRenderer>();
-                foreach (MeshRenderer render in renderers)
-                {
-                    if (render != specifiedMeshRenderer) combinedBounds.Encapsulate(render.bounds);
-                }
-                meshBounds = combinedBounds;
-            }
+            Renderer[] rr = gameObject.GetComponentsInChildren<Renderer>();
+            Bounds combinedBounds = rr[0].bounds;
+            foreach (Renderer r in rr) combinedBounds.Encapsulate(r.bounds);
+            return combinedBounds;
         }
 
-        private void GetObjectCollider()
-        {
-            if (specifiedCollider) // if customCollider is specified in inspector
-            {
-                return;
-            }
-            else if (GetComponent<Collider>()) // look for collider on gameObject
-            {
-                specifiedCollider = GetComponent<Collider>();
-            }
-            else
-            {
-                specifiedCollider = GetComponentInChildren<Collider>(); // get the first collider found in children - not ideal.
-            }
-        }
+        //private void MakeBoxCollider()
+        //{
+        //    gameObject.AddComponent<BoxCollider>();
+        //    BoxCollider collider = GetComponent<BoxCollider>();
+        //    collider.center = meshBounds.center - gameObject.transform.position;
+        //    collider.size = meshBounds.size;
+        //}
 
         private void CamSetup()
         {
@@ -108,8 +84,7 @@ namespace ReactiveMiseEnScene
         // Update is called once per frame
         void Update()
         {
-            GetObjectCollider();
-            GetObjectRenderer();
+            meshBounds = GetCombinedRendererBounds(); // Needs to be updated to handle movement.
             GetFocusLevel();
         }
 
@@ -123,7 +98,7 @@ namespace ReactiveMiseEnScene
         private bool ObjectLineOfSightCheck()
         {
             if (Physics.Linecast(cam.transform.position, meshBounds.center, out RaycastHit hit, 1 << 0, QueryTriggerInteraction.Ignore) // Physics.AllLayers replaced with 1 << 10 for focus? 1 << 0 = default
-                && hit.collider == specifiedCollider)
+                && childColliders.Contains(hit.collider))
             {
                 Debug.DrawLine(cam.transform.position, meshBounds.center, Color.green);
                 return true;
