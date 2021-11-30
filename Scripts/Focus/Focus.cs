@@ -35,19 +35,14 @@ namespace ReactiveMiseEnScene
 
         [Tooltip("Specify a camera if issues with focus occur, e.g. if using multiple cams.")]
         public Camera cam;
-
-        //private Collider boxCollider;
         private List<Collider> childColliders;
         private Bounds meshBounds;
 
-        // Start is called before the first frame update
         void Start()
         {
             CamSetup();
             meshBounds = GetCombinedRendererBounds();
             childColliders = GetComponentsInChildren<Collider>().ToList();
-            //MakeBoxCollider();
-            //boxCollider = GetComponent<BoxCollider>();
         }
 
         private Bounds GetCombinedRendererBounds()
@@ -57,14 +52,6 @@ namespace ReactiveMiseEnScene
             foreach (Renderer r in rr) combinedBounds.Encapsulate(r.bounds);
             return combinedBounds;
         }
-
-        //private void MakeBoxCollider()
-        //{
-        //    gameObject.AddComponent<BoxCollider>();
-        //    BoxCollider collider = GetComponent<BoxCollider>();
-        //    collider.center = meshBounds.center - gameObject.transform.position;
-        //    collider.size = meshBounds.size;
-        //}
 
         private void CamSetup()
         {
@@ -81,7 +68,6 @@ namespace ReactiveMiseEnScene
             }
         }
 
-        // Update is called once per frame
         void Update()
         {
             meshBounds = GetCombinedRendererBounds(); // Needs to be updated to handle movement.
@@ -118,9 +104,7 @@ namespace ReactiveMiseEnScene
 
         private void GetFocusLevel()
         {
-            //throw new NotImplementedException();
             lastFocusLevel = currentFocusLevel;
-            // If object is being rendered and isn't behind another object and is close enough...
             if(ObjectFrustrumCheck() && ObjectLineOfSightCheck() && ObjectDistanceCheck())
             {
                 float objectScreenCentreDistance = GetObjectScreenPosition();
