@@ -105,7 +105,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1147726378892554133}
-  - component: {fileID: -4558062372004865756}
   - component: {fileID: 3789824152344330755}
   m_Layer: 0
   m_Name: ReactiveObject_Tendency_02
@@ -129,32 +128,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4558062372004865756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5286824135258697350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 890b5bd01f26da84e8a76d4ef6eb93b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentFocusLevel: 0
-  lastFocusLevel: 0
-  distanceThreshold: 50
-  focusedThreshold: 0.07500000298023224
-  attendedThreshold: 0.25
-  FocusLevelChange:
-    m_PersistentCalls:
-      m_Calls: []
-  FocusLevelStay:
-    m_PersistentCalls:
-      m_Calls: []
-  cam: {fileID: 0}
-  specifiedCollider: {fileID: 0}
-  specifiedMeshRenderer: {fileID: 0}
 --- !u!114 &3789824152344330755
 MonoBehaviour:
   m_ObjectHideFlags: 0
