@@ -70,6 +70,7 @@ Finally thank you to my industry partner BBC R&D, with special thanks to Si Lumb
 If you would like to speak to me about this plugin or my research please contact me via:
 
 Twitter: [@lukeskarth](https://www.twitter.com/lukeskarth)
+
 E-mail: rmes@oneirica.systems
 
 I'm particularly keen to hear from you if you decide to use this plugin, and would be very interested to see what you make with it. I am planning on organising workshops and a game jam using this plugin, which I will advertise on Twitter and via other channels in due course.
