@@ -1,8 +1,6 @@
 # Reactive Mise-en-scène Unity Plugin
 
-Reactive Mise-en-scène is a plugin that uses the position of objects on screen as a proxy for viewer/player attention. This attention is then measured over time and associated with different narrative tendencies. 
-
-Each specified object has attention tracked over time and is tagged with a locale and a tendency. Locales are the locations/scenes/areas objects reside within, and tendencies are the narrative tendencies/branches/moods with which objects are associated.
+Reactive Mise-en-scène is a Unity plugin that uses the position of objects on screen as a proxy for player attention. This attention is then measured over time and associated with different "tendencies" and "locales", which can respectively represent, for example, different narrative tendencies and different areas or scenes.
 
 Each locale has a dominant narrative tendency, which is determined over time based on the total attention rating for objects within it, by their associated tendencies.
 
@@ -70,6 +68,15 @@ Thank you to my supervisors Martin Flintham, Sarah Martindale, and Steve Benford
 Thank you also to Paul Tennent, Christine Li, Chris Greenhalgh, Stuart Reeves, Jocelyn Spence and so many others in the Mixed Reality Lab at University of Nottingham for advice, feedback, and conversations on my research and everything else.
 
 Finally thank you to my industry partner BBC R&D, with special thanks to Si Lumb, Phil Stenton, Tim Pearce and Rajiv Ramdhany for help and guidance, and encouraging me to release this plugin as a means to widening its reach.
+
+## Contact
+
+If you would like to speak to me about this plugin or my research please contact me via:
+
+Twitter: [@lukeskarth](https://www.twitter.com/lukeskarth)
+E-mail: luke.skarth-hayley@nottingham.ac.uk
+
+I'm particularly keen to hear from you if you decide to use this plugin, and would be very interested to see what you make with it. I am planning on organising workshops and a game jam using this plugin, which I will advertise on Twitter and via other channels in due course.
 
 ## License
 
