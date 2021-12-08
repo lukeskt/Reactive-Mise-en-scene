@@ -4,11 +4,13 @@ Reactive Mise-en-scène is a Unity plugin that uses the position of objects on s
 
 Each locale has a dominant narrative tendency, which is determined over time based on the total attention rating for objects within it, by their associated tendencies.
 
-On entering a new locale, we can use the loader system to determine how elements of the locale are changed either by the global tendency of the narrative, or the tendency of another locale (e.g., the last locale visited). The loader system can provide positive, negative, or more balanced feedback into the overall system, enabling experiences that narrow to a single tendency outcome or present different tendencies/moods/perspectives over time and/or per locale.
+On entering a new locale, we can use a prefab loading system to determine how elements of the locale are changed either by the global tendency of the narrative, or the tendency of another locale (e.g., the last locale visited). The prefab loading system can provide positive, negative, or balanced feedback into the overall system, enabling experiences that narrow to a single tendency outcome or present different tendencies/moods/perspectives over time and/or per locale.
 
-The purpose of the plugin is to enable reactive narrative experiences that are shaped via the implicit and tacit interactions of the user through attention, rather than by their explicit actions in game or their selection of branching choices seen in other narrative systems. However, the system is flexible enough to be adapted for other use cases.
+The purpose of the plugin is to enable reactive narrative experiences that are shaped via the implicit and tacit interactions of the user through their attention (inferred by camera position), rather than by their explicit actions in game or their selection of branching choices seen in other narrative systems. The system is also flexible enough to be adapted for other use cases.
 
-Please note that this plugin is a work-in-progress and should be considered experimental/beta software. It is part of an on-going PhD research project by the author, Luke Skarth-Hayley. I am keen to discuss use cases with creators, see what people use the system for, and perhaps conduct studies with users. I am also planning game jams and other means to promote and explore the plugin and the design concepts underpinning it. Please follow me on Twitter [@lukeskarth](https://www.twitter.com/lukeskarth) or get in touch via rmes@oneirica.systems.
+Please note that this plugin is a work-in-progress and should be considered experimental/beta software. It is part of an on-going PhD research project by the author, Luke Skarth-Hayley. You can read a summary of my research here: https://highlights.cdt.horizon.ac.uk/students/psxls4.
+
+I am keen to discuss use cases with creators, see what people use the system for, and perhaps conduct studies with users. I am also planning game jams and other means to promote and explore the plugin and the design concepts underpinning it. Please follow me on Twitter [@lukeskarth](https://www.twitter.com/lukeskarth) or get in touch via rmes@oneirica.systems.
 
 ## Contents
 
