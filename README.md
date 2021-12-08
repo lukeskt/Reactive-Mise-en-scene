@@ -21,35 +21,28 @@ Please note that this plugin is a work-in-progress and should be considered expe
 
 ## Installation
 
-*Tutorial Video pending*
-
-### .unitypackage
-
-Download the package from [releases](releases).
+Download the .unitypackage from [releases](releases).
 
 Follow the Unity documentation here: https://docs.unity3d.com/Manual/AssetPackagesImport.html 
 
-### Package Manager
-
-Please note the package manager installation method is pending setup, it won’t work at present.
-
-Download the tar.gz file from [releases](releases).
-
-Follow the Unity documentation here: https://docs.unity3d.com/Manual/upm-ui-tarball.html 
-
 ## Usage
+
+*Demo Scene Explanation Video pending*
 
 *Tutorial Video pending*
 
 The Reactive Mise-en-scène system’s core functionality is as follows:
 
-1.	Customise the locales and tendencies to be relevant to your project by editing…?!?
-2.	Create the actual locales/areas you want in your experience or game, along with the objects, and divide these up per locale based on which ones you want to load depending on the tendency. This might be complex, so refer to the tutorial video when available, or check out the demo scene in the plugin.
+1.	Customise the locales and tendencies to be relevant to your project by editing the RMS.asset file in \_Reactive Mise-en-scène\Scripts\DataStore
+2.	Add the Attention Data Manager prefab (containing the Attention Data Manager component) to the scene.
 3.	Add the Focus and Focus Measures components to all the objects you want to track player attention on. Set the Locale and Tendency on each.
-4.	Add the Attention Data Manager prefab (containing the Attention Data Manager component) to the scene.
-5.	Add loaders and configure which objects and elements they will load dependent upon which locale/global tendency you want to track, and the algorithm that will be used to determine what to load. You might want to use the Locale prefab, which is a nested set of game objects with attached loader scripts, as a guide to how to set up a locale.
+4.	(optional) Write your own behaviour components inheriting from FocusReactiveBehaviour that implement "tacit" interactions based on an object's current Focus state.
+5.	Create Prefabs with either Focus and FocusMeasures components (to serve as further Reactive Objects that track attention), or with the ReactiveObjectTags component, setting the locale and tendency per prefab on either the FocusMeasures or ReactiveObjectTags respectively. This enables the prefab to be used with the PrefabLoader.
+6. 	Use the PrefabLoader component (e.g. via the PlacementPoint prefab), adding
 
-This is a simplification of the process, so please do watch the tutorial video above and/or refer to the further documentation in the wiki as linked below.
+l load dependent upon which locale/global tendency you want to track, and the algorithm that will be used to determine what to load.
+
+This is a simplification of the process, so please do watch the tutorial video above and/or refer to the further documentation in the wiki as linked below. Alternatively, look at how the Demo scene, provided with the plugin, is set up, to see one example setup of the system in use.
 
 ## Further Documentation
 
