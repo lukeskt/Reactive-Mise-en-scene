@@ -37,10 +37,8 @@ The Reactive Mise-en-scène system’s core functionality is as follows:
 2.	Add the Attention Data Manager prefab (containing the Attention Data Manager component) to the scene.
 3.	Add the Focus and Focus Measures components to all the objects you want to track player attention on. Set the Locale and Tendency on each.
 4.	(optional) Write your own behaviour components inheriting from FocusReactiveBehaviour that implement "tacit" interactions based on an object's current Focus state.
-5.	Create Prefabs with either Focus and FocusMeasures components (to serve as further Reactive Objects that track attention), or with the ReactiveObjectTags component, setting the locale and tendency per prefab on either the FocusMeasures or ReactiveObjectTags respectively. This enables the prefab to be used with the PrefabLoader.
-6. 	Use the PrefabLoader component (e.g. via the PlacementPoint prefab), adding
-
-l load dependent upon which locale/global tendency you want to track, and the algorithm that will be used to determine what to load.
+5.	Create Prefabs with either Focus and FocusMeasures components (to serve as further Reactive Objects that track attention), or with the ReactiveObjectTags component, setting the locale and tendency per prefab on either the FocusMeasures or ReactiveObjectTags respectively. This enables the prefab to be used with the LoadPrefab.
+6. 	Make use of the LoadPrefab component (e.g. via the PlacementPoint prefab) to load different prefabs based on the order of tendencies. Do this by adding a prefab per-tendency that you want to load to the LoadPrefab's list and configuring which tendency you want loading based on tendency order (e.g. StrongestTendency loads the tendency with the highest attention value) either Globally or for a specific Locale.
 
 This is a simplification of the process, so please do watch the tutorial video above and/or refer to the further documentation in the wiki as linked below. Alternatively, look at how the Demo scene, provided with the plugin, is set up, to see one example setup of the system in use.
 
