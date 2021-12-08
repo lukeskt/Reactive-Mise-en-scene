@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2453743480105941007, guid: d5d666322920d064a85366275186b4cc, type: 3}
+      propertyPath: focusedThreshold
+      value: 0.10000000149011612
+      objectReference: {fileID: 0}
     - target: {fileID: 5286824135258697350, guid: d5d666322920d064a85366275186b4cc, type: 3}
       propertyPath: m_Name
       value: ReactiveObject_Tendency_01
@@ -710,6 +714,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4189764177244668913, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
+      propertyPath: focusedThreshold
+      value: 0.10000000149011612
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189764177244668913, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
       propertyPath: FocusLevelChange.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1007,6 +1015,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1758774855}
     m_Modifications:
     - target: {fileID: -3482952618817648153, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
+      propertyPath: focusedThreshold
+      value: 0.10000000149011612
+      objectReference: {fileID: 0}
+    - target: {fileID: -3482952618817648153, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
       propertyPath: FocusLevelChange.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1125,6 +1137,14 @@ PrefabInstance:
     - target: {fileID: 1147726378892554133, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789824152344330755, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
+      propertyPath: tendency
+      value: Tendency_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789824152344330755, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
+      propertyPath: tendencyIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5286824135258697350, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
       propertyPath: m_Name
@@ -3581,6 +3601,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1758774855}
     m_Modifications:
+    - target: {fileID: -6056185169512372395, guid: 8bbecc0b0e20ee34f9f731fca2acb9e3, type: 3}
+      propertyPath: focusedThreshold
+      value: 0.10000000149011612
+      objectReference: {fileID: 0}
     - target: {fileID: -6056185169512372395, guid: 8bbecc0b0e20ee34f9f731fca2acb9e3, type: 3}
       propertyPath: FocusLevelChange.m_PersistentCalls.m_Calls.Array.size
       value: 1
