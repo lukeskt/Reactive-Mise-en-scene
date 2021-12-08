@@ -17,6 +17,7 @@ Please note that this plugin is a work-in-progress and should be considered expe
 * [Further Docuemntation](#further-documentation)
 * [Contributing](#contributing)
 * [Credits](#credits)
+* [Contact](#contact)
 * [License](#license)
 
 ## Installation
@@ -26,8 +27,6 @@ Download the .unitypackage from [releases](releases).
 Follow the Unity documentation here: https://docs.unity3d.com/Manual/AssetPackagesImport.html 
 
 ## Usage
-
-*Demo Scene Explanation Video pending*
 
 *Tutorial Video pending*
 
@@ -41,6 +40,8 @@ The Reactive Mise-en-scène system’s core functionality is as follows:
 6. 	Make use of the LoadPrefab component (e.g. via the PlacementPoint prefab) to load different prefabs based on the order of tendencies. Do this by adding a prefab per-tendency that you want to load to the LoadPrefab's list and configuring which tendency you want loading based on tendency order (e.g. StrongestTendency loads the tendency with the highest attention value) either Globally or for a specific Locale.
 
 This is a simplification of the process, so please do watch the tutorial video above and/or refer to the further documentation in the wiki as linked below. Alternatively, look at how the Demo scene, provided with the plugin, is set up, to see one example setup of the system in use.
+
+*Demo Scene Explanation Video pending*
 
 ## Further Documentation
 
@@ -65,7 +66,7 @@ Finally thank you to my industry partner BBC R&D, with special thanks to Si Lumb
 If you would like to speak to me about this plugin or my research please contact me via:
 
 Twitter: [@lukeskarth](https://www.twitter.com/lukeskarth)
-E-mail: luke.skarth-hayley@nottingham.ac.uk
+E-mail: rmes@oneirica.systems
 
 I'm particularly keen to hear from you if you decide to use this plugin, and would be very interested to see what you make with it. I am planning on organising workshops and a game jam using this plugin, which I will advertise on Twitter and via other channels in due course.
 
