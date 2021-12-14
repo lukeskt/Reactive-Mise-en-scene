@@ -90,9 +90,9 @@ namespace ReactiveMiseEnScene
             {
                 objToSpawn = tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(TendencyForPrefab));
             }
-            else if (tendencyObjects.Find(obj => obj.GetComponent<ReactiveMesObjectTags>() != null && obj.GetComponent<ReactiveMesObjectTags>().tendency.Equals(TendencyForPrefab)))
+            else if (tendencyObjects.Find(obj => obj.GetComponent<RmesObjectTags>() != null && obj.GetComponent<RmesObjectTags>().tendency.Equals(TendencyForPrefab)))
             {
-                objToSpawn = tendencyObjects.Find(obj => obj.GetComponent<ReactiveMesObjectTags>().tendency.Equals(TendencyForPrefab));
+                objToSpawn = tendencyObjects.Find(obj => obj.GetComponent<RmesObjectTags>().tendency.Equals(TendencyForPrefab));
             }
             else
             {

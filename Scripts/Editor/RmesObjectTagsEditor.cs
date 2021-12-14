@@ -6,9 +6,9 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    [CustomEditor(typeof(ReactiveMesObjectTags))]
+    [CustomEditor(typeof(RmesObjectTags))]
     [CanEditMultipleObjects]
-    public class ReactiveMesObjectTagsEditor : Editor
+    public class RmesObjectTagsEditor : Editor
     {
         SerializedProperty RMSettings;
         SerializedProperty locale;
@@ -25,7 +25,7 @@ namespace ReactiveMiseEnScene
             localeIndex = serializedObject.FindProperty("localeIndex");
             tendency = serializedObject.FindProperty("tendency");
             tendencyIndex = serializedObject.FindProperty("tendencyIndex");
-            var objectTags = target as ReactiveMesObjectTags;
+            var objectTags = target as RmesObjectTags;
             if (objectTags.RMSettings != null)
             {
                 editorLocale = objectTags.RMSettings.Locales;
@@ -39,7 +39,7 @@ namespace ReactiveMiseEnScene
             EditorGUILayout.PropertyField(RMSettings);
             serializedObject.ApplyModifiedProperties();
             serializedObject.Update();
-            var objectTags = target as ReactiveMesObjectTags;
+            var objectTags = target as RmesObjectTags;
             if (objectTags.RMSettings != null)
             {
                 editorLocale = objectTags.RMSettings.Locales;
