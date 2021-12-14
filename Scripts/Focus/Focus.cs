@@ -43,11 +43,13 @@ namespace ReactiveMiseEnScene
             CamSetup();
             meshBounds = GetCombinedRendererBounds();
             childColliders = GetComponentsInChildren<Collider>().ToList();
+            if(GetComponent<Collider>() != null) childColliders.Add(GetComponent<Collider>());
         }
 
         private Bounds GetCombinedRendererBounds()
         {
-            Renderer[] rr = gameObject.GetComponentsInChildren<Renderer>();
+            List<Renderer> rr = gameObject.GetComponentsInChildren<Renderer>().ToList();
+            if (GetComponent<Renderer>() != null) rr.Add(GetComponent<Renderer>());
             Bounds combinedBounds = rr[0].bounds;
             foreach (Renderer r in rr) combinedBounds.Encapsulate(r.bounds);
             return combinedBounds;
