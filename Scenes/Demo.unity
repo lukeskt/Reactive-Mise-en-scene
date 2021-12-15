@@ -303,6 +303,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -394,6 +395,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -485,6 +487,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -889,6 +892,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -1201,6 +1205,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -1238,6 +1243,7 @@ Transform:
   m_Children:
   - {fileID: 2140661782}
   - {fileID: 1974645909}
+  - {fileID: 1484967357}
   m_Father: {fileID: 1410985427}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1811,6 +1817,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -2088,6 +2095,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
@@ -2117,6 +2125,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -2255,6 +2264,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 4040962649895143724, guid: 1f1e05bcb79923b49a3cb3885b992aaa, type: 3}
@@ -2346,6 +2356,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 1
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
@@ -2596,6 +2607,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
@@ -2940,6 +2952,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 1
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
@@ -3038,6 +3051,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
@@ -3067,12 +3081,139 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
   - {fileID: 5286824135258697350, guid: d5d666322920d064a85366275186b4cc, type: 3}
   - {fileID: 5286824135258697350, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
   - {fileID: 5286824135258697350, guid: 8bbecc0b0e20ee34f9f731fca2acb9e3, type: 3}
+--- !u!1 &1484967356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1484967357}
+  - component: {fileID: 1484967358}
+  - component: {fileID: 1484967359}
+  m_Layer: 0
+  m_Name: TriggerReloadObjectsTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1484967357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484967356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -8.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 481686618}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1484967358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484967356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1484967359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484967356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca416dd3fc51c94480b7a82f50f5314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1659550915}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.LoadPrefab, ReactiveMiseEnScene
+        m_MethodName: PrefabLoader
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2138791676}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.LoadPrefab, ReactiveMiseEnScene
+        m_MethodName: PrefabLoader
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1410257433}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.LoadPrefab, ReactiveMiseEnScene
+        m_MethodName: PrefabLoader
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1106710226}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.LoadPrefab, ReactiveMiseEnScene
+        m_MethodName: PrefabLoader
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2140661783}
+        m_TargetAssemblyTypeName: ReactiveMiseEnScene.LoadPrefab, ReactiveMiseEnScene
+        m_MethodName: PrefabLoader
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerStay:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1567164413 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1383003533395403455, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
@@ -3096,6 +3237,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -3468,6 +3610,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 1
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
@@ -3497,6 +3640,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -3588,6 +3732,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 0
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -4348,6 +4493,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 1
   continuous: 0
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
@@ -4403,6 +4549,7 @@ MonoBehaviour:
   tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
+  replaceObject: 1
   continuous: 0
   tendencyObjects:
   - {fileID: 4040962649895143724, guid: 1f1e05bcb79923b49a3cb3885b992aaa, type: 3}

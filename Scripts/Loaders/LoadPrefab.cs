@@ -19,6 +19,9 @@ namespace ReactiveMiseEnScene
         public string localeRequest;
         [HideInInspector] public int localeIndex = 0; // for custom editor
 
+        [Tooltip("If enabled any child objects of this object will be deleted before loading the tendency object. Useful if you want to load and update the object at this position more than once.")]
+        public bool replaceObject = false;
+
         [Tooltip("WARNING EXPERIMENTAL FEATURE!\nIf Continuous is checked, update the tendency-based timeline every frame.")]
         public bool continuous = false;
 
@@ -28,7 +31,7 @@ namespace ReactiveMiseEnScene
         void Start()
         {
             DataMgr = FindObjectOfType<ReactiveMesDataManager>();
-            PrefabLoader(localeRequest);
+            PrefabLoader(); // localeRequest);
         }
 
         // Update is called once per frame
@@ -36,11 +39,11 @@ namespace ReactiveMiseEnScene
         {
             if (continuous)
             {
-                PrefabLoader(localeRequest); // change this to the locale locale?
+                PrefabLoader(); //localeRequest); // change this to the locale locale?
             }
         }
 
-        private void PrefabLoader(string localeRequest)
+        public void PrefabLoader() //string localeRequest)
         {
             // Move this up into the datamgr?
             Dictionary<string, double> TendenciesFromDataMgr = new Dictionary<string, double>();
@@ -61,8 +64,6 @@ namespace ReactiveMiseEnScene
             List<KeyValuePair<string, double>> WeakestFirstTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).ToList();
             switch (algorithm)
             {
-                // TODO: Make the lookups generic with tolist orderby, not aggregate?
-                // Maybe make sure the ordering is the same and then do 0, 1, -1, -2?
                 // Also need to move the check into datamgr maybe for reuse, and just spawn obj here?
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.StrongestTendency:
                     //TendencyForPrefab = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
@@ -99,10 +100,10 @@ namespace ReactiveMiseEnScene
                 objToSpawn = null;
             }
 
-            //if(continuous)
-            //{
-            //    removePlacementPointChildren();
-            //}
+            if(continuous || replaceObject)
+            {
+                removePlacementPointChildren();
+            }
             spawnObject(objToSpawn, gameObject);
         }
 
