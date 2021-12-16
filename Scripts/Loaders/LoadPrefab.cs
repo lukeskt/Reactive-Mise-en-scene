@@ -19,28 +19,20 @@ namespace ReactiveMiseEnScene
         public string localeRequest;
         [HideInInspector] public int localeIndex = 0; // for custom editor
 
+        [Header("Modes")]
         [Tooltip("If enabled any child objects of this object will be deleted before loading the tendency object. Useful if you want to load and update the object at this position more than once.")]
         public bool replaceObject = false;
+        [Tooltip("If enabled, loads the relevant tendency object when this component is enabled.")]
+        public bool loadOnStart = false;
 
-        [Tooltip("WARNING EXPERIMENTAL FEATURE!\nIf Continuous is checked, update the tendency-based timeline every frame.")]
-        public bool continuous = false;
-
+        [Header("Tendency Objects")]
         public List<GameObject> tendencyObjects;
 
         // Start is called before the first frame update
         void Start()
         {
             DataMgr = FindObjectOfType<ReactiveMesDataManager>();
-            PrefabLoader(); // localeRequest);
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            if (continuous)
-            {
-                PrefabLoader(); //localeRequest); // change this to the locale locale?
-            }
+            if (loadOnStart) PrefabLoader(); // localeRequest);
         }
 
         public void PrefabLoader() //string localeRequest)
@@ -100,7 +92,7 @@ namespace ReactiveMiseEnScene
                 objToSpawn = null;
             }
 
-            if(continuous || replaceObject)
+            if(replaceObject)
             {
                 removePlacementPointChildren();
             }
