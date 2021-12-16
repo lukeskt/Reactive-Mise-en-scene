@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1383003533395403392}
   - component: {fileID: 4906987998723102054}
+  - component: {fileID: 4251167344273156039}
   m_Layer: 0
   m_Name: PlacementPoint
   m_TagString: Untagged
@@ -43,3 +44,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd2ad1866e28054db29032c1b61699b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4251167344273156039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383003533395403455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd486ef8c3e0b5c48b4e5e2d5b20b17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
+  algorithm: 0
+  requestType: 0
+  tendencyIndex: 0
+  localeRequest: Area_01
+  localeIndex: 0
+  replaceObject: 0
+  loadOnStart: 0
+  tendencyObjects: []

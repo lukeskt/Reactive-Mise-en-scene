@@ -318,7 +318,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_05
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &52763663 stripped
 Transform:
@@ -410,7 +415,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_02
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &98799657 stripped
 Transform:
@@ -502,7 +512,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_04
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &231304795 stripped
 Transform:
@@ -903,7 +918,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &327046743 stripped
 Transform:
@@ -1824,7 +1844,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_03
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &688542174 stripped
 Transform:
@@ -2007,7 +2032,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_09
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &917043971 stripped
 Transform:
@@ -2224,7 +2254,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_00
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &1024051294 stripped
 Transform:
@@ -2363,7 +2398,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_03
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &1106710223 stripped
 Transform:
@@ -2550,7 +2590,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_08
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &1193225450 stripped
 Transform:
@@ -2706,7 +2751,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_02
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &1300737042 stripped
 Transform:
@@ -2959,7 +3009,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_02
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &1410257430 stripped
 Transform:
@@ -3419,7 +3474,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_07
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &1576085876 stripped
 Transform:
@@ -3481,7 +3541,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_00
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &1577799541 stripped
 Transform:
@@ -3638,7 +3703,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &1650232204 stripped
 Transform:
@@ -3700,7 +3770,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_00
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &1659550912 stripped
 Transform:
@@ -3822,7 +3897,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_03
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &1707636043 stripped
 Transform:
@@ -4687,7 +4767,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_06
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &2125127012 stripped
 Transform:
@@ -4749,7 +4834,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementPoint_01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: localeRequest
+      value: Area_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4251167344273156039, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
 --- !u!4 &2138791673 stripped
 Transform:
