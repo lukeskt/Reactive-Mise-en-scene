@@ -349,7 +349,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
   - {fileID: 5286824135258697350, guid: 73bb207bd4cc5eb4ebf2ff9bc0abcc3c, type: 3}
@@ -441,7 +441,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
   - {fileID: 5286824135258697350, guid: 73bb207bd4cc5eb4ebf2ff9bc0abcc3c, type: 3}
@@ -533,7 +533,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
   - {fileID: 5286824135258697350, guid: 73bb207bd4cc5eb4ebf2ff9bc0abcc3c, type: 3}
@@ -934,7 +934,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
   - {fileID: 5286824135258697350, guid: 73bb207bd4cc5eb4ebf2ff9bc0abcc3c, type: 3}
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
   - {fileID: 5286824135258697350, guid: 73bb207bd4cc5eb4ebf2ff9bc0abcc3c, type: 3}
@@ -1855,7 +1855,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
   - {fileID: 5286824135258697350, guid: 73bb207bd4cc5eb4ebf2ff9bc0abcc3c, type: 3}
@@ -2133,7 +2133,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
   - {fileID: 5286824135258697350, guid: d5d666322920d064a85366275186b4cc, type: 3}
@@ -2163,7 +2163,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
   - {fileID: 5286824135258697350, guid: 73bb207bd4cc5eb4ebf2ff9bc0abcc3c, type: 3}
@@ -2302,7 +2302,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 4040962649895143724, guid: 1f1e05bcb79923b49a3cb3885b992aaa, type: 3}
   - {fileID: 3695863044548345581, guid: e77a09c569c96fd448ccf56d68bab8ec, type: 3}
@@ -2645,7 +2645,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
   - {fileID: 5286824135258697350, guid: d5d666322920d064a85366275186b4cc, type: 3}
@@ -3089,7 +3089,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
   - {fileID: 5286824135258697350, guid: d5d666322920d064a85366275186b4cc, type: 3}
@@ -3119,7 +3119,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
   - {fileID: 5286824135258697350, guid: d5d666322920d064a85366275186b4cc, type: 3}
@@ -3358,7 +3358,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
   - {fileID: 5286824135258697350, guid: 73bb207bd4cc5eb4ebf2ff9bc0abcc3c, type: 3}
@@ -3761,7 +3761,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
   - {fileID: 5286824135258697350, guid: 73bb207bd4cc5eb4ebf2ff9bc0abcc3c, type: 3}
@@ -4023,7 +4023,7 @@ MonoBehaviour:
   localeRequest: Area_01
   localeIndex: 0
   replaceObject: 0
-  loadOnStart: 0
+  loadOnStart: 1
   tendencyObjects:
   - {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
   - {fileID: 5286824135258697350, guid: 73bb207bd4cc5eb4ebf2ff9bc0abcc3c, type: 3}
