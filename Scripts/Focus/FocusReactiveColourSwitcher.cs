@@ -6,7 +6,7 @@ namespace ReactiveMiseEnScene
 {
     public class FocusReactiveColourSwitcher : FocusReactiveBehaviour
     {
-        public List<Color> switchColors = new List<Color>();
+        public List<Color> switchColors = new List<Color>() { new Color(0,1,0,1), new Color(1,0.75f,0,1), new Color(1,0,0,1) };
         Color defaultColor;
         Material material;
 
