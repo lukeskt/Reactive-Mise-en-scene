@@ -143,7 +143,7 @@ MonoBehaviour:
   currentFocusLevel: 0
   lastFocusLevel: 0
   distanceThreshold: 50
-  focusedThreshold: 0.07500000298023224
+  focusedThreshold: 0.10000000149011612
   attendedThreshold: 0.25
   FocusLevelChange:
     m_PersistentCalls:
@@ -152,8 +152,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   cam: {fileID: 0}
-  specifiedCollider: {fileID: 0}
-  specifiedMeshRenderer: {fileID: 0}
 --- !u!114 &-1760087066536486742
 MonoBehaviour:
   m_ObjectHideFlags: 0
