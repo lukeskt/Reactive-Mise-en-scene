@@ -49,9 +49,9 @@ The Reactive Mise-en-scène system’s core functionality is as follows:
 
 This is a simplification of the process, so please do watch the tutorial video above and/or refer to the further documentation in the wiki as linked below. Alternatively, look at how the Demo Scene, provided with the plugin, is set up, to see one example setup of the system in use.
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/HcV73VpRVlc/0.jpg)](http://www.youtube.com/watch?v=HcV73VpRVlc "Reactive Mise-en-scène Demo Scene Video")
+[![Demo Scene Tutorial Video](http://img.youtube.com/vi/HcV73VpRVlc/0.jpg)](http://www.youtube.com/watch?v=HcV73VpRVlc "Reactive Mise-en-scène Demo Scene Video")
 
-*Demo Scene Explanation Video*
+*Demo Scene Tutorial Video*
 
 ## Further Documentation
 
