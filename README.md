@@ -14,7 +14,7 @@ The purpose of the plugin is to enable reactive narrative experiences that are s
 
 Please note that this plugin is a work-in-progress and should be considered experimental/beta software. It is part of an on-going PhD research project by the author, Luke Skarth-Hayley. You can read a summary of my research here: https://highlights.cdt.horizon.ac.uk/students/psxls4.
 
-I am keen to discuss use cases with creators, see what people use the system for, and perhaps conduct studies with users. I am also planning game jams and other means to promote and explore the plugin and the design concepts underpinning it. Please follow me on Twitter [@lukeskarth](https://www.twitter.com/lukeskarth) or get in touch via rmes@oneirica.systems.
+I am keen to discuss use cases with creators, see what people use the system for, and perhaps conduct studies with users. I am also planning game jams and other means to promote and explore the plugin and the design concepts underpinning it. Please follow and DM me on Twitter [@lukeskarth](https://www.twitter.com/lukeskarth) or get in touch via rmes@oneirica.systems.
 
 ## Contents
 
@@ -30,7 +30,7 @@ I am keen to discuss use cases with creators, see what people use the system for
 
 Download the .unitypackage from [releases](releases).
 
-Follow the Unity documentation here: https://docs.unity3d.com/Manual/AssetPackagesImport.html 
+Follow the Unity documentation on how to import the package here: https://docs.unity3d.com/Manual/AssetPackagesImport.html 
 
 ## Usage
 
@@ -55,7 +55,7 @@ This is a simplification of the process, so please do watch the tutorial video a
 
 ## Further Documentation
 
-See the [wiki](https://github.com/lukeskt/Reactive-Mise-en-scene/wiki) for more detailed information about the plugin, along with the design and academic underpinnings of the system.
+See the [wiki](https://github.com/lukeskt/Reactive-Mise-en-scene/wiki) for more detailed information about the plugin.
 
 ## Contributing
 
@@ -67,7 +67,7 @@ The Focus implementation in this plugin is inspired by the Focus interaction wor
 
 Thank you to my supervisors Martin Flintham, Sarah Martindale, and Steve Benford for all guidance and advice received so far and in the future as my PhD progresses.
 
-Thank you also to Paul Tennent, Christine Li, Chris Greenhalgh, Stuart Reeves, Jocelyn Spence and so many others in the Mixed Reality Lab at University of Nottingham for advice, feedback, and conversations on my research and everything else.
+Thank you also to Paul Tennent, Christine Li, Jocelyn Spence, Chris Greenhalgh, Stuart Reeves and so many others in the Mixed Reality Lab at University of Nottingham for advice, feedback, and conversations on my research and everything else.
 
 Finally thank you to my industry partner BBC R&D, with special thanks to Si Lumb, Phil Stenton, Tim Pearce and Rajiv Ramdhany for help and guidance, and encouraging me to release this plugin as a means to widening its reach.
 
