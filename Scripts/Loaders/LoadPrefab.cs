@@ -96,7 +96,7 @@ namespace ReactiveMiseEnScene
             {
                 removePlacementPointChildren();
             }
-            spawnObject(objToSpawn, gameObject);
+            spawnObject(objToSpawn);
         }
 
         private void removePlacementPointChildren ()
@@ -112,9 +112,9 @@ namespace ReactiveMiseEnScene
             }
         }
 
-        private void spawnObject(GameObject objectToSpawn, GameObject placementPoint)
+        private void spawnObject(GameObject objectToSpawn)
         {
-            Instantiate(objectToSpawn, placementPoint.transform.position, placementPoint.transform.rotation, placementPoint.transform);
+            Instantiate(objectToSpawn, gameObject.transform);
         }
     }
 }
