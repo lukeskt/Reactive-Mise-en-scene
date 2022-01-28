@@ -34,9 +34,7 @@ Follow the Unity documentation on how to import the package here: https://docs.u
 
 ## Usage
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/ygI-2F8ApUM/0.jpg)](http://www.youtube.com/watch?v=ygI-2F8ApUM "Reactive Mise-en-scène Demo Scene Video")
-
-*Tutorial Video pending*
+### *Tutorial Video pending*
 
 The Reactive Mise-en-scène system’s core functionality is as follows:
 
