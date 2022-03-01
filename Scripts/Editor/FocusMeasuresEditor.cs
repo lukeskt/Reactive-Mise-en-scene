@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    [CustomEditor(typeof(FocusMeasures))]
+    [CustomEditor(typeof(FocusTimeTracking))]
     [CanEditMultipleObjects]
-    public class FocusMeasuresEditor : Editor
+    public class FocusTimeTrackingEditor : Editor
     {
         SerializedProperty RMSettings;
         public string[] editorLocale;
@@ -26,7 +26,7 @@ namespace ReactiveMiseEnScene
             localeIndex = serializedObject.FindProperty("localeIndex");
             tendency = serializedObject.FindProperty("tendency");
             tendencyIndex = serializedObject.FindProperty("tendencyIndex");
-            var focusMeasures = target as FocusMeasures;
+            var focusMeasures = target as FocusTimeTracking;
             if (focusMeasures.RMSettings != null)
             {
                 editorLocale = focusMeasures.RMSettings.Locales;
@@ -45,7 +45,7 @@ namespace ReactiveMiseEnScene
             EditorGUILayout.PropertyField(RMSettings);
             serializedObject.ApplyModifiedProperties();
             serializedObject.Update();
-            var focusMeasures = target as FocusMeasures;
+            var focusMeasures = target as FocusTimeTracking;
             if (focusMeasures.RMSettings != null)
             {
                 editorLocale = focusMeasures.RMSettings.Locales;

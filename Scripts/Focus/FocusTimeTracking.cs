@@ -8,7 +8,7 @@ using UnityEngine.Events;
 namespace ReactiveMiseEnScene
 {
     [RequireComponent(typeof(Focus))]
-    public class FocusMeasures : MonoBehaviour
+    public class FocusTimeTracking : MonoBehaviour
     {
         public ReactiveMesSettings RMSettings;
         public string locale;
