@@ -79,9 +79,9 @@ namespace ReactiveMiseEnScene
             }
 
             GameObject objToSpawn;
-            if (tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>() != null && obj.GetComponent<FocusMeasures>().tendency.Equals(TendencyForPrefab)))
+            if (tendencyObjects.Find(obj => obj.GetComponent<FocusTimeTracking>() != null && obj.GetComponent<FocusTimeTracking>().tendency.Equals(TendencyForPrefab)))
             {
-                objToSpawn = tendencyObjects.Find(obj => obj.GetComponent<FocusMeasures>().tendency.Equals(TendencyForPrefab));
+                objToSpawn = tendencyObjects.Find(obj => obj.GetComponent<FocusTimeTracking>().tendency.Equals(TendencyForPrefab));
             }
             else if (tendencyObjects.Find(obj => obj.GetComponent<UnreactiveObjectTags>() != null && obj.GetComponent<UnreactiveObjectTags>().tendency.Equals(TendencyForPrefab)))
             {
