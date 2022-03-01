@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    public class RmesObjectTags : MonoBehaviour
+    public class UnreactiveObjectTags : MonoBehaviour
     {
         [SerializeField] public ReactiveMesSettings RMSettings;
         [SerializeField] public string locale;
