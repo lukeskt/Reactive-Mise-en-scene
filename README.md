@@ -82,3 +82,5 @@ I'm particularly keen to hear from you if you decide to use this plugin, and wou
 ## License
 
 Released under [MIT License](./LICENSE).
+
+Copyright &copy; Luke Skarth-Hayley 2022
