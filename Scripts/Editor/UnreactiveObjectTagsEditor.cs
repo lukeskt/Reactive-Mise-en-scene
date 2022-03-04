@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    [CustomEditor(typeof(UnreactiveObjectTagsEditor))]
+    [CustomEditor(typeof(UnreactiveObjectTags))]
     [CanEditMultipleObjects]
     public class UnreactiveObjectTagsEditor : Editor
     {
