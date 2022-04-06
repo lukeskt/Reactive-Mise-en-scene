@@ -34,7 +34,7 @@ Follow the Unity documentation on how to import the package here: https://docs.u
 
 ## Usage
 
-### *Tutorial Video Coming Soon*
+### *Full Tutorial Video Coming Soon*
 
 The Reactive Mise-en-scène system’s core functionality is as follows:
 
