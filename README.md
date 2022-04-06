@@ -1,6 +1,7 @@
 # Reactive Mise-en-scène Unity Plugin
 
 *Introduction Video*
+
 [![Introduction Video](http://img.youtube.com/vi/CpbM8zDdTQM/0.jpg)](http://www.youtube.com/watch?v=CpbM8zDdTQM "Reactive Mise-en-scène Introduction Video")
 
 Reactive Mise-en-scène is a Unity (2019+) plugin that uses the position of objects on screen as a proxy for player attention. This attention is then measured over time and associated with different "tendencies" and "locales", which can respectively represent, for example, different narrative tendencies and different areas or scenes.
