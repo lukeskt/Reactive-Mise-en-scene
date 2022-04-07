@@ -5,6 +5,6 @@ authors:
     given-names: Luke
     orcid: https://orcid.org/0000-0002-7968-4374
 title: "Reactive Mise-en-scène Unity Plugin"
-version: 0.9.5
+version: 1.0.0
 doi: 10.5281/zenodo.6421107 
 date-released: 2021-09-30
