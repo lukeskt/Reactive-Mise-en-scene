@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace ReactiveMiseEnScene
 {
@@ -23,10 +24,29 @@ namespace ReactiveMiseEnScene
         
         }
 
-        public override void Offscreen() { material.SetColor("_BaseColor", defaultColor); }
-        public override void Onscreen() { material.SetColor("_BaseColor", switchColors[0]); }
-        public override void Attended() { material.SetColor("_BaseColor", switchColors[1]); }
-        public override void Focused() { material.SetColor("_BaseColor", switchColors[2]); }
+        public override void Offscreen() 
+        {
+            if (GraphicsSettings.renderPipelineAsset == null) material.SetColor("_Color", defaultColor);
+            else material.SetColor("_BaseColor", defaultColor);
+        }
+        
+        public override void Onscreen() 
+        {
+            if (GraphicsSettings.renderPipelineAsset == null) material.SetColor("_Color", switchColors[0]);
+            else material.SetColor("_BaseColor", switchColors[0]);
+        }
+
+        public override void Attended() 
+        {
+            if (GraphicsSettings.renderPipelineAsset == null) material.SetColor("_Color", switchColors[1]);
+            else material.SetColor("_BaseColor", switchColors[1]);
+        }
+        
+        public override void Focused() 
+        {
+            if (GraphicsSettings.renderPipelineAsset == null) material.SetColor("_Color", switchColors[2]);
+            else material.SetColor("_BaseColor", switchColors[2]);
+        }
 
         public override void StayOffscreen() { }
         public override void StayOnscreen() { }
