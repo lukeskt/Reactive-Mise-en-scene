@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1147726378892554133}
   m_RootOrder: 0
@@ -52,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -106,6 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1147726378892554133}
   - component: {fileID: 3789824152344330755}
+  - component: {fileID: 5740419418037127655}
   m_Layer: 0
   m_Name: ReactiveObject_Tendency_02
   m_TagString: Untagged
@@ -123,6 +126,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5238710294301422795}
   m_Father: {fileID: 0}
@@ -159,3 +163,28 @@ MonoBehaviour:
   WriteAttnDataMgr:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5740419418037127655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5286824135258697350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 890b5bd01f26da84e8a76d4ef6eb93b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFocusLevel: 0
+  lastFocusLevel: 0
+  distanceThreshold: 50
+  focusedThreshold: 0.10000000149011612
+  attendedThreshold: 0.25
+  layerMask: Default
+  FocusLevelChange:
+    m_PersistentCalls:
+      m_Calls: []
+  FocusLevelStay:
+    m_PersistentCalls:
+      m_Calls: []
+  cam: {fileID: 0}
