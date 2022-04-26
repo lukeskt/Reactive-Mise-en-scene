@@ -1,5 +1,7 @@
 # Reactive Mise-en-scène Unity Plugin
 
+[![DOI](https://zenodo.org/badge/392462419.svg)](https://zenodo.org/badge/latestdoi/392462419)
+
 *Introduction Video*
 
 [![Introduction Video](http://img.youtube.com/vi/CpbM8zDdTQM/0.jpg)](http://www.youtube.com/watch?v=CpbM8zDdTQM "Reactive Mise-en-scène Introduction Video")
