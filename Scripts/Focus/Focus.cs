@@ -36,6 +36,7 @@ namespace ReactiveMiseEnScene
         [Tooltip("Specify a camera if issues with focus occur, e.g. if using multiple cams.")]
         public Camera cam;
         private List<Collider> childColliders;
+        private List<Renderer> childRenderers;
         private Bounds meshBounds;
 
         void Start()
@@ -48,10 +49,10 @@ namespace ReactiveMiseEnScene
 
         private Bounds GetCombinedRendererBounds()
         {
-            List<Renderer> rr = gameObject.GetComponentsInChildren<Renderer>().ToList();
-            if (GetComponent<Renderer>() != null) rr.Add(GetComponent<Renderer>());
-            Bounds combinedBounds = rr[0].bounds;
-            foreach (Renderer r in rr) combinedBounds.Encapsulate(r.bounds);
+            childRenderers = gameObject.GetComponentsInChildren<Renderer>().ToList();
+            if (GetComponent<Renderer>() != null) childRenderers.Add(GetComponent<Renderer>());
+            Bounds combinedBounds = childRenderers[0].bounds;
+            foreach (Renderer r in childRenderers) combinedBounds.Encapsulate(r.bounds);
             return combinedBounds;
         }
 
@@ -72,7 +73,7 @@ namespace ReactiveMiseEnScene
 
         void Update()
         {
-            meshBounds = GetCombinedRendererBounds(); // Needs to be updated to handle movement.
+            meshBounds = GetCombinedRendererBounds(); // Needs to be updated to handle object movement.
             GetFocusLevel();
         }
 
@@ -85,7 +86,7 @@ namespace ReactiveMiseEnScene
 
         private bool ObjectLineOfSightCheck()
         {
-            if (Physics.Linecast(cam.transform.position, meshBounds.center, out RaycastHit hit, 1 << 0, QueryTriggerInteraction.Ignore) // Physics.AllLayers replaced with 1 << 10 for focus? 1 << 0 = default
+            if (Physics.Linecast(cam.transform.position, meshBounds.center, out RaycastHit hit, 1 << gameObject.layer, QueryTriggerInteraction.Ignore)
                 && childColliders.Contains(hit.collider))
             {
                 Debug.DrawLine(cam.transform.position, meshBounds.center, Color.green);
