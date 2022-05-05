@@ -63,6 +63,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Credits
 
+The author is supported by the Horizon Centre for Doctoral Training at the University of Nottingham (RCUK Grant No. EP/L015463/1) and the BBC.
+
 The Focus implementation in this plugin is inspired by the Focus interaction work of Benford and Fahlén in [*A Spatial Model of Interaction in Large Virtual Environments*](https://link.springer.com/chapter/10.1007/978-94-011-2094-4_8) and Greenhalgh and Benford in [*MASSIVE: a distributed virtual reality system incorporating spatial trading*](https://ieeexplore.ieee.org/abstract/document/499999).
 
 Thank you to my supervisors Martin Flintham, Sarah Martindale, and Steve Benford for all guidance and advice received so far and in the future as my PhD progresses.
