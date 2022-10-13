@@ -65,10 +65,10 @@ MonoBehaviour:
   replaceObject: 1
   loadOnStart: 1
   tendencyObjs:
-  - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
-  - {fileID: 5286824135258697350, guid: d5d666322920d064a85366275186b4cc, type: 3}
-  - {fileID: 5286824135258697350, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
-  - {fileID: 5286824135258697350, guid: 8bbecc0b0e20ee34f9f731fca2acb9e3, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tendencyNames:
   - Tendency A
   - Tendency B
