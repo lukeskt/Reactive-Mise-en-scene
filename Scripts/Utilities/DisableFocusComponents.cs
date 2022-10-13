@@ -16,8 +16,7 @@ namespace ReactiveMiseEnScene
             {
                 //Destroy(obj.GetComponent<FocusMeasures>());
                 //Destroy(obj.GetComponent<Focus>());
-                obj.GetComponent<FocusTimeTracking>().enabled = false;
-                obj.GetComponent<Focus>().enabled = false;
+                obj.GetComponent<FocusNeue>().enabled = false;
             }
         }
     }
