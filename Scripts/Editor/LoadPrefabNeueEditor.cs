@@ -22,10 +22,10 @@ namespace ReactiveMiseEnScene
         SerializedProperty replaceObject;
         SerializedProperty loadOnStart;
 
-        SerializedProperty tendencyNames;
+        //SerializedProperty tendencyNames;
         string[] editorTendencyNames;
         SerializedProperty tendencyObjs;
-        GameObject[] editorTendencyObjs;
+        //GameObject[] editorTendencyObjs;
 
         private void OnEnable()
         {
@@ -37,14 +37,14 @@ namespace ReactiveMiseEnScene
             {
                 editorLocale = loadPrefabSingle.RMSettings.Locales;
                 editorTendencyNames = loadPrefabSingle.tendencyNames;
-                editorTendencyObjs = loadPrefabSingle.tendencyObjs;
+                //editorTendencyObjs = loadPrefabSingle.tendencyObjs;
             }
             localeRequest = serializedObject.FindProperty("localeRequest");
             localeIndex = serializedObject.FindProperty("localeIndex");
             replaceObject = serializedObject.FindProperty("replaceObject");
             loadOnStart = serializedObject.FindProperty("loadOnStart");
 
-            tendencyNames = serializedObject.FindProperty("tendencyNames");
+            //tendencyNames = serializedObject.FindProperty("tendencyNames");
             tendencyObjs = serializedObject.FindProperty("tendencyObjs");
         }
 

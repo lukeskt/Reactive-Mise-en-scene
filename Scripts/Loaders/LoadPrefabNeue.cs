@@ -16,8 +16,8 @@ namespace ReactiveMiseEnScene
 
         public string localeRequest;
         [HideInInspector] public int localeIndex = 0; // for custom editor
-        public string tendency;
-        [HideInInspector] public int tendencyIndex = 0; // for custom editor
+        //public string tendency;
+        //[HideInInspector] public int tendencyIndex = 0; // for custom editor
 
         [Header("Modes")]
         [Tooltip("If enabled any child objects of this object will be deleted before loading the tendency object. Useful if you want to load and update the object at this position more than once.")]
@@ -32,15 +32,9 @@ namespace ReactiveMiseEnScene
         private void OnValidate()
         {
             tendencyNames = RMSettings.Tendencies;
-            //tendencyObjs = new GameObject[tendencyNames.Length];
             tendencyDict = tendencyNames.Zip(tendencyObjs, (k, v) => new { Key = k, Value = v }).ToDictionary(x => x.Key, x => x.Value);
-            //foreach (var item in tendencyDict)
-            //{
-            //    print($"{item.Key}: {item.Value}");
-            //}
         }
 
-        // Start is called before the first frame update
         void Start()
         {
             DataMgr = FindObjectOfType<ReactiveMesDataManager>();
