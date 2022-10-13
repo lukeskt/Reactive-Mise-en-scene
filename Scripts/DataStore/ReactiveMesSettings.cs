@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    [CreateAssetMenu(fileName = "Data", menuName = "ReactiveMesSettings", order = 1)]
+    [CreateAssetMenu(fileName = "RMS", menuName = "ReactiveMesSettings", order = 1)]
     public class ReactiveMesSettings : ScriptableObject
     {
         public string[] Locales = new string[4];
