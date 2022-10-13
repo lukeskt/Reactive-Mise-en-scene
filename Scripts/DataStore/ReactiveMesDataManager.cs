@@ -59,9 +59,10 @@ namespace ReactiveMiseEnScene
             return tendencyAttnRating;
         }
 
-        public FocusDataStruct GetObjStructDetails (List<FocusDataStruct> attnStructs, string objectName)
+        // Get data on a specific object.
+        public FocusDataStruct GetObjStructDetails (string objectName)
         {
-            FocusDataStruct attnStruct = attnStructs.Find(attnStruct => attnStruct.name.Equals(objectName));
+            FocusDataStruct attnStruct = reactiveObjects.Find(attnStruct => attnStruct.name.Equals(objectName));
             return attnStruct;
         }
 
