@@ -27,13 +27,19 @@ namespace ReactiveMiseEnScene
 
         public List<GameObject> tendencyObjects;
 
-        public GameObject[] tendencyObject;
+        public GameObject[] tendencyObjs;
         public string[] tendencyNames;
+        public Dictionary<string, GameObject> tendencyDict;
 
         private void OnValidate()
         {
-            tendencyObject = new GameObject[RMSettings.Tendencies.Length];
+            tendencyObjs = new GameObject[RMSettings.Tendencies.Length];
             tendencyNames = RMSettings.Tendencies;
+            tendencyDict = tendencyNames.Zip(tendencyObjs, (k, v) => new { Key = k, Value = v }).ToDictionary(x => x.Key, x => x.Value);
+            foreach (var item in tendencyDict)
+            {
+                print($"{item.Key}: {item.Value}");
+            }
         }
 
         //[Serializable]
