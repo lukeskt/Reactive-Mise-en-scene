@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1383003533395403392}
   - component: {fileID: 4906987998723102054}
-  - component: {fileID: 4251167344273156039}
+  - component: {fileID: 2138791678}
   m_Layer: 0
   m_Name: PlacementPoint
   m_TagString: Untagged
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd2ad1866e28054db29032c1b61699b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4251167344273156039
+--- !u!114 &2138791678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,15 +54,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1383003533395403455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd486ef8c3e0b5c48b4e5e2d5b20b17c, type: 3}
+  m_Script: {fileID: 11500000, guid: b6cf02b298a924043a32cf4f7b92f982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RMSettings: {fileID: 11400000, guid: 3d3b87ef45c71474dbd063c324b06bbd, type: 2}
+  RMSettings: {fileID: 11400000, guid: 49fd78d727b230f42b984d36585b936b, type: 2}
   algorithm: 0
   requestType: 0
-  tendencyIndex: 0
   localeRequest: Area_01
   localeIndex: 0
-  replaceObject: 0
-  loadOnStart: 0
-  tendencyObjects: []
+  replaceObject: 1
+  loadOnStart: 1
+  tendencyObjs:
+  - {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
+  - {fileID: 5286824135258697350, guid: d5d666322920d064a85366275186b4cc, type: 3}
+  - {fileID: 5286824135258697350, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
+  - {fileID: 5286824135258697350, guid: 8bbecc0b0e20ee34f9f731fca2acb9e3, type: 3}
+  tendencyNames:
+  - Tendency A
+  - Tendency B
+  - Tendency C
+  - Tendency D
