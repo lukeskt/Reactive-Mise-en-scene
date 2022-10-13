@@ -25,7 +25,7 @@ namespace ReactiveMiseEnScene
         [Tooltip("If enabled, loads the relevant tendency object when this component is enabled.")]
         public bool loadOnStart = false;
 
-        public GameObject[] tendencyObjs;
+        public GameObject[] tendencyObjs = new GameObject[0];
         public string[] tendencyNames;
         public Dictionary<string, GameObject> tendencyDict;
 
