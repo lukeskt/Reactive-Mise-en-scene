@@ -76,14 +76,17 @@ namespace ReactiveMiseEnScene
             EditorGUILayout.PropertyField(loadOnStart);
             EditorGUILayout.Space();
 
-            //EditorGUILayout.PropertyField(tendencyNames);
-            EditorGUI.BeginChangeCheck();
-            foreach (var obj in editorTendencyObjs)
+            for (int i = 0; i < editorTendencyNames.Length; i++)
             {
-                var pos = Array.IndexOf(editorTendencyObjs, obj);
-                EditorGUILayout.PropertyField(tendencyObjs.GetArrayElementAtIndex(pos), label: new GUIContent(editorTendencyNames[pos]));
+                EditorGUILayout.PropertyField(tendencyObjs.GetArrayElementAtIndex(i), label: new GUIContent(editorTendencyNames[i]));
             }
-            EditorGUI.EndChangeCheck();
+
+            //foreach (var name in editorTendencyNames)
+            //{
+            //    var pos = Array.IndexOf(editorTendencyNames, name);
+            //    GUIContent lab = new GUIContent(editorTendencyNames[pos]);
+            //    EditorGUILayout.PropertyField(tendencyObjs.GetArrayElementAtIndex(pos), label: lab);
+            //}
 
             serializedObject.ApplyModifiedProperties();
         }

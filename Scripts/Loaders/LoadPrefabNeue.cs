@@ -25,24 +25,19 @@ namespace ReactiveMiseEnScene
         [Tooltip("If enabled, loads the relevant tendency object when this component is enabled.")]
         public bool loadOnStart = false;
 
-        public List<GameObject> tendencyObjects;
-
         public GameObject[] tendencyObjs;
         public string[] tendencyNames;
         public Dictionary<string, GameObject> tendencyDict;
 
         private void OnValidate()
         {
-            if (tendencyObjs.Length == 0)
-            {
-                tendencyObjs = new GameObject[RMSettings.Tendencies.Length];
-            }
             tendencyNames = RMSettings.Tendencies;
+            //tendencyObjs = new GameObject[tendencyNames.Length];
             tendencyDict = tendencyNames.Zip(tendencyObjs, (k, v) => new { Key = k, Value = v }).ToDictionary(x => x.Key, x => x.Value);
-            foreach (var item in tendencyDict)
-            {
-                print($"{item.Key}: {item.Value.name}");
-            }
+            //foreach (var item in tendencyDict)
+            //{
+            //    print($"{item.Key}: {item.Value}");
+            //}
         }
 
         // Start is called before the first frame update
@@ -57,6 +52,7 @@ namespace ReactiveMiseEnScene
             // Move this up into the datamgr?
             Dictionary<string, double> TendenciesFromDataMgr = new Dictionary<string, double>();
             string TendencyForPrefab;
+
             switch (requestType)
             {
                 case ReactiveMesSettings.RequestType.Global:
@@ -70,7 +66,8 @@ namespace ReactiveMiseEnScene
             }
 
             List<KeyValuePair<string, double>> StrongestFirstTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).Reverse().ToList();
-            List<KeyValuePair<string, double>> WeakestFirstTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).ToList();
+            List<KeyValuePair<string, double>> WeakestFirstTendencies   = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).ToList();
+
             switch (algorithm)
             {
                 // Also need to move the check into datamgr maybe for reuse, and just spawn obj here?
@@ -89,7 +86,7 @@ namespace ReactiveMiseEnScene
                     TendencyForPrefab = WeakestFirstTendencies[0].Key;
                     break;
                 case ReactiveMesSettings.SingleResultTendencyAlgorithm.Random:
-                    TendencyForPrefab = tendencyObjects[UnityEngine.Random.Range(0, tendencyObjects.Count)].ToString();
+                    TendencyForPrefab = tendencyNames[UnityEngine.Random.Range(0, tendencyNames.Length)].ToString();
                     break;
                 default:
                     goto case ReactiveMesSettings.SingleResultTendencyAlgorithm.StrongestTendency;
