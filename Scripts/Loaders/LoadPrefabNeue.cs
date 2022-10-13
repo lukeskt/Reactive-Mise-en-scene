@@ -33,32 +33,17 @@ namespace ReactiveMiseEnScene
 
         private void OnValidate()
         {
-            tendencyObjs = new GameObject[RMSettings.Tendencies.Length];
+            if (tendencyObjs.Length == 0)
+            {
+                tendencyObjs = new GameObject[RMSettings.Tendencies.Length];
+            }
             tendencyNames = RMSettings.Tendencies;
             tendencyDict = tendencyNames.Zip(tendencyObjs, (k, v) => new { Key = k, Value = v }).ToDictionary(x => x.Key, x => x.Value);
             foreach (var item in tendencyDict)
             {
-                print($"{item.Key}: {item.Value}");
+                print($"{item.Key}: {item.Value.name}");
             }
         }
-
-        //[Serializable]
-        //public struct TendencyObjectStruct
-        //{
-        //    public string tendency;
-        //    public GameObject objectToLoad;
-        //}
-        //public TendencyObjectStruct[] tendencyObjs;
-
-        //private void OnValidate()
-        //{
-        //    foreach (var tendency in RMSettings.Tendencies)
-        //    {
-        //        TendencyObjectStruct objectStruct = new TendencyObjectStruct();
-        //        objectStruct.tendency = tendency;
-        //        tendencyObjs.Append(objectStruct);
-        //    }
-        //}
 
         // Start is called before the first frame update
         void Start()
@@ -110,24 +95,7 @@ namespace ReactiveMiseEnScene
                     goto case ReactiveMesSettings.SingleResultTendencyAlgorithm.StrongestTendency;
             }
 
-            GameObject objToSpawn;
-            if (tendencyObjects.Find(obj => obj.GetComponent<FocusTimeTracking>() != null && obj.GetComponent<FocusTimeTracking>().tendency.Equals(TendencyForPrefab)))
-            {
-                objToSpawn = tendencyObjects.Find(obj => obj.GetComponent<FocusTimeTracking>().tendency.Equals(TendencyForPrefab));
-            }
-            else if (tendencyObjects.Find(obj => obj.GetComponent<UnreactiveObjectTags>() != null && obj.GetComponent<UnreactiveObjectTags>().tendency.Equals(TendencyForPrefab)))
-            {
-                objToSpawn = tendencyObjects.Find(obj => obj.GetComponent<UnreactiveObjectTags>().tendency.Equals(TendencyForPrefab));
-            }
-            else
-            {
-                objToSpawn = null;
-            }
-
-            if (replaceObject)
-            {
-                removePlacementPointChildren();
-            }
+            GameObject objToSpawn = tendencyDict[TendencyForPrefab];
             spawnObject(objToSpawn);
         }
 

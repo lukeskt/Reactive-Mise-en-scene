@@ -19,10 +19,6 @@ namespace ReactiveMiseEnScene
         string[] editorLocale;
         SerializedProperty localeIndex;
 
-    //    public string[] editorTendency;
-    //    SerializedProperty tendency;
-    //    SerializedProperty tendencyIndex;
-
         SerializedProperty replaceObject;
         SerializedProperty loadOnStart;
 
