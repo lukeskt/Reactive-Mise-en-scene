@@ -32,6 +32,7 @@ namespace ReactiveMiseEnScene
         private void OnValidate()
         {
             tendencyNames = RMSettings.Tendencies;
+            if (tendencyObjs.Length == 0) tendencyObjs = new GameObject[RMSettings.Tendencies.Length];
             tendencyDict = tendencyNames.Zip(tendencyObjs, (k, v) => new { Key = k, Value = v }).ToDictionary(x => x.Key, x => x.Value);
         }
 
@@ -84,6 +85,11 @@ namespace ReactiveMiseEnScene
                     break;
                 default:
                     goto case ReactiveMesSettings.SingleResultTendencyAlgorithm.StrongestTendency;
+            }
+
+            if(replaceObject)
+            {
+                removePlacementPointChildren();
             }
 
             GameObject objToSpawn = tendencyDict[TendencyForPrefab];
