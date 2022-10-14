@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
     [CreateAssetMenu(fileName = "RMS", menuName = "ReactiveMesSettings", order = 1)]
-    public class ReactiveMesSettings : ScriptableObject
+    public class RemesSettings : ScriptableObject
     {
         public string[] Locales = new string[4];
         public string[] Tendencies = new string[4];

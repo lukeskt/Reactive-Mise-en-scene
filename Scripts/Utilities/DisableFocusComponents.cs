@@ -14,9 +14,7 @@ namespace ReactiveMiseEnScene
         {
             foreach (var obj in objectsToRemoveComponentFrom)
             {
-                //Destroy(obj.GetComponent<FocusMeasures>());
-                //Destroy(obj.GetComponent<Focus>());
-                obj.GetComponent<FocusNeue>().enabled = false;
+                obj.GetComponent<AttentionTracker>().enabled = false;
             }
         }
     }

@@ -7,9 +7,9 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    [CustomEditor(typeof(LoadPrefabNeue))]
+    [CustomEditor(typeof(RemesPrefabLoader))]
     [CanEditMultipleObjects]
-    public class LoadPrefabNeueEditor : Editor
+    public class RemesPrefabLoaderEditor : Editor
     {
         SerializedProperty RMSettings;
         SerializedProperty algorithm;
@@ -32,11 +32,11 @@ namespace ReactiveMiseEnScene
             RMSettings = serializedObject.FindProperty("RMSettings");
             algorithm = serializedObject.FindProperty("algorithm");
             requestType = serializedObject.FindProperty("requestType");
-            var loadPrefabSingle = target as LoadPrefabNeue;
-            if (loadPrefabSingle.RMSettings != null)
+            var remesPrefabLoader = target as RemesPrefabLoader;
+            if (remesPrefabLoader.RMSettings != null)
             {
-                editorLocale = loadPrefabSingle.RMSettings.Locales;
-                editorTendencyNames = loadPrefabSingle.tendencyNames;
+                editorLocale = remesPrefabLoader.RMSettings.Locales;
+                editorTendencyNames = remesPrefabLoader.tendencyNames;
                 //editorTendencyObjs = loadPrefabSingle.tendencyObjs;
             }
             localeRequest = serializedObject.FindProperty("localeRequest");
@@ -57,15 +57,15 @@ namespace ReactiveMiseEnScene
 
             EditorGUILayout.PropertyField(algorithm);
 
-            var loadPrefabSingle = target as LoadPrefabNeue;
+            var remesPrefabLoader = target as RemesPrefabLoader;
 
-            if (loadPrefabSingle.RMSettings != null)
+            if (remesPrefabLoader.RMSettings != null)
             {
-                if (loadPrefabSingle.algorithm != ReactiveMesSettings.SingleResultTendencyAlgorithm.Random)
+                if (remesPrefabLoader.algorithm != RemesSettings.SingleResultTendencyAlgorithm.Random)
                 {
                     EditorGUILayout.PropertyField(requestType);
-                    editorLocale = loadPrefabSingle.RMSettings.Locales;
-                    if (loadPrefabSingle.requestType == ReactiveMesSettings.RequestType.Locale)
+                    editorLocale = remesPrefabLoader.RMSettings.Locales;
+                    if (remesPrefabLoader.requestType == RemesSettings.RequestType.Locale)
                     {
                         localeIndex.intValue = EditorGUILayout.Popup("Locale to Request:", localeIndex.intValue, editorLocale);
                     }

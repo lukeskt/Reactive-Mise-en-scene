@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq; // WATCH OUT FOR LINQ PERF ISSUES
 using UnityEngine;
@@ -14,10 +13,10 @@ namespace ReactiveMiseEnScene
     }
 
     [System.Serializable]
-    public class ReactiveMesDataManager : MonoBehaviour
+    public class RemesDataManager : MonoBehaviour
     {
-        public static ReactiveMesDataManager dataMgr;
-        [SerializeField] private ReactiveMesSettings RMesSettings;
+        public static RemesDataManager dataMgr;
+        [SerializeField] private RemesSettings RMesSettings;
 
         public List<FocusDataStruct> reactiveObjects = new List<FocusDataStruct>();
 

@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    public class FocusNeueColourChanging : MonoBehaviour
+    public class AttentionColourChanger : MonoBehaviour
     {
-        public FocusNeue focusComponent;
+        public AttentionTracker focusComponent;
         private float focusValue;
 
         public Renderer rend;

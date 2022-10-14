@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    [CustomEditor(typeof(FocusNeue))]
+    [CustomEditor(typeof(AttentionTracker))]
     [CanEditMultipleObjects]
-    public class FocusNeueEditor : Editor
+    public class AttentionTrackerEditor : Editor
     {
         SerializedProperty RMSettings;
         public string[] editorLocale;
@@ -26,11 +26,11 @@ namespace ReactiveMiseEnScene
             localeIndex = serializedObject.FindProperty("localeIndex");
             tendency = serializedObject.FindProperty("tendency");
             tendencyIndex = serializedObject.FindProperty("tendencyIndex");
-            var focusNeue = target as FocusNeue;
-            if (focusNeue.RMSettings != null)
+            var attentionTracker = target as AttentionTracker;
+            if (attentionTracker.RMSettings != null)
             {
-                editorLocale = focusNeue.RMSettings.Locales;
-                editorTendency = focusNeue.RMSettings.Tendencies;
+                editorLocale = attentionTracker.RMSettings.Locales;
+                editorTendency = attentionTracker.RMSettings.Tendencies;
             }
             distanceThreshold = serializedObject.FindProperty("distanceThreshold");
             cam = serializedObject.FindProperty("cam");
@@ -43,14 +43,14 @@ namespace ReactiveMiseEnScene
             EditorGUILayout.PropertyField(RMSettings);
             serializedObject.ApplyModifiedProperties();
             serializedObject.Update();
-            var focusNeue = target as FocusNeue;
-            if (focusNeue.RMSettings != null)
+            var attentionTracker = target as AttentionTracker;
+            if (attentionTracker.RMSettings != null)
             {
-                editorLocale = focusNeue.RMSettings.Locales;
+                editorLocale = attentionTracker.RMSettings.Locales;
                 localeIndex.intValue = EditorGUILayout.Popup(label: "Locale", localeIndex.intValue, editorLocale);
                 locale.stringValue = editorLocale[localeIndex.intValue];
 
-                editorTendency = focusNeue.RMSettings.Tendencies;
+                editorTendency = attentionTracker.RMSettings.Tendencies;
                 tendencyIndex.intValue = EditorGUILayout.Popup("Tendency", tendencyIndex.intValue, editorTendency);
                 tendency.stringValue = editorTendency[tendencyIndex.intValue];
             }

@@ -6,7 +6,7 @@ namespace ReactiveMiseEnScene
 {
     public abstract class AttentionBehaviour : MonoBehaviour
     {
-        public FocusNeue focusObj;
+        public AttentionTracker focusObj;
         public float[] thresholds;
 
         private float attentionRating;

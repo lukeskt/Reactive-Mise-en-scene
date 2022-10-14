@@ -6,13 +6,13 @@ using UnityEngine;
 
 namespace ReactiveMiseEnScene
 {
-    public class LoadPrefabNeue : MonoBehaviour
+    public class RemesPrefabLoader : MonoBehaviour
     {
-        public ReactiveMesSettings RMSettings;
-        ReactiveMesDataManager DataMgr;
+        public RemesSettings RMSettings;
+        RemesDataManager DataMgr;
 
-        public ReactiveMesSettings.SingleResultTendencyAlgorithm algorithm;
-        public ReactiveMesSettings.RequestType requestType;
+        public RemesSettings.SingleResultTendencyAlgorithm algorithm;
+        public RemesSettings.RequestType requestType;
 
         public string localeRequest;
         [HideInInspector] public int localeIndex = 0; // for custom editor
@@ -38,7 +38,7 @@ namespace ReactiveMiseEnScene
 
         void Start()
         {
-            DataMgr = FindObjectOfType<ReactiveMesDataManager>();
+            DataMgr = FindObjectOfType<RemesDataManager>();
             if (loadOnStart) PrefabLoader(); // localeRequest);
         }
 
@@ -50,14 +50,14 @@ namespace ReactiveMiseEnScene
 
             switch (requestType)
             {
-                case ReactiveMesSettings.RequestType.Global:
+                case RemesSettings.RequestType.Global:
                     TendenciesFromDataMgr = DataMgr.GetGlobalTendency(DataMgr.reactiveObjects);
                     break;
-                case ReactiveMesSettings.RequestType.Locale:
+                case RemesSettings.RequestType.Locale:
                     TendenciesFromDataMgr = DataMgr.GetLocaleTendency(DataMgr.reactiveObjects, localeRequest);
                     break;
                 default:
-                    goto case ReactiveMesSettings.RequestType.Global;
+                    goto case RemesSettings.RequestType.Global;
             }
 
             List<KeyValuePair<string, double>> StrongestFirstTendencies = TendenciesFromDataMgr.ToList().OrderBy(x => x.Value).Reverse().ToList();
@@ -66,25 +66,25 @@ namespace ReactiveMiseEnScene
             switch (algorithm)
             {
                 // Also need to move the check into datamgr maybe for reuse, and just spawn obj here?
-                case ReactiveMesSettings.SingleResultTendencyAlgorithm.StrongestTendency:
+                case RemesSettings.SingleResultTendencyAlgorithm.StrongestTendency:
                     //TendencyForPrefab = TendenciesFromDataMgr.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
                     TendencyForPrefab = StrongestFirstTendencies[0].Key;
                     break;
-                case ReactiveMesSettings.SingleResultTendencyAlgorithm.SecondStrongest:
+                case RemesSettings.SingleResultTendencyAlgorithm.SecondStrongest:
                     TendencyForPrefab = StrongestFirstTendencies[1].Key;
                     break;
-                case ReactiveMesSettings.SingleResultTendencyAlgorithm.SecondWeakest:
+                case RemesSettings.SingleResultTendencyAlgorithm.SecondWeakest:
                     TendencyForPrefab = WeakestFirstTendencies[1].Key;
                     break;
-                case ReactiveMesSettings.SingleResultTendencyAlgorithm.WeakestTendency:
+                case RemesSettings.SingleResultTendencyAlgorithm.WeakestTendency:
                     //TendencyForPrefab = TendenciesFromDataMgr.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
                     TendencyForPrefab = WeakestFirstTendencies[0].Key;
                     break;
-                case ReactiveMesSettings.SingleResultTendencyAlgorithm.Random:
+                case RemesSettings.SingleResultTendencyAlgorithm.Random:
                     TendencyForPrefab = tendencyNames[UnityEngine.Random.Range(0, tendencyNames.Length)].ToString();
                     break;
                 default:
-                    goto case ReactiveMesSettings.SingleResultTendencyAlgorithm.StrongestTendency;
+                    goto case RemesSettings.SingleResultTendencyAlgorithm.StrongestTendency;
             }
 
             if(replaceObject)
