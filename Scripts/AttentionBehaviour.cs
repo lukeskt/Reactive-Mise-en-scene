@@ -6,8 +6,8 @@ namespace ReactiveMiseEnScene
 {
     public abstract class AttentionBehaviour : MonoBehaviour
     {
-        public AttentionTracker focusObj;
-        public float[] thresholds;
+        public AttentionTracker attentionTracker;
+        //public float[] thresholds;
 
         private float attentionRating;
         private float cumulativeAttentionRating;
@@ -25,8 +25,8 @@ namespace ReactiveMiseEnScene
         void Update()
         {
             // Every frame get a local copy of attention values.
-            attentionRating = focusObj.getFocusValue;
-            cumulativeAttentionRating = focusObj.getCumulativeFocusValue;
+            attentionRating = attentionTracker.getFocusValue;
+            cumulativeAttentionRating = attentionTracker.getCumulativeFocusValue;
             // Then use in whatever methods.
         }
 
