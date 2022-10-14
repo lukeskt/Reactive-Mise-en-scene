@@ -121,6 +121,7 @@ namespace ReactiveMiseEnScene
         {
             if (ObjectFrustrumCheck() && ObjectLineOfSightCheck() && ObjectDistanceCheck())
             {
+                // TODO: check these magic numbers for mapping here - mostly seem okay but is there a better way?
                 float getFocusValue = MapPositionToLinear(GetObjectScreenPosition(), 2, 0, -1f, 1);
                 if (getFocusValue > 0) focusValue = getFocusValue;
                 else focusValue = 0;
@@ -153,18 +154,9 @@ namespace ReactiveMiseEnScene
 
             var mappedValue = toAbs + toMin;
 
-            //float mappedValue = (inputValue - fromMin) / (toMin - fromMin) * (toMax - fromMax) + fromMax;
             mappedValue = Mathf.Clamp(mappedValue, toMin, toMax);
             return mappedValue;
         }
-
-#if UNITY_EDITOR
-        void OnDrawGizmos()
-        {
-            // implement debug / visualisation logic here?
-            Handles.Label(transform.position, $"{locale}\n{tendency}\n{cumulativeFocusValue}");
-        }
-#endif
 
         private void SendAttentionData()
         {
@@ -175,5 +167,13 @@ namespace ReactiveMiseEnScene
             attentionData.attentionRating = cumulativeFocusValue;
             WriteAttnDataMgr.Invoke(attentionData);
         }
+
+#if UNITY_EDITOR
+    void OnDrawGizmos()
+        {
+            // implement debug / visualisation logic here?
+            Handles.Label(transform.position, $"{locale}\n{tendency}\n{cumulativeFocusValue}");
+        }
+#endif
     }
 }
