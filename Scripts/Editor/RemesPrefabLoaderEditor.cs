@@ -23,7 +23,7 @@ namespace ReactiveMiseEnScene
         SerializedProperty loadOnStart;
 
         //SerializedProperty tendencyNames;
-        string[] editorTendencyNames;
+        List<string> editorTendencyNames;
         SerializedProperty tendencyObjs;
         //GameObject[] editorTendencyObjs;
 
@@ -76,9 +76,14 @@ namespace ReactiveMiseEnScene
             EditorGUILayout.PropertyField(loadOnStart);
             EditorGUILayout.Space();
 
-            for (int i = 0; i < editorTendencyNames.Length; i++)
+            if (remesPrefabLoader.RMSettings != null)
             {
-                EditorGUILayout.PropertyField(tendencyObjs.GetArrayElementAtIndex(i), label: new GUIContent(editorTendencyNames[i]));
+                for (int i = 0; i < remesPrefabLoader.RMSettings.Tendencies.Length; i++)
+                {
+                    EditorGUILayout.PropertyField(tendencyObjs.GetArrayElementAtIndex(i), label: new GUIContent(remesPrefabLoader.RMSettings.Tendencies[i]));
+                    serializedObject.ApplyModifiedProperties();
+                    serializedObject.Update();
+                }
             }
 
             //foreach (var name in editorTendencyNames)
@@ -87,8 +92,6 @@ namespace ReactiveMiseEnScene
             //    GUIContent lab = new GUIContent(editorTendencyNames[pos]);
             //    EditorGUILayout.PropertyField(tendencyObjs.GetArrayElementAtIndex(pos), label: lab);
             //}
-
-            serializedObject.ApplyModifiedProperties();
         }
     }
 }

@@ -16,8 +16,6 @@ namespace ReactiveMiseEnScene
 
         public string localeRequest;
         [HideInInspector] public int localeIndex = 0; // for custom editor
-        //public string tendency;
-        //[HideInInspector] public int tendencyIndex = 0; // for custom editor
 
         [Header("Modes")]
         [Tooltip("If enabled any child objects of this object will be deleted before loading the tendency object. Useful if you want to load and update the object at this position more than once.")]
@@ -25,14 +23,17 @@ namespace ReactiveMiseEnScene
         [Tooltip("If enabled, loads the relevant tendency object when this component is enabled.")]
         public bool loadOnStart = false;
 
-        public GameObject[] tendencyObjs = new GameObject[0];
-        public string[] tendencyNames;
+        public List<GameObject> tendencyObjs = new List<GameObject>();
+        public List<string> tendencyNames;
         public Dictionary<string, GameObject> tendencyDict;
 
         private void OnValidate()
         {
-            tendencyNames = RMSettings.Tendencies;
-            if (tendencyObjs.Length == 0) tendencyObjs = new GameObject[RMSettings.Tendencies.Length];
+            tendencyNames = RMSettings.Tendencies.ToList();
+            foreach (var item in tendencyNames)
+            {
+                tendencyObjs.Add(null);
+            }
             tendencyDict = tendencyNames.Zip(tendencyObjs, (k, v) => new { Key = k, Value = v }).ToDictionary(x => x.Key, x => x.Value);
         }
 
@@ -81,7 +82,7 @@ namespace ReactiveMiseEnScene
                     TendencyForPrefab = WeakestFirstTendencies[0].Key;
                     break;
                 case RemesSettings.SingleResultTendencyAlgorithm.Random:
-                    TendencyForPrefab = tendencyNames[UnityEngine.Random.Range(0, tendencyNames.Length)].ToString();
+                    TendencyForPrefab = tendencyNames[UnityEngine.Random.Range(0, tendencyNames.Count)].ToString();
                     break;
                 default:
                     goto case RemesSettings.SingleResultTendencyAlgorithm.StrongestTendency;
