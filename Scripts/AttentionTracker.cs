@@ -7,10 +7,10 @@ using UnityEngine.Events;
 
 namespace ReactiveMiseEnScene
 {
-    public class FocusNeue : MonoBehaviour
+    public class AttentionTracker : MonoBehaviour
     {
         // Data Sending for Attention Data Manager
-        public ReactiveMesSettings RMSettings;
+        public RemesSettings RMSettings;
         public string locale;
         [HideInInspector] public int localeIndex = 0; // for custom editor
         public string tendency;
@@ -40,9 +40,9 @@ namespace ReactiveMiseEnScene
             childColliders = GetComponentsInChildren<Collider>().ToList();
             if (GetComponent<Collider>() != null) childColliders.Add(GetComponent<Collider>());
 
-            if (FindObjectOfType<ReactiveMesDataManager>())
+            if (FindObjectOfType<RemesDataManager>())
             {
-                ReactiveMesDataManager AttnMgr = FindObjectOfType<ReactiveMesDataManager>();
+                RemesDataManager AttnMgr = FindObjectOfType<RemesDataManager>();
                 WriteAttnDataMgr.AddListener(AttnMgr.ParseInboundStructData);
             }
             else print("Attention Data Manager not found. Have you added the prefab to the scene?");
@@ -74,11 +74,13 @@ namespace ReactiveMiseEnScene
 
         void FixedUpdate()
         {
-            meshBounds = GetCombinedRendererBounds(); // Needs to be updated to handle object movement.
+            // This needs to run in an update loop to handle object movement. Possible perf issues?
+            meshBounds = GetCombinedRendererBounds();
+
             focusValue = GetFocusValue();
-            //print($"Screen pos of {name} is {focusValue}");
+            // TODO: bit of a magic number multiplier below to reduce the cumulative value to something less ridiculous - better way to do this?
             cumulativeFocusValue += focusValue * 0.01f;
-            //print($"{name} cumulative focus: {cumulativeFocusValue}");
+
             SendAttentionData();
         }
 
@@ -119,7 +121,9 @@ namespace ReactiveMiseEnScene
         {
             if (ObjectFrustrumCheck() && ObjectLineOfSightCheck() && ObjectDistanceCheck())
             {
-                focusValue = MapPositionToLinear(GetObjectScreenPosition(), 1, 0, 0, 1);
+                float getFocusValue = MapPositionToLinear(GetObjectScreenPosition(), 2, 0, -1f, 1);
+                if (getFocusValue > 0) focusValue = getFocusValue;
+                else focusValue = 0;
             }
             else
             {
