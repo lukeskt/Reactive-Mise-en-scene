@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using System.Linq; // WATCH OUT FOR LINQ PERF ISSUES
+using UnityEditor;
 using UnityEngine;
 
-namespace ReactiveMiseEnScene
+namespace Remes
 {
     public struct FocusDataStruct
     {
@@ -93,5 +94,19 @@ namespace ReactiveMiseEnScene
             }
             return globalTendencies;
         }
+#if UNITY_EDITOR
+        private void OnDrawGizmosSelected()
+        {
+            Handles.BeginGUI();
+            Handles.DrawSolidRectangleWithOutline(new Rect(100, 20, 200, 200), Color.black, Color.white);
+            int textpos = 25;
+            foreach (var tendency in RMesSettings.Tendencies)
+            {
+                GUI.Label(new Rect(110, 30, 200, textpos), $"Tendency {tendency}: {Mathf.Round((float)GetTendencyRating(reactiveObjects, tendency) * 1000f) / 1000f}");
+                textpos += 40;
+            }
+            Handles.EndGUI();
+        }
+#endif
     }
 }
