@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ReactiveMiseEnScene
+namespace Remes
 {
     public class AttentionTracker : MonoBehaviour
     {
@@ -123,23 +123,14 @@ namespace ReactiveMiseEnScene
             if (ObjectFrustrumCheck() && ObjectLineOfSightCheck() && ObjectDistanceCheck())
             {
                 // TODO: check these magic numbers for mapping here - mostly seem okay but is there a better way?
-                //float getFocusValue = MapPositionToLinear(GetObjectScreenPosition(), 2, 0, -1f, 1);
-                //getFocusValue = Mathf.InverseLerp(1f, 0f, GetObjectScreenPosition());
                 getFocusValue = MapValue(GetObjectScreenPosition(), 0, 0.5f, 1, 0);
                 getFocusValue = Mathf.Clamp(getFocusValue, 0, 1);
-                print(getFocusValue);
             }
             else
             {
                 getFocusValue = 0f;
-                //print(getFocusValue);
             }
             return getFocusValue;
-        }
-
-        private float MapValue(float value, float fromLow, float fromHigh, float toLow, float toHigh)
-        {
-            return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
         }
 
         private float GetObjectScreenPosition()
@@ -151,21 +142,10 @@ namespace ReactiveMiseEnScene
             return dist;
         }
 
-        //private float MapPositionToLinear(float inputValue, float fromMin, float fromMax, float toMin, float toMax)
-        //{
-        //    var fromAbs = inputValue - fromMin;
-        //    var fromMaxAbs = fromMax - fromMin;
-
-        //    var normal = fromAbs / fromMaxAbs;
-
-        //    var toMaxAbs = toMax - toMin;
-        //    var toAbs = toMaxAbs * normal;
-
-        //    var mappedValue = toAbs + toMin;
-
-        //    mappedValue = Mathf.Clamp(mappedValue, toMin, toMax);
-        //    return mappedValue;
-        //}
+        private float MapValue(float value, float fromLow, float fromHigh, float toLow, float toHigh)
+        {
+            return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
+        }
 
         private void SendAttentionData()
         {
@@ -178,10 +158,30 @@ namespace ReactiveMiseEnScene
         }
 
 #if UNITY_EDITOR
-    void OnDrawGizmos()
+        void OnDrawGizmos()
         {
             // implement debug / visualisation logic here?
             Handles.Label(transform.position, $"{locale}\n{tendency}\n{cumulativeFocusValue}");
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Handles.BeginGUI();
+            Handles.DrawSolidRectangleWithOutline(new Rect(350, 20, 250, 200), new Color(0.2f,0.1f,0.2f), Color.red);
+            var objDataString =
+            $@"
+            Reactive Object:
+            {name}
+
+            Locale: {locale} 
+
+            Tendency: {tendency} 
+
+            Attention Value: {Mathf.Round(focusValue * 1000f) / 1000f} 
+
+            Cumulative Attention: {Mathf.Round(cumulativeFocusValue * 1000f) / 1000f}";
+            GUI.Label(new Rect(330, 0, 250, 200), objDataString);
+            Handles.EndGUI();
         }
 #endif
     }
