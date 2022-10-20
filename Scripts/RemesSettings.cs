@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ReactiveMiseEnScene
+namespace Remes
 {
     [CreateAssetMenu(fileName = "RMS", menuName = "ReactiveMesSettings", order = 1)]
     public class RemesSettings : ScriptableObject
