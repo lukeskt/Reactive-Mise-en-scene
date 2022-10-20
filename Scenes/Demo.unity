@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 7240644}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 7240642}
 --- !u!1001 &10463059
 PrefabInstance:
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 10463063}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 10463061}
 --- !u!1 &11997821
 GameObject:
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1768022992}
+  attentionTracker: {fileID: 1768022992}
   rend: {fileID: 26389297}
 --- !u!1001 &34232079
 PrefabInstance:
@@ -760,7 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 34232083}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 34232081}
 --- !u!1001 &41175787
 PrefabInstance:
@@ -868,7 +868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 41175792}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 41175789}
 --- !u!114 &41175792
 MonoBehaviour:
@@ -910,7 +910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -1090,7 +1090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 69508877}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 69508874}
 --- !u!114 &69508877
 MonoBehaviour:
@@ -1114,6 +1114,41 @@ MonoBehaviour:
       m_Calls: []
   distanceThreshold: 200
   cam: {fileID: 0}
+--- !u!1 &80147773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80147774}
+  m_Layer: 0
+  m_Name: TendencyScenery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &80147774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80147773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 860438709}
+  - {fileID: 412843870}
+  - {fileID: 680737597}
+  - {fileID: 1298995938}
+  m_Father: {fileID: 481686618}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &90219952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1220,7 +1255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 90219957}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 90219954}
 --- !u!114 &90219957
 MonoBehaviour:
@@ -1253,7 +1288,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -1455,7 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 109800772}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 109800770}
 --- !u!1001 &128972460
 PrefabInstance:
@@ -1563,7 +1598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 128972465}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 128972462}
 --- !u!114 &128972465
 MonoBehaviour:
@@ -1693,7 +1728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 137627883}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 137627880}
 --- !u!114 &137627883
 MonoBehaviour:
@@ -1773,6 +1808,338 @@ MonoBehaviour:
   - {fileID: 3695863044548345581, guid: e77a09c569c96fd448ccf56d68bab8ec, type: 3}
   - {fileID: 1428707238825174415, guid: 1baf9953732e94745bdf74ff378c1cdb, type: 3}
   - {fileID: 250741821776023715, guid: 6e954137a5ff36d46bd2b3f7a3f13d24, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2460,7 +2827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 217912140}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 217912137}
 --- !u!114 &217912140
 MonoBehaviour:
@@ -2493,7 +2860,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -2695,7 +3062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 243399526}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 243399524}
 --- !u!1 &288472278
 GameObject:
@@ -2940,7 +3307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 298397008}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 298397006}
 --- !u!23 &304026473 stripped
 MeshRenderer:
@@ -3075,7 +3442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 316765044}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 316765042}
 --- !u!1001 &318756932
 PrefabInstance:
@@ -3295,7 +3662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 319283971}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 319283969}
 --- !u!1001 &327046742
 PrefabInstance:
@@ -3306,7 +3673,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -3508,7 +3875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 331464183}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 331464181}
 --- !u!1001 &338591686
 PrefabInstance:
@@ -3616,7 +3983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 338591691}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 338591688}
 --- !u!114 &338591691
 MonoBehaviour:
@@ -3750,7 +4117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1058949874}
+  attentionTracker: {fileID: 1371482249}
   rend: {fileID: 347001759}
 --- !u!1001 &349518424
 PrefabInstance:
@@ -3858,7 +4225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 349518429}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 349518426}
 --- !u!114 &349518429
 MonoBehaviour:
@@ -4010,7 +4377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 364369742}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 364369740}
 --- !u!1001 &388628843
 PrefabInstance:
@@ -4298,7 +4665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 393209935}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 393209933}
 --- !u!1001 &406278613
 PrefabInstance:
@@ -4406,7 +4773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 406278618}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 406278615}
 --- !u!114 &406278618
 MonoBehaviour:
@@ -4430,6 +4797,95 @@ MonoBehaviour:
       m_Calls: []
   distanceThreshold: 200
   cam: {fileID: 0}
+--- !u!1 &412843869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412843870}
+  - component: {fileID: 412843871}
+  m_Layer: 0
+  m_Name: Corner_B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412843870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412843869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 80147774}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &412843871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412843869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cf02b298a924043a32cf4f7b92f982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RMSettings: {fileID: 11400000, guid: 49fd78d727b230f42b984d36585b936b, type: 2}
+  algorithm: 0
+  requestType: 0
+  localeRequest: Area_01
+  localeIndex: 0
+  replaceObject: 1
+  loadOnStart: 1
+  tendencyObjs:
+  - {fileID: 1861640982762301677, guid: ed149e2276f8d8a42b3208077575d273, type: 3}
+  - {fileID: 1696206566447032283, guid: 2253d22438c1b324b95523b2f4bf488e, type: 3}
+  - {fileID: 4964034606222163738, guid: a0db4207ac946bc419de275d02225fc9, type: 3}
+  - {fileID: 4625764171507265935, guid: 5046a9c73111e464aaaad1cc5a355333, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tendencyNames:
+  - Tendency A
+  - Tendency B
+  - Tendency C
+  - Tendency D
 --- !u!1 &415499466 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2355995631910061052, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
@@ -4452,7 +4908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1058949874}
+  attentionTracker: {fileID: 1371482249}
   rend: {fileID: 415499479}
 --- !u!1 &439509885
 GameObject:
@@ -4491,6 +4947,338 @@ MonoBehaviour:
   replaceObject: 0
   loadOnStart: 0
   tendencyObjs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -5072,7 +5860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 470585727}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 470585724}
 --- !u!114 &470585727
 MonoBehaviour:
@@ -5202,7 +5990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 471711227}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 471711224}
 --- !u!114 &471711227
 MonoBehaviour:
@@ -5354,7 +6142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 476611889}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 476611887}
 --- !u!1 &481686617
 GameObject:
@@ -5388,6 +6176,7 @@ Transform:
   m_Children:
   - {fileID: 821064275}
   - {fileID: 1974645909}
+  - {fileID: 80147774}
   - {fileID: 1484967357}
   m_Father: {fileID: 1410985427}
   m_RootOrder: 0
@@ -5407,6 +6196,7 @@ MonoBehaviour:
   objectsToActivate:
   - {fileID: 1974645908}
   - {fileID: 821064274}
+  - {fileID: 80147773}
 --- !u!65 &481686626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5531,7 +6321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1894448072}
+  attentionTracker: {fileID: 1894448072}
   rend: {fileID: 492416860}
 --- !u!1001 &517258562
 PrefabInstance:
@@ -5639,7 +6429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 517258567}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 517258564}
 --- !u!114 &517258567
 MonoBehaviour:
@@ -5769,7 +6559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 552283890}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 552283887}
 --- !u!114 &552283890
 MonoBehaviour:
@@ -5945,7 +6735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1894448072}
+  attentionTracker: {fileID: 1894448072}
   rend: {fileID: 566334960}
 --- !u!1 &626519541 stripped
 GameObject:
@@ -6062,7 +6852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1058949874}
+  attentionTracker: {fileID: 1371482249}
   rend: {fileID: 628909146}
 --- !u!1001 &643428217
 PrefabInstance:
@@ -6192,7 +6982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 643428221}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 643428219}
 --- !u!1 &662070859
 GameObject:
@@ -6381,7 +7171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 665026261}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 665026258}
 --- !u!114 &665026261
 MonoBehaviour:
@@ -6405,6 +7195,95 @@ MonoBehaviour:
       m_Calls: []
   distanceThreshold: 200
   cam: {fileID: 0}
+--- !u!1 &680737596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 680737597}
+  - component: {fileID: 680737598}
+  m_Layer: 0
+  m_Name: Corner_C
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &680737597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680737596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 80147774}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &680737598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680737596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cf02b298a924043a32cf4f7b92f982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RMSettings: {fileID: 11400000, guid: 49fd78d727b230f42b984d36585b936b, type: 2}
+  algorithm: 0
+  requestType: 0
+  localeRequest: Area_01
+  localeIndex: 0
+  replaceObject: 1
+  loadOnStart: 1
+  tendencyObjs:
+  - {fileID: 2699087697782152699, guid: 93f013fe5657cfd428aa37c8feaa8a9c, type: 3}
+  - {fileID: 923702483343945351, guid: 2169544e66dbc024f9dd82b71c91bce7, type: 3}
+  - {fileID: 6928223452658595636, guid: 79de793242de748489a303ad3bc95a4f, type: 3}
+  - {fileID: 3937594635094684948, guid: f0c07446a589f974f87e13b0f57e834f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tendencyNames:
+  - Tendency A
+  - Tendency B
+  - Tendency C
+  - Tendency D
 --- !u!1001 &682440985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6511,7 +7390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 682440990}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 682440987}
 --- !u!114 &682440990
 MonoBehaviour:
@@ -6544,7 +7423,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -6650,6 +7529,8 @@ Transform:
   - {fileID: 662070861}
   - {fileID: 1362386724}
   - {fileID: 1414169922}
+  - {fileID: 1444331541}
+  - {fileID: 967047833}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6781,7 +7662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 696329447}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 696329445}
 --- !u!1001 &729952444
 PrefabInstance:
@@ -6911,7 +7792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 729952448}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 729952446}
 --- !u!1001 &765494230
 PrefabInstance:
@@ -7041,7 +7922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 765494234}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 765494232}
 --- !u!1001 &766646698
 PrefabInstance:
@@ -7149,7 +8030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 766646703}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 766646700}
 --- !u!114 &766646703
 MonoBehaviour:
@@ -7357,7 +8238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 780373700}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 780373698}
 --- !u!1001 &783438195
 PrefabInstance:
@@ -7487,7 +8368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 783438199}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 783438197}
 --- !u!1001 &792915967
 PrefabInstance:
@@ -7617,7 +8498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 792915971}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 792915969}
 --- !u!1001 &793447338
 PrefabInstance:
@@ -7747,7 +8628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 793447342}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 793447340}
 --- !u!1001 &797708539
 PrefabInstance:
@@ -7855,7 +8736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 797708544}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 797708541}
 --- !u!114 &797708544
 MonoBehaviour:
@@ -8007,7 +8888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 800594209}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 800594207}
 --- !u!1001 &803791546
 PrefabInstance:
@@ -8137,7 +9018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 803791550}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 803791548}
 --- !u!1 &809317844
 GameObject:
@@ -8302,7 +9183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 821004124}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 821004122}
 --- !u!1 &821064274
 GameObject:
@@ -8950,6 +9831,427 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tendencyNames:
+  - Tendency A
+  - Tendency B
+  - Tendency C
+  - Tendency D
+--- !u!1 &860438708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860438709}
+  - component: {fileID: 860438710}
+  m_Layer: 0
+  m_Name: Corner_A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &860438709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860438708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 80147774}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &860438710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860438708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cf02b298a924043a32cf4f7b92f982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RMSettings: {fileID: 11400000, guid: 49fd78d727b230f42b984d36585b936b, type: 2}
+  algorithm: 0
+  requestType: 0
+  localeRequest: Area_01
+  localeIndex: 0
+  replaceObject: 1
+  loadOnStart: 1
+  tendencyObjs:
+  - {fileID: 7144695409972751691, guid: 1d57d981f82ea5e4fb9c4e17e52b85b1, type: 3}
+  - {fileID: 5161412340118672675, guid: c4ade2cbd3e2b1949bc05512ddfb565d, type: 3}
+  - {fileID: 1413465779673986348, guid: 524ab09f78cd90a48829d2ad7b82c4d5, type: 3}
+  - {fileID: 7327122556222426884, guid: 833bc1f860267c040b5058f69508893d, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tendencyNames:
   - Tendency A
   - Tendency B
@@ -9061,7 +10363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 876762210}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 876762207}
 --- !u!114 &876762210
 MonoBehaviour:
@@ -9164,7 +10466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -9344,7 +10646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 941715259}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 941715256}
 --- !u!114 &941715259
 MonoBehaviour:
@@ -9496,7 +10798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 942786576}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 942786574}
 --- !u!1 &959048777
 GameObject:
@@ -9608,8 +10910,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68c3abbf50db1c4d9e35a647bd8ea95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attentionTracker: {fileID: 0}
   focusComponent: {fileID: 1864708668}
   mat: {fileID: 2100000, guid: 2ce7df6f543c2ac499cb1a4fb79ba2fd, type: 2}
+--- !u!1 &967047832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 967047833}
+  - component: {fileID: 967047836}
+  - component: {fileID: 967047835}
+  - component: {fileID: 967047834}
+  m_Layer: 0
+  m_Name: Plane (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &967047833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967047832}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: -1.5, z: -6}
+  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 690922573}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &967047834
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967047832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &967047835
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967047832}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 96251d88f3510404e941c4319d40f2c9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &967047836
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967047832}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &977169918
 GameObject:
   m_ObjectHideFlags: 0
@@ -9816,7 +11217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1009713797}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1009713795}
 --- !u!1001 &1024051293
 PrefabInstance:
@@ -9827,7 +11228,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -9923,7 +11324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1894448072}
+  attentionTracker: {fileID: 1894448072}
   rend: {fileID: 1025070389}
 --- !u!1001 &1044444071
 PrefabInstance:
@@ -10053,7 +11454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1044444075}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1044444073}
 --- !u!1001 &1047778956
 PrefabInstance:
@@ -10183,19 +11584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1047778960}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1047778958}
---- !u!114 &1058949874 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -8917946981541279038, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
-  m_PrefabInstance: {fileID: 388628843}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29be00294270fd84fb337e7dddfa8d21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1069339757
 GameObject:
   m_ObjectHideFlags: 0
@@ -10310,7 +11700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 117
+      value: 121
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyNames.Array.size
@@ -10502,7 +11892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1114081105}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1114081102}
 --- !u!114 &1114081105
 MonoBehaviour:
@@ -10654,7 +12044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1139113411}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1139113409}
 --- !u!1001 &1146615308
 PrefabInstance:
@@ -10762,7 +12152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1146615313}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1146615310}
 --- !u!114 &1146615313
 MonoBehaviour:
@@ -11066,7 +12456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1174410809}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1174410806}
 --- !u!114 &1174410809
 MonoBehaviour:
@@ -11103,7 +12493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -11305,7 +12695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1207800085}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1207800083}
 --- !u!1 &1210260199
 GameObject:
@@ -11500,7 +12890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1227085474}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1227085472}
 --- !u!1001 &1278814131
 PrefabInstance:
@@ -11608,7 +12998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1278814136}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1278814133}
 --- !u!114 &1278814136
 MonoBehaviour:
@@ -11738,7 +13128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1283859812}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1283859809}
 --- !u!114 &1283859812
 MonoBehaviour:
@@ -11890,8 +13280,97 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1286430061}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1286430059}
+--- !u!1 &1298995937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1298995938}
+  - component: {fileID: 1298995939}
+  m_Layer: 0
+  m_Name: Corner_D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1298995938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298995937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 80147774}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1298995939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298995937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cf02b298a924043a32cf4f7b92f982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RMSettings: {fileID: 11400000, guid: 49fd78d727b230f42b984d36585b936b, type: 2}
+  algorithm: 0
+  requestType: 0
+  localeRequest: Area_01
+  localeIndex: 0
+  replaceObject: 1
+  loadOnStart: 1
+  tendencyObjs:
+  - {fileID: 2570986753234905016, guid: 92453c761c567de468e0ddf208a76216, type: 3}
+  - {fileID: 7778708695903132835, guid: 9ff8002c4c2036c45b6b1a285512be4c, type: 3}
+  - {fileID: 781044709878462717, guid: 494816fbb11ddbd4180835be2958b888, type: 3}
+  - {fileID: 2922460582194143612, guid: 1dcb3cf4af8d9b9479bc0b7c00c58cab, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tendencyNames:
+  - Tendency A
+  - Tendency B
+  - Tendency C
+  - Tendency D
 --- !u!1001 &1300737041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11901,7 +13380,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -12200,7 +13679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1327853150}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1327853148}
 --- !u!1001 &1331931628
 PrefabInstance:
@@ -12381,7 +13860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1344856144}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1344856141}
 --- !u!114 &1344856144
 MonoBehaviour:
@@ -12533,7 +14012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1349713314}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1349713312}
 --- !u!1 &1362386720
 GameObject:
@@ -12626,13 +14105,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362386720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: -1.5, z: -6}
-  m_LocalScale: {x: 6, y: 1, z: 2}
+  m_LocalPosition: {x: -30, y: -1.5, z: -6}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 690922573}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1371482249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8917946981541279038, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
+  m_PrefabInstance: {fileID: 388628843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29be00294270fd84fb337e7dddfa8d21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1385399343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12761,7 +14251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1385399347}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1385399345}
 --- !u!1001 &1386045226
 PrefabInstance:
@@ -12891,7 +14381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1386045230}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1386045228}
 --- !u!1001 &1402002221
 PrefabInstance:
@@ -12999,7 +14489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1402002226}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1402002223}
 --- !u!114 &1402002226
 MonoBehaviour:
@@ -13036,7 +14526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 117
+      value: 121
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyNames.Array.size
@@ -13204,6 +14694,104 @@ Transform:
   m_Father: {fileID: 690922573}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1444331540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444331541}
+  - component: {fileID: 1444331544}
+  - component: {fileID: 1444331543}
+  - component: {fileID: 1444331542}
+  m_Layer: 0
+  m_Name: Plane (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1444331541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444331540}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10, y: -1.5, z: -6}
+  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 690922573}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1444331542
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444331540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1444331543
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444331540}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 96251d88f3510404e941c4319d40f2c9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1444331544
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444331540}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1450844076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13332,7 +14920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1450844080}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1450844078}
 --- !u!1 &1455876222
 GameObject:
@@ -13545,7 +15133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1468691573}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1468691571}
 --- !u!1001 &1480716303
 PrefabInstance:
@@ -13675,7 +15263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1480716307}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1480716305}
 --- !u!1 &1484967356
 GameObject:
@@ -13710,7 +15298,7 @@ Transform:
   - {fileID: 1455876223}
   - {fileID: 1738510334}
   m_Father: {fileID: 481686618}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1484967358
 BoxCollider:
@@ -13945,7 +15533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1492803281}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1492803279}
 --- !u!1001 &1513375879
 PrefabInstance:
@@ -14152,7 +15740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1513597287}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1513597284}
 --- !u!114 &1513597287
 MonoBehaviour:
@@ -14304,7 +15892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1547061819}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1547061817}
 --- !u!1001 &1576085875
 PrefabInstance:
@@ -14319,7 +15907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -14402,7 +15990,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -14701,7 +16289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1597397661}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1597397659}
 --- !u!1001 &1650232203
 PrefabInstance:
@@ -14712,7 +16300,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -14799,7 +16387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 117
+      value: 121
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyNames.Array.size
@@ -15021,7 +16609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1662613016}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1662613014}
 --- !u!1001 &1665160531
 PrefabInstance:
@@ -15151,7 +16739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1665160535}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1665160533}
 --- !u!1001 &1675796183
 PrefabInstance:
@@ -15281,7 +16869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1675796187}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1675796185}
 --- !u!1001 &1695372071
 PrefabInstance:
@@ -15411,7 +16999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1695372075}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1695372073}
 --- !u!1001 &1707636042
 PrefabInstance:
@@ -15422,7 +17010,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 123
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -15535,7 +17123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.216, y: 0.815}
+  m_AnchoredPosition: {x: 1.394, y: 0.815}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1738510335
@@ -15585,8 +17173,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
-  m_fontSizeBase: 7
+  m_fontSize: 3
+  m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15621,7 +17209,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 6.518835, y: 1.6637392, z: 5.6171484, w: 0}
+  m_margin: {x: 11.062626, y: 2.0360339, z: 5.6171484, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -15795,7 +17383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1754831692}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 51724524}
 --- !u!1001 &1756221606
 PrefabInstance:
@@ -15925,7 +17513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1756221610}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1756221608}
 --- !u!1 &1758774854
 GameObject:
@@ -16189,7 +17777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1765146009}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1765146007}
 --- !u!114 &1768022992 stripped
 MonoBehaviour:
@@ -16557,7 +18145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1864708668}
+  attentionTracker: {fileID: 1864708668}
   rend: {fileID: 304026473}
 --- !u!114 &1864708668 stripped
 MonoBehaviour:
@@ -16795,7 +18383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1893235165}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1893235163}
 --- !u!1 &1894448070 stripped
 GameObject:
@@ -16955,7 +18543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 1943371058}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 1943371056}
 --- !u!1 &1974645908
 GameObject:
@@ -17120,7 +18708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 2022814445}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 2022814443}
 --- !u!1001 &2071365271
 PrefabInstance:
@@ -17250,7 +18838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 2071365275}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 2071365273}
 --- !u!1001 &2085551477
 PrefabInstance:
@@ -17358,7 +18946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 2085551482}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 2085551479}
 --- !u!114 &2085551482
 MonoBehaviour:
@@ -17510,7 +19098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 2095452093}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 2095452091}
 --- !u!1001 &2120886762
 PrefabInstance:
@@ -17618,7 +19206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 2120886767}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 2120886764}
 --- !u!114 &2120886767
 MonoBehaviour:
@@ -17655,7 +19243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 16
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -17857,7 +19445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 2136027209}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 2136027207}
 --- !u!1001 &2138791672
 PrefabInstance:
@@ -17868,7 +19456,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 117
+      value: 121
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyNames.Array.size
@@ -18070,7 +19658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusComponent: {fileID: 2146278841}
+  attentionTracker: {fileID: 0}
   rend: {fileID: 2146278838}
 --- !u!114 &2146278841
 MonoBehaviour:
