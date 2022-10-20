@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace ReactiveMiseEnScene
+namespace Remes
 {
     [CustomEditor(typeof(AttentionTracker))]
     [CanEditMultipleObjects]
