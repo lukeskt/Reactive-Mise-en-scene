@@ -7,8 +7,8 @@ namespace Remes
 {
     public class AttentionAudioCrossfade : MonoBehaviour
     {
-        public AttentionTracker focusComponent;
-        private float focusValue;
+        public AttentionTracker attentionTracker;
+        private float attentionRating;
 
         public AudioSource audioSrc1;
         public AudioSource audioSrc2;
@@ -26,13 +26,13 @@ namespace Remes
         // Update is called once per frame
         void Update()
         {
-            focusValue = focusComponent.getFocusValue;
+            attentionRating = attentionTracker.getFocusValue;
             CrossfadeAudio();
         }
 
         private void CrossfadeAudio()
         {
-            if (focusValue <= 0)
+            if (attentionRating <= 0)
             {
                 audioSrc1.volume = 0;
                 audioSrc2.volume = 0;
@@ -51,8 +51,8 @@ namespace Remes
                     audioSrc3.Play();
                     clickOnPlayed = true;
                 }
-                audioSrc1.volume = Mathf.InverseLerp(1, 0, focusValue);
-                audioSrc2.volume = Mathf.InverseLerp(0, 1, focusValue);
+                audioSrc1.volume = Mathf.InverseLerp(1, 0, attentionRating);
+                audioSrc2.volume = Mathf.InverseLerp(0, 1, attentionRating);
             }
         }
     }

@@ -6,8 +6,8 @@ namespace Remes
 {
     public class AttentionColourChanger : MonoBehaviour
     {
-        public AttentionTracker focusComponent;
-        private float focusValue;
+        public AttentionTracker attentionTracker;
+        private float attentionRating;
 
         public Renderer rend;
 
@@ -19,33 +19,33 @@ namespace Remes
         // Update is called once per frame
         void Update()
         {
-            focusValue = focusComponent.getFocusValue;
+            attentionRating = attentionTracker.getFocusValue;
             //print(focusValue);
             ChangeColour();
         }
 
         private void ChangeColour ()
         {
-            var mixer = Mathf.InverseLerp(1, 0, focusValue);
-            Color customColour = new Color(focusValue * 0.5f, mixer, 0);
+            var mixer = Mathf.InverseLerp(1, 0, attentionRating);
+            Color customColour = new Color(attentionRating * 0.5f, mixer, 0);
             rend.material.SetColor("_BaseColor", customColour);
         }
 
         private void ColourSteps ()
         {
-            if (focusValue == 0)
+            if (attentionRating == 0)
             {
                 rend.material.SetColor("_BaseColor", Color.black);
             }
-            else if (focusValue < 0.7f)
+            else if (attentionRating < 0.7f)
             {
                 rend.material.SetColor("_BaseColor", Color.green);
             }
-            else if (focusValue < 0.9f)
+            else if (attentionRating < 0.9f)
             {
                 rend.material.SetColor("_BaseColor", Color.yellow);
             }
-            else if (focusValue > 0.9f)
+            else if (attentionRating > 0.9f)
             {
                 rend.material.SetColor("_BaseColor", Color.red);
             }

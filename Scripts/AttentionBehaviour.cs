@@ -61,19 +61,9 @@ namespace Remes
 
         // Map a value from one range to another,
         // e.g. map a rating value to something useful for a property like material colour or video clip length...
-        public virtual float MapValue(float inputValue, float fromMin, float fromMax, float toMin, float toMax)
+        public virtual float MapValue(float value, float fromLow, float fromHigh, float toLow, float toHigh)
         {
-            var fromAbs = inputValue - fromMin;
-            var fromMaxAbs = fromMax - fromMin;
-
-            var normal = fromAbs / fromMaxAbs;
-
-            var toMaxAbs = toMax - toMin;
-            var toAbs = toMaxAbs * normal;
-
-            var mappedValue = toAbs + toMin;
-            mappedValue = Mathf.Clamp(mappedValue, toMin, toMax);
-            return mappedValue;
+            return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
         }
     }
 }
