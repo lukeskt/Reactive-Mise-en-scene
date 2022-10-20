@@ -531,7 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7410036492902467430, guid: d5d666322920d064a85366275186b4cc, type: 3}
       propertyPath: tendency
-      value: Tendency C
+      value: Tendency B
       objectReference: {fileID: 0}
     - target: {fileID: -7410036492902467430, guid: d5d666322920d064a85366275186b4cc, type: 3}
       propertyPath: localeIndex
@@ -539,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7410036492902467430, guid: d5d666322920d064a85366275186b4cc, type: 3}
       propertyPath: tendencyIndex
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 378046906422024543, guid: d5d666322920d064a85366275186b4cc, type: 3}
       propertyPath: m_Layer
@@ -599,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5286824135258697350, guid: d5d666322920d064a85366275186b4cc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5d666322920d064a85366275186b4cc, type: 3}
@@ -907,6 +907,10 @@ PrefabInstance:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: algorithm
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -1247,6 +1251,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 809317845}
     m_Modifications:
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
       value: 
@@ -2137,6 +2145,210 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tendencyNames:
   - Tendency A
   - Tendency B
@@ -2279,6 +2491,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 556873297}
     m_Modifications:
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
       value: 
@@ -2874,7 +3090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5064426072840645272, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
       propertyPath: tendency
-      value: Tendency C
+      value: Tendency A
       objectReference: {fileID: 0}
     - target: {fileID: -5064426072840645272, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
       propertyPath: localeIndex
@@ -2882,7 +3098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5064426072840645272, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
       propertyPath: tendencyIndex
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1147726378892554133, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
       propertyPath: m_RootOrder
@@ -2942,7 +3158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
@@ -3088,6 +3304,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 556873297}
     m_Modifications:
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
       value: 
@@ -3941,7 +4161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5286824135258697350, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63c28f450198de044b40dc47df2dd6f0, type: 3}
@@ -4271,6 +4491,210 @@ MonoBehaviour:
   replaceObject: 0
   loadOnStart: 0
   tendencyObjs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -6119,6 +6543,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 556873297}
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
       value: 
       objectReference: {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -7887,7 +8315,7 @@ GameObject:
   - component: {fileID: 821064275}
   - component: {fileID: 821064276}
   m_Layer: 0
-  m_Name: HDRP_Volume (1)
+  m_Name: HDRP_Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7933,6 +8361,210 @@ MonoBehaviour:
   - {fileID: 1428707238825174415, guid: 1baf9953732e94745bdf74ff378c1cdb, type: 3}
   - {fileID: 250741821776023715, guid: 6e954137a5ff36d46bd2b3f7a3f13d24, type: 3}
   - {fileID: 4040962649895143724, guid: 1f1e05bcb79923b49a3cb3885b992aaa, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -8529,6 +9161,10 @@ PrefabInstance:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: algorithm
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -9190,6 +9826,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 556873297}
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
       value: 
       objectReference: {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -9670,11 +10310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 109
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyNames.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -10460,6 +11100,10 @@ PrefabInstance:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: algorithm
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -11255,6 +11899,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 556873297}
     m_Modifications:
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
       value: 
@@ -12388,11 +13036,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 109
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyNames.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -13140,8 +13788,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ReactiveMiseEnScene.LoadPrefabNeue, ReactiveMiseEnScene
+      - m_Target: {fileID: 821064276}
+        m_TargetAssemblyTypeName: Remes.TendencyPrefabLoader, ReactiveMiseEnScene
         m_MethodName: PrefabLoader
         m_Mode: 1
         m_Arguments:
@@ -13670,6 +14318,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
       value: 
       objectReference: {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -13748,6 +14400,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 809317845}
     m_Modifications:
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
       value: 
@@ -14055,6 +14711,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 809317845}
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
       value: 
       objectReference: {fileID: 5286824135258697350, guid: dadba30219dab594882eb3d0bf89e976, type: 3}
@@ -14139,11 +14799,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 109
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyNames.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -14762,7 +15422,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 115
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
@@ -16994,6 +17654,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
+      propertyPath: tendencyObjs.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
       value: 
       objectReference: {fileID: 5286824135258697350, guid: 79615e8f69f263d489c9d14d114376ca, type: 3}
@@ -17204,11 +17868,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.size
-      value: 109
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyNames.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2138791678, guid: 52fc5a390a3314146b2ae1000f6dd8f1, type: 3}
       propertyPath: tendencyObjs.Array.data[0]
