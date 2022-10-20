@@ -5,11 +5,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace ReactiveMiseEnScene
+namespace Remes
 {
-    [CustomEditor(typeof(RemesPrefabLoader))]
+    [CustomEditor(typeof(TendencyPrefabLoader))]
     [CanEditMultipleObjects]
-    public class RemesPrefabLoaderEditor : Editor
+    public class TendencyPrefabLoaderEditor : Editor
     {
         SerializedProperty RMSettings;
         SerializedProperty algorithm;
@@ -32,7 +32,7 @@ namespace ReactiveMiseEnScene
             RMSettings = serializedObject.FindProperty("RMSettings");
             algorithm = serializedObject.FindProperty("algorithm");
             requestType = serializedObject.FindProperty("requestType");
-            var remesPrefabLoader = target as RemesPrefabLoader;
+            var remesPrefabLoader = target as TendencyPrefabLoader;
             if (remesPrefabLoader.RMSettings != null)
             {
                 editorLocale = remesPrefabLoader.RMSettings.Locales;
@@ -57,7 +57,7 @@ namespace ReactiveMiseEnScene
 
             EditorGUILayout.PropertyField(algorithm);
 
-            var remesPrefabLoader = target as RemesPrefabLoader;
+            var remesPrefabLoader = target as TendencyPrefabLoader;
 
             if (remesPrefabLoader.RMSettings != null)
             {

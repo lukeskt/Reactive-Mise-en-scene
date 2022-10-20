@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace ReactiveMiseEnScene
+namespace Remes
 {
-    public class RemesPrefabLoader : MonoBehaviour
+    public class TendencyPrefabLoader : MonoBehaviour
     {
         public RemesSettings RMSettings;
         RemesDataManager DataMgr;
