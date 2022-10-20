@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ReactiveMiseEnScene
+namespace Remes
 {
     public class AttentionColourChanger : MonoBehaviour
     {

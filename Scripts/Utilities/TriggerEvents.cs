@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace ReactiveMiseEnScene
+namespace Remes
 {
     public class TriggerEvents : MonoBehaviour
     {

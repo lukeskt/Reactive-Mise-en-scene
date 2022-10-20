@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ReactiveMiseEnScene
+namespace Remes
 {
     public class AttentionTextureBlender : MonoBehaviour
     {
@@ -17,11 +17,8 @@ namespace ReactiveMiseEnScene
         {
             focusValue = focusComponent.getFocusValue;
             cumulativeFocus = focusComponent.getCumulativeFocusValue;
-            //var blendValue = Mathf.InverseLerp(1, 10, focusValue);
-            //var blendValue = focusValue * 2;
             var blendValue = MapValue(focusValue, 0, 1, 1, 10);
             var clampedCumulative = Mathf.Clamp(cumulativeFocus, 1, 20);
-            //print(blendValue);
             mat.SetFloat("_BlendOpacity", clampedCumulative);
         }
 

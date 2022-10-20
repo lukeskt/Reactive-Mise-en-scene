@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace ReactiveMiseEnScene
+namespace Remes
 {
     public class AttentionBehaviourCaptionText : MonoBehaviour
     {
