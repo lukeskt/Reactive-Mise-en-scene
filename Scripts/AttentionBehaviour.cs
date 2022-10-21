@@ -6,14 +6,14 @@ namespace Remes
 {
     public abstract class AttentionBehaviour : MonoBehaviour
     {
-        public AttentionTracker attentionTracker;
+        [field: SerializeField] public AttentionTracker AttentionTracker { get; set; }
         //public float[] thresholds;
 
-        private float attentionRating;
-        private float cumulativeAttentionRating;
+        private float? attentionRating = null;
+        private float? cumulativeAttentionRating = null;
 
-        public virtual float AttentionRating { get => attentionRating; set => attentionRating = value; }
-        public virtual float CumulativeAttentionRating { get => cumulativeAttentionRating; set => cumulativeAttentionRating = value; }
+        public virtual float? AttentionRating { get => attentionRating; set => attentionRating = value; }
+        public virtual float? CumulativeAttentionRating { get => cumulativeAttentionRating; set => cumulativeAttentionRating = value; }
 
         // Start is called before the first frame update
         void Start()
@@ -22,24 +22,12 @@ namespace Remes
         }
 
         // Update is called once per frame
-        void Update()
+        public virtual void Update()
         {
             // Every frame get a local copy of attention values.
-            attentionRating = attentionTracker.getFocusValue;
-            cumulativeAttentionRating = attentionTracker.getCumulativeFocusValue;
-            // Then use in whatever methods.
-        }
-
-        public virtual bool CheckRatingAgainstThreshold (float rating, float threshold)
-        {
-            if (rating > threshold)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            // In classes inheriting from this we need to call base.Update(); to get these values, or just call them ourselves.
+            AttentionRating = AttentionTracker.getFocusValue;
+            CumulativeAttentionRating = AttentionTracker.getCumulativeFocusValue;
         }
 
         public virtual Dictionary<float, bool> CheckAgainstMultipleThresholds (float rating, params float[] thresholds)
@@ -59,8 +47,7 @@ namespace Remes
             return thresholdChecks;
         }
 
-        // Map a value from one range to another,
-        // e.g. map a rating value to something useful for a property like material colour or video clip length...
+        // Map a value from one range to another.
         public virtual float MapValue(float value, float fromLow, float fromHigh, float toLow, float toHigh)
         {
             return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
