@@ -6,42 +6,28 @@ namespace Remes
 {
     public class AttentionBehaviourExample : AttentionBehaviour
     {
-        public override float AttentionRating { get => base.AttentionRating; set => base.AttentionRating = value; }
-        public override float CumulativeAttentionRating { get => base.CumulativeAttentionRating; set => base.CumulativeAttentionRating = value; }
-
-        public override Dictionary<float, bool> CheckAgainstMultipleThresholds(float rating, params float[] thresholds)
+        // For AttentionBehaviour derived classes make sure you set public override on Upate,
+        // and first call base.Update(); in it to get current attention and cumulative attention values.
+        // You can then reference these as AttentionRating and CumulativeAttentionRating respectively.
+        public override void Update()
         {
-            return base.CheckAgainstMultipleThresholds(rating, thresholds);
-        }
-
-        public override bool CheckRatingAgainstThreshold(float rating, float threshold)
-        {
-            return base.CheckRatingAgainstThreshold(rating, threshold);
-        }
-
-        public override float MapValue(float inputValue, float fromMin, float fromMax, float toMin, float toMax)
-        {
-            return base.MapValue(inputValue, fromMin, fromMax, toMin, toMax);
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
+            base.Update();
             float[] threshes = { 1.0f, 0.9f, 0.8f, 0.7f, 0.6f, 0.5f, 0.4f, 0.3f, 0.2f, 0.1f, 0.05f, 0f };
-            var threshChecks = CheckAgainstMultipleThresholds(AttentionRating, threshes);
+            var threshChecks = CheckAgainstMultipleThresholds((float)AttentionRating, threshes);
             foreach (var item in threshChecks)
             {
                 if (item.Value == true)
                 {
-                    print($"Attention rating {AttentionRating} is higher than {item.Key}!");
+                    print($"Attention Rating {AttentionRating} is higher than {item.Key}!");
+                    break;
+                }
+                else
+                {
+                    print($"Attention Rating {AttentionRating} is 0 or less!");
+                    break;
                 }
             }
+            print($"Cumulative Attention is currently at: {CumulativeAttentionRating}");
         }
     }
 }

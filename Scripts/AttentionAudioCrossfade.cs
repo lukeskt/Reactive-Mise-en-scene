@@ -5,11 +5,8 @@ using UnityEngine;
 
 namespace Remes
 {
-    public class AttentionAudioCrossfade : MonoBehaviour
+    public class AttentionAudioCrossfade : AttentionBehaviour
     {
-        public AttentionTracker attentionTracker;
-        private float attentionRating;
-
         public AudioSource audioSrc1;
         public AudioSource audioSrc2;
         public AudioSource audioSrc3;
@@ -17,22 +14,16 @@ namespace Remes
         private bool clickOffPlayed;
         private bool clickOnPlayed;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
-
         // Update is called once per frame
-        void Update()
+        public override void Update()
         {
-            attentionRating = attentionTracker.getFocusValue;
+            base.Update();
             CrossfadeAudio();
         }
 
         private void CrossfadeAudio()
         {
-            if (attentionRating <= 0)
+            if (AttentionRating <= 0)
             {
                 audioSrc1.volume = 0;
                 audioSrc2.volume = 0;
@@ -51,8 +42,8 @@ namespace Remes
                     audioSrc3.Play();
                     clickOnPlayed = true;
                 }
-                audioSrc1.volume = Mathf.InverseLerp(1, 0, attentionRating);
-                audioSrc2.volume = Mathf.InverseLerp(0, 1, attentionRating);
+                audioSrc1.volume = Mathf.InverseLerp(1, 0, (float)AttentionRating);
+                audioSrc2.volume = Mathf.InverseLerp(0, 1, (float)AttentionRating);
             }
         }
     }
