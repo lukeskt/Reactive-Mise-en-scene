@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 7240642}
 --- !u!1001 &10463059
 PrefabInstance:
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 10463061}
 --- !u!1 &11997821
 GameObject:
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 1768022992}
+  <AttentionTracker>k__BackingField: {fileID: 1768022992}
   rend: {fileID: 26389297}
 --- !u!1001 &34232079
 PrefabInstance:
@@ -760,7 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 34232081}
 --- !u!1001 &41175787
 PrefabInstance:
@@ -868,7 +868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 41175789}
 --- !u!114 &41175792
 MonoBehaviour:
@@ -1090,7 +1090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 69508874}
 --- !u!114 &69508877
 MonoBehaviour:
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 90219954}
 --- !u!114 &90219957
 MonoBehaviour:
@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 109800770}
 --- !u!1001 &128972460
 PrefabInstance:
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 128972462}
 --- !u!114 &128972465
 MonoBehaviour:
@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 137627880}
 --- !u!114 &137627883
 MonoBehaviour:
@@ -1808,6 +1808,326 @@ MonoBehaviour:
   - {fileID: 3695863044548345581, guid: e77a09c569c96fd448ccf56d68bab8ec, type: 3}
   - {fileID: 1428707238825174415, guid: 1baf9953732e94745bdf74ff378c1cdb, type: 3}
   - {fileID: 250741821776023715, guid: 6e954137a5ff36d46bd2b3f7a3f13d24, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2827,7 +3147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 217912137}
 --- !u!114 &217912140
 MonoBehaviour:
@@ -3062,7 +3382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 243399524}
 --- !u!1 &288472278
 GameObject:
@@ -3307,7 +3627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 298397006}
 --- !u!23 &304026473 stripped
 MeshRenderer:
@@ -3442,7 +3762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 316765042}
 --- !u!1001 &318756932
 PrefabInstance:
@@ -3662,7 +3982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 319283969}
 --- !u!1001 &327046742
 PrefabInstance:
@@ -3875,7 +4195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 331464181}
 --- !u!1001 &338591686
 PrefabInstance:
@@ -3983,7 +4303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 338591688}
 --- !u!114 &338591691
 MonoBehaviour:
@@ -4117,7 +4437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 1371482249}
+  <AttentionTracker>k__BackingField: {fileID: 1371482249}
   rend: {fileID: 347001759}
 --- !u!1001 &349518424
 PrefabInstance:
@@ -4225,7 +4545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 349518426}
 --- !u!114 &349518429
 MonoBehaviour:
@@ -4377,7 +4697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 364369740}
 --- !u!1001 &388628843
 PrefabInstance:
@@ -4665,7 +4985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 393209933}
 --- !u!1001 &406278613
 PrefabInstance:
@@ -4773,7 +5093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 406278615}
 --- !u!114 &406278618
 MonoBehaviour:
@@ -4881,6 +5201,326 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tendencyNames:
   - Tendency A
   - Tendency B
@@ -4908,7 +5548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 1371482249}
+  <AttentionTracker>k__BackingField: {fileID: 1371482249}
   rend: {fileID: 415499479}
 --- !u!1 &439509885
 GameObject:
@@ -4947,6 +5587,326 @@ MonoBehaviour:
   replaceObject: 0
   loadOnStart: 0
   tendencyObjs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -5860,7 +6820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 470585724}
 --- !u!114 &470585727
 MonoBehaviour:
@@ -5990,7 +6950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 471711224}
 --- !u!114 &471711227
 MonoBehaviour:
@@ -6142,7 +7102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 476611887}
 --- !u!1 &481686617
 GameObject:
@@ -6321,7 +7281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 1894448072}
+  <AttentionTracker>k__BackingField: {fileID: 1894448072}
   rend: {fileID: 492416860}
 --- !u!1001 &517258562
 PrefabInstance:
@@ -6429,7 +7389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 517258564}
 --- !u!114 &517258567
 MonoBehaviour:
@@ -6559,7 +7519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 552283887}
 --- !u!114 &552283890
 MonoBehaviour:
@@ -6735,7 +7695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 1894448072}
+  <AttentionTracker>k__BackingField: {fileID: 1894448072}
   rend: {fileID: 566334960}
 --- !u!1 &626519541 stripped
 GameObject:
@@ -6852,7 +7812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 1371482249}
+  <AttentionTracker>k__BackingField: {fileID: 1371482249}
   rend: {fileID: 628909146}
 --- !u!1001 &643428217
 PrefabInstance:
@@ -6982,7 +7942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 643428219}
 --- !u!1 &662070859
 GameObject:
@@ -7171,7 +8131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 665026258}
 --- !u!114 &665026261
 MonoBehaviour:
@@ -7251,6 +8211,326 @@ MonoBehaviour:
   - {fileID: 923702483343945351, guid: 2169544e66dbc024f9dd82b71c91bce7, type: 3}
   - {fileID: 6928223452658595636, guid: 79de793242de748489a303ad3bc95a4f, type: 3}
   - {fileID: 3937594635094684948, guid: f0c07446a589f974f87e13b0f57e834f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -7390,7 +8670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 682440987}
 --- !u!114 &682440990
 MonoBehaviour:
@@ -7662,7 +8942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 696329445}
 --- !u!1001 &729952444
 PrefabInstance:
@@ -7792,7 +9072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 729952446}
 --- !u!1001 &765494230
 PrefabInstance:
@@ -7922,7 +9202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 765494232}
 --- !u!1001 &766646698
 PrefabInstance:
@@ -8030,7 +9310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 766646700}
 --- !u!114 &766646703
 MonoBehaviour:
@@ -8238,7 +9518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 780373698}
 --- !u!1001 &783438195
 PrefabInstance:
@@ -8368,7 +9648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 783438197}
 --- !u!1001 &792915967
 PrefabInstance:
@@ -8498,7 +9778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 792915969}
 --- !u!1001 &793447338
 PrefabInstance:
@@ -8628,7 +9908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 793447340}
 --- !u!1001 &797708539
 PrefabInstance:
@@ -8736,7 +10016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 797708541}
 --- !u!114 &797708544
 MonoBehaviour:
@@ -8888,7 +10168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 800594207}
 --- !u!1001 &803791546
 PrefabInstance:
@@ -9018,7 +10298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 803791548}
 --- !u!1 &809317844
 GameObject:
@@ -9183,7 +10463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 821004122}
 --- !u!1 &821064274
 GameObject:
@@ -9242,6 +10522,326 @@ MonoBehaviour:
   - {fileID: 1428707238825174415, guid: 1baf9953732e94745bdf74ff378c1cdb, type: 3}
   - {fileID: 250741821776023715, guid: 6e954137a5ff36d46bd2b3f7a3f13d24, type: 3}
   - {fileID: 4040962649895143724, guid: 1f1e05bcb79923b49a3cb3885b992aaa, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -10252,6 +11852,326 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tendencyNames:
   - Tendency A
   - Tendency B
@@ -10363,7 +12283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 876762207}
 --- !u!114 &876762210
 MonoBehaviour:
@@ -10646,7 +12566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 941715256}
 --- !u!114 &941715259
 MonoBehaviour:
@@ -10798,7 +12718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 942786574}
 --- !u!1 &959048777
 GameObject:
@@ -10910,8 +12830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68c3abbf50db1c4d9e35a647bd8ea95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
-  focusComponent: {fileID: 1864708668}
+  <AttentionTracker>k__BackingField: {fileID: 1864708668}
   mat: {fileID: 2100000, guid: 2ce7df6f543c2ac499cb1a4fb79ba2fd, type: 2}
 --- !u!1 &967047832
 GameObject:
@@ -11217,7 +13136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1009713795}
 --- !u!1001 &1024051293
 PrefabInstance:
@@ -11324,7 +13243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 1894448072}
+  <AttentionTracker>k__BackingField: {fileID: 1894448072}
   rend: {fileID: 1025070389}
 --- !u!1001 &1044444071
 PrefabInstance:
@@ -11454,7 +13373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1044444073}
 --- !u!1001 &1047778956
 PrefabInstance:
@@ -11584,7 +13503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1047778958}
 --- !u!1 &1069339757
 GameObject:
@@ -11892,7 +13811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1114081102}
 --- !u!114 &1114081105
 MonoBehaviour:
@@ -12044,7 +13963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1139113409}
 --- !u!1001 &1146615308
 PrefabInstance:
@@ -12152,7 +14071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1146615310}
 --- !u!114 &1146615313
 MonoBehaviour:
@@ -12456,7 +14375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1174410806}
 --- !u!114 &1174410809
 MonoBehaviour:
@@ -12480,6 +14399,17 @@ MonoBehaviour:
       m_Calls: []
   distanceThreshold: 200
   cam: {fileID: 0}
+--- !u!114 &1186102574 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2071029097529193197, guid: 358f5b8a23355c44fb186cbf02b4eb53, type: 3}
+  m_PrefabInstance: {fileID: 2071029096410757628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29be00294270fd84fb337e7dddfa8d21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1193225449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12695,7 +14625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1207800083}
 --- !u!1 &1210260199
 GameObject:
@@ -12890,7 +14820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1227085472}
 --- !u!1001 &1278814131
 PrefabInstance:
@@ -12998,7 +14928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1278814133}
 --- !u!114 &1278814136
 MonoBehaviour:
@@ -13128,7 +15058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1283859809}
 --- !u!114 &1283859812
 MonoBehaviour:
@@ -13280,7 +15210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1286430059}
 --- !u!1 &1298995937
 GameObject:
@@ -13338,6 +15268,326 @@ MonoBehaviour:
   - {fileID: 7778708695903132835, guid: 9ff8002c4c2036c45b6b1a285512be4c, type: 3}
   - {fileID: 781044709878462717, guid: 494816fbb11ddbd4180835be2958b888, type: 3}
   - {fileID: 2922460582194143612, guid: 1dcb3cf4af8d9b9479bc0b7c00c58cab, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -13679,7 +15929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1327853148}
 --- !u!1001 &1331931628
 PrefabInstance:
@@ -13860,7 +16110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1344856141}
 --- !u!114 &1344856144
 MonoBehaviour:
@@ -14012,7 +16262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1349713312}
 --- !u!1 &1362386720
 GameObject:
@@ -14251,7 +16501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1385399345}
 --- !u!1001 &1386045226
 PrefabInstance:
@@ -14381,7 +16631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1386045228}
 --- !u!1001 &1402002221
 PrefabInstance:
@@ -14489,7 +16739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1402002223}
 --- !u!114 &1402002226
 MonoBehaviour:
@@ -14920,7 +17170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1450844078}
 --- !u!1 &1455876222
 GameObject:
@@ -15133,7 +17383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1468691571}
 --- !u!1001 &1480716303
 PrefabInstance:
@@ -15263,7 +17513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1480716305}
 --- !u!1 &1484967356
 GameObject:
@@ -15378,6 +17628,54 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 821064276}
         m_TargetAssemblyTypeName: Remes.TendencyPrefabLoader, ReactiveMiseEnScene
+        m_MethodName: PrefabLoader
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 860438710}
+        m_TargetAssemblyTypeName: Remes.TendencyPrefabLoader, Remes
+        m_MethodName: PrefabLoader
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 412843871}
+        m_TargetAssemblyTypeName: Remes.TendencyPrefabLoader, Remes
+        m_MethodName: PrefabLoader
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 680737598}
+        m_TargetAssemblyTypeName: Remes.TendencyPrefabLoader, Remes
+        m_MethodName: PrefabLoader
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1298995939}
+        m_TargetAssemblyTypeName: Remes.TendencyPrefabLoader, Remes
         m_MethodName: PrefabLoader
         m_Mode: 1
         m_Arguments:
@@ -15533,8 +17831,122 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1492803279}
+--- !u!1 &1502532018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1502532023}
+  - component: {fileID: 1502532022}
+  - component: {fileID: 1502532021}
+  - component: {fileID: 1502532020}
+  - component: {fileID: 1502532019}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1502532019
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502532018}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1502532020
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502532018}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1502532021
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502532018}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1502532022
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502532018}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1502532023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502532018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.8619342, y: -3.3779607, z: 2.2908876}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1513375879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15740,7 +18152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1513597284}
 --- !u!114 &1513597287
 MonoBehaviour:
@@ -15892,7 +18304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1547061817}
 --- !u!1001 &1576085875
 PrefabInstance:
@@ -16289,7 +18701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1597397659}
 --- !u!1001 &1650232203
 PrefabInstance:
@@ -16609,7 +19021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1662613014}
 --- !u!1001 &1665160531
 PrefabInstance:
@@ -16739,7 +19151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1665160533}
 --- !u!1001 &1675796183
 PrefabInstance:
@@ -16869,7 +19281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1675796185}
 --- !u!1001 &1695372071
 PrefabInstance:
@@ -16999,7 +19411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1695372073}
 --- !u!1001 &1707636042
 PrefabInstance:
@@ -17383,7 +19795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 51724524}
 --- !u!1001 &1756221606
 PrefabInstance:
@@ -17513,7 +19925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1756221608}
 --- !u!1 &1758774854
 GameObject:
@@ -17777,7 +20189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1765146007}
 --- !u!114 &1768022992 stripped
 MonoBehaviour:
@@ -17802,7 +20214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fe0221b8bd33146849888fe5bbad6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 1768022992}
+  <AttentionTracker>k__BackingField: {fileID: 1768022992}
 --- !u!1 &1785736004
 GameObject:
   m_ObjectHideFlags: 0
@@ -18145,7 +20557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 1864708668}
+  <AttentionTracker>k__BackingField: {fileID: 1864708668}
   rend: {fileID: 304026473}
 --- !u!114 &1864708668 stripped
 MonoBehaviour:
@@ -18383,7 +20795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1893235163}
 --- !u!1 &1894448070 stripped
 GameObject:
@@ -18543,7 +20955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 1943371056}
 --- !u!1 &1974645908
 GameObject:
@@ -18708,7 +21120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 2022814443}
 --- !u!1001 &2071365271
 PrefabInstance:
@@ -18838,7 +21250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 2071365273}
 --- !u!1001 &2085551477
 PrefabInstance:
@@ -18946,7 +21358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 2085551479}
 --- !u!114 &2085551482
 MonoBehaviour:
@@ -19098,7 +21510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 2095452091}
 --- !u!1001 &2120886762
 PrefabInstance:
@@ -19206,7 +21618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 2120886764}
 --- !u!114 &2120886767
 MonoBehaviour:
@@ -19445,7 +21857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 2136027207}
 --- !u!1001 &2138791672
 PrefabInstance:
@@ -19658,7 +22070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a500734252e5d20469ae05bde2d2b932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attentionTracker: {fileID: 0}
+  <AttentionTracker>k__BackingField: {fileID: 0}
   rend: {fileID: 2146278838}
 --- !u!114 &2146278841
 MonoBehaviour:
@@ -19737,6 +22149,18 @@ PrefabInstance:
       propertyPath: captionText
       value: 
       objectReference: {fileID: 11997823}
+    - target: {fileID: 2071029097529193195, guid: 358f5b8a23355c44fb186cbf02b4eb53, type: 3}
+      propertyPath: attentionTracker
+      value: 
+      objectReference: {fileID: 1186102574}
+    - target: {fileID: 2071029097529193195, guid: 358f5b8a23355c44fb186cbf02b4eb53, type: 3}
+      propertyPath: <AttentionTracker>k__BackingField
+      value: 
+      objectReference: {fileID: 1186102574}
+    - target: {fileID: 2071029097529193196, guid: 358f5b8a23355c44fb186cbf02b4eb53, type: 3}
+      propertyPath: <AttentionTracker>k__BackingField
+      value: 
+      objectReference: {fileID: 1186102574}
     - target: {fileID: 2071029097529193197, guid: 358f5b8a23355c44fb186cbf02b4eb53, type: 3}
       propertyPath: tendency
       value: Tendency D
@@ -19751,7 +22175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2071029097529193201, guid: 358f5b8a23355c44fb186cbf02b4eb53, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 358f5b8a23355c44fb186cbf02b4eb53, type: 3}
