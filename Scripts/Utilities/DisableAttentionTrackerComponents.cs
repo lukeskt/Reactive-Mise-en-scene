@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Remes
 {
-    public class DisableFocusComponents : MonoBehaviour
+    public class DisableAttentionTrackerComponents : MonoBehaviour
     {
         public GameObject[] objectsToRemoveComponentFrom;
 
